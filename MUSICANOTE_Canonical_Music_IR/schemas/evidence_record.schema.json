@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://schemas.musicanote.com/evidence-record/0.1.0", "title": "MUSICANOTE Evidence Record", "type": "object",
+  "required": ["schema_version", "evidence_id", "evidence_type", "score_id", "source_refs", "relation", "value", "producer"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"}, "evidence_id": {"type": "string"}, "evidence_type": {"type": "string"}, "score_id": {"type": "string"},
+    "source_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "relation": {"type": "string"}, "value": {},
+    "target": {"type": "object"}, "producer": {"type": "object", "required": ["name", "version", "deterministic"], "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "deterministic": {"type": "boolean"}}, "additionalProperties": false},
+    "edges": {"type": "array", "items": {"type": "object", "required": ["to_ref", "relation"], "properties": {"to_ref": {"type": "string"}, "relation": {"enum": ["supports", "contradicts", "derived_from", "corroborates"]}}, "additionalProperties": false}}
+  }, "additionalProperties": false
+}

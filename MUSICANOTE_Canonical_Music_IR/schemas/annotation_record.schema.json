@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://schemas.musicanote.com/annotation-record/0.1.0", "title": "MUSICANOTE Annotation Record", "type": "object",
+  "required": ["schema_version", "annotation_id", "score_id", "target", "annotation_type", "ai", "human", "resolution_status", "training_eligible", "annotation_version"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"}, "annotation_id": {"type": "string"}, "score_id": {"type": "string"}, "target": {"type": "object"}, "annotation_type": {"type": "string"},
+    "source_analysis_id": {"type": ["string", "null"]}, "ai": {"type": ["object", "null"]},
+    "human": {"oneOf": [{"type": "null"}, {"type": "object", "required": ["status", "annotator_id", "timestamp"], "properties": {"status": {"enum": ["accepted", "corrected", "rejected", "ambiguous", "needs_review"]}, "label": {"type": ["string", "null"]}, "alternatives": {"type": "array", "items": {"type": "object"}}, "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "comment": {"type": ["string", "null"]}, "annotator_id": {"type": "string"}, "timestamp": {"type": "string", "format": "date-time"}}, "additionalProperties": false}]},
+    "resolution_status": {"enum": ["unreviewed", "accepted", "corrected", "rejected", "ambiguous", "needs_review"]}, "target_mapping_status": {"enum": ["exact", "mapped", "ambiguous", "orphaned"]},
+    "training_eligible": {"type": "boolean"}, "annotation_version": {"type": "integer", "minimum": 1}, "supersedes_annotation_id": {"type": ["string", "null"]}
+  }, "additionalProperties": false
+}

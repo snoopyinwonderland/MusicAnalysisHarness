@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://schemas.musicanote.com/analysis-state/0.1.0", "title": "MUSICANOTE Runtime Analysis State", "type": "object",
+  "required": ["schema_version", "state_id", "score_id", "harness_run_id", "cursor_global_quarter", "engine", "working_memory"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"}, "state_id": {"type": "string"}, "score_id": {"type": "string"}, "harness_run_id": {"type": "string"},
+    "cursor_global_quarter": {"type": "object", "required": ["numerator", "denominator"], "properties": {"numerator": {"type": "integer"}, "denominator": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "engine": {"type": "object", "required": ["name", "version"], "properties": {"name": {"type": "string"}, "version": {"type": "string"}}, "additionalProperties": false},
+    "working_memory": {"type": "object", "properties": {"local_key_candidates": {"type": "array"}, "active_phrase": {}, "current_motifs": {"type": "array"}, "modulation_probability": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "cadence_expectation": {}, "recent_chromatic_event_refs": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": true},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }, "additionalProperties": false
+}

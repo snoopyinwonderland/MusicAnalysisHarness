@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.musicanote.com/canonical-music-ir/0.1.0",
+  "title": "MUSICANOTE Canonical Music IR",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "ir_document_id", "source_files", "source_references", "score", "parts", "staves", "voices", "measures", "note_events", "rest_events", "tie_chains", "sounding_events", "attack_events", "chord_onset_groups", "parser_manifest"],
+  "properties": {
+    "schema_name": {"const": "musicanote-canonical-music-ir"},
+    "schema_version": {"const": "0.1.0"},
+    "ir_document_id": {"$ref": "#/$defs/id"},
+    "source_files": {"type": "array", "items": {"$ref": "#/$defs/sourceFile"}, "minItems": 1},
+    "source_references": {"type": "array", "items": {"$ref": "#/$defs/sourceRef"}},
+    "score": {"$ref": "#/$defs/score"},
+    "parts": {"type": "array", "items": {"$ref": "#/$defs/part"}},
+    "staves": {"type": "array", "items": {"$ref": "#/$defs/staff"}},
+    "voices": {"type": "array", "items": {"$ref": "#/$defs/voice"}},
+    "measures": {"type": "array", "items": {"$ref": "#/$defs/measure"}},
+    "note_events": {"type": "array", "items": {"$ref": "#/$defs/note"}},
+    "rest_events": {"type": "array", "items": {"$ref": "#/$defs/rest"}},
+    "tie_chains": {"type": "array", "items": {"$ref": "#/$defs/tieChain"}},
+    "sounding_events": {"type": "array", "items": {"$ref": "#/$defs/sounding"}},
+    "attack_events": {"type": "array", "items": {"$ref": "#/$defs/attack"}},
+    "chord_onset_groups": {"type": "array", "items": {"$ref": "#/$defs/chordGroup"}},
+    "extensions": {"type": "array", "items": {"$ref": "#/$defs/extension"}},
+    "parser_manifest": {"$ref": "#/$defs/parserManifest"},
+    "validation_summary": {"type": "object"}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{2,127}$"},
+    "rational": {
+      "type": "object", "required": ["numerator", "denominator"],
+      "properties": {"numerator": {"type": "integer"}, "denominator": {"type": "integer", "minimum": 1}},
+      "additionalProperties": false
+    },
+    "span": {
+      "type": "object", "required": ["start", "end"],
+      "properties": {"start": {"$ref": "#/$defs/rational"}, "end": {"$ref": "#/$defs/rational"}, "display": {"type": "object"}},
+      "additionalProperties": false
+    },
+    "sourceFile": {
+      "type": "object", "required": ["source_file_id", "sha256", "musicxml_version", "original_name"],
+      "properties": {"source_file_id": {"$ref": "#/$defs/id"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "musicxml_version": {"type": ["string", "null"]}, "original_name": {"type": "string"}},
+      "additionalProperties": false
+    },
+    "sourceRef": {
+      "type": "object", "required": ["source_ref_id", "source_file_id", "source_part_id", "source_measure_number", "source_element_index"],
+      "properties": {"source_ref_id": {"$ref": "#/$defs/id"}, "source_file_id": {"$ref": "#/$defs/id"}, "source_part_id": {"type": ["string", "null"]}, "source_measure_number": {"type": ["string", "null"]}, "source_voice": {"type": ["string", "null"]}, "source_staff": {"type": ["integer", "null"]}, "source_element_index": {"type": "integer", "minimum": 0}, "source_xpath": {"type": ["string", "null"]}, "local_fingerprint": {"type": ["string", "null"]}},
+      "additionalProperties": false
+    },
+    "score": {
+      "type": "object", "required": ["score_id", "source_file_id", "part_ids", "measure_count", "duration_quarters", "pickup_measure"],
+      "properties": {"score_id": {"$ref": "#/$defs/id"}, "source_file_id": {"$ref": "#/$defs/id"}, "title": {"type": ["string", "null"]}, "composer": {"type": ["string", "null"]}, "movement": {"type": ["string", "null"]}, "part_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}}, "measure_count": {"type": "integer", "minimum": 0}, "duration_quarters": {"$ref": "#/$defs/rational"}, "pickup_measure": {"type": ["string", "null"]}, "metadata": {"type": "object"}},
+      "additionalProperties": false
+    },
+    "part": {
+      "type": "object", "required": ["part_id", "score_id", "source_part_id", "staff_ids"],
+      "properties": {"part_id": {"$ref": "#/$defs/id"}, "score_id": {"$ref": "#/$defs/id"}, "source_part_id": {"type": "string"}, "instrument_name": {"type": ["string", "null"]}, "instrument_family": {"type": ["string", "null"]}, "transposition_semitones": {"$ref": "#/$defs/rational"}, "staff_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}}, "midi_program": {"type": ["integer", "null"], "minimum": 0, "maximum": 127}},
+      "additionalProperties": false
+    },
+    "staff": {
+      "type": "object", "required": ["staff_id", "part_id", "staff_number", "voice_ids", "clef_timeline"],
+      "properties": {"staff_id": {"$ref": "#/$defs/id"}, "part_id": {"$ref": "#/$defs/id"}, "staff_number": {"type": "integer", "minimum": 1}, "voice_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}}, "clef_timeline": {"type": "array", "items": {"type": "object"}}},
+      "additionalProperties": false
+    },
+    "voice": {
+      "type": "object", "required": ["voice_id", "part_id", "source_voice_number", "event_ids"],
+      "properties": {"voice_id": {"$ref": "#/$defs/id"}, "part_id": {"$ref": "#/$defs/id"}, "default_staff_id": {"type": ["string", "null"]}, "source_voice_number": {"type": ["string", "null"]}, "event_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}}, "inference": {"type": ["object", "null"]}},
+      "additionalProperties": false
+    },
+    "measure": {
+      "type": "object", "required": ["measure_id", "printed_measure_number", "sequential_measure_index", "global_start_quarter", "nominal_duration_quarter", "actual_duration_quarter", "pickup", "time_signature", "key_signature"],
+      "properties": {"measure_id": {"$ref": "#/$defs/id"}, "printed_measure_number": {"type": "string"}, "sequential_measure_index": {"type": "integer", "minimum": 0}, "global_start_quarter": {"$ref": "#/$defs/rational"}, "nominal_duration_quarter": {"$ref": "#/$defs/rational"}, "actual_duration_quarter": {"$ref": "#/$defs/rational"}, "pickup": {"type": "boolean"}, "time_signature": {"type": "object", "required": ["beats", "beat_type"], "properties": {"beats": {"type": "integer", "minimum": 1}, "beat_type": {"type": "integer", "minimum": 1}}, "additionalProperties": false}, "key_signature": {"type": "object", "required": ["fifths"], "properties": {"fifths": {"type": ["integer", "null"], "minimum": -7, "maximum": 7}, "mode_hint": {"type": ["string", "null"]}}, "additionalProperties": false}, "repeat_barline": {"type": ["object", "null"]}},
+      "additionalProperties": false
+    },
+    "pitch": {
+      "type": "object", "required": ["spelling", "step", "alter", "octave", "midi_pitch", "pitch_class"],
+      "properties": {"spelling": {"type": "string"}, "step": {"enum": ["A", "B", "C", "D", "E", "F", "G"]}, "alter": {"$ref": "#/$defs/rational"}, "octave": {"type": "integer"}, "midi_pitch": {"type": ["integer", "null"]}, "pitch_class": {"type": ["integer", "null"], "minimum": 0, "maximum": 11}},
+      "additionalProperties": false
+    },
+    "eventBase": {
+      "type": "object", "required": ["score_id", "part_id", "display_staff_id", "voice_id", "measure_id", "onset_in_measure", "global_onset_quarter", "notated_duration_quarter", "source_ref_id"],
+      "properties": {"score_id": {"$ref": "#/$defs/id"}, "part_id": {"$ref": "#/$defs/id"}, "display_staff_id": {"$ref": "#/$defs/id"}, "voice_id": {"$ref": "#/$defs/id"}, "measure_id": {"$ref": "#/$defs/id"}, "onset_in_measure": {"$ref": "#/$defs/rational"}, "global_onset_quarter": {"$ref": "#/$defs/rational"}, "notated_duration_quarter": {"$ref": "#/$defs/rational"}, "source_ref_id": {"$ref": "#/$defs/id"}}
+    },
+    "note": {
+      "allOf": [{"$ref": "#/$defs/eventBase"}, {"type": "object", "required": ["note_id", "written_pitch", "concert_pitch", "tie_role", "grace", "chord_member", "notation"], "properties": {"note_id": {"$ref": "#/$defs/id"}, "written_pitch": {"$ref": "#/$defs/pitch"}, "concert_pitch": {"$ref": "#/$defs/pitch"}, "tie_role": {"enum": ["none", "start", "continue", "stop"]}, "grace": {"type": "object", "required": ["is_grace"], "properties": {"is_grace": {"type": "boolean"}, "order": {"type": ["integer", "null"]}, "anchor_note_id": {"type": ["string", "null"]}, "slash": {"type": ["boolean", "null"]}}, "additionalProperties": false}, "chord_member": {"type": "boolean"}, "chord_onset_group_id": {"type": ["string", "null"]}, "notation": {"type": "object"}}}]
+    },
+    "rest": {
+      "allOf": [{"$ref": "#/$defs/eventBase"}, {"type": "object", "required": ["rest_id", "hidden"], "properties": {"rest_id": {"$ref": "#/$defs/id"}, "hidden": {"type": "boolean"}}}]
+    },
+    "tieChain": {"type": "object", "required": ["tie_chain_id", "source_note_ids", "sounding_pitch", "span", "total_duration", "attack_note_id"], "properties": {"tie_chain_id": {"$ref": "#/$defs/id"}, "source_note_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "minItems": 2}, "sounding_pitch": {"$ref": "#/$defs/pitch"}, "span": {"$ref": "#/$defs/span"}, "total_duration": {"$ref": "#/$defs/rational"}, "attack_note_id": {"$ref": "#/$defs/id"}}, "additionalProperties": false},
+    "sounding": {"type": "object", "required": ["sounding_event_id", "source_note_ids", "pitch", "span", "sounding_duration", "attack_note_id"], "properties": {"sounding_event_id": {"$ref": "#/$defs/id"}, "source_note_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "minItems": 1}, "pitch": {"$ref": "#/$defs/pitch"}, "span": {"$ref": "#/$defs/span"}, "sounding_duration": {"$ref": "#/$defs/rational"}, "attack_note_id": {"$ref": "#/$defs/id"}, "tie_chain_id": {"type": ["string", "null"]}}, "additionalProperties": false},
+    "attack": {"type": "object", "required": ["attack_event_id", "note_id", "sounding_event_id", "global_onset_quarter"], "properties": {"attack_event_id": {"$ref": "#/$defs/id"}, "note_id": {"$ref": "#/$defs/id"}, "sounding_event_id": {"$ref": "#/$defs/id"}, "global_onset_quarter": {"$ref": "#/$defs/rational"}}, "additionalProperties": false},
+    "chordGroup": {"type": "object", "required": ["chord_onset_group_id", "voice_id", "global_onset_quarter", "note_ids"], "properties": {"chord_onset_group_id": {"$ref": "#/$defs/id"}, "voice_id": {"$ref": "#/$defs/id"}, "global_onset_quarter": {"$ref": "#/$defs/rational"}, "note_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}, "minItems": 2}}, "additionalProperties": false},
+    "extension": {"type": "object", "required": ["name", "version", "owner", "schema_uri", "payload"], "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "owner": {"type": "string"}, "schema_uri": {"type": "string", "format": "uri"}, "payload": {}}, "additionalProperties": false},
+    "parserManifest": {"type": "object", "required": ["parser_name", "parser_version", "normalization_policy_version"], "properties": {"parser_name": {"type": "string"}, "parser_version": {"type": "string"}, "normalization_policy_version": {"type": "string"}, "options": {"type": "object"}}, "additionalProperties": false}
+  }
+}

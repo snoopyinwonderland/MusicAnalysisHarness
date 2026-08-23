@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://schemas.musicanote.com/analysis-record/0.1.0", "title": "MUSICANOTE Analysis Record", "type": "object",
+  "required": ["schema_version", "analysis_id", "analysis_type", "score_id", "target", "hypotheses", "selected_hypothesis", "evidence_refs", "status", "engine"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"}, "analysis_id": {"type": "string"}, "analysis_type": {"type": "string"}, "score_id": {"type": "string"},
+    "target": {"$ref": "#/$defs/target"},
+    "hypotheses": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/hypothesis"}},
+    "selected_hypothesis": {"type": ["integer", "null"], "minimum": 0},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "status": {"enum": ["candidate", "selected", "validated", "rejected", "abstained"]},
+    "engine": {"type": "object", "required": ["name", "version", "config_hash"], "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "config_hash": {"type": "string"}}, "additionalProperties": false},
+    "created_at": {"type": "string", "format": "date-time"}, "extensions": {"type": "object"}
+  }, "additionalProperties": false,
+  "$defs": {
+    "rational": {"type": "object", "required": ["numerator", "denominator"], "properties": {"numerator": {"type": "integer"}, "denominator": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "span": {"type": "object", "required": ["start", "end"], "properties": {"start": {"$ref": "#/$defs/rational"}, "end": {"$ref": "#/$defs/rational"}, "display": {"type": "object"}}, "additionalProperties": false},
+    "target": {"type": "object", "properties": {"entity_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "span": {"$ref": "#/$defs/span"}, "span_id": {"type": "string"}}, "anyOf": [{"required": ["entity_refs"]}, {"required": ["span"]}, {"required": ["span_id"]}], "additionalProperties": false},
+    "hypothesis": {"type": "object", "required": ["label", "confidence"], "properties": {"label": {"type": "string"}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "parameters": {"type": "object"}, "rationale": {"type": ["string", "null"]}}, "additionalProperties": false}
+  }
+}
