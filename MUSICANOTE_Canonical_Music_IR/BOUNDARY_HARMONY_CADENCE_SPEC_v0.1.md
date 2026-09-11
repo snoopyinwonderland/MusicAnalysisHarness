@@ -39,13 +39,21 @@ A phrase boundary never proves a cadence. A V–I-like surface pattern never pro
 
 ## UI contract
 
-Each phrase option SHOULD show:
+Each phrase option SHOULD show a quickly scannable phrase identity:
 
-`Phrase number · measure range · first pitch → last pitch · boundary harmony progression · Cadence candidate`
+`Phrase number · measure range · first pitch → last pitch · Cadence candidate`
 
-The review-facing harmony progression SHOULD use Roman numerals relative to the explicitly displayed selected-key hypothesis. Absolute root/quality labels MUST remain available in the analysis record for traceability and fallback. `romanDisplay` is an interpretation, not a Canonical Core value, and must never be presented without the key hypothesis that governed it.
+The detail panel MUST state that boundary harmony is a local window rather than a start-to-end Phrase progression. It SHOULD render three explicit semantic fields: preparation before the terminal arrival, terminal/arrival harmony, and the first harmony after the boundary. Analysis records SHOULD expose these as `preparationRoman`, `arrivalRoman`, and `afterBoundaryRoman`; `romanDisplay` remains a backward-compatible compact representation using `preparation → arrival | after-boundary`.
+
+The review-facing harmony values SHOULD use Roman numerals relative to the explicitly displayed selected-key hypothesis. Absolute root/quality labels MUST remain available in the analysis record for traceability and fallback. Roman labels are interpretations, not Canonical Core values, and must never be presented without the key hypothesis that governed them.
+
+Campania MAY be used for Roman-numeral value glyphs only. Prose, Korean labels, punctuation/arrows, controls, key names, and pitch names MUST retain the normal UI font because Campania's music-analysis substitutions are not general-text typography. A bundled, licensed webfont is preferred to a machine-local font dependency.
 
 The detail panel shows the raw boundary measure/beat only as secondary evidence. Cadence strength is labelled `uncalibrated evidence strength`, never probability. Unknown and withheld results are displayed explicitly rather than silently omitted.
+
+## Governing harmony correction path
+
+A short surface sonority MUST NOT by itself determine the governing terminal harmony or Cadence. When a reviewed case identifies a dominant arrival that the surface template misses, the implementation must improve general evidence handling—defining-tone completeness, non-chord-tone candidates, prolongation, bass/metrical support, and sequence-level cadence grammar—rather than add a score-specific label. AI output, human correction, and adjudication status remain separate Analysis/Annotation records.
 
 ## Deferred
 
