@@ -78,6 +78,8 @@ A local rest or attack gap is evidence for a possible division, not proof of a f
 
 When consecutive cells share a sufficiently similar normalized duration/IOI pattern and melodic contour, the analyzer may issue a `repeated-figure-continuation` hypothesis. It may then propose a `repeated-figure-run-start` and `repeated-figure-run-end` while preserving every internal gap as counter-evidence. A separate `rhythmic-gesture-continuation` hypothesis may connect two pickup-like gestures that share a short-short-long rhythmic prefix and are followed by a materially larger closing gap.
 
+A `repeated-figure-run-end` alone MUST NOT cross the primary phrase-boundary threshold. It is a structural location hypothesis, not independent closure. Promotion requires a separate closure cue that already meets the configured boundary threshold and is not contradicted by strong temporal continuity. Implementations MUST expose `requiresIndependentClosureCue` and whether the run end was promoted. A fixed minimum phrase length MUST NOT be used as a substitute because genuinely short phrases remain possible.
+
 These are versioned Analysis Layer hypotheses, not Canonical Core facts and not deterministic Layer C labels. Each record must expose the run/group ID, source boundary indices or stable event IDs, cell length, similarity evidence, raw pre-suppression strength, effective strength, hierarchy level, and whether cadence review is still required. Repetition alone MUST NOT prove non-boundary status: a sufficiently supported cadence, formal articulation, explicit fermata/breath, or human correction may preserve the internal point as a primary boundary.
 
 The preferred future output is a set of competing spans rather than a destructive merge:

@@ -43,6 +43,8 @@ Each phrase option SHOULD show:
 
 `Phrase number · measure range · first pitch → last pitch · boundary harmony progression · Cadence candidate`
 
+The review-facing harmony progression SHOULD use Roman numerals relative to the explicitly displayed selected-key hypothesis. Absolute root/quality labels MUST remain available in the analysis record for traceability and fallback. `romanDisplay` is an interpretation, not a Canonical Core value, and must never be presented without the key hypothesis that governed it.
+
 The detail panel shows the raw boundary measure/beat only as secondary evidence. Cadence strength is labelled `uncalibrated evidence strength`, never probability. Unknown and withheld results are displayed explicitly rather than silently omitted.
 
 ## Deferred
