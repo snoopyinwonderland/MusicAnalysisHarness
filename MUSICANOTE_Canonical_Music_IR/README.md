@@ -33,6 +33,8 @@ Layer D  External Analysis / Annotation Interface
 - `PHRASE_BOUNDARY_EVIDENCE_SPEC.md`: 프레이즈 분할 이전의 결정론적 증거 계약
 - `PHRASE_REVIEW_VIEWER_CONTRACT_v0.1.md`: MusicSearch 공유 악보 레이어와 검수 저장 계약
 - `BOUNDARY_HARMONY_CADENCE_SPEC_v0.1.md`: 프레이즈 경계 주변의 제한적 화성 진행·Cadence 가설 계약
+- `CORE_LOGIC_SELF_CHECK_QUIZ_v0.1_KO.md`: Canonical IR과 Phrase 분석 핵심 논리의 사용자 합의 점검 문제
+- `CORE_LOGIC_SELF_CHECK_QUIZ_v0.1_ANSWER_KEY_KO.md`: 객관식 해설과 주관식 검토 기준(퀴즈를 푼 뒤 확인)
 - `VERSIONING_AND_MIGRATION.md`: SemVer와 migration 정책
 - `VALIDATION_RULES.md`: hard/soft validator와 regression 규칙
 - `OPEN_QUESTIONS.md`: 구현 전에 결정할 충돌·미확정 사항
