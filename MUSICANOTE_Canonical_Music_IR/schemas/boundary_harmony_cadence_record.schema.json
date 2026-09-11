@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://musicanote.com/schemas/boundary_harmony_cadence_record.schema.json",
+  "title": "MUSICANOTE Boundary Harmony and Cadence Record",
+  "type": "object",
+  "required": ["analysisId", "boundaryIndex", "boundaryTime", "scope", "observed", "harmonyProgression", "keyHypotheses", "cadenceHypotheses", "selectedCadence", "status"],
+  "properties": {
+    "analysisId": {"type": "string", "minLength": 1},
+    "boundaryIndex": {"type": "integer", "minimum": 0},
+    "boundaryTime": {"type": "number"},
+    "scope": {
+      "type": "object",
+      "required": ["leftWindowQuarters", "rightWindowQuarters", "intervalSemantics"],
+      "properties": {
+        "leftWindowQuarters": {"type": "number", "exclusiveMinimum": 0},
+        "rightWindowQuarters": {"type": "number", "minimum": 0},
+        "intervalSemantics": {"const": "[start,end)"}
+      },
+      "additionalProperties": false
+    },
+    "observed": {"type": "object"},
+    "harmonyProgression": {
+      "type": "object",
+      "required": ["display", "beforeBoundary", "afterBoundary"],
+      "properties": {
+        "display": {"type": "string"},
+        "beforeBoundary": {"type": "array", "items": {"type": "string"}},
+        "afterBoundary": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "keyHypotheses": {"type": "array", "items": {"type": "object"}},
+    "selectedKey": {"type": ["object", "null"]},
+    "cadenceHypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "strength", "evidence", "against"],
+        "properties": {
+          "type": {"enum": ["PAC", "IAC", "HC", "DC", "plagal", "no_clear_cadence"]},
+          "strength": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence": {"type": "array", "items": {"type": "object"}},
+          "against": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "selectedCadence": {"type": ["object", "null"]},
+    "status": {"enum": ["provisional", "insufficient_evidence", "needs_review"]}
+  },
+  "additionalProperties": true
+}

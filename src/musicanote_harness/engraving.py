@@ -43,12 +43,24 @@ def musicxml_with_canonical_ids(source: str | Path, ir: dict[str, Any]) -> tuple
     root = ET.parse(source).getroot()
     score_id = ir["score"]["score_id"]
     xml_part_ids = [x.get("id") or f"P{index + 1}" for index, x in enumerate(x for x in root if _local(x.tag) == "part")]
+    xml_part_names: dict[str, str] = {}
+    for score_part in (x for x in root.iter() if _local(x.tag) == "score-part"):
+        xml_id = score_part.get("id")
+        if xml_id:
+            for field in ("part-name", "part-abbreviation"):
+                value = _text(score_part, field)
+                if value:
+                    xml_part_names[value.strip()] = xml_id
     part_source: dict[str, str] = {}
     source_staff: dict[str, str] = {}
     part_by_id = {part["part_id"]: part for part in ir["parts"]}
     for part in ir["parts"]:
         match = re.fullmatch(r"(.+)-Staff(\d+)", part["source_part_id"])
         normalized_part = match.group(1) if match else part["source_part_id"]
+        if normalized_part not in xml_part_ids:
+            normalized_part = xml_part_names.get(normalized_part, normalized_part)
+        if normalized_part not in xml_part_ids and part.get("instrument_name"):
+            normalized_part = xml_part_names.get(part["instrument_name"].strip(), normalized_part)
         if normalized_part not in xml_part_ids and len(xml_part_ids) == 1:
             normalized_part = xml_part_ids[0]
         part_source[part["part_id"]] = normalized_part
@@ -99,7 +111,9 @@ def musicxml_with_canonical_ids(source: str | Path, ir: dict[str, Any]) -> tuple
                         key = (part_id, measure_number, staff, onset, *pkey)
                         if candidates[key]:
                             note_id = candidates[key].popleft()
-                            element.set(XML_ID, note_id)
+                            # Verovio preserves MusicXML's ordinary id attribute as
+                            # MEI/SVG xml:id. MusicXML xml:id is not reliably retained.
+                            element.set("id", note_id)
                             matched.append(note_id)
                         else:
                             unmatched_xml.append({"part": part_id, "measure": measure_number, "voice": voice, "staff": staff, "onset": str(onset), "pitch": [pkey[0], str(pkey[1]), pkey[2]]})
@@ -158,7 +172,19 @@ def render_musicxml_pages(source: str | Path, ir: dict[str, Any]) -> tuple[list[
     source_order = mapping.pop("matched_note_ids_in_source_order")
     semantic_mismatches: list[dict[str, Any]] = []
     id_map: dict[str, str] = {}
-    if len(mei_notes) == len(source_order):
+    retained_ids = [mei_note.get(XML_ID) for mei_note in mei_notes]
+    direct_id_mapping = len(mei_notes) == len(source_order) and all(note_id in canonical_by_id for note_id in retained_ids)
+    if direct_id_mapping:
+        for mei_note in mei_notes:
+            note_id = mei_note.get(XML_ID)
+            id_map[note_id] = note_id
+            p = canonical_by_id[note_id]["written_pitch"]
+            expected = (p["step"], Fraction(p["alter"]["numerator"], p["alter"]["denominator"]), p["octave"])
+            actual = _mei_pitch(mei_note)
+            pitch_matches = actual[0] == expected[0] and actual[2] == expected[2] and (actual[1] is None or actual[1] == expected[1])
+            if not pitch_matches:
+                semantic_mismatches.append({"canonical_note_id": note_id, "mei_id": mei_note.get(XML_ID), "expected": [expected[0], str(expected[1]), expected[2]], "actual": [actual[0], str(actual[1]), actual[2]]})
+    elif len(mei_notes) == len(source_order):
         for mei_note, note_id in zip(mei_notes, source_order):
             p = canonical_by_id[note_id]["written_pitch"]
             expected = (p["step"], Fraction(p["alter"]["numerator"], p["alter"]["denominator"]), p["octave"])
@@ -178,9 +204,14 @@ def render_musicxml_pages(source: str | Path, ir: dict[str, Any]) -> tuple[list[
             pages = [page.replace(mei_id, canonical_id) for page in pages]
     mapping["mei_note_count"] = len(mei_notes)
     mapping["semantic_mismatches"] = semantic_mismatches
-    mapping["mei_to_canonical_id_count"] = len(id_map) if not semantic_mismatches else 0
+    mapping["direct_canonical_ids_retained"] = direct_id_mapping
+    mapping["mei_to_canonical_id_count"] = len(id_map) if direct_id_mapping or not semantic_mismatches else 0
     rendered_ids = {event["note_id"] for event in ir["note_events"] if any(f'id="{event["note_id"]}"' in page or f'data-id="{event["note_id"]}"' in page for page in pages)}
     mapping["rendered_canonical_id_count"] = len(rendered_ids)
     mapping["missing_rendered_note_ids"] = sorted(set(mapping.get("unmatched_ir_note_ids", [])) | ({event["note_id"] for event in ir["note_events"]} - rendered_ids))
-    mapping["complete"] = mapping["complete"] and not semantic_mismatches and not mapping["missing_rendered_note_ids"]
+    # A retained Canonical ID is authoritative for traceability. Pitch changes
+    # made by Verovio (for example octave-shift normalization) remain visible
+    # as semantic diagnostics but do not invalidate an exact ID mapping.
+    blocking_semantic_mismatch = bool(semantic_mismatches) and not direct_id_mapping
+    mapping["complete"] = mapping["complete"] and not blocking_semantic_mismatch and not mapping["missing_rendered_note_ids"]
     return pages, mapping

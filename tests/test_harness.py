@@ -8,6 +8,8 @@ from music21 import chord, key, meter, note, stream, tie
 from musicanote_harness.core import MusicHarness, arrangement_plan, write_package
 from musicanote_harness.formal_ir import FormalIRAdapter, deterministic_evidence
 from musicanote_harness.engraving import render_musicxml_pages
+from musicanote_harness.engraving import musicxml_with_canonical_ids
+from musicanote_harness.source_enrichment import enrich_from_mapped_musicxml
 
 
 class HarnessTest(unittest.TestCase):
@@ -104,6 +106,8 @@ class HarnessTest(unittest.TestCase):
 
             legacy = MusicHarness().parse(source)["score"]
             formal = FormalIRAdapter().convert(legacy, source)
+            mapped_xml, source_mapping = musicxml_with_canonical_ids(source, formal)
+            enrichment = enrich_from_mapped_musicxml(formal, mapped_xml)
             self.assertEqual(formal["schema_name"], "musicanote-canonical-music-ir")
             self.assertEqual(formal["schema_version"], "0.1.0")
             self.assertEqual(len(formal["note_events"]), 2)
@@ -112,6 +116,10 @@ class HarnessTest(unittest.TestCase):
             self.assertEqual(len(formal["attack_events"]), 1)
             self.assertEqual(formal["note_events"][0]["written_pitch"]["spelling"], "F#4")
             self.assertEqual(formal["tie_chains"][0]["total_duration"], {"numerator": 5, "denominator": 1})
+            self.assertTrue(source_mapping["complete"])
+            self.assertEqual(enrichment["note_locator_count"], 2)
+            self.assertTrue(all(ref["source_xpath"] for ref in formal["source_references"] if ref["source_ref_id"] in {n["source_ref_id"] for n in formal["note_events"]}))
+            self.assertEqual(formal["measures"][0]["time_signature"], {"beats": 4, "beat_type": 4})
             slices = deterministic_evidence(formal)
             self.assertTrue(slices)
             self.assertEqual(slices[0]["pitch_classes"], [6])

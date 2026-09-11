@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://musicanote.com/schemas/phrase_review_record.schema.json",
+  "title": "MUSICANOTE Phrase Boundary Review Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaName", "schemaVersion", "reviewId", "createdAt", "workId", "streamId", "analyzerVersion", "target", "candidate", "human", "trainingEligible"],
+  "properties": {
+    "schemaName": { "const": "musicanote-phrase-boundary-review" },
+    "schemaVersion": { "const": "0.1.0" },
+    "reviewId": { "type": "string", "minLength": 1 },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "workId": { "type": "string", "minLength": 1 },
+    "sourceId": { "type": ["string", "null"] },
+    "streamId": { "type": "string", "minLength": 1 },
+    "analyzerVersion": { "type": "string", "minLength": 1 },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["boundaryIndex", "noteId", "onset", "measure", "measureOrdinal", "beat"],
+      "properties": {
+        "boundaryIndex": { "type": "integer", "minimum": 1 },
+        "noteId": { "type": ["string", "null"] },
+        "onset": { "type": ["number", "null"] },
+        "measure": { "type": ["string", "number", "null"] },
+        "measureOrdinal": { "type": ["integer", "null"], "minimum": 1 },
+        "beat": { "type": ["number", "null"] }
+      }
+    },
+    "candidate": { "type": ["object", "null"] },
+    "analysisContext": {
+      "type": ["object", "null"],
+      "description": "Versioned analysis hypotheses shown when the review was made; context only, never human ground truth."
+    },
+    "human": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "comment"],
+      "properties": {
+        "status": { "enum": ["accepted", "rejected", "ambiguous"] },
+        "comment": { "type": ["string", "null"] }
+      }
+    },
+    "trainingEligible": { "const": false }
+  }
+}

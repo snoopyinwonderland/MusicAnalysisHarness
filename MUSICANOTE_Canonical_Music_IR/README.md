@@ -30,6 +30,9 @@ Layer D  External Analysis / Annotation Interface
 - `ID_AND_TIME_COORDINATE_SPEC.md`: 안정 ID, rational time, span 규칙
 - `ANALYSIS_INTERFACE_SPEC.md`: 분석·evidence 연결 계약
 - `ANNOTATION_EXTENSION_SPEC.md`: 사람 검수와 교정 데이터
+- `PHRASE_BOUNDARY_EVIDENCE_SPEC.md`: 프레이즈 분할 이전의 결정론적 증거 계약
+- `PHRASE_REVIEW_VIEWER_CONTRACT_v0.1.md`: MusicSearch 공유 악보 레이어와 검수 저장 계약
+- `BOUNDARY_HARMONY_CADENCE_SPEC_v0.1.md`: 프레이즈 경계 주변의 제한적 화성 진행·Cadence 가설 계약
 - `VERSIONING_AND_MIGRATION.md`: SemVer와 migration 정책
 - `VALIDATION_RULES.md`: hard/soft validator와 regression 규칙
 - `OPEN_QUESTIONS.md`: 구현 전에 결정할 충돌·미확정 사항
@@ -39,4 +42,3 @@ Layer D  External Analysis / Annotation Interface
 ## 현재 구현과의 관계
 
 `src/musicanote_harness/canonical.py`는 v0.2 prototype이다. 이 문서의 v0.1.0은 첫 정식 계약 버전이며 숫자가 더 작아도 prototype의 downgrade를 뜻하지 않는다. 구현이 규격을 충족하면 별도 migration과 함께 정식 schema version으로 전환한다.
-

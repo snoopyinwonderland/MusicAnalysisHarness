@@ -8,7 +8,9 @@ from .batch import validate_corpus
 from .corpus import inventory, write_inventory
 from .core import MusicHarness, write_package
 from .formal_ir import FormalIRAdapter, deterministic_evidence, legacy_analysis_records
-from .engraving import render_musicxml_pages
+from .engraving import musicxml_with_canonical_ids, render_musicxml_pages
+from .source_enrichment import enrich_from_mapped_musicxml
+from .formal_regression import validate_formal_corpus
 from .review import write_review_html
 
 
@@ -34,6 +36,10 @@ def main() -> None:
     review.add_argument("source", type=Path)
     review.add_argument("--output", "-o", type=Path, default=Path("output/review"))
     review.add_argument("--measures", type=int, default=8)
+    formal_corpus = sub.add_parser("validate-formal-corpus", help="Validate formal IR, source enrichment, and engraving ID mapping across non-melody MusicXML files")
+    formal_corpus.add_argument("source", type=Path)
+    formal_corpus.add_argument("--output", "-o", type=Path, default=Path("output/formal_regression"))
+    formal_corpus.add_argument("--limit", type=int, default=10)
     args = parser.parse_args()
     if args.command == "validate-corpus":
         result = validate_corpus(args.inventory, args.output, args.limit, args.timeout)
@@ -43,6 +49,10 @@ def main() -> None:
         write_inventory(result, args.output)
         print(json.dumps(result["summary"], ensure_ascii=False, indent=2))
         print(f"Inventory written to {args.output.resolve()}")
+    elif args.command == "validate-formal-corpus":
+        result = validate_formal_corpus(args.source, args.output, args.limit)
+        print(json.dumps(result["summary"], ensure_ascii=False, indent=2))
+        print(f"Formal regression written to {args.output.resolve()}")
     elif args.command == "parse":
         result = MusicHarness().parse(args.source)
         args.output.mkdir(parents=True, exist_ok=True)
@@ -53,11 +63,15 @@ def main() -> None:
         harness = MusicHarness()
         parsed = harness.parse(args.source)
         formal = FormalIRAdapter().convert(parsed["score"], args.source)
+        mapped_xml, source_mapping = musicxml_with_canonical_ids(args.source, formal)
+        enrichment_report = enrich_from_mapped_musicxml(formal, mapped_xml)
         evidence = deterministic_evidence(formal)
         analyzed = harness.analyze(args.source)
         analysis_records = legacy_analysis_records(formal, analyzed["analysis"])
         args.output.mkdir(parents=True, exist_ok=True)
         (args.output / "canonical_music_ir_v0.1.json").write_text(json.dumps(formal, ensure_ascii=False, indent=2), encoding="utf-8")
+        mapping_summary = {key: value for key, value in source_mapping.items() if key != "matched_note_ids_in_source_order"}
+        (args.output / "source_enrichment_report.json").write_text(json.dumps({"mapping": mapping_summary, "enrichment": enrichment_report}, ensure_ascii=False, indent=2), encoding="utf-8")
         (args.output / "deterministic_evidence.json").write_text(json.dumps(evidence, ensure_ascii=False, indent=2), encoding="utf-8")
         (args.output / "legacy_analysis_hypotheses.json").write_text(json.dumps(analyzed["analysis"], ensure_ascii=False, indent=2), encoding="utf-8")
         (args.output / "analysis_records_v0.1.json").write_text(json.dumps(analysis_records, ensure_ascii=False, indent=2), encoding="utf-8")
