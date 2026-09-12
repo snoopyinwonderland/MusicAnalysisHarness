@@ -40,7 +40,13 @@ Human labels for Motif identity, Motif membership, Phrase span, and Phrase bound
 
 ## Current prototype contract
 
-`local-boundary-evidence-v1.4` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
+`local-boundary-evidence-v1.5` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
+
+A recurrence whose attack distance is no more than twice its Motif length MAY be proposed as a local Motif-repetition group. Its internal start can be demoted to subphrase level while preserving the raw boundary evidence. Distant recurrence MUST NOT trigger automatic Phrase merging.
+
+The shared score viewer MUST distinguish Phrase and Motif visually. Phrase spans use a thick solid upper lane; Motif candidates use a thin bracket-shaped dashed lower lane. Phrase and Motif display counters are independent and each begins at 1. The prototype orders Motif display numbers by score position; these display numbers are not stable analysis IDs. A master control is named `Structure Analysis`/`구조 분석`, while the underlying records and semantics remain separate.
+
+The matched bounded signature proves a local relation but may cover only the shared opening of a longer cell. For display, the prototype uses the recurrence cycle: the first occurrence spans from its start to the next related start using `[start,end)`, and the second uses the same global-quarter duration; each endpoint snaps to the final attack before the exclusive end. It does not infer Motif closure from a cadence or reuse a Phrase endpoint. A short provisional Phrase boundary at a close recurrence start is demoted to an internal Motif/subphrase boundary only when Phrase-level closure evidence is absent.
 
 ## Deferred
 
@@ -48,4 +54,4 @@ Human labels for Motif identity, Motif membership, Phrase span, and Phrase bound
 - explicit transformation vocabulary;
 - governing-harmony/Cadence integration;
 - learned Phrase aggregation after sufficient reviewed annotations;
-- independent Motif and Phrase overlays in the shared score viewer.
+- stable cross-session mapping between review display numbers and versioned Motif occurrence IDs.
