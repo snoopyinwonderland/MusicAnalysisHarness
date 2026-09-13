@@ -40,7 +40,7 @@ Human labels for Motif identity, Motif membership, Phrase span, and Phrase bound
 
 ## Current prototype contract
 
-`local-boundary-evidence-v1.6` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
+`local-boundary-evidence-v1.7` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
 
 A recurrence whose attack distance is no more than twice its Motif length MAY be proposed as a local Motif-repetition group. Its internal start can be demoted to subphrase level while preserving the raw boundary evidence. Distant recurrence MUST NOT trigger automatic Phrase merging.
 
@@ -57,6 +57,14 @@ The shared score viewer MUST distinguish Phrase and Motif visually. Phrase spans
 Selecting either a Phrase or a Motif SHOULD open details for that same structural object. Roman-numeral harmony values MAY use a music-analysis font; pitch names, `unknown`, prose, controls, and other ordinary text MUST remain in the normal UI font.
 
 The matched bounded signature proves a local relation but may cover only the shared opening of a longer cell. For display, the prototype uses the recurrence cycle: the first occurrence spans from its start to the next related start using `[start,end)`, and the second uses the same global-quarter duration; each endpoint snaps to the final attack before the exclusive end. It does not infer Motif closure from a cadence or reuse a Phrase endpoint. A short provisional Phrase boundary at a close recurrence start is demoted to an internal Motif/subphrase boundary only when Phrase-level closure evidence is absent.
+
+Motif occurrence extent MUST NOT be inherited from a Phrase span. A bounded matching signature is relation evidence, not necessarily the complete Motif extent. Once a prototype occurrence is established from a local recurrence cycle or parallel-cell structure, its attack count SHOULD be projected to a distant recurrence. A duration-only difference at the final event MAY retain the same Motif variant identity when interval sequence, contour, and event coverage remain equivalent.
+
+When two long passages of at least twelve aligned attacks show high transposition-normalized pitch agreement and rhythmic agreement, Phrase segmentation SHOULD be compared across the full source/recurrence pair. An internal boundary that appears only as local noise MAY be demoted to `internal-repeated-passage`; its original strength and evidence MUST be preserved. A separately validated Cadence, clear observed rest, or human correction MAY override this continuity hypothesis.
+
+An `observed-gap` derived from notated attack durations MUST NOT be treated as a clear rest when the preceding tie chain carries its sounding event into the boundary measure. A strong observed gap not covered by a tie MAY override repeated-passage continuity. When a local recurrence cycle has already established a Motif prototype extent, a broader later partial match MUST NOT lengthen that prototype.
+
+A Motif span ending on the attack of a tied sounding event retains its canonical `[start,end)` occurrence semantics. The viewer SHOULD additionally render the endpoint through all notated tie-continuation glyphs so a reviewer can see the complete held sound. This display extension MUST NOT create an extra attack or silently change the Analysis Record endpoint.
 
 ## Deferred
 
