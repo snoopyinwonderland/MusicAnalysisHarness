@@ -40,7 +40,7 @@ Human labels for Motif identity, Motif membership, Phrase span, and Phrase bound
 
 ## Current prototype contract
 
-`local-boundary-evidence-v1.8` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
+`local-boundary-evidence-v1.9` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
 
 A recurrence whose attack distance is no more than twice its Motif length MAY be proposed as a local Motif-repetition group. Its internal start can be demoted to subphrase level while preserving the raw boundary evidence. Distant recurrence MUST NOT trigger automatic Phrase merging.
 
@@ -71,6 +71,14 @@ A pervasive rhythmic Motif MAY be represented by a work-local rhythm-family hypo
 A two-to-three-cell Phrase prior MAY be applied only when at least eight occurrences of the rhythm family cover at least 55 percent of melody attacks and at least two rhythmic variants occur. It MAY merge adjacent one-cell Phrase hypotheses, rebalance a one-plus-four-cell split, or propose a restart after a complete two-to-three-cell group. It MUST preserve displaced boundary strength and cues, mark new boundaries as hypotheses requiring Cadence review, and allow validated Cadence or human correction to override the prior.
 
 Review UI MAY display a note reference as `pitch(notated value)`, for example `F#4(8th note)`. A tied or accumulated duration that does not map to one ordinary note value SHOULD be shown as an exact beat duration with a tie indication rather than mislabeled as a simple note value. This is a presentation field derived from Core duration and tie evidence; it is not part of Motif or Phrase semantics.
+
+A Motif hypothesis SHOULD contain at least four Attack Events in the v0.1 review profile. Fewer attacks MAY remain as an unclassified fragment or interval evidence, but MUST NOT be promoted to a displayed Motif without a versioned extension or human annotation.
+
+A work-level Phrase repair MAY demote a boundary that closes fewer than four attacks, provided the original strength and cues remain available as raw evidence. This repair MUST NOT run on short retrieval excerpts where the complete structural context is unavailable.
+
+A recurring Motif core MAY support an enclosing preparation-core-answer Phrase frame only after at least three occurrences and bounded subunit evidence. This remains an Analysis Layer hypothesis and MUST be overridable by validated Cadence or human annotation.
+
+MusicXML beam membership is observable notation and belongs in Canonical Core or a deterministic notation-evidence extension. A future representation SHOULD preserve beam group ID, beam level, begin/continue/end state, source references, and tie-aware Attack Event membership. Until these fields exist, an analyzer MUST NOT describe duration-inferred grouping as observed beaming.
 
 ## Deferred
 
