@@ -40,7 +40,7 @@ Human labels for Motif identity, Motif membership, Phrase span, and Phrase bound
 
 ## Current prototype contract
 
-`local-boundary-evidence-v1.7` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
+`local-boundary-evidence-v1.8` records `repeated-motif-start` and `repeated-figure-run-start` as non-voting Motif-layer cues. They carry `contributesToPhraseStrength=false`. A coincident Phrase boundary requires an independent Phrase evidence score that already meets the Phrase threshold.
 
 A recurrence whose attack distance is no more than twice its Motif length MAY be proposed as a local Motif-repetition group. Its internal start can be demoted to subphrase level while preserving the raw boundary evidence. Distant recurrence MUST NOT trigger automatic Phrase merging.
 
@@ -65,6 +65,12 @@ When two long passages of at least twelve aligned attacks show high transpositio
 An `observed-gap` derived from notated attack durations MUST NOT be treated as a clear rest when the preceding tie chain carries its sounding event into the boundary measure. A strong observed gap not covered by a tie MAY override repeated-passage continuity. When a local recurrence cycle has already established a Motif prototype extent, a broader later partial match MUST NOT lengthen that prototype.
 
 A Motif span ending on the attack of a tied sounding event retains its canonical `[start,end)` occurrence semantics. The viewer SHOULD additionally render the endpoint through all notated tie-continuation glyphs so a reviewer can see the complete held sound. This display extension MUST NOT create an extra attack or silently change the Analysis Record endpoint.
+
+A pervasive rhythmic Motif MAY be represented by a work-local rhythm-family hypothesis. The v1.8 prototype detects a `four-short-plus-long-arrival` family from tempo-relative durations: four short attacks spanning approximately four local short units, followed by an arrival at least 3.5 units long. Straight and total-span-preserving syncopated duration distributions are separate variants of that family. This classification belongs to Analysis/Evidence, not Canonical Core.
+
+A two-to-three-cell Phrase prior MAY be applied only when at least eight occurrences of the rhythm family cover at least 55 percent of melody attacks and at least two rhythmic variants occur. It MAY merge adjacent one-cell Phrase hypotheses, rebalance a one-plus-four-cell split, or propose a restart after a complete two-to-three-cell group. It MUST preserve displaced boundary strength and cues, mark new boundaries as hypotheses requiring Cadence review, and allow validated Cadence or human correction to override the prior.
+
+Review UI MAY display a note reference as `pitch(notated value)`, for example `F#4(8th note)`. A tied or accumulated duration that does not map to one ordinary note value SHOULD be shown as an exact beat duration with a tie indication rather than mislabeled as a simple note value. This is a presentation field derived from Core duration and tie evidence; it is not part of Motif or Phrase semantics.
 
 ## Deferred
 
