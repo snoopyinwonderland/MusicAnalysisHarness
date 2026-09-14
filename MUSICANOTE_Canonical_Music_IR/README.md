@@ -25,6 +25,7 @@ Layer D  External Analysis / Annotation Interface
 
 ## 파일
 
+- `DOCUMENT_MAP.md`: 처음 읽을 문서, 주제별 정본, 구현 기록의 위치를 구분한 문서 지도
 - `DESIGN_PRINCIPLES.md`: 변경되지 않아야 할 설계 철학
 - `ENTITY_REFERENCE.md`: Core entity와 필드 계약
 - `ID_AND_TIME_COORDINATE_SPEC.md`: 안정 ID, rational time, span 규칙
@@ -46,3 +47,5 @@ Layer D  External Analysis / Annotation Interface
 ## 현재 구현과의 관계
 
 `src/musicanote_harness/canonical.py`는 v0.2 prototype이다. 이 문서의 v0.1.0은 첫 정식 계약 버전이며 숫자가 더 작아도 prototype의 downgrade를 뜻하지 않는다. 구현이 규격을 충족하면 별도 migration과 함께 정식 schema version으로 전환한다.
+
+날짜별 구현 변경과 UI·평가 기록은 MusicStructureAnalyzer 저장소의 `docs/README.md`를 진입점으로 사용한다. 이 폴더에는 장기 계약만 유지하고 일일 개발 로그를 복제하지 않는다.
