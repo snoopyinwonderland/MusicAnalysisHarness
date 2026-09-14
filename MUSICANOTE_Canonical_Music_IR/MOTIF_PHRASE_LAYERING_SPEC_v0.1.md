@@ -78,6 +78,10 @@ A work-level Phrase repair MAY demote a boundary that closes fewer than four att
 
 A recurring Motif core MAY support an enclosing preparation-core-answer Phrase frame only after at least three occurrences and bounded subunit evidence. This remains an Analysis Layer hypothesis and MUST be overridable by validated Cadence or human annotation.
 
+Exact note/rhythm recurrence MUST be treated as anchor evidence, not as the semantic extent of a Motif. A displayed Motif span MAY extend beyond the exact core to a Phrase-layer internal boundary when metric, duration, tie, contour, arrival, or harmonic evidence supports a complete gesture. Differences in individual pitch, rhythm, or terminal duration MUST remain representable as Motif variation rather than forcing premature truncation.
+
+Work-internal Motif role and cross-work retrieval distinctiveness MUST be scored separately. Repeated-note rhythm cells and short scalar cells MAY have low retrieval distinctiveness while retaining structural Motif function inside one work.
+
 MusicXML beam membership is observable notation and belongs in Canonical Core or a deterministic notation-evidence extension. A future representation SHOULD preserve beam group ID, beam level, begin/continue/end state, source references, and tie-aware Attack Event membership. Until these fields exist, an analyzer MUST NOT describe duration-inferred grouping as observed beaming.
 
 ## Deferred
