@@ -4,6 +4,16 @@
 
 Canonical Music IR은 MusicXML을 단순히 JSON으로 옮긴 결과가 아니다. 서로 다른 작성 프로그램과 XML 구조를 정규화하면서도 원본으로 역추적할 수 있고, 관찰 가능한 사실과 해석적 분석을 분리하며, 모든 분석기가 동일한 ID와 시간축을 사용하게 하는 장기 안정 표현이다.
 
+## 화성·구조 분석과 작곡·편곡의 다음 개발
+
+화면으로 확인: [화성 실험 5사례 악보 비교](../output/harmony-visual-review-2026-09-27-r7/index.html). 원자료·기존 계산·실험 계산을 악보 위 구간과 로마자로 비교한다. 로컬 서버 실행 중에는 [사례 목록](http://127.0.0.1:8767/)으로 열 수 있다.
+
+**화성 개발을 이어받을 때는 [화성 개발 인수인계](HARMONY_DEVELOPER_HANDOFF.md)부터 읽는다.** 현재 적용 상태, 코드·사례 위치, 재현 명령, 기록 양식과 데이터 전달 주의사항을 한곳에 정리했다. 날짜별 상세 변경은 화성 개발 기록 (상세 기록은 공개 브랜치에서 제외)에 이어 쓴다.
+
+개발자에게 전달할 실행 계획은 [화성·구조 분석 및 작곡·편곡 Harness 실행 계획](HARMONY_COMPOSITION_HARNESS_IMPLEMENTATION_PLAN.md) 한 문서에서 시작한다. 현재 코드의 제한, 코퍼스와 IR·주석의 연결, 알고리즘, 스타일 데이터, P0–P13 작업 카드와 검증 기준을 담고 있다. 구현과 검증은 [전체 코퍼스 등록·정렬 확대](ALL_CORPORA_REGISTRY_AND_ALIGNMENT_2026-09-24.md), [654쌍 주석 전수 검사](DCML_FAST_ANNOTATION_AUDIT_2026-09-24.md), [392쌍 정밀 정렬](DCML_FULL_ANNOTATION_ALIGNMENT_2026-09-24.md), [RomanText·ChoCo 출처 검사](ROMANTEXT_CHOCO_ANNOTATION_SOURCE_AUDIT_2026-09-24.md), [RomanText 2,029쌍 좌표 정렬](ROMANTEXT_SCORE_ALIGNMENT_PILOT_2026-09-24.md), [RomanText 수입·악보 검토](ROMANTEXT_IMPORT_AND_REVIEW_2026-09-25.md), [RomanText 악보 호환 증거](ROMANTEXT_SOURCE_EVIDENCE_2026-09-25.md), [반복 엔딩 정렬](DCML_REPEAT_TIMELINE_ALIGNMENT_2026-09-24.md), [DCML 수입](DCML_HARMONY_IMPORT_PILOT_2026-09-24.md), [독립 한 박 표면 화음](BLIND_SURFACE_HARMONY_PILOT_2026-09-24.md), [펼친 구간 화성](UNFOLDED_HARMONY_PILOT_2026-09-24.md) 개발 기록을 확인한다. 코퍼스 전체 파일을 등록했지만 모든 형식의 주석 수입이나 학습은 아직 완료되지 않았다. 후자의 두 분석기는 기능화성·NCT·종지·조성 판정이나 작곡 엔진이 아니며, 구조 분석에 아직 공급하지 않는다.
+
+근거 자료는 [코퍼스 조사](CLASSICAL_HARMONY_CORPORA_AUDIT_2026-09-24.md)와 [증6화음·작곡·편곡 데이터 조사](COMPOSITION_ARRANGEMENT_HARMONY_DATA_PLAN_2026-09-24.md)다. 실행 계획은 아래 Core 계약을 대체하지 않는다.
+
 ## 문서 우선순위
 
 1. `CANONICAL_MUSIC_IR_SPEC_v0.1.md`
@@ -48,4 +58,4 @@ Layer D  External Analysis / Annotation Interface
 
 `src/musicanote_harness/canonical.py`는 v0.2 prototype이다. 이 문서의 v0.1.0은 첫 정식 계약 버전이며 숫자가 더 작아도 prototype의 downgrade를 뜻하지 않는다. 구현이 규격을 충족하면 별도 migration과 함께 정식 schema version으로 전환한다.
 
-날짜별 구현 변경과 UI·평가 기록은 MusicStructureAnalyzer 저장소의 `docs/README.md`를 진입점으로 사용한다. 이 폴더에는 장기 계약만 유지하고 일일 개발 로그를 복제하지 않는다.
+구조 분석 UI의 날짜별 구현 변경과 평가는 MusicStructureAnalyzer 저장소의 `docs/README.md`에서 찾는다. 이 폴더에는 Canonical IR과 화성 Harness의 장기 계약 및 관련 코퍼스 수입·평가 파일럿 기록을 유지한다.

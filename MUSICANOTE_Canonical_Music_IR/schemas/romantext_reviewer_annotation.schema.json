@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://musicanote.local/schemas/romantext_reviewer_annotation.schema.json",
+  "title": "MUSICANOTE RomanText Reviewer Annotation",
+  "type": "object",
+  "required": [
+    "schema_name", "schema_version", "review_id", "score_review_id",
+    "annotation_id", "reviewer_id", "status", "reason", "created_at",
+    "training_eligible"
+  ],
+  "properties": {
+    "schema_name": {"const": "musicanote-romantext-reviewer-annotation"},
+    "schema_version": {"const": "0.1.0"},
+    "review_id": {"type": "string", "pattern": "^rev_[0-9a-f]{16}$"},
+    "score_review_id": {"type": "string", "minLength": 1},
+    "annotation_id": {"type": "string", "minLength": 1},
+    "reviewer_id": {"type": "string", "minLength": 1},
+    "status": {"const": "reviewed"},
+    "reason": {
+      "enum": [
+        "surface_compatible", "non_chord_tone", "inversion_or_bass",
+        "local_key_or_tonicization", "alignment_or_timeline",
+        "source_label_suspect", "cannot_judge"
+      ]
+    },
+    "note": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "supersedes_review_id": {"type": ["string", "null"]},
+    "training_eligible": {"const": false},
+    "interpretation": {"type": "string"}
+  },
+  "additionalProperties": false
+}

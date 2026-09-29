@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MUSICANOTE Harmony Overlay Artifact 0.1.0",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "artifact_version", "score_id", "ir_document_id", "layer", "render_contract", "items", "interpretation"],
+  "properties": {
+    "schema_name": {"const": "musicanote-harmony-overlay-artifact"},
+    "schema_version": {"const": "0.1.0"},
+    "artifact_version": {"type": "string"},
+    "score_id": {"type": "string"},
+    "ir_document_id": {"type": "string"},
+    "source_identity": {
+      "type": "object",
+      "required": ["score_sha256", "analysis_sha256"],
+      "properties": {
+        "score_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "analysis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "layer": {
+      "type": "object",
+      "required": ["layer_id", "display_name", "default_enabled", "interaction_mode", "structure_influence", "source_visibility"],
+      "properties": {
+        "layer_id": {"const": "source_harmony_review"},
+        "display_name": {"const": "화성 분석 · 모호 구간"},
+        "default_enabled": {"const": true},
+        "interaction_mode": {"const": "ambiguity_review"},
+        "structure_influence": {"const": "none"},
+        "source_visibility": {"const": "source_annotation_conditioned"}
+      },
+      "additionalProperties": false
+    },
+    "render_contract": {"type": "object"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["overlay_item_id", "annotation_id", "target", "display_location", "label", "range_event_refs", "attack_event_refs", "surface_evidence", "context_evidence", "review_candidate", "review_priority", "review_reasons", "provenance"],
+        "properties": {
+          "overlay_item_id": {"type": "string"},
+          "annotation_id": {"type": "string"},
+          "target": {"type": "object"},
+          "display_location": {"type": "object"},
+          "label": {"type": "object"},
+          "range_event_refs": {"type": "array", "items": {"type": "string"}},
+          "attack_event_refs": {"type": "array", "items": {"type": "string"}},
+          "surface_evidence": {"type": "object"},
+          "context_evidence": {"type": "object"},
+          "review_candidate": {"type": "boolean"},
+          "review_priority": {"enum": ["high", "medium", "none"]},
+          "review_reasons": {"type": "array", "items": {"type": "string"}},
+          "provenance": {"type": "object"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "interpretation": {"type": "string"}
+  },
+  "additionalProperties": false
+}

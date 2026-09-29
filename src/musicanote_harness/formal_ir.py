@@ -48,6 +48,7 @@ class FormalIRAdapter:
 
         part_rows = legacy.get("parts", [])
         part_map = {row["part_id"]: f"part_{stable_id(score_id, row['part_id'])}" for row in part_rows}
+        source_part_map = {row["part_id"]: row.get("source_part_id", row["part_id"]) for row in part_rows}
         segment_rows = legacy.get("notated_note_segments", [])
         rest_rows = legacy.get("rest_events", [])
 
@@ -125,6 +126,8 @@ class FormalIRAdapter:
         chord_by_note = {note_id: group["chord_onset_group_id"] for group in chord_groups for note_id in group["note_ids"]}
         for event in note_events:
             event["chord_onset_group_id"] = chord_by_note.get(event["note_id"])
+        for ref in source_refs:
+            ref["source_part_id"] = source_part_map.get(ref["source_part_id"], ref["source_part_id"])
 
         measures = []
         for index, grid in enumerate(representative):
@@ -147,7 +150,12 @@ class FormalIRAdapter:
             "source_files": [{"source_file_id": source_file_id, "sha256": raw_hash, "musicxml_version": None, "original_name": source.name}],
             "source_references": source_refs,
             "score": {"score_id": score_id, "source_file_id": source_file_id, "title": source.stem, "composer": None, "movement": None, "part_ids": list(part_map.values()), "measure_count": len(measures), "duration_quarters": q(duration), "pickup_measure": next((m["measure_id"] for m in measures if m["pickup"]), None), "metadata": {}},
-            "parts": [{"part_id": part_map[p["part_id"]], "score_id": score_id, "source_part_id": p["part_id"], "instrument_name": p.get("name"), "instrument_family": None, "transposition_semitones": q(0), "staff_ids": [staff_map[k] for k in staff_keys if k[0] == p["part_id"]], "midi_program": None} for p in part_rows],
+            "parts": [{"part_id": part_map[p["part_id"]], "score_id": score_id,
+                       "source_part_id": p.get("source_part_id", p["part_id"]),
+                       "instrument_name": p.get("name"), "instrument_family": None,
+                       "transposition_semitones": q(0),
+                       "staff_ids": [staff_map[k] for k in staff_keys if k[0] == p["part_id"]],
+                       "midi_program": None} for p in part_rows],
             "staves": [{"staff_id": staff_map[k], "part_id": part_map[k[0]], "staff_number": int(k[1]) if str(k[1]).isdigit() else 1, "voice_ids": [voice_map[v] for v in voice_keys if v[:2] == k], "clef_timeline": []} for k in staff_keys],
             "voices": [{"voice_id": voice_map[k], "part_id": part_map[k[0]], "default_staff_id": staff_map[k[:2]], "source_voice_number": k[2], "event_ids": event_ids_by_voice[voice_map[k]], "inference": None} for k in voice_keys],
             "measures": measures, "note_events": note_events, "rest_events": rest_events,

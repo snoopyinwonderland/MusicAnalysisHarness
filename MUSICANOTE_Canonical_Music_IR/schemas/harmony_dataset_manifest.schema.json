@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MUSICANOTE Harmony Dataset Manifest 0.1.0",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "builder_version", "dataset_release_id", "source_root", "split_policy", "entries", "errors", "summary"],
+  "properties": {
+    "schema_name": {"const": "musicanote-harmony-dataset-manifest"},
+    "schema_version": {"const": "0.1.0"},
+    "builder_version": {"type": "string"},
+    "dataset_release_id": {"type": "string", "pattern": "^hdsrel_"},
+    "source_root": {"type": "string"},
+    "split_policy": {
+      "type": "object",
+      "required": ["group_unit", "assignment", "train_percent", "dev_percent", "holdout_percent", "same_work_must_not_cross_splits", "unresolved_family_uses_score_stem_fallback", "release_is_immutable_input_to_evaluation", "minimum_dev_holdout_work_families"],
+      "properties": {
+        "group_unit": {"const": "work_family_id"},
+        "assignment": {"const": "deterministic_whole_family_greedy_balance_by_exact_alignment_count"},
+        "train_percent": {"type": "integer", "minimum": 1, "maximum": 98},
+        "dev_percent": {"type": "integer", "minimum": 1, "maximum": 98},
+        "holdout_percent": {"type": "integer", "minimum": 1, "maximum": 98},
+        "same_work_must_not_cross_splits": {"const": true},
+        "unresolved_family_uses_score_stem_fallback": {"const": true},
+        "release_is_immutable_input_to_evaluation": {"const": true},
+        "minimum_dev_holdout_work_families": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["manifest_entry_id", "package_path", "score_source_path", "score_id", "ir_document_id", "corpus_id", "collection_id", "work_family_id", "work_family_source_key", "work_family_method", "work_family_confidence", "movement_id", "edition_id", "annotation_lineage_id", "score_sha256", "annotation_sha256", "split_group_id", "split", "quality", "eligibility", "rights"],
+        "properties": {
+          "manifest_entry_id": {"type": "string", "pattern": "^hds_"},
+          "package_path": {"type": "string"},
+          "score_source_path": {"type": "string"},
+          "score_id": {"type": "string"},
+          "ir_document_id": {"type": "string"},
+          "corpus_id": {"type": "string"},
+          "collection_id": {"type": "string"},
+          "work_family_id": {"type": "string", "pattern": "^workfam_"},
+          "work_family_source_key": {"type": "string"},
+          "work_family_method": {"type": "string"},
+          "work_family_confidence": {"enum": ["derived_conservative", "unresolved_work_family"]},
+          "movement_id": {"type": ["string", "null"]},
+          "edition_id": {"type": ["string", "null"]},
+          "annotation_lineage_id": {"type": "string", "pattern": "^annlin_"},
+          "score_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "annotation_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "split_group_id": {"type": "string"},
+          "split": {"enum": ["train", "dev", "holdout"]},
+          "quality": {"type": "object"},
+          "eligibility": {"type": "object"},
+          "rights": {
+            "type": "object",
+            "required": ["licence_status", "internal_research_use", "model_training_approved", "external_api_transmission_approved", "redistribution_approved"],
+            "properties": {
+              "licence_status": {"type": "string"},
+              "internal_research_use": {"type": "boolean"},
+              "model_training_approved": {"const": false},
+              "external_api_transmission_approved": {"const": false},
+              "redistribution_approved": {"const": false}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "errors": {"type": "array", "items": {"type": "object"}},
+    "summary": {"type": "object"}
+  },
+  "additionalProperties": false
+}

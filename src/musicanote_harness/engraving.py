@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import copy
 import re
-from collections import defaultdict, deque
+from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 from typing import Any
@@ -10,6 +10,7 @@ from xml.etree import ElementTree as ET
 
 
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
+SOURCE_MAPPING_VERSION = "source-note-mapping-0.2.0"
 ET.register_namespace("", "http://www.w3.org/2000/svg")
 
 
@@ -37,6 +38,44 @@ def _pitch_key(note: ET.Element) -> tuple[str, Fraction, int] | None:
     return step, Fraction(_text(pitch, "alter", "0")), int(octave)
 
 
+def _source_voice(value: Any) -> str | None:
+    # music21's synthetic voice_0 means unknown, NOT MusicXML voice 1.
+    return None if value is None or str(value) in ("", "voice_0") else str(value)
+
+
+def _tie_role(element: ET.Element) -> str:
+    kinds = {x.get("type") for x in element if _local(x.tag) == "tie"}
+    return "continue" if {"start", "stop"} <= kinds else "start" if "start" in kinds else "stop" if "stop" in kinds else "none"
+
+
+def _unique_voice_pairs(ir_rows, xml_rows):
+    """Unique exact geometry first; explicit voices disambiguate collisions.
+
+    Never resolve indistinguishable unisons by hash, list order, or stale XPath.
+    Inputs have already matched exact pitch/onset/duration/grace/tie/staff.
+    """
+    left = dict(ir_rows)
+    right = dict(xml_rows)
+    if len(left) == len(right) == 1:
+        # Legacy music21 context voices can leak from an earlier measure. A
+        # one-to-one full-geometry match is stronger than that voice hint.
+        return [(next(iter(left)), next(iter(right)))]
+    pairs = []
+    for exact in (True, False):
+        edges = {x: [i for i, v in left.items()
+                     if v is not None and w is not None and v == w]
+                 for x, w in right.items()} if exact else {
+            x: [i for i, v in left.items() if v is None or w is None or v == w]
+            for x, w in right.items()}
+        degree = defaultdict(int)
+        for ids in edges.values():
+            for i in ids: degree[i] += 1
+        chosen = [(ids[0], x) for x, ids in edges.items() if len(ids) == 1 and degree[ids[0]] == 1]
+        for i, x in chosen:
+            pairs.append((i, x)); del left[i]; del right[x]
+    return pairs
+
+
 def musicxml_with_canonical_ids(source: str | Path, ir: dict[str, Any]) -> tuple[str, dict[str, Any]]:
     """Return a rendering-only MusicXML copy with Canonical IDs on note elements."""
     source = Path(source)
@@ -53,7 +92,6 @@ def musicxml_with_canonical_ids(source: str | Path, ir: dict[str, Any]) -> tuple
                     xml_part_names[value.strip()] = xml_id
     part_source: dict[str, str] = {}
     source_staff: dict[str, str] = {}
-    part_by_id = {part["part_id"]: part for part in ir["parts"]}
     for part in ir["parts"]:
         match = re.fullmatch(r"(.+)-Staff(\d+)", part["source_part_id"])
         normalized_part = match.group(1) if match else part["source_part_id"]
@@ -68,19 +106,25 @@ def musicxml_with_canonical_ids(source: str | Path, ir: dict[str, Any]) -> tuple
             source_staff[staff_id] = match.group(2) if match else str(next(x["staff_number"] for x in ir["staves"] if x["staff_id"] == staff_id))
     measure_printed = {measure["measure_id"]: measure["printed_measure_number"] for measure in ir["measures"]}
 
-    candidates: dict[tuple[Any, ...], deque[str]] = defaultdict(deque)
-    for event in sorted(ir["note_events"], key=lambda x: x["source_ref_id"]):
+    voices = {v["voice_id"]: _source_voice(v.get("source_voice_number")) for v in ir.get("voices", [])}
+    candidates = defaultdict(list)
+    note_ids = [n["note_id"] for n in ir["note_events"]]
+    if len(note_ids) != len(set(note_ids)):
+        raise ValueError("duplicate_canonical_note_id")
+    for event in ir["note_events"]:
         p = event["written_pitch"]
         onset = Fraction(event["onset_in_measure"]["numerator"], event["onset_in_measure"]["denominator"])
         key = (
             part_source[event["part_id"]], measure_printed[event["measure_id"]],
             source_staff[event["display_staff_id"]], onset,
             p["step"], Fraction(p["alter"]["numerator"], p["alter"]["denominator"]), p["octave"],
+            Fraction(event["notated_duration_quarter"]["numerator"], event["notated_duration_quarter"]["denominator"]),
+            bool(event.get("grace", {}).get("is_grace")), event.get("tie_role", "none"),
         )
-        candidates[key].append(event["note_id"])
+        candidates[key].append((event["note_id"], voices.get(event.get("voice_id"))))
 
-    matched: list[str] = []
-    unmatched_xml: list[dict[str, Any]] = []
+    xml_groups = defaultdict(list)
+    xml_notes = []
     for part in (x for x in root.iter() if _local(x.tag) == "part"):
         part_id = part.get("id") or "P1"
         divisions = 1
@@ -104,25 +148,42 @@ def musicxml_with_canonical_ids(source: str | Path, ir: dict[str, Any]) -> tuple
                     onset = previous_onset if chord_member else cursor
                     if not chord_member:
                         previous_onset = onset
-                    voice = _text(element, "voice", "voice_0")
+                    voice = _source_voice(_text(element, "voice"))
                     staff = _text(element, "staff", "1")
                     pkey = _pitch_key(element)
                     if pkey is not None:
-                        key = (part_id, measure_number, staff, onset, *pkey)
-                        if candidates[key]:
-                            note_id = candidates[key].popleft()
-                            # Verovio preserves MusicXML's ordinary id attribute as
-                            # MEI/SVG xml:id. MusicXML xml:id is not reliably retained.
-                            element.set("id", note_id)
-                            matched.append(note_id)
-                        else:
-                            unmatched_xml.append({"part": part_id, "measure": measure_number, "voice": voice, "staff": staff, "onset": str(onset), "pitch": [pkey[0], str(pkey[1]), pkey[2]]})
+                        duration = Fraction(int(_text(element, "duration", "0")), divisions)
+                        key = (part_id, measure_number, staff, onset, *pkey, duration, grace, _tie_role(element))
+                        index = len(xml_notes)
+                        xml_groups[key].append((index, voice))
+                        xml_notes.append((element, {"part": part_id, "measure": measure_number, "voice": voice,
+                            "staff": staff, "onset": str(onset), "duration": str(duration),
+                            "pitch": [pkey[0], str(pkey[1]), pkey[2]]}))
+                        # Do not let an original id masquerade as a verified mapping.
+                        element.attrib.pop("id", None)
+                        element.attrib.pop(XML_ID, None)
                     if not chord_member and not grace:
                         cursor += Fraction(int(_text(element, "duration", "0")), divisions)
 
-    unmatched_ir = [note_id for queue in candidates.values() for note_id in queue]
+    assigned = {}
+    voice_disagreements = []
+    for key, rows in xml_groups.items():
+        for note_id, index in _unique_voice_pairs(candidates.get(key, []), rows):
+            assigned[index] = note_id
+            xml_notes[index][0].set("id", note_id)
+            expected = dict(candidates[key])[note_id]
+            actual = dict(rows)[index]
+            if expected is not None and actual is not None and expected != actual:
+                voice_disagreements.append({"note_id": note_id, "ir_voice_hint": expected,
+                    "xml_voice": actual, "basis": "unique_exact_geometry_legacy_voice_not_rewritten"})
+    matched = [assigned[i] for i in sorted(assigned)]
+    unmatched_xml = [r for i, (_, r) in enumerate(xml_notes) if i not in assigned]
+    unmatched_ir = sorted(set(note_ids) - set(matched))
     xml = ET.tostring(copy.deepcopy(root), encoding="unicode", xml_declaration=False)
-    return xml, {"score_id": score_id, "matched_note_ids_in_source_order": matched, "matched_count": len(matched), "ir_note_count": len(ir["note_events"]), "unmatched_ir_note_ids": unmatched_ir, "unmatched_xml_notes": unmatched_xml, "complete": not unmatched_ir and not unmatched_xml}
+    return xml, {"score_id": score_id, "mapping_version": SOURCE_MAPPING_VERSION,
+        "policy": "unique_exact_geometry_then_voice_disambiguation_no_order_tiebreak",
+        "voice_hint_disagreements": voice_disagreements,
+        "matched_note_ids_in_source_order": matched, "matched_count": len(matched), "ir_note_count": len(ir["note_events"]), "unmatched_ir_note_ids": unmatched_ir, "unmatched_xml_notes": unmatched_xml, "complete": not unmatched_ir and not unmatched_xml}
 
 
 def _mei_pitch(note: ET.Element) -> tuple[str, Fraction | None, int]:
@@ -165,7 +226,26 @@ def render_musicxml_pages(source: str | Path, ir: dict[str, Any]) -> tuple[list[
     })
     rendering_xml, mapping = musicxml_with_canonical_ids(source, ir)
     if not toolkit.loadData(rendering_xml):
-        raise ValueError(f"Verovio could not load MusicXML: {source}")
+        # Some otherwise valid MusicXML files become unacceptable to a
+        # long-lived Verovio process after xml:id injection.  The canonical
+        # mapping can still be recovered deterministically by source order,
+        # so retry with the untouched score instead of making the review UI
+        # unavailable.  This fallback never reconstructs notation from IR.
+        toolkit = verovio.toolkit()
+        toolkit.setOptions({
+            "inputFrom": "musicxml",
+            "pageWidth": 1800,
+            "pageHeight": 2500,
+            "adjustPageHeight": True,
+            "scale": 35,
+            "breaks": "encoded",
+            "svgHtml5": True,
+            "removeIds": False,
+        })
+        source_xml = Path(source).read_text(encoding="utf-8-sig")
+        if not toolkit.loadData(source_xml):
+            raise ValueError(f"Verovio could not load MusicXML: {source}")
+        mapping["render_input_fallback"] = "original_musicxml_source_order_mapping"
     mei_root = ET.fromstring(toolkit.getMEI())
     mei_notes = [x for x in mei_root.iter() if _local(x.tag) == "note"]
     canonical_by_id = {event["note_id"]: event for event in ir["note_events"]}

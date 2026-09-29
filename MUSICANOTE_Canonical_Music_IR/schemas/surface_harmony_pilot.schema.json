@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.musicanote.com/surface-harmony-pilot/0.1.0",
+  "title": "Blind whole-score surface-sonority pilot",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "engine_version", "score_id", "ir_document_id", "input_policy", "time_policy", "score_policy", "interpretation_level", "windows", "summary"],
+  "properties": {
+    "schema_name": {"const": "musicanote-blind-surface-harmony-pilot"},
+    "schema_version": {"const": "0.1.0"},
+    "engine_version": {"type": "string"},
+    "score_id": {"type": "string"},
+    "ir_document_id": {"type": "string"},
+    "input_policy": {"const": "blind_canonical_ir_only"},
+    "time_policy": {"const": "written_score_notated_beat_windows_half_open"},
+    "score_policy": {"const": "template_fit_rank_not_calibrated_confidence"},
+    "interpretation_level": {"const": "surface_sonority_only_no_key_function_or_cadence"},
+    "windows": {"type": "array", "items": {"$ref": "#/$defs/window"}},
+    "summary": {"type": "object", "required": ["window_count", "status_counts"], "properties": {
+      "window_count": {"type": "integer", "minimum": 0},
+      "status_counts": {"type": "object", "required": ["candidate", "ambiguous", "abstained", "rest"], "properties": {
+        "candidate": {"type": "integer", "minimum": 0}, "ambiguous": {"type": "integer", "minimum": 0},
+        "abstained": {"type": "integer", "minimum": 0}, "rest": {"type": "integer", "minimum": 0}
+      }, "additionalProperties": false}
+    }, "additionalProperties": false}
+  },
+  "$defs": {
+    "rational": {"type": "object", "required": ["numerator", "denominator"], "properties": {"numerator": {"type": "integer"}, "denominator": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "span": {"type": "object", "required": ["start", "end"], "properties": {"start": {"$ref": "#/$defs/rational"}, "end": {"$ref": "#/$defs/rational"}}, "additionalProperties": false},
+    "weight": {"type": "object", "required": ["pitch_class", "weight"], "properties": {"pitch_class": {"type": "integer", "minimum": 0, "maximum": 11}, "weight": {"$ref": "#/$defs/rational"}}, "additionalProperties": false},
+    "candidate": {"type": "object", "required": ["label", "root_pitch_class", "quality", "template_pitch_classes", "fit_score", "purity", "completeness"], "properties": {
+      "label": {"type": "string"}, "root_pitch_class": {"type": "integer", "minimum": 0, "maximum": 11},
+      "quality": {"type": "string"}, "template_pitch_classes": {"type": "array", "items": {"type": "integer", "minimum": 0, "maximum": 11}},
+      "fit_score": {"type": "number", "minimum": 0, "maximum": 1}, "purity": {"type": "number", "minimum": 0, "maximum": 1},
+      "completeness": {"type": "number", "minimum": 0, "maximum": 1}
+    }, "additionalProperties": false},
+    "window": {"type": "object", "required": ["window_id", "measure_id", "span", "status", "abstention_reason", "pitch_class_weights", "bass_midi_at_start", "sounding_event_ids", "note_ids", "candidates", "display_hint_index"], "properties": {
+      "window_id": {"type": "string"}, "measure_id": {"type": "string"}, "span": {"$ref": "#/$defs/span"},
+      "status": {"enum": ["candidate", "ambiguous", "abstained", "rest"]},
+      "abstention_reason": {"type": ["string", "null"]},
+      "pitch_class_weights": {"type": "array", "items": {"$ref": "#/$defs/weight"}},
+      "bass_midi_at_start": {"type": ["integer", "null"]},
+      "sounding_event_ids": {"type": "array", "items": {"type": "string"}},
+      "note_ids": {"type": "array", "items": {"type": "string"}},
+      "candidates": {"type": "array", "items": {"$ref": "#/$defs/candidate"}},
+      "display_hint_index": {"type": ["integer", "null"], "minimum": 0}
+    }, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MUSICANOTE imported corpus annotation 0.1.0",
+  "type": "object",
+  "required": ["annotation_id", "track_id", "source_asset_sha256", "source_locator", "raw_label", "raw_fields", "components", "native_target", "author_origin", "source_review_status", "source_confidence", "target"],
+  "properties": {
+    "annotation_id": {"type": "string", "minLength": 1},
+    "track_id": {"type": "string", "minLength": 1},
+    "source_asset_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_locator": {
+      "type": "object", "required": ["path", "line"],
+      "properties": {"path": {"type": "string"}, "line": {"type": "integer", "minimum": 2}},
+      "additionalProperties": false
+    },
+    "raw_label": {"type": "string"},
+    "raw_fields": {"type": "object", "additionalProperties": {"type": "string"}},
+    "components": {"type": "object", "additionalProperties": {"type": "string"}},
+    "native_target": {"type": "object", "additionalProperties": {"type": "string"}},
+    "author_origin": {"enum": ["human", "machine", "mixed", "unknown"]},
+    "source_review_status": {"type": "string"},
+    "source_confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "target": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/target"}]}
+  },
+  "$defs": {
+    "rational": {"type": "object", "required": ["numerator", "denominator"], "properties": {"numerator": {"type": "integer"}, "denominator": {"type": "integer", "minimum": 1}}, "additionalProperties": false},
+    "span": {"type": "object", "required": ["start", "end"], "properties": {"start": {"$ref": "#/$defs/rational"}, "end": {"$ref": "#/$defs/rational"}}, "additionalProperties": false},
+    "target": {"type": "object", "required": ["score_id", "ir_document_id"], "oneOf": [{"required": ["span"]}, {"required": ["point"]}], "properties": {"score_id": {"type": "string"}, "ir_document_id": {"type": "string"}, "span": {"$ref": "#/$defs/span"}, "point": {"$ref": "#/$defs/rational"}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

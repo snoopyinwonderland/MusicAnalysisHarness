@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MUSICANOTE Harmony Retrieved Case 0.2.0",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "case_id", "score_id", "ir_document_id", "annotation_id", "label", "feature", "dataset_identity", "source_evidence", "provenance", "training_eligible"],
+  "properties": {
+    "schema_name": {"const": "musicanote-harmony-case-record"},
+    "schema_version": {"const": "0.2.0"},
+    "case_id": {"type": "string", "pattern": "^hcase_"},
+    "score_id": {"type": "string"},
+    "ir_document_id": {"type": "string"},
+    "annotation_id": {"type": "string"},
+    "label": {"type": "object"},
+    "feature": {
+      "type": "object",
+      "required": ["feature_version", "span", "current", "before", "after", "blind_local_key", "entry_voice_leading", "exit_voice_leading", "nct_geometry", "invariance"]
+    },
+    "dataset_identity": {
+      "type": "object",
+      "required": ["manifest_entry_id", "corpus_id", "collection_id", "work_family_id", "movement_id", "edition_id", "annotation_lineage_id", "split", "identity_status"],
+      "properties": {
+        "manifest_entry_id": {"type": ["string", "null"]},
+        "corpus_id": {"type": "string"},
+        "collection_id": {"type": "string"},
+        "work_family_id": {"type": "string"},
+        "movement_id": {"type": ["string", "null"]},
+        "edition_id": {"type": ["string", "null"]},
+        "annotation_lineage_id": {"type": "string"},
+        "split": {"enum": ["train", "dev", "holdout", "unassigned"]},
+        "identity_status": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "source_evidence": {"type": "object"},
+    "provenance": {
+      "type": "object",
+      "required": ["source_asset_sha256", "score_sha256", "source_locator", "author_origin", "source_review_status", "score_source_path"]
+    },
+    "training_eligible": {"const": false}
+  },
+  "additionalProperties": false
+}

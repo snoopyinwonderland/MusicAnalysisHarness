@@ -3,6 +3,7 @@ from __future__ import annotations
 from fractions import Fraction
 from typing import Any
 from xml.etree import ElementTree as ET
+from .engraving import _tie_role
 
 
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
@@ -53,8 +54,39 @@ def _written_pitch(note: ET.Element) -> dict[str, Any] | None:
 def enrich_from_mapped_musicxml(ir: dict[str, Any], mapped_musicxml: str) -> dict[str, Any]:
     """Add directly observed MusicXML notation facts to formal IR in place."""
     root = ET.fromstring(mapped_musicxml)
-    ir["source_files"][0]["musicxml_version"] = root.get("version")
     notes = {event["note_id"]: event for event in ir["note_events"]}
+    # Reject stale/misassigned IDs BEFORE writing any source metadata. This is
+    # a second gate independent of the caller's mapping completeness flag.
+    seen = set()
+    for part in (el for el in root if _local(el.tag) == "part"):
+        divisions = 1
+        for measure in _children(part, "measure"):
+            cursor = previous = Fraction(0)
+            for el in measure:
+                tag = _local(el.tag)
+                if tag == "attributes" and _text(el, "divisions"):
+                    divisions = int(_text(el, "divisions"))
+                elif tag in ("backup", "forward"):
+                    cursor += Fraction(int(_text(el, "duration", "0")), divisions) * (1 if tag == "forward" else -1)
+                elif tag == "note":
+                    chord = _child(el, "chord") is not None
+                    grace = _child(el, "grace") is not None
+                    onset = previous if chord else cursor
+                    if not chord: previous = onset
+                    duration = Fraction(int(_text(el, "duration", "0")), divisions)
+                    nid = el.get("id") or el.get(XML_ID)
+                    if nid in notes:
+                        if nid in seen: raise ValueError("duplicate_mapped_note_id")
+                        seen.add(nid)
+                        event = notes[nid]
+                        def exact(value): return Fraction(value["numerator"], value["denominator"])
+                        if (duration != exact(event["notated_duration_quarter"]) or
+                            onset != exact(event["onset_in_measure"]) or
+                            grace != bool(event.get("grace", {}).get("is_grace")) or
+                            _tie_role(el) != event.get("tie_role", "none")):
+                            raise ValueError("mapped_note_identity_mismatch:" + nid)
+                    if not chord and not grace: cursor += duration
+    ir["source_files"][0]["musicxml_version"] = root.get("version")
     refs = {ref["source_ref_id"]: ref for ref in ir["source_references"]}
     measures = sorted(ir["measures"], key=lambda row: row["sequential_measure_index"])
     measure_by_printed: dict[str, list[dict[str, Any]]] = {}
@@ -62,14 +94,16 @@ def enrich_from_mapped_musicxml(ir: dict[str, Any], mapped_musicxml: str) -> dic
         measure_by_printed.setdefault(measure["printed_measure_number"], []).append(measure)
 
     staff_lookup: dict[tuple[str, str], str] = {}
+    staff_by_id = {staff["staff_id"]: staff for staff in ir["staves"]}
     for part in ir["parts"]:
         source = part["source_part_id"]
         if "-Staff" in source:
             xml_part, number = source.rsplit("-Staff", 1)
         else:
-            xml_part, number = source, "1"
+            xml_part, number = source, None
         for staff_id in part["staff_ids"]:
-            staff_lookup[(xml_part, number)] = staff_id
+            staff_number = number or str(staff_by_id[staff_id]["staff_number"])
+            staff_lookup[(xml_part, staff_number)] = staff_id
     if len({part_id for part_id, _ in staff_lookup}) == 1:
         only_xml_part = next(iter({part_id for part_id, _ in staff_lookup}))
     else:

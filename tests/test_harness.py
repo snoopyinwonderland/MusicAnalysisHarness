@@ -5,6 +5,7 @@ from pathlib import Path
 
 from music21 import chord, key, meter, note, stream, tie
 
+from musicanote_harness.canonical import CanonicalIRBuilder
 from musicanote_harness.core import MusicHarness, arrangement_plan, write_package
 from musicanote_harness.formal_ir import FormalIRAdapter, deterministic_evidence
 from musicanote_harness.engraving import render_musicxml_pages
@@ -13,6 +14,25 @@ from musicanote_harness.source_enrichment import enrich_from_mapped_musicxml
 
 
 class HarnessTest(unittest.TestCase):
+    def test_duplicate_source_part_labels_get_distinct_internal_ids(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "duplicate-parts.musicxml"
+            score = stream.Score()
+            for pitch_name in ("C4", "E4"):
+                part = stream.Part(id="Voice")
+                measure = stream.Measure(number=1)
+                measure.append(note.Note(pitch_name, quarterLength=4))
+                part.append(measure)
+                score.append(part)
+            path.write_text("fixture", encoding="utf-8")
+            legacy = CanonicalIRBuilder().build(score, path)
+            self.assertEqual([p["part_id"] for p in legacy["parts"]], ["Voice__part_1", "Voice__part_2"])
+            self.assertEqual([p["source_part_id"] for p in legacy["parts"]], ["Voice", "Voice"])
+            formal = FormalIRAdapter().convert(legacy, path)
+            self.assertEqual(len(formal["parts"]), 2)
+            self.assertEqual(len(formal["measures"]), 1)
+            self.assertEqual({ref["source_part_id"] for ref in formal["source_references"]}, {"Voice"})
+
     def make_score(self, path: Path) -> None:
         score = stream.Score(id="test")
         part = stream.Part(id="melody")

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MUSICANOTE Harmony Case Review 0.1.0",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "review_id", "query_id", "case_id", "engine_version", "reviewer_id", "verdict", "axis_ratings", "created_at", "training_eligible", "rule_update_eligible", "interpretation"],
+  "properties": {
+    "schema_name": {"const": "musicanote-harmony-case-review"},
+    "schema_version": {"const": "0.1.0"},
+    "review_id": {"type": "string", "pattern": "^crev_[0-9a-f]{16}$"},
+    "query_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "engine_version": {"type": "string", "minLength": 1},
+    "reviewer_id": {"type": "string", "minLength": 1},
+    "verdict": {"enum": ["useful_analogy", "similar_surface_different_function", "not_similar", "cannot_judge"]},
+    "axis_ratings": {
+      "type": "object",
+      "propertyNames": {"enum": ["surface", "bass_motion", "voice_leading", "harmonic_function", "nct_context", "phrase_role"]},
+      "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 4}
+    },
+    "note": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "supersedes_review_id": {"type": ["string", "null"]},
+    "training_eligible": {"const": false},
+    "rule_update_eligible": {"const": false},
+    "interpretation": {"type": "string"}
+  },
+  "additionalProperties": false
+}

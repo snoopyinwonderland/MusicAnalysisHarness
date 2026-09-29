@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MUSICANOTE Harmony Case Retrieval Ablation 0.1.0",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "evaluator_version", "library", "query_split", "candidate_split", "query_count", "candidate_count", "evaluation_scope", "label_visibility_policy", "results", "dev_selection", "interpretation"],
+  "properties": {
+    "schema_name": {"const": "musicanote-harmony-case-retrieval-ablation"},
+    "schema_version": {"const": "0.1.0"},
+    "evaluator_version": {"type": "string"},
+    "library": {"type": "string"},
+    "query_split": {"enum": ["dev", "holdout"]},
+    "candidate_split": {"const": "train"},
+    "query_count": {"type": "integer", "minimum": 0},
+    "candidate_count": {"type": "integer", "minimum": 0},
+    "evaluation_scope": {"type": "object"},
+    "label_visibility_policy": {"type": "object"},
+    "results": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["weight_profile", "evaluated_queries", "no_candidate_queries", "raw_top1_accuracy", "raw_top5_recall", "raw_mrr", "family_top1_accuracy", "family_top5_recall", "family_mrr", "per_family", "delta_vs_surface"]
+      }
+    },
+    "dev_selection": {"type": "object"},
+    "interpretation": {"type": "string"}
+  },
+  "additionalProperties": false
+}

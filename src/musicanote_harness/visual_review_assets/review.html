@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>화성 실험 · 악보 비교</title><link rel="stylesheet" href="review.css"></head>
+<body><header><a href="index.html">← 사례 목록</a><strong id="title">화성 실험 · 악보 비교</strong><span>검토용 · 서비스 분석 변경 없음</span></header>
+<div class="layout"><main id="main">
+<div class="toolbar"><label>계산 문맥 <select id="margin"></select></label><button id="target">검토 구간으로</button><label><input type="checkbox" id="showSource" checked> 원자료 주석</label><label><input type="checkbox" id="showBaseline" checked> <span id="baselineName"></span></label><label><input type="checkbox" id="showExperiment" checked> <span id="experimentName"></span></label></div>
+<div class="toolbar" id="variantToolbar" hidden><label>보완 조건 <select id="variant"></select></label><span>회색 기준은 고정 · 보라색 계산만 변경 · 서비스 미적용</span></div>
+<div class="notice" id="notice"></div><div class="legend"><span class="source">원자료 주석</span><span class="baseline" id="baselineLegend"></span><span class="experiment" id="experimentLegend"></span><span class="target">노란 세로 영역 = 이번 검토 대상</span></div>
+<div id="mappingWarning" role="status"></div><div id="score"><!--SCORE--></div>
+</main><aside><h2>구간을 눌러 비교하세요</h2><div id="detail"></div><h3>이 사례에서 확인할 것</h3><div id="questions"></div><details><summary>식별자 · 출처 · 상태</summary><pre id="identity"></pre></details></aside></div>
+<script id="payload" type="application/json"><!--PAYLOAD--></script><script src="review.js"></script>
+</body></html>

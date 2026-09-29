@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import hashlib
-from collections import defaultdict
+from collections import Counter, defaultdict
 from fractions import Fraction
 from pathlib import Path
 from typing import Any, Iterable
@@ -76,12 +76,22 @@ class CanonicalIRBuilder:
         source = Path(source)
         score_id = f"score_{stable_id(source.name, source.stat().st_size)}"
         parts = list(score.parts)
+        raw_part_ids = [_part_id(part, index) for index, part in enumerate(parts)]
+        raw_part_id_counts = Counter(raw_part_ids)
+        # MusicXML importers may expose two distinct parts with the same label
+        # (for example two vocal staves both called ``Voice``).  Internal part
+        # identity must remain unique and deterministic without rewriting the
+        # original label in the source reference layer.
+        part_ids = [
+            raw if raw_part_id_counts[raw] == 1 else f"{raw}__part_{index + 1}"
+            for index, raw in enumerate(raw_part_ids)
+        ]
         segments: list[dict[str, Any]] = []
         rests: list[dict[str, Any]] = []
         measures: list[dict[str, Any]] = []
 
         for p_index, part in enumerate(parts):
-            pid = _part_id(part, p_index)
+            pid = part_ids[p_index]
             measures.extend(self._measure_grid(score, part, pid))
             for element_ordinal, element in enumerate(part.recurse().notesAndRests):
                 measure_obj = element.getContextByClass(stream.Measure)
@@ -136,7 +146,8 @@ class CanonicalIRBuilder:
                 "ornament_realization": "not_expanded",
                 "missing_directions": "preserve_as_null_do_not_infer",
             },
-            "parts": [{"part_id": _part_id(p, i), "name": p.partName} for i, p in enumerate(parts)],
+            "parts": [{"part_id": part_ids[i], "source_part_id": raw_part_ids[i], "name": p.partName}
+                      for i, p in enumerate(parts)],
             "measure_grid": measures,
             "notated_note_segments": segments,
             "rest_events": rests,
