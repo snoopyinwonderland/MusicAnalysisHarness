@@ -1,0 +1,34 @@
+{
+  "schema": "musicanote-external-analysis-observations/v1",
+  "caseId": "RC-004",
+  "role": "human-analysis-hypotheses-for-evaluator",
+  "retrieval": "Public HTML bodies read; embedded scores and audio not independently verified in this review.",
+  "observations": [
+    {
+      "annotationId": 48,
+      "url": "https://musicanote.com/score/detail/508?annotation_id=48",
+      "author": "Snoopy",
+      "postedAtDisplayed": "2024-08-25 13:44:21",
+      "summary": "국소 선율·리듬 음형·윤곽이 변주 관계처럼 유사하다는 분석.",
+      "claimedCorrespondences": [
+        {"inputMeasures": [14, 15], "referenceMeasures": [10, 11], "features": ["melody", "figure"]},
+        {"inputMeasures": [15, 16], "referenceMeasures": [12, 12], "features": ["figure"]}
+      ],
+      "coordinateStatus": "website-measures; local-XML-and-KY-edition-mapping-unverified",
+      "caution": "Input measure 15 overlaps; do not count these observations as two independent phrase matches."
+    },
+    {
+      "annotationId": 47,
+      "url": "https://musicanote.com/score/detail/508?annotation_id=47",
+      "author": "Snoopy",
+      "postedAtDisplayed": "2024-08-25 08:56:13",
+      "summary": "도입부, 화성 진행, 리듬 음형, 가사 배치에 관련성이 있다는 분석.",
+      "claimedFeatures": ["intro-character", "degree-root-cycle-4-3-6-5-1", "chord-quality-variation", "rhythmic-figures", "lyric-relative-position"],
+      "verificationStatus": "source-claims; harmony-keys-bass-lyrics-not-verified-against-local-XML",
+      "caution": "Root progression, sounding bass and harmonic function must be distinguished. Chord-quality differences are retained, not treated as universally equivalent."
+    }
+  ],
+  "proposedRuleFamilies": ["boundary-tolerant-local-variation", "unequal-span-alignment", "overlap-aware-evidence-grouping", "separate-harmonic-root-and-quality-features", "multilayer-contextual-correspondence"],
+  "candidateOrScoreOverrideAllowed": false,
+  "legalPositiveLabel": false
+}

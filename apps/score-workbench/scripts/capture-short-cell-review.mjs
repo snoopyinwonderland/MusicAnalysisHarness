@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {analyzePhraseBoundaries as analyze} from '../server/phrase-boundaries.mjs';
+const out='evaluation/reports/short-cell-008-v1';if(existsSync(out))throw Error('Refusing overwrite');
+const hash=x=>createHash('sha256').update(x).digest('hex'),root='evaluation/case-assets/S-STRUCT-008',bytes=readFileSync(root+'/review-snapshot.json'),s=JSON.parse(bytes),xml=readFileSync(root+'/context.musicxml');
+if(hash(xml)!==s.xmlSha256)throw Error('Source mismatch');
+const n=s.work.notes,before=analyze(n,{shortCell:false}),after=analyze(n);
+if(!before.boundaries[226].supported||!before.boundaries[230].supported||!before.boundaries[241].supported)throw Error('Feedback mapping changed');
+const regression=['004','005','006','007','008'].map(id=>{const n=JSON.parse(readFileSync(`evaluation/case-assets/S-STRUCT-${id}/review-snapshot.json`)).work.notes,a=analyze(n,{shortCell:false}),b=analyze(n);return {id,changed:b.boundaries.filter((x,i)=>x.supported!==a.boundaries[i].supported).map(b=>b.index)}});
+mkdirSync(out,{recursive:true});
+writeFileSync(out+'/case.json',JSON.stringify({schema:'musicanote-structure-feedback/v1',userDescription:'Phrase12가13의 앞부분에 다시 나타난다. 짧게 나누기보다 합치는 것이 좋고 모티프 반복으로 볼 수 있다.',status:'user-preference-not-gold',sourceXml:root+'/context.musicxml',sourceHash:hash(xml),sourceSnapshot:root+'/review-snapshot.json',snapshotHash:hash(bytes),numberingVersion:'local-boundary-evidence-v1.15',requestedRange:{startEventId:n[226].id,lastEventId:n[240].id,removeBoundaryBefore:n[230].id},contextNotes:n.slice(207,273),before:before.boundaries.slice(226,242),after:after.boundaries.slice(226,242),regression,codeHashes:Object.fromEntries(['server/short-cell-continuity.mjs','server/phrase-boundaries.mjs'].map(p=>[p,hash(readFileSync(p))]))},null,2));console.log(JSON.stringify(regression));

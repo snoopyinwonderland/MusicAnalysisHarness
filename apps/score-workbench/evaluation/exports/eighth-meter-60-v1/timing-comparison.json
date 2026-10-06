@@ -1,0 +1,847 @@
+{
+  "schema": "musicanote-paired-meter-evaluation/v1",
+  "generatedAt": "2026-09-17T05:22:48.745Z",
+  "groups": [
+    {
+      "meter": "6/8",
+      "length": 12,
+      "type": "original",
+      "total": 5,
+      "top5": 5,
+      "top10": 5,
+      "found": 5
+    },
+    {
+      "meter": "6/8",
+      "length": 12,
+      "type": "ornament-delete",
+      "total": 5,
+      "top5": 3,
+      "top10": 3,
+      "found": 4
+    },
+    {
+      "meter": "6/8",
+      "length": 12,
+      "type": "ornament-delete-preserve-time",
+      "total": 5,
+      "top5": 4,
+      "top10": 4,
+      "found": 4
+    },
+    {
+      "meter": "6/8",
+      "length": 8,
+      "type": "original",
+      "total": 5,
+      "top5": 5,
+      "top10": 5,
+      "found": 5
+    },
+    {
+      "meter": "6/8",
+      "length": 8,
+      "type": "ornament-delete",
+      "total": 5,
+      "top5": 0,
+      "top10": 0,
+      "found": 1
+    },
+    {
+      "meter": "6/8",
+      "length": 8,
+      "type": "ornament-delete-preserve-time",
+      "total": 5,
+      "top5": 0,
+      "top10": 0,
+      "found": 2
+    },
+    {
+      "meter": "3/8",
+      "length": 12,
+      "type": "original",
+      "total": 5,
+      "top5": 4,
+      "top10": 4,
+      "found": 4
+    },
+    {
+      "meter": "3/8",
+      "length": 12,
+      "type": "ornament-delete",
+      "total": 5,
+      "top5": 3,
+      "top10": 3,
+      "found": 3
+    },
+    {
+      "meter": "3/8",
+      "length": 12,
+      "type": "ornament-delete-preserve-time",
+      "total": 5,
+      "top5": 3,
+      "top10": 3,
+      "found": 3
+    },
+    {
+      "meter": "3/8",
+      "length": 8,
+      "type": "original",
+      "total": 5,
+      "top5": 4,
+      "top10": 4,
+      "found": 4
+    },
+    {
+      "meter": "3/8",
+      "length": 8,
+      "type": "ornament-delete",
+      "total": 5,
+      "top5": 0,
+      "top10": 0,
+      "found": 0
+    },
+    {
+      "meter": "3/8",
+      "length": 8,
+      "type": "ornament-delete-preserve-time",
+      "total": 5,
+      "top5": 0,
+      "top10": 0,
+      "found": 0
+    }
+  ],
+  "pairs": [
+    {
+      "baseId": "EM01-L12",
+      "meter": "6/8",
+      "title": "Ennio Morricone Medley",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 21,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 5,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "baseId": "EM02-L12",
+      "meter": "6/8",
+      "title": "GAME OF THRONES",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "baseId": "EM03-L12",
+      "meter": "6/8",
+      "title": "LET THERE BE PEACE ON EARTH",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "representative-window-differs"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {
+            "low-information-floors": 5
+          },
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {
+            "low-information-floors": 5
+          },
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM04-L12",
+      "meter": "6/8",
+      "title": "March Medley",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 5
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 1,
+            "admission-floor": 3
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 1,
+            "admission-floor": 3
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "baseId": "EM05-L12",
+      "meter": "6/8",
+      "title": "My Favorite Things",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 2,
+            "admission-floor": 2
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 1,
+            "admission-floor": 3
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "baseId": "EM06-L12",
+      "meter": "3/8",
+      "title": "HE WAS BEAUTIFUL",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 3
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 1
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 1
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "baseId": "EM07-L12",
+      "meter": "3/8",
+      "title": "Für Elise",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "representative-window-differs"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 3,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "partial-query-alignment"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 2,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "partial-query-alignment"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM08-L12",
+      "meter": "3/8",
+      "title": "Hedwig's Theme",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM09-L12",
+      "meter": "3/8",
+      "title": "Beethoven Ludwig van 5 6 Piano Sonata No.10 in G major Op.14 No.2 3rd",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM10-L12",
+      "meter": "3/8",
+      "title": "Beethoven Ludwig van 5 6 Piano Sonata No.12 in A flat major Op.26 1st",
+      "length": 12,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {},
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {},
+          "issues": []
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {},
+          "issues": []
+        }
+      ]
+    },
+    {
+      "baseId": "EM01-L8",
+      "meter": "6/8",
+      "title": "Ennio Morricone Medley",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {},
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM02-L8",
+      "meter": "6/8",
+      "title": "GAME OF THRONES",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM03-L8",
+      "meter": "6/8",
+      "title": "LET THERE BE PEACE ON EARTH",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "representative-window-differs"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "issues": [
+            "source-candidate-not-returned"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 75,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "issues": [
+            "representative-window-differs"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM04-L8",
+      "meter": "6/8",
+      "title": "March Medley",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 5
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM05-L8",
+      "meter": "6/8",
+      "title": "My Favorite Things",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 2,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "representative-window-differs"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": 32,
+          "inCandidates": true,
+          "rejections": {},
+          "issues": [
+            "representative-window-differs"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": 54,
+          "inCandidates": true,
+          "rejections": {},
+          "issues": [
+            "representative-window-differs"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM06-L8",
+      "meter": "3/8",
+      "title": "HE WAS BEAUTIFUL",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 3
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM07-L8",
+      "meter": "3/8",
+      "title": "Für Elise",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": [
+            "representative-window-differs"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM08-L8",
+      "meter": "3/8",
+      "title": "Hedwig's Theme",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM09-L8",
+      "meter": "3/8",
+      "title": "Beethoven Ludwig van 5 6 Piano Sonata No.10 in G major Op.14 No.2 3rd",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    },
+    {
+      "baseId": "EM10-L8",
+      "meter": "3/8",
+      "title": "Beethoven Ludwig van 5 6 Piano Sonata No.12 in A flat major Op.26 1st",
+      "length": 8,
+      "conditions": [
+        {
+          "type": "original",
+          "rank": 1,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 4
+          },
+          "issues": []
+        },
+        {
+          "type": "ornament-delete",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        },
+        {
+          "type": "ornament-delete-preserve-time",
+          "rank": null,
+          "inCandidates": false,
+          "rejections": {},
+          "issues": [
+            "source-not-in-candidates"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Five independent source works per meter; paired conditions are not independent melodies.",
+    "Time preservation also lengthens the preceding note.",
+    "Source-only convenience selection, no population accuracy or false-positive claims."
+  ]
+}

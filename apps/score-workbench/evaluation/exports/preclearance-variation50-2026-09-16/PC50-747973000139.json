@@ -1,0 +1,342 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "PC50-747973000139",
+  "createdAt": "2026-09-15",
+  "status": "draft",
+  "replayable": true,
+  "tags": [
+    "repeated-note",
+    "source"
+  ],
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": false,
+    "includeRests": true,
+    "events": [
+      {
+        "id": "work-bfc76c19ae29e440-4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.140625
+      },
+      {
+        "id": "work-bfc76c19ae29e440-5",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.14453125
+      },
+      {
+        "id": "work-bfc76c19ae29e440-6",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.14453125
+      },
+      {
+        "id": "gap-work-bfc76c19ae29e440-7",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 3
+      },
+      {
+        "id": "work-bfc76c19ae29e440-7",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "work-bfc76c19ae29e440-8",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "gap-work-bfc76c19ae29e440-9",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-bfc76c19ae29e440-9",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "gap-work-bfc76c19ae29e440-10",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "work-bfc76c19ae29e440-10",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "gap-work-bfc76c19ae29e440-11",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-bfc76c19ae29e440-11",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "expected": {
+    "sourceId": "4. For the First Time in Forever, Violin and Piano Duet.musicxml.xml",
+    "workId": "work-bfc76c19ae29e440",
+    "streamId": "P1:1:1",
+    "focus": [
+      {
+        "id": "work-bfc76c19ae29e440-4",
+        "onset": 0.5703125,
+        "pitchMidi": 67,
+        "measure": "0",
+        "measureOrdinal": 1
+      },
+      {
+        "id": "work-bfc76c19ae29e440-5",
+        "onset": 0.7109375,
+        "pitchMidi": 69,
+        "measure": "0",
+        "measureOrdinal": 1
+      },
+      {
+        "id": "work-bfc76c19ae29e440-6",
+        "onset": 0.85546875,
+        "pitchMidi": 70,
+        "measure": "0",
+        "measureOrdinal": 1
+      },
+      {
+        "id": "work-bfc76c19ae29e440-7",
+        "onset": 4,
+        "pitchMidi": 72,
+        "measure": "1",
+        "measureOrdinal": 2
+      },
+      {
+        "id": "work-bfc76c19ae29e440-8",
+        "onset": 4.75,
+        "pitchMidi": 72,
+        "measure": "1",
+        "measureOrdinal": 2
+      },
+      {
+        "id": "work-bfc76c19ae29e440-9",
+        "onset": 5.5,
+        "pitchMidi": 72,
+        "measure": "1",
+        "measureOrdinal": 2
+      },
+      {
+        "id": "work-bfc76c19ae29e440-10",
+        "onset": 6.25,
+        "pitchMidi": 72,
+        "measure": "1",
+        "measureOrdinal": 2
+      },
+      {
+        "id": "work-bfc76c19ae29e440-11",
+        "onset": 7,
+        "pitchMidi": 72,
+        "measure": "1",
+        "measureOrdinal": 2
+      }
+    ],
+    "status": "source-retrieval-probe-not-human-relevance-label"
+  },
+  "observations": [
+    {
+      "source": "automated-search",
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "elapsedMs": 29679.424100000004,
+      "issues": [],
+      "invalidAlignmentRanks": []
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "K:\\MusicSearch\\evaluation\\runs\\preclearance-variation50-final-2026-09-16\\PC50-747973000139.json",
+      "fingerprint": "bdf0b1378197a190336978848b108ebc1ae87b5ad1407866b44321c23c051cd7"
+    }
+  ],
+  "humanReview": {
+    "status": "unreviewed",
+    "rankingJustification": null
+  },
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "status": "automatic-unreviewed",
+    "identity": {
+      "sourceId": "4. For the First Time in Forever, Violin and Piano Duet.musicxml.xml",
+      "workId": "work-bfc76c19ae29e440",
+      "streamId": "P1:1:1"
+    },
+    "sourceSnapshot": {
+      "xmlHash": "46b153db9b43fda6711c115513795aee6b077801cc0c47d3bbb2a66f9693d9c5",
+      "eventsHash": "a9130794ba352f0f9b06fba710b2e58dfcb564ed14e32160f2cb69638cce9687",
+      "xmlCaptureError": null
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "work-bfc76c19ae29e440-4",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "onset": 0.5703125,
+          "durationRatio": 0.140625,
+          "measure": "0",
+          "measureOrdinal": 1,
+          "beat": 1.5703125,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-5",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "onset": 0.7109375,
+          "durationRatio": 0.14453125,
+          "measure": "0",
+          "measureOrdinal": 1,
+          "beat": 1.7109375,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-6",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "onset": 0.85546875,
+          "durationRatio": 0.14453125,
+          "measure": "0",
+          "measureOrdinal": 1,
+          "beat": 1.85546875,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-7",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 4,
+          "durationRatio": 0.75,
+          "measure": "1",
+          "measureOrdinal": 2,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-8",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 4.75,
+          "durationRatio": 0.25,
+          "measure": "1",
+          "measureOrdinal": 2,
+          "beat": 1.75,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 5.5,
+          "durationRatio": 0.5,
+          "measure": "1",
+          "measureOrdinal": 2,
+          "beat": 2.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-10",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 6.25,
+          "durationRatio": 0.25,
+          "measure": "1",
+          "measureOrdinal": 2,
+          "beat": 3.25,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bfc76c19ae29e440-11",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 7,
+          "durationRatio": 0.5,
+          "measure": "1",
+          "measureOrdinal": 2,
+          "beat": 4,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        }
+      ]
+    },
+    "context": {
+      "policy": "source snapshot context plus up-to-two-ordinal-measures original XML"
+    },
+    "assets": {
+      "musicXml": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B04\\context.musicxml",
+      "events": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B04\\events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "repeated-note",
+        "source"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4",
+          "noteCount": 8
+        }
+      ],
+      "exclusions": [
+        "Source retrieval is not proof of correct ranking or copyright infringement"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "alignment-review",
+        "transformation-comparison"
+      ]
+    }
+  }
+}

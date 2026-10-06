@@ -1,0 +1,1338 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH09-L6-pitch-change",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH09-e0",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e1",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e2",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e3",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e5",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH09-e0",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e1",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e2",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e3",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH09-e5",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "pitch-change",
+    "positive-probe"
+  ],
+  "description": "6음 중 네 번째 음 +1반음 변경",
+  "changes": {
+    "changedSourceIds": [
+      "SH09-e3"
+    ],
+    "originalDuration": 3,
+    "queryDuration": 3,
+    "transformation": {
+      "pitch": {
+        "eventId": "SH09-e3",
+        "from": 69,
+        "to": 70,
+        "semitones": 1
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-9fc197c66f76342e",
+    "sourceId": "2. Way Back Then, Piano Solo.xml",
+    "streamId": "P1:1:1",
+    "title": "WAY BACK THEN",
+    "composer": "Composed by Jung, Jaeil\nArranged by La Lueur Exotique",
+    "baseStartIndex": 6,
+    "baseStartMeasure": 2,
+    "baseEndMeasure": 2,
+    "baseTargets": [
+      {
+        "onset": 4,
+        "pitchMidi": 75,
+        "measure": 2,
+        "beat": 1
+      },
+      {
+        "onset": 4.5,
+        "pitchMidi": 71,
+        "measure": 2,
+        "beat": 1.5
+      },
+      {
+        "onset": 5,
+        "pitchMidi": 71,
+        "measure": 2,
+        "beat": 2
+      },
+      {
+        "onset": 5.5,
+        "pitchMidi": 69,
+        "measure": 2,
+        "beat": 2.5
+      },
+      {
+        "onset": 6,
+        "pitchMidi": 67,
+        "measure": 2,
+        "beat": 3
+      },
+      {
+        "onset": 6.5,
+        "pitchMidi": 69,
+        "measure": 2,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 7119.656200000085,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [
+        {
+          "id": "query-completion-v1-0",
+          "kind": "pitch",
+          "query": {
+            "version": 1,
+            "mode": "melody_rhythm",
+            "meter": "4/4",
+            "startsOnDownbeat": true,
+            "includeRests": true,
+            "absoluteExactOnly": false,
+            "events": [
+              {
+                "id": "SH09-e0",
+                "kind": "note",
+                "pitchMidi": 75,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e1",
+                "kind": "note",
+                "pitchMidi": 71,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e2",
+                "kind": "note",
+                "pitchMidi": 71,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e3",
+                "kind": "note",
+                "pitchMidi": 70,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e4",
+                "kind": "note",
+                "pitchMidi": 67,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e5",
+                "kind": "note",
+                "pitchMidi": 68,
+                "durationRatio": 0.5,
+                "spelling": "G♯4"
+              }
+            ]
+          },
+          "changedIds": [
+            "SH09-e5"
+          ],
+          "reason": "6번째 음 undefined → G♯4",
+          "beforeFit": 0.8333333333333334,
+          "afterFit": 1,
+          "evidence": [
+            {
+              "workId": "work-c37cbd7e561b3abb-49c82cc1",
+              "sourceId": "mxl/17/49/QmZVUKs3t27Tp7qgHuFrkcooCauFgAXeT9SeDxUWowJext.mxl",
+              "title": "This is Undertale",
+              "streamId": "P15:1:1",
+              "startMeasure": 82,
+              "endMeasure": 83,
+              "transposition": -8,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-c37cbd7e561b3abb-49c82cc1-3",
+                  "kind": "note",
+                  "pitchMidi": 67,
+                  "spelling": "G4",
+                  "durationRatio": 0.5,
+                  "onset": 326,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 82,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 82,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Vibraphone",
+                  "keyFifths": 6
+                },
+                {
+                  "id": "work-c37cbd7e561b3abb-49c82cc1-4",
+                  "kind": "note",
+                  "pitchMidi": 63,
+                  "spelling": "Eb4",
+                  "durationRatio": 0.5,
+                  "onset": 326.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 82,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 82,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Vibraphone",
+                  "keyFifths": 6
+                },
+                {
+                  "id": "work-c37cbd7e561b3abb-49c82cc1-5",
+                  "kind": "note",
+                  "pitchMidi": 63,
+                  "spelling": "Eb4",
+                  "durationRatio": 0.5,
+                  "onset": 327,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 82,
+                  "beat": 4,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 82,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Vibraphone",
+                  "keyFifths": 6
+                },
+                {
+                  "id": "work-c37cbd7e561b3abb-49c82cc1-6",
+                  "kind": "note",
+                  "pitchMidi": 62,
+                  "spelling": "D4",
+                  "durationRatio": 0.5,
+                  "onset": 327.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 82,
+                  "beat": 4.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 82,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Vibraphone",
+                  "keyFifths": 6
+                },
+                {
+                  "id": "work-c37cbd7e561b3abb-49c82cc1-7",
+                  "kind": "note",
+                  "pitchMidi": 59,
+                  "spelling": "B3",
+                  "durationRatio": 0.5,
+                  "onset": 328,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 83,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 83,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Vibraphone",
+                  "keyFifths": 6
+                },
+                {
+                  "id": "work-c37cbd7e561b3abb-49c82cc1-8",
+                  "kind": "note",
+                  "pitchMidi": 60,
+                  "spelling": "C4",
+                  "durationRatio": 0.5,
+                  "onset": 328.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 83,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 83,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Vibraphone",
+                  "keyFifths": 6
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 8,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "query-completion-v1-1",
+          "kind": "pitch",
+          "query": {
+            "version": 1,
+            "mode": "melody_rhythm",
+            "meter": "4/4",
+            "startsOnDownbeat": true,
+            "includeRests": true,
+            "absoluteExactOnly": false,
+            "events": [
+              {
+                "id": "SH09-e0",
+                "kind": "note",
+                "pitchMidi": 74,
+                "durationRatio": 0.5,
+                "spelling": "D5"
+              },
+              {
+                "id": "SH09-e1",
+                "kind": "note",
+                "pitchMidi": 71,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e2",
+                "kind": "note",
+                "pitchMidi": 71,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e3",
+                "kind": "note",
+                "pitchMidi": 70,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e4",
+                "kind": "note",
+                "pitchMidi": 67,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH09-e5",
+                "kind": "note",
+                "pitchMidi": 69,
+                "durationRatio": 0.5
+              }
+            ]
+          },
+          "changedIds": [
+            "SH09-e0"
+          ],
+          "reason": "1번째 음 undefined → D5",
+          "beforeFit": 0.8333333333333334,
+          "afterFit": 1,
+          "evidence": [
+            {
+              "workId": "work-635c7fe7ae5a9046-5513ec17",
+              "sourceId": "mxl/8/33/QmQn2sjU689p3jyCGDNwWuvq6TrKn2rGjqfRGFu1U72m8m.mxl",
+              "title": "Toccata Op.7",
+              "streamId": "P1:1:3",
+              "startMeasure": 268,
+              "endMeasure": 271,
+              "transposition": -2,
+              "tempoRatio": 2,
+              "notes": [
+                {
+                  "id": "work-635c7fe7ae5a9046-5513ec17-1",
+                  "kind": "note",
+                  "pitchMidi": 72,
+                  "spelling": "C5",
+                  "durationRatio": 1,
+                  "onset": 535,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 268,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 268,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Piano",
+                  "keyFifths": 0
+                },
+                {
+                  "id": "work-635c7fe7ae5a9046-5513ec17-2",
+                  "kind": "note",
+                  "pitchMidi": 69,
+                  "spelling": "A4",
+                  "durationRatio": 1,
+                  "onset": 536,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 269,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 269,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Piano",
+                  "keyFifths": 0
+                },
+                {
+                  "id": "work-635c7fe7ae5a9046-5513ec17-3",
+                  "kind": "note",
+                  "pitchMidi": 69,
+                  "spelling": "A4",
+                  "durationRatio": 1,
+                  "onset": 537,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 269,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 269,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Piano",
+                  "keyFifths": 0
+                },
+                {
+                  "id": "work-635c7fe7ae5a9046-5513ec17-4",
+                  "kind": "note",
+                  "pitchMidi": 68,
+                  "spelling": "Ab4",
+                  "durationRatio": 1,
+                  "onset": 538,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 270,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 270,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Piano",
+                  "keyFifths": 0
+                },
+                {
+                  "id": "work-635c7fe7ae5a9046-5513ec17-5",
+                  "kind": "note",
+                  "pitchMidi": 65,
+                  "spelling": "F4",
+                  "durationRatio": 1,
+                  "onset": 539,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 270,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 270,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Piano",
+                  "keyFifths": 0
+                },
+                {
+                  "id": "work-635c7fe7ae5a9046-5513ec17-6",
+                  "kind": "note",
+                  "pitchMidi": 67,
+                  "spelling": "G4",
+                  "durationRatio": 1,
+                  "onset": 540,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 271,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 271,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Piano",
+                  "keyFifths": 0
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 2,
+                  "cost": 0.04443428571428571,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "top": [
+        {
+          "rank": 1,
+          "title": "WELLERMAN",
+          "sourceId": "4. Wellerman, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 97.66666666666667,
+            "interval": 97.38666666666667,
+            "contour": 100,
+            "rhythm": 89.48393168143699,
+            "meter": 85,
+            "structural": 82,
+            "skeleton": 71,
+            "pillarPitch": 91,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-956708fec92257b9-88a85b71&start=46&end=48&source=search&targets=92%3A54%2C92.5%3A50%2C93%3A50%2C94%3A49%2C95%3A46%2C96%3A47"
+        },
+        {
+          "rank": 2,
+          "title": "This is Undertale",
+          "sourceId": "mxl/17/49/QmZVUKs3t27Tp7qgHuFrkcooCauFgAXeT9SeDxUWowJext.mxl",
+          "streamId": "P15:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 97.66666666666667,
+            "interval": 97.38666666666667,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 100,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-c37cbd7e561b3abb-49c82cc1&start=82&end=83&source=search&targets=326%3A67%2C326.5%3A63%2C327%3A63%2C327.5%3A62%2C328%3A59%2C328.5%3A60"
+        },
+        {
+          "rank": 3,
+          "title": "Toccata Op.7",
+          "sourceId": "mxl/8/33/QmQn2sjU689p3jyCGDNwWuvq6TrKn2rGjqfRGFu1U72m8m.mxl",
+          "streamId": "P1:1:3",
+          "score": 96.79983575305634,
+          "scores": {
+            "pitch": 97.66666666666667,
+            "interval": 97.38666666666667,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 35,
+            "structural": 67,
+            "skeleton": 58,
+            "pillarPitch": 72,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-635c7fe7ae5a9046-5513ec17&start=268&end=271&source=search&targets=535%3A72%2C536%3A69%2C537%3A69%2C538%3A68%2C539%3A65%2C540%3A67"
+        },
+        {
+          "rank": 4,
+          "title": "Man of sorrows",
+          "sourceId": "mxl/12/27/QmUJJiA2poVnQZ1hyzUxNwLcohK7rJoZevq26wPwnMJATs.mxl",
+          "streamId": "P3:2:5",
+          "score": 94.20402985971589,
+          "scores": {
+            "pitch": 97.66666666666667,
+            "interval": 97.38666666666667,
+            "contour": 100,
+            "rhythm": 89.48393168143699,
+            "meter": 0,
+            "structural": 75,
+            "skeleton": 65,
+            "pillarPitch": 81,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-c38b294f7f2fcc40-e5024080&start=9&end=11&source=search&targets=35%3A58%2C36%3A55%2C37%3A55%2C38%3A54%2C40%3A51%2C40.5%3A53"
+        },
+        {
+          "rank": 5,
+          "title": "Elegie",
+          "sourceId": "mxl/7/23/QmPh1TgCgoi56pAVx4yKSZSdVtdUheNxwhc4PiGcnsnEkv.mxl",
+          "streamId": "P2:1:1",
+          "score": 93.59878445787879,
+          "scores": {
+            "pitch": 93,
+            "interval": 92.16,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 8,
+            "structural": 77,
+            "skeleton": 83,
+            "pillarPitch": 83,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-9d6f78689b07d345-88a85b71&start=12&end=12&source=search&targets=44.5%3A46%2C45%3A45%2C45.5%3A45%2C46%3A44%2C46.5%3A41%2C47%3A43"
+        },
+        {
+          "rank": 6,
+          "title": "XII. Now each flowry bancke of May",
+          "sourceId": "mxl/0/44/QmatmgMnxU81SkmoPBvxQnPkpJivFG1n8uACMiYjJxtTXE.mxl",
+          "streamId": "P1:1:1",
+          "score": 93.34881414359748,
+          "scores": {
+            "pitch": 97.66666666666667,
+            "interval": 97.38666666666667,
+            "contour": 100,
+            "rhythm": 56.7148534305012,
+            "meter": 58,
+            "structural": 92,
+            "skeleton": 95,
+            "pillarPitch": 97,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-ba01da50eda614fd&start=1&end=1&source=search&targets=293%3A73%2C294%3A70%2C295.5%3A70%2C296%3A69%2C297%3A66%2C298%3A68"
+        },
+        {
+          "rank": 7,
+          "title": "선인장",
+          "sourceId": "kysing/83451.xml",
+          "streamId": "P3:1:1",
+          "score": 93.23560002133172,
+          "scores": {
+            "pitch": 93,
+            "interval": 92.16,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 35,
+            "structural": 71,
+            "skeleton": 58,
+            "pillarPitch": 72,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-3b7ce3f1b4723af4-a71ddd21&start=28&end=30&source=search&targets=108%3A70%2C109%3A69%2C110%3A69%2C111%3A68%2C112%3A65%2C113%3A67"
+        },
+        {
+          "rank": 8,
+          "title": "tango",
+          "sourceId": "mxl/2/9/QmcaX3hp7SCf3ZRnrENL7HPorFjbkgxodvCHQLGPLb9vjY.mxl",
+          "streamId": "P1:1:1",
+          "score": 93.13675918171919,
+          "scores": {
+            "pitch": 95.33333333333333,
+            "interval": 94.77333333333334,
+            "contour": 100,
+            "rhythm": 89.48393168143699,
+            "meter": 8,
+            "structural": 77,
+            "skeleton": 65,
+            "pillarPitch": 81,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-5df7ea33d12c1236&start=23&end=24&source=search&targets=45%3A71%2C45.5%3A69%2C46%3A69%2C46.5%3A68%2C47.5%3A65%2C47.75%3A67"
+        },
+        {
+          "rank": 9,
+          "title": "아주 조금만 더 (드라마\"사운드트랙#1\")",
+          "sourceId": "kysing/28660.xml",
+          "streamId": "P3:2:5",
+          "score": 93.08872713853845,
+          "scores": {
+            "pitch": 93,
+            "interval": 92.16,
+            "contour": 100,
+            "rhythm": 89.48393168143699,
+            "meter": 78,
+            "structural": 41,
+            "skeleton": 83,
+            "pillarPitch": 83,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-48bb29dad20bdc21-e5024080&start=8&end=10&source=search&targets=26%3A71%2C28%3A70%2C29%3A70%2C30%3A69%2C32%3A66%2C34%3A68"
+        },
+        {
+          "rank": 10,
+          "title": "그대 눈물까지도",
+          "sourceId": "kysing/87056.xml",
+          "streamId": "P3:1:1",
+          "score": 92.72559247160748,
+          "scores": {
+            "pitch": 97.66666666666667,
+            "interval": 97.38666666666667,
+            "contour": 100,
+            "rhythm": 52.07058362876739,
+            "meter": 58,
+            "structural": 94,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-f59e61c2559a2561-a71ddd21&start=57&end=57&source=search&targets=226.375%3A76%2C226.5%3A73%2C226.75%3A73%2C226.875%3A72%2C227%3A69%2C227.125%3A71"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "changed-note-alignment",
+      "queryNoteIndex": 3,
+      "queryPitch": 70,
+      "originalPitch": 69,
+      "sourcePitch": null,
+      "sourceOnset": null,
+      "alignmentType": null,
+      "unmatched": true
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 61,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH09-L6-pitch-change.json",
+      "initialPath": "../runs/SH09-L6-pitch-change.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-9fc197c66f76342e",
+      "sourceId": "2. Way Back Then, Piano Solo.xml",
+      "streamId": "P1:1:1",
+      "title": "WAY BACK THEN",
+      "composer": "Composed by Jung, Jaeil\nArranged by La Lueur Exotique",
+      "baseStartIndex": 6,
+      "baseStartMeasure": 2,
+      "baseEndMeasure": 2,
+      "baseTargets": [
+        {
+          "onset": 4,
+          "pitchMidi": 75,
+          "measure": 2,
+          "beat": 1
+        },
+        {
+          "onset": 4.5,
+          "pitchMidi": 71,
+          "measure": 2,
+          "beat": 1.5
+        },
+        {
+          "onset": 5,
+          "pitchMidi": 71,
+          "measure": 2,
+          "beat": 2
+        },
+        {
+          "onset": 5.5,
+          "pitchMidi": 69,
+          "measure": 2,
+          "beat": 2.5
+        },
+        {
+          "onset": 6,
+          "pitchMidi": 67,
+          "measure": 2,
+          "beat": 3
+        },
+        {
+          "onset": 6.5,
+          "pitchMidi": 69,
+          "measure": 2,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 1,
+      "endOrdinal": 4,
+      "xmlHash": "938435d6e4dd8ca14289c35a57436ce1ff6883e2728293784deb23e6ae311144",
+      "xmlError": null,
+      "eventsHash": "b2bc3cd64f33f7d178046e8ba58296f9966fd50c0fd2af099bbf98e90d853c20",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Way Back Then, Piano Solo.xml",
+      "sourceHash": "9fc197c66f76342e9316b1e53d658ba060227dcf302ff15025d0deaa0786ca63"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m2:n1",
+          "xmlNoteId": "P1:m2:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 2,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 2,
+          "originalMeasureLabel": "2",
+          "onsetQ": {
+            "n": 4,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 75,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m2:n2",
+          "xmlNoteId": "P1:m2:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 2,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 2,
+          "originalMeasureLabel": "2",
+          "onsetQ": {
+            "n": 9,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m2:n3",
+          "xmlNoteId": "P1:m2:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 2,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 2,
+          "originalMeasureLabel": "2",
+          "onsetQ": {
+            "n": 5,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m2:n4",
+          "xmlNoteId": "P1:m2:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 2,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 2,
+          "originalMeasureLabel": "2",
+          "onsetQ": {
+            "n": 11,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 69,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m2:n5",
+          "xmlNoteId": "P1:m2:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 2,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 2,
+          "originalMeasureLabel": "2",
+          "onsetQ": {
+            "n": 6,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m2:n6",
+          "xmlNoteId": "P1:m2:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 2,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 2,
+          "originalMeasureLabel": "2",
+          "onsetQ": {
+            "n": 13,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 69,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH09-L6/context.musicxml",
+      "events": "../base-assets/SH09-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "pitch-change"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

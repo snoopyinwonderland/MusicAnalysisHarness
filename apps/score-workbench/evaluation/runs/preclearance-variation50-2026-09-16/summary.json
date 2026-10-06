@@ -1,0 +1,131 @@
+{
+  "fingerprint": "af0bf3018eae9bd1c051d1bd48d93e76eb2edff5453863d60c52ad743d9d9e83",
+  "executed": 11,
+  "remaining": 39,
+  "runs": [
+    {
+      "caseId": "PC50-f5a289189313",
+      "status": "completed",
+      "elapsedMs": 18575.7062,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-90f14c42ad6d",
+      "status": "completed",
+      "elapsedMs": 3178.666400000002,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-57eec2840de6",
+      "status": "completed",
+      "elapsedMs": 3328.159200000002,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-1055ab692f5c",
+      "status": "completed",
+      "elapsedMs": 49337.054099999994,
+      "sourceRank": 8,
+      "sourceWindowProxyRank": 8,
+      "issues": [
+        "Original source below rank 5; higher candidates require musical review"
+      ],
+      "improvementDirections": [
+        "Review competing passages; do not force source rank"
+      ],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-d1e03901f158",
+      "status": "completed",
+      "elapsedMs": 51031.0162,
+      "sourceRank": null,
+      "sourceWindowProxyRank": null,
+      "issues": [
+        "Original source absent within returned results; edition alternatives need review"
+      ],
+      "improvementDirections": [
+        "Inspect retrieval vs reranking before changing thresholds; compare paired source case"
+      ],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-9d54431b228d",
+      "status": "failed",
+      "elapsedMs": 60135.98340000001,
+      "error": "Search timed out after 60000ms",
+      "issues": [
+        "Search did not complete"
+      ],
+      "improvementDirections": [
+        "Inspect timeout trace and cold cache before scoring changes"
+      ]
+    },
+    {
+      "caseId": "PC50-908c82beb746",
+      "status": "completed",
+      "elapsedMs": 4918.272400000016,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-277bca0124a9",
+      "status": "completed",
+      "elapsedMs": 4338.731999999989,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-c003cc7fbcd1",
+      "status": "completed",
+      "elapsedMs": 3082.0084999999963,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-904b401ff219",
+      "status": "completed",
+      "elapsedMs": 19790.738100000017,
+      "sourceRank": null,
+      "sourceWindowProxyRank": null,
+      "issues": [
+        "Original source absent within returned results; edition alternatives need review"
+      ],
+      "improvementDirections": [
+        "Inspect retrieval vs reranking before changing thresholds; compare paired source case"
+      ],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    },
+    {
+      "caseId": "PC50-63107c35162f",
+      "status": "completed",
+      "elapsedMs": 28705.561599999986,
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "issues": [],
+      "improvementDirections": [],
+      "highlightValidation": "API targets retained; actual Verovio SVG visual correctness not verified by this runner"
+    }
+  ]
+}

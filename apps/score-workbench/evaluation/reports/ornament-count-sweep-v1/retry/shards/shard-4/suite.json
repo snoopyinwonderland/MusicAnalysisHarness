@@ -1,0 +1,1979 @@
+{
+  "schema": "ornament-count-sweep/1/retry/shard",
+  "createdAt": "2026-09-22T10:45:05.370Z",
+  "selection": "15 distinct 4/4 XML-audited sources. Same host and fixed 0.5-beat cluster span for 3–6 tones. B16 replaced by B14 before execution because it had no host long enough.",
+  "controlledVariables": {
+    "sourceNotes": 16,
+    "clusterSpan": 0.5,
+    "counts": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "sameHostWithinBase": true,
+    "downstreamOnsetsPreserved": true
+  },
+  "decisionRule": "Measure retrieval/admission and score degradation by count. Rank is secondary and corpus-relative.",
+  "bases": [
+    {
+      "baseId": "OC05",
+      "sourceBaseId": "B06",
+      "expected": {
+        "workId": "work-ece449acd6f329a1",
+        "sourceId": "3. Can_t Smile Without You, Violin and Piano Duet.musicxml.xml",
+        "streamId": "P1:1:1",
+        "title": "CAN'T SMILE WITHOUT YOU",
+        "composer": "Composed by Christian Arnold, Geoff Morrow, David Martin\nArranged by Reflet des Nuages",
+        "partName": "Vln.",
+        "family": "MusicXML",
+        "baseStartIndex": 111,
+        "baseStartMeasure": 34,
+        "baseEndMeasure": 37,
+        "baseTargets": [
+          {
+            "onset": 132,
+            "pitchMidi": 66,
+            "measure": 34,
+            "beat": 1
+          },
+          {
+            "onset": 134,
+            "pitchMidi": 67,
+            "measure": 34,
+            "beat": 3
+          },
+          {
+            "onset": 136,
+            "pitchMidi": 71,
+            "measure": 35,
+            "beat": 1
+          },
+          {
+            "onset": 138,
+            "pitchMidi": 69,
+            "measure": 35,
+            "beat": 3
+          },
+          {
+            "onset": 139.33203125,
+            "pitchMidi": 64,
+            "measure": 35,
+            "beat": 4.33203125
+          },
+          {
+            "onset": 139.6640625,
+            "pitchMidi": 67,
+            "measure": 35,
+            "beat": 4.6640625
+          },
+          {
+            "onset": 140,
+            "pitchMidi": 71,
+            "measure": 36,
+            "beat": 1
+          },
+          {
+            "onset": 142,
+            "pitchMidi": 69,
+            "measure": 36,
+            "beat": 3
+          },
+          {
+            "onset": 143.5,
+            "pitchMidi": 64,
+            "measure": 36,
+            "beat": 4.5
+          },
+          {
+            "onset": 144,
+            "pitchMidi": 71,
+            "measure": 37,
+            "beat": 1
+          }
+        ]
+      },
+      "meter": "4/4",
+      "sourceNoteCount": 16,
+      "sourceDuration": 20.5,
+      "host": {
+        "eventId": "b06-src-13",
+        "eventIndex": 14,
+        "pitchMidi": 71,
+        "durationRatio": 2,
+        "source": {
+          "measure": 36,
+          "beat": 1,
+          "onset": 140
+        }
+      },
+      "sourceEvents": [
+        {
+          "id": "b06-src-01",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 32,
+            "beat": 1,
+            "onset": 124
+          }
+        },
+        {
+          "id": "b06-src-02",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 32,
+            "beat": 3,
+            "onset": 126
+          }
+        },
+        {
+          "id": "b06-rest-02",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5,
+          "generatedFromSourceGap": true
+        },
+        {
+          "id": "b06-src-03",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 33,
+            "beat": 1.5,
+            "onset": 128.5
+          }
+        },
+        {
+          "id": "b06-src-04",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1,
+          "source": {
+            "measure": 33,
+            "beat": 2,
+            "onset": 129
+          }
+        },
+        {
+          "id": "b06-src-05",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1.5,
+          "source": {
+            "measure": 33,
+            "beat": 3,
+            "onset": 130
+          }
+        },
+        {
+          "id": "b06-src-06",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 33,
+            "beat": 4.5,
+            "onset": 131.5
+          }
+        },
+        {
+          "id": "b06-src-07",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 34,
+            "beat": 1,
+            "onset": 132
+          }
+        },
+        {
+          "id": "b06-src-08",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 34,
+            "beat": 3,
+            "onset": 134
+          }
+        },
+        {
+          "id": "b06-src-09",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 35,
+            "beat": 1,
+            "onset": 136
+          }
+        },
+        {
+          "id": "b06-src-10",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1,
+          "source": {
+            "measure": 35,
+            "beat": 3,
+            "onset": 138
+          }
+        },
+        {
+          "id": "b06-rest-10",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.332031,
+          "generatedFromSourceGap": true
+        },
+        {
+          "id": "b06-src-11",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.332031,
+          "source": {
+            "measure": 35,
+            "beat": 4.33203125,
+            "onset": 139.33203125
+          }
+        },
+        {
+          "id": "b06-src-12",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.335938,
+          "source": {
+            "measure": 35,
+            "beat": 4.6640625,
+            "onset": 139.6640625
+          }
+        },
+        {
+          "id": "b06-src-13",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 36,
+            "beat": 1,
+            "onset": 140
+          }
+        },
+        {
+          "id": "b06-src-14",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5,
+          "source": {
+            "measure": 36,
+            "beat": 3,
+            "onset": 142
+          }
+        },
+        {
+          "id": "b06-src-15",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 36,
+            "beat": 4.5,
+            "onset": 143.5
+          }
+        },
+        {
+          "id": "b06-src-16",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 37,
+            "beat": 1,
+            "onset": 144
+          }
+        }
+      ],
+      "qualification": "Existing XML-audited stream; fixed-span synthetic neighbor cluster, not harmonic adjudication."
+    },
+    {
+      "baseId": "OC08",
+      "sourceBaseId": "B10",
+      "expected": {
+        "workId": "work-bb7980b41fbed397",
+        "sourceId": "kysing/01105.xml",
+        "streamId": "P1:1:1",
+        "title": "가장 무도회",
+        "composer": "최희준",
+        "partName": "Piano, S1",
+        "family": "KYSing",
+        "baseStartIndex": 14,
+        "baseStartMeasure": 9,
+        "baseEndMeasure": 11,
+        "baseTargets": [
+          {
+            "onset": 32,
+            "pitchMidi": 74,
+            "measure": 9,
+            "beat": 1
+          },
+          {
+            "onset": 35,
+            "pitchMidi": 67,
+            "measure": 9,
+            "beat": 4
+          },
+          {
+            "onset": 36,
+            "pitchMidi": 72,
+            "measure": 10,
+            "beat": 1
+          },
+          {
+            "onset": 37.5,
+            "pitchMidi": 74,
+            "measure": 10,
+            "beat": 2.5
+          },
+          {
+            "onset": 38,
+            "pitchMidi": 76,
+            "measure": 10,
+            "beat": 3
+          },
+          {
+            "onset": 39,
+            "pitchMidi": 79,
+            "measure": 10,
+            "beat": 4
+          },
+          {
+            "onset": 39.5,
+            "pitchMidi": 84,
+            "measure": 10,
+            "beat": 4.5
+          },
+          {
+            "onset": 40,
+            "pitchMidi": 81,
+            "measure": 11,
+            "beat": 1
+          },
+          {
+            "onset": 43,
+            "pitchMidi": 79,
+            "measure": 11,
+            "beat": 4
+          },
+          {
+            "onset": 43.5,
+            "pitchMidi": 81,
+            "measure": 11,
+            "beat": 4.5
+          }
+        ]
+      },
+      "meter": "4/4",
+      "sourceNoteCount": 16,
+      "sourceDuration": 19,
+      "host": {
+        "eventId": "b10-src-06",
+        "eventIndex": 5,
+        "pitchMidi": 76,
+        "durationRatio": 1,
+        "source": {
+          "measure": 8,
+          "beat": 3,
+          "onset": 30
+        }
+      },
+      "sourceEvents": [
+        {
+          "id": "b10-src-01",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 3,
+          "source": {
+            "measure": 7,
+            "beat": 1,
+            "onset": 24
+          }
+        },
+        {
+          "id": "b10-src-02",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 7,
+            "beat": 4,
+            "onset": 27
+          }
+        },
+        {
+          "id": "b10-src-03",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 7,
+            "beat": 4.5,
+            "onset": 27.5
+          }
+        },
+        {
+          "id": "b10-src-04",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.5,
+          "source": {
+            "measure": 8,
+            "beat": 1,
+            "onset": 28
+          }
+        },
+        {
+          "id": "b10-src-05",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 8,
+            "beat": 2.5,
+            "onset": 29.5
+          }
+        },
+        {
+          "id": "b10-src-06",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 8,
+            "beat": 3,
+            "onset": 30
+          }
+        },
+        {
+          "id": "b10-src-07",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 8,
+            "beat": 4,
+            "onset": 31
+          }
+        },
+        {
+          "id": "b10-src-08",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 8,
+            "beat": 4.5,
+            "onset": 31.5
+          }
+        },
+        {
+          "id": "b10-src-09",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3,
+          "source": {
+            "measure": 9,
+            "beat": 1,
+            "onset": 32
+          }
+        },
+        {
+          "id": "b10-src-10",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1,
+          "source": {
+            "measure": 9,
+            "beat": 4,
+            "onset": 35
+          }
+        },
+        {
+          "id": "b10-src-11",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.5,
+          "source": {
+            "measure": 10,
+            "beat": 1,
+            "onset": 36
+          }
+        },
+        {
+          "id": "b10-src-12",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 10,
+            "beat": 2.5,
+            "onset": 37.5
+          }
+        },
+        {
+          "id": "b10-src-13",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 10,
+            "beat": 3,
+            "onset": 38
+          }
+        },
+        {
+          "id": "b10-src-14",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 10,
+            "beat": 4,
+            "onset": 39
+          }
+        },
+        {
+          "id": "b10-src-15",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 10,
+            "beat": 4.5,
+            "onset": 39.5
+          }
+        },
+        {
+          "id": "b10-src-16",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 3,
+          "source": {
+            "measure": 11,
+            "beat": 1,
+            "onset": 40
+          }
+        }
+      ],
+      "qualification": "Existing XML-audited stream; fixed-span synthetic neighbor cluster, not harmonic adjudication."
+    },
+    {
+      "baseId": "OC13",
+      "sourceBaseId": "B17",
+      "expected": {
+        "workId": "work-1b77b5a4a021de03",
+        "sourceId": "3. I Saw Mommy Kissing Santa Claus, Violin, Cello and Piano Trio.musicxml.xml",
+        "streamId": "P1:1:1",
+        "title": "I SAW MOMMY KISSING SANTA CLAUS",
+        "composer": "Composed by Tommie Connor\nArranged by Reflet des Nuages",
+        "partName": "Vln.",
+        "family": "MusicXML",
+        "baseStartIndex": 56,
+        "baseStartMeasure": 23,
+        "baseEndMeasure": 26,
+        "baseTargets": [
+          {
+            "onset": 88,
+            "pitchMidi": 83,
+            "measure": 23,
+            "beat": 1
+          },
+          {
+            "onset": 91,
+            "pitchMidi": 79,
+            "measure": 23,
+            "beat": 4
+          },
+          {
+            "onset": 92,
+            "pitchMidi": 76,
+            "measure": 24,
+            "beat": 1
+          },
+          {
+            "onset": 96,
+            "pitchMidi": 81,
+            "measure": 25,
+            "beat": 1
+          },
+          {
+            "onset": 97,
+            "pitchMidi": 79,
+            "measure": 25,
+            "beat": 2
+          },
+          {
+            "onset": 98,
+            "pitchMidi": 76,
+            "measure": 25,
+            "beat": 3
+          },
+          {
+            "onset": 99.5,
+            "pitchMidi": 72,
+            "measure": 25,
+            "beat": 4.5
+          },
+          {
+            "onset": 100,
+            "pitchMidi": 81,
+            "measure": 26,
+            "beat": 1
+          },
+          {
+            "onset": 101,
+            "pitchMidi": 79,
+            "measure": 26,
+            "beat": 2
+          },
+          {
+            "onset": 102,
+            "pitchMidi": 76,
+            "measure": 26,
+            "beat": 3
+          }
+        ]
+      },
+      "meter": "4/4",
+      "sourceNoteCount": 16,
+      "sourceDuration": 23,
+      "host": {
+        "eventId": "b17-src-06",
+        "eventIndex": 6,
+        "pitchMidi": 84,
+        "durationRatio": 1,
+        "source": {
+          "measure": 22,
+          "beat": 4,
+          "onset": 87
+        }
+      },
+      "sourceEvents": [
+        {
+          "id": "b17-src-01",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 2,
+          "source": {
+            "measure": 21,
+            "beat": 1,
+            "onset": 80
+          }
+        },
+        {
+          "id": "b17-rest-01",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1,
+          "generatedFromSourceGap": true
+        },
+        {
+          "id": "b17-src-02",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 21,
+            "beat": 4,
+            "onset": 83
+          }
+        },
+        {
+          "id": "b17-src-03",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 22,
+            "beat": 1,
+            "onset": 84
+          }
+        },
+        {
+          "id": "b17-src-04",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 22,
+            "beat": 2,
+            "onset": 85
+          }
+        },
+        {
+          "id": "b17-src-05",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 22,
+            "beat": 3,
+            "onset": 86
+          }
+        },
+        {
+          "id": "b17-src-06",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1,
+          "source": {
+            "measure": 22,
+            "beat": 4,
+            "onset": 87
+          }
+        },
+        {
+          "id": "b17-src-07",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2,
+          "source": {
+            "measure": 23,
+            "beat": 1,
+            "onset": 88
+          }
+        },
+        {
+          "id": "b17-rest-07",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1,
+          "generatedFromSourceGap": true
+        },
+        {
+          "id": "b17-src-08",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 23,
+            "beat": 4,
+            "onset": 91
+          }
+        },
+        {
+          "id": "b17-src-09",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3,
+          "source": {
+            "measure": 24,
+            "beat": 1,
+            "onset": 92
+          }
+        },
+        {
+          "id": "b17-rest-09",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1,
+          "generatedFromSourceGap": true
+        },
+        {
+          "id": "b17-src-10",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 25,
+            "beat": 1,
+            "onset": 96
+          }
+        },
+        {
+          "id": "b17-src-11",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 25,
+            "beat": 2,
+            "onset": 97
+          }
+        },
+        {
+          "id": "b17-src-12",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 25,
+            "beat": 3,
+            "onset": 98
+          }
+        },
+        {
+          "id": "b17-rest-12",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5,
+          "generatedFromSourceGap": true
+        },
+        {
+          "id": "b17-src-13",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 25,
+            "beat": 4.5,
+            "onset": 99.5
+          }
+        },
+        {
+          "id": "b17-src-14",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 26,
+            "beat": 1,
+            "onset": 100
+          }
+        },
+        {
+          "id": "b17-src-15",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 26,
+            "beat": 2,
+            "onset": 101
+          }
+        },
+        {
+          "id": "b17-src-16",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1,
+          "source": {
+            "measure": 26,
+            "beat": 3,
+            "onset": 102
+          }
+        }
+      ],
+      "qualification": "Existing XML-audited stream; fixed-span synthetic neighbor cluster, not harmonic adjudication."
+    },
+    {
+      "baseId": "OC14",
+      "sourceBaseId": "B18",
+      "expected": {
+        "workId": "work-9c6923756c5ce285",
+        "sourceId": "3. Aqua, Violin, Cello and Piano Trio.musicxml.xml",
+        "streamId": "P1:1:1",
+        "title": "AQUA",
+        "composer": "Composed by Ryuichi Sakamoto\nArranged by Reflet des Nuages",
+        "partName": "Vln.",
+        "family": "MusicXML",
+        "baseStartIndex": 67,
+        "baseStartMeasure": 28,
+        "baseEndMeasure": 30,
+        "baseTargets": [
+          {
+            "onset": 108,
+            "pitchMidi": 67,
+            "measure": 28,
+            "beat": 1
+          },
+          {
+            "onset": 109,
+            "pitchMidi": 71,
+            "measure": 28,
+            "beat": 2
+          },
+          {
+            "onset": 109.75,
+            "pitchMidi": 69,
+            "measure": 28,
+            "beat": 2.75
+          },
+          {
+            "onset": 110,
+            "pitchMidi": 69,
+            "measure": 28,
+            "beat": 3
+          },
+          {
+            "onset": 111.5,
+            "pitchMidi": 62,
+            "measure": 28,
+            "beat": 4.5
+          },
+          {
+            "onset": 112,
+            "pitchMidi": 67,
+            "measure": 29,
+            "beat": 1
+          },
+          {
+            "onset": 113,
+            "pitchMidi": 69,
+            "measure": 29,
+            "beat": 2
+          },
+          {
+            "onset": 114,
+            "pitchMidi": 71,
+            "measure": 29,
+            "beat": 3
+          },
+          {
+            "onset": 115.5,
+            "pitchMidi": 62,
+            "measure": 29,
+            "beat": 4.5
+          },
+          {
+            "onset": 116,
+            "pitchMidi": 64,
+            "measure": 30,
+            "beat": 1
+          }
+        ]
+      },
+      "meter": "4/4",
+      "sourceNoteCount": 16,
+      "sourceDuration": 11.5,
+      "host": {
+        "eventId": "b18-src-11",
+        "eventIndex": 10,
+        "pitchMidi": 71,
+        "durationRatio": 1,
+        "source": {
+          "measure": 27,
+          "beat": 3.5,
+          "onset": 106.5
+        }
+      },
+      "sourceEvents": [
+        {
+          "id": "b18-src-01",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 26,
+            "beat": 1,
+            "onset": 100
+          }
+        },
+        {
+          "id": "b18-src-02",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 26,
+            "beat": 1.5,
+            "onset": 100.5
+          }
+        },
+        {
+          "id": "b18-src-03",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 26,
+            "beat": 2,
+            "onset": 101
+          }
+        },
+        {
+          "id": "b18-src-04",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 26,
+            "beat": 2.5,
+            "onset": 101.5
+          }
+        },
+        {
+          "id": "b18-src-05",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2,
+          "source": {
+            "measure": 26,
+            "beat": 3,
+            "onset": 102
+          }
+        },
+        {
+          "id": "b18-src-06",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1,
+          "source": {
+            "measure": 27,
+            "beat": 1,
+            "onset": 104
+          }
+        },
+        {
+          "id": "b18-src-07",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 27,
+            "beat": 2,
+            "onset": 105
+          }
+        },
+        {
+          "id": "b18-src-08",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.25,
+          "source": {
+            "measure": 27,
+            "beat": 2.5,
+            "onset": 105.5
+          }
+        },
+        {
+          "id": "b18-src-09",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25,
+          "source": {
+            "measure": 27,
+            "beat": 2.75,
+            "onset": 105.75
+          }
+        },
+        {
+          "id": "b18-src-10",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 27,
+            "beat": 3,
+            "onset": 106
+          }
+        },
+        {
+          "id": "b18-src-11",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1,
+          "source": {
+            "measure": 27,
+            "beat": 3.5,
+            "onset": 106.5
+          }
+        },
+        {
+          "id": "b18-src-12",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5,
+          "source": {
+            "measure": 27,
+            "beat": 4.5,
+            "onset": 107.5
+          }
+        },
+        {
+          "id": "b18-src-13",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1,
+          "source": {
+            "measure": 28,
+            "beat": 1,
+            "onset": 108
+          }
+        },
+        {
+          "id": "b18-src-14",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75,
+          "source": {
+            "measure": 28,
+            "beat": 2,
+            "onset": 109
+          }
+        },
+        {
+          "id": "b18-src-15",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25,
+          "source": {
+            "measure": 28,
+            "beat": 2.75,
+            "onset": 109.75
+          }
+        },
+        {
+          "id": "b18-src-16",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5,
+          "source": {
+            "measure": 28,
+            "beat": 3,
+            "onset": 110
+          }
+        }
+      ],
+      "qualification": "Existing XML-audited stream; fixed-span synthetic neighbor cluster, not harmonic adjudication."
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "OC05-cluster-3",
+      "baseId": "OC05",
+      "kind": "cluster-3",
+      "addedNoteCount": 3,
+      "finalNoteCount": 19,
+      "clusterSpan": 0.5,
+      "operation": {
+        "type": "fixed-span-local-ornament-cluster",
+        "hostId": "b06-src-13",
+        "hostPitchMidi": 71,
+        "hostBefore": 2,
+        "hostAfter": 1.5,
+        "clusterSpan": 0.5,
+        "insertedCount": 3,
+        "insertedIds": [
+          "oc05-cluster-3-orn-01",
+          "oc05-cluster-3-orn-02",
+          "oc05-cluster-3-orn-03"
+        ],
+        "durations": [
+          0.166667,
+          0.166667,
+          0.166666
+        ],
+        "contourOffsets": [
+          1,
+          -1,
+          0
+        ]
+      },
+      "totalDuration": 20.5,
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "4/4",
+        "startsOnDownbeat": true,
+        "events": [
+          {
+            "id": "b06-src-01",
+            "kind": "note",
+            "pitchMidi": 66,
+            "spelling": "F#4",
+            "durationRatio": 2
+          },
+          {
+            "id": "b06-src-02",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 2
+          },
+          {
+            "id": "b06-rest-02",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 0.5,
+            "generatedFromSourceGap": true
+          },
+          {
+            "id": "b06-src-03",
+            "kind": "note",
+            "pitchMidi": 59,
+            "spelling": "B3",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b06-src-04",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 1
+          },
+          {
+            "id": "b06-src-05",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 1.5
+          },
+          {
+            "id": "b06-src-06",
+            "kind": "note",
+            "pitchMidi": 66,
+            "spelling": "F#4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b06-src-07",
+            "kind": "note",
+            "pitchMidi": 66,
+            "spelling": "F#4",
+            "durationRatio": 2
+          },
+          {
+            "id": "b06-src-08",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 2
+          },
+          {
+            "id": "b06-src-09",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 2
+          },
+          {
+            "id": "b06-src-10",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 1
+          },
+          {
+            "id": "b06-rest-10",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 0.332031,
+            "generatedFromSourceGap": true
+          },
+          {
+            "id": "b06-src-11",
+            "kind": "note",
+            "pitchMidi": 64,
+            "spelling": "E4",
+            "durationRatio": 0.332031
+          },
+          {
+            "id": "b06-src-12",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 0.335938
+          },
+          {
+            "id": "b06-src-13",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 1.5
+          },
+          {
+            "id": "oc05-cluster-3-orn-01",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 0.166667,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc05-cluster-3-orn-02",
+            "kind": "note",
+            "pitchMidi": 70,
+            "spelling": "A#4",
+            "durationRatio": 0.166667,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc05-cluster-3-orn-03",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 0.166666,
+            "generated": true,
+            "ornamentRole": "return-tone"
+          },
+          {
+            "id": "b06-src-14",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 1.5
+          },
+          {
+            "id": "b06-src-15",
+            "kind": "note",
+            "pitchMidi": 64,
+            "spelling": "E4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b06-src-16",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 0.5
+          }
+        ],
+        "absoluteExactOnly": false,
+        "includeRests": true
+      }
+    },
+    {
+      "caseId": "OC08-original",
+      "baseId": "OC08",
+      "kind": "original",
+      "addedNoteCount": 0,
+      "finalNoteCount": 16,
+      "clusterSpan": 0,
+      "operation": null,
+      "totalDuration": 19,
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "4/4",
+        "startsOnDownbeat": true,
+        "events": [
+          {
+            "id": "b10-src-01",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 3
+          },
+          {
+            "id": "b10-src-02",
+            "kind": "note",
+            "pitchMidi": 81,
+            "spelling": "A5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-03",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-04",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 1.5
+          },
+          {
+            "id": "b10-src-05",
+            "kind": "note",
+            "pitchMidi": 74,
+            "spelling": "D5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-06",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b10-src-07",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-08",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-09",
+            "kind": "note",
+            "pitchMidi": 74,
+            "spelling": "D5",
+            "durationRatio": 3
+          },
+          {
+            "id": "b10-src-10",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 1
+          },
+          {
+            "id": "b10-src-11",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 1.5
+          },
+          {
+            "id": "b10-src-12",
+            "kind": "note",
+            "pitchMidi": 74,
+            "spelling": "D5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-13",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b10-src-14",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-15",
+            "kind": "note",
+            "pitchMidi": 84,
+            "spelling": "C6",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b10-src-16",
+            "kind": "note",
+            "pitchMidi": 81,
+            "spelling": "A5",
+            "durationRatio": 3
+          }
+        ],
+        "absoluteExactOnly": false,
+        "includeRests": true
+      }
+    },
+    {
+      "caseId": "OC13-cluster-4",
+      "baseId": "OC13",
+      "kind": "cluster-4",
+      "addedNoteCount": 4,
+      "finalNoteCount": 20,
+      "clusterSpan": 0.5,
+      "operation": {
+        "type": "fixed-span-local-ornament-cluster",
+        "hostId": "b17-src-06",
+        "hostPitchMidi": 84,
+        "hostBefore": 1,
+        "hostAfter": 0.5,
+        "clusterSpan": 0.5,
+        "insertedCount": 4,
+        "insertedIds": [
+          "oc13-cluster-4-orn-01",
+          "oc13-cluster-4-orn-02",
+          "oc13-cluster-4-orn-03",
+          "oc13-cluster-4-orn-04"
+        ],
+        "durations": [
+          0.125,
+          0.125,
+          0.125,
+          0.125
+        ],
+        "contourOffsets": [
+          1,
+          0,
+          -1,
+          0
+        ]
+      },
+      "totalDuration": 23,
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "4/4",
+        "startsOnDownbeat": true,
+        "events": [
+          {
+            "id": "b17-src-01",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 2
+          },
+          {
+            "id": "b17-rest-01",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 1,
+            "generatedFromSourceGap": true
+          },
+          {
+            "id": "b17-src-02",
+            "kind": "note",
+            "pitchMidi": 74,
+            "spelling": "D5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-03",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-04",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-05",
+            "kind": "note",
+            "pitchMidi": 81,
+            "spelling": "A5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-06",
+            "kind": "note",
+            "pitchMidi": 84,
+            "spelling": "C6",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "oc13-cluster-4-orn-01",
+            "kind": "note",
+            "pitchMidi": 85,
+            "spelling": "C#6",
+            "durationRatio": 0.125,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc13-cluster-4-orn-02",
+            "kind": "note",
+            "pitchMidi": 84,
+            "spelling": "C6",
+            "durationRatio": 0.125,
+            "generated": true,
+            "ornamentRole": "return-tone"
+          },
+          {
+            "id": "oc13-cluster-4-orn-03",
+            "kind": "note",
+            "pitchMidi": 83,
+            "spelling": "B5",
+            "durationRatio": 0.125,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc13-cluster-4-orn-04",
+            "kind": "note",
+            "pitchMidi": 84,
+            "spelling": "C6",
+            "durationRatio": 0.125,
+            "generated": true,
+            "ornamentRole": "return-tone"
+          },
+          {
+            "id": "b17-src-07",
+            "kind": "note",
+            "pitchMidi": 83,
+            "spelling": "B5",
+            "durationRatio": 2
+          },
+          {
+            "id": "b17-rest-07",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 1,
+            "generatedFromSourceGap": true
+          },
+          {
+            "id": "b17-src-08",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-09",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 3
+          },
+          {
+            "id": "b17-rest-09",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 1,
+            "generatedFromSourceGap": true
+          },
+          {
+            "id": "b17-src-10",
+            "kind": "note",
+            "pitchMidi": 81,
+            "spelling": "A5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-11",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-12",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-rest-12",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 0.5,
+            "generatedFromSourceGap": true
+          },
+          {
+            "id": "b17-src-13",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b17-src-14",
+            "kind": "note",
+            "pitchMidi": 81,
+            "spelling": "A5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-15",
+            "kind": "note",
+            "pitchMidi": 79,
+            "spelling": "G5",
+            "durationRatio": 1
+          },
+          {
+            "id": "b17-src-16",
+            "kind": "note",
+            "pitchMidi": 76,
+            "spelling": "E5",
+            "durationRatio": 1
+          }
+        ],
+        "absoluteExactOnly": false,
+        "includeRests": true
+      }
+    },
+    {
+      "caseId": "OC14-cluster-5",
+      "baseId": "OC14",
+      "kind": "cluster-5",
+      "addedNoteCount": 5,
+      "finalNoteCount": 21,
+      "clusterSpan": 0.5,
+      "operation": {
+        "type": "fixed-span-local-ornament-cluster",
+        "hostId": "b18-src-11",
+        "hostPitchMidi": 71,
+        "hostBefore": 1,
+        "hostAfter": 0.5,
+        "clusterSpan": 0.5,
+        "insertedCount": 5,
+        "insertedIds": [
+          "oc14-cluster-5-orn-01",
+          "oc14-cluster-5-orn-02",
+          "oc14-cluster-5-orn-03",
+          "oc14-cluster-5-orn-04",
+          "oc14-cluster-5-orn-05"
+        ],
+        "durations": [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "contourOffsets": [
+          1,
+          0,
+          -1,
+          1,
+          0
+        ]
+      },
+      "totalDuration": 11.5,
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "4/4",
+        "startsOnDownbeat": true,
+        "events": [
+          {
+            "id": "b18-src-01",
+            "kind": "note",
+            "pitchMidi": 64,
+            "spelling": "E4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-02",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-03",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-04",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-05",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 2
+          },
+          {
+            "id": "b18-src-06",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 1
+          },
+          {
+            "id": "b18-src-07",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-08",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 0.25
+          },
+          {
+            "id": "b18-src-09",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 0.25
+          },
+          {
+            "id": "b18-src-10",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-11",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "oc14-cluster-5-orn-01",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 0.1,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc14-cluster-5-orn-02",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 0.1,
+            "generated": true,
+            "ornamentRole": "return-tone"
+          },
+          {
+            "id": "oc14-cluster-5-orn-03",
+            "kind": "note",
+            "pitchMidi": 70,
+            "spelling": "A#4",
+            "durationRatio": 0.1,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc14-cluster-5-orn-04",
+            "kind": "note",
+            "pitchMidi": 72,
+            "spelling": "C5",
+            "durationRatio": 0.1,
+            "generated": true,
+            "ornamentRole": "neighbor"
+          },
+          {
+            "id": "oc14-cluster-5-orn-05",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 0.1,
+            "generated": true,
+            "ornamentRole": "return-tone"
+          },
+          {
+            "id": "b18-src-12",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 0.5
+          },
+          {
+            "id": "b18-src-13",
+            "kind": "note",
+            "pitchMidi": 67,
+            "spelling": "G4",
+            "durationRatio": 1
+          },
+          {
+            "id": "b18-src-14",
+            "kind": "note",
+            "pitchMidi": 71,
+            "spelling": "B4",
+            "durationRatio": 0.75
+          },
+          {
+            "id": "b18-src-15",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 0.25
+          },
+          {
+            "id": "b18-src-16",
+            "kind": "note",
+            "pitchMidi": 69,
+            "spelling": "A4",
+            "durationRatio": 1.5
+          }
+        ],
+        "absoluteExactOnly": false,
+        "includeRests": true
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic chromatic neighbor figures without harmonic adjudication.",
+    "Per-note duration changes with count so total ornament span stays fixed.",
+    "Convenience sample; no production rule changes."
+  ],
+  "parentSuite": "evaluation/reports/ornament-count-sweep-v1/retry/suite.json",
+  "retrySelection": "No completed run found across ornament-count-sweep-v1-shard-1, ornament-count-sweep-v1-shard-2, ornament-count-sweep-v1-shard-3, ornament-count-sweep-v1-shard-3-sub-1, ornament-count-sweep-v1-shard-3-sub-2",
+  "shard": {
+    "index": 4,
+    "count": 4
+  }
+}

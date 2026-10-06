@@ -1,0 +1,909 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH03-L6-original",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH03-e0",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 2
+      },
+      {
+        "id": "SH03-e1",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e2",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e3",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e4",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.3359375
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH03-e0",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 2
+      },
+      {
+        "id": "SH03-e1",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e2",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e3",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e4",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.3359375
+      }
+    ]
+  },
+  "tags": [
+    "original",
+    "positive-probe"
+  ],
+  "description": "6음 원형 대조",
+  "changes": {
+    "changedSourceIds": [],
+    "originalDuration": 6,
+    "queryDuration": 6,
+    "transformation": {}
+  },
+  "expected": {
+    "workId": "work-7c5ee0ca6528fe87",
+    "sourceId": "2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "UN DI, FELICE",
+    "composer": "Composed by Giuseppe Verdi\nArranged by Reflet des Nuages",
+    "baseStartIndex": 12,
+    "baseStartMeasure": 6,
+    "baseEndMeasure": 7,
+    "baseTargets": [
+      {
+        "onset": 15,
+        "pitchMidi": 67,
+        "measure": 6,
+        "beat": 1
+      },
+      {
+        "onset": 17,
+        "pitchMidi": 65,
+        "measure": 6,
+        "beat": 3
+      },
+      {
+        "onset": 18,
+        "pitchMidi": 64,
+        "measure": 7,
+        "beat": 1
+      },
+      {
+        "onset": 20,
+        "pitchMidi": 63,
+        "measure": 7,
+        "beat": 3
+      },
+      {
+        "onset": 20.33203125,
+        "pitchMidi": 64,
+        "measure": 7,
+        "beat": 3.33203125
+      },
+      {
+        "onset": 20.6640625,
+        "pitchMidi": 65,
+        "measure": 7,
+        "beat": 3.6640625
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 2,
+      "elapsedMs": 10037.600199999986,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 78,
+            "stage": "candidate-scored",
+            "elapsedMs": 1397.3497999999672,
+            "key": "work-7c5ee0ca6528fe87\u000012",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 9,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 5,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 12
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 2,
+      "rankChange": 0,
+      "sourceScore": 100,
+      "representativeWindowRank": 2,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 6,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "UN DI, FELICE",
+          "sourceId": "2. Un di, felice, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 75,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 46
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-e56c0cf6319571f9-d08f9a8a&start=6&end=7&source=search&targets=15%3A67%2C17%3A65%2C18%3A64%2C20%3A63%2C20.33203125%3A64%2C20.6640625%3A65"
+        },
+        {
+          "rank": 2,
+          "title": "UN DI, FELICE",
+          "sourceId": "2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-7c5ee0ca6528fe87&start=6&end=7&source=search&targets=15%3A67%2C17%3A65%2C18%3A64%2C20%3A63%2C20.33203125%3A64%2C20.6640625%3A65"
+        },
+        {
+          "rank": 3,
+          "title": "UN DI, FELICE",
+          "sourceId": "2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 75,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 46
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-7c5ee0ca6528fe87-88a85b71&start=6&end=7&source=search&targets=15%3A67%2C17%3A65%2C18%3A64%2C20%3A63%2C20.33203125%3A64%2C20.6640625%3A65"
+        },
+        {
+          "rank": 4,
+          "title": "UN DI, FELICE",
+          "sourceId": "2. Un di, felice, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-b05b28e7b1c832de&start=6&end=7&source=search&targets=15%3A67%2C17%3A65%2C18%3A64%2C20%3A63%2C20.33203125%3A64%2C20.6640625%3A65"
+        },
+        {
+          "rank": 5,
+          "title": "UN DI, FELICE",
+          "sourceId": "2. Un di, felice, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 75,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 46
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-b05b28e7b1c832de-a71ddd21&start=6&end=7&source=search&targets=15%3A67%2C17%3A65%2C18%3A64%2C20%3A63%2C20.33203125%3A64%2C20.6640625%3A65"
+        },
+        {
+          "rank": 6,
+          "title": "UN DI, FELICE",
+          "sourceId": "Un di, felice Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-e7d200492b45ad38&start=6&end=7&source=search&targets=15%3A67%2C17%3A65%2C18%3A64%2C20%3A63%2C20.33203125%3A64%2C20.6640625%3A65"
+        },
+        {
+          "rank": 7,
+          "title": "Where The Jack O' Lanterns Glow",
+          "sourceId": "mxl/7/23/QmPhRbzwvyR6xqWYkqniiW1KdFPLYDgE4jbQY8vwQqXCay.mxl",
+          "streamId": "P2:2:5",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 79.55114117771444,
+            "meter": 85,
+            "structural": 100,
+            "skeleton": 89,
+            "pillarPitch": 91,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-709ba5cc2135cd37-6d4cc08f&start=22&end=23&source=search&targets=84%3A55%2C86%3A53%2C88%3A52%2C89%3A51%2C89.5%3A52%2C90%3A53"
+        },
+        {
+          "rank": 8,
+          "title": "The Sleeping Beauty (ballet) Op.66",
+          "sourceId": "mxl/2/45/QmcToAuigRsMqZ2GMX3s9WYviWSyrV4iXvt3dSefyxmw2i.mxl",
+          "streamId": "P2:1:1",
+          "score": 95.35617105508388,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 85.38818715630097,
+            "meter": 100,
+            "structural": 69,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 46
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-e3d959bbdb23f43d-88a85b71&start=75&end=76&source=search&targets=222%3A65%2C224%3A63%2C225%3A62%2C226%3A61%2C226.5%3A62%2C227%3A63"
+        },
+        {
+          "rank": 9,
+          "title": "The Sleeping Beauty (ballet) Op.66",
+          "sourceId": "mxl/14/11/QmWbH6ou7RZByRmuEgyye1qz7sx7T9RCjyQtfm5Pdro6dD.mxl",
+          "streamId": "P2:1:1",
+          "score": 95.35617105508388,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 85.38818715630097,
+            "meter": 100,
+            "structural": 69,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 46
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-d9290ac4b5dcabdd-88a85b71&start=75&end=76&source=search&targets=222%3A65%2C224%3A63%2C225%3A62%2C226%3A61%2C226.5%3A62%2C227%3A63"
+        },
+        {
+          "rank": 10,
+          "title": "Missa Puerorum Opus 62",
+          "sourceId": "mxl/14/40/QmWradW9jGGG9Udpg5ecaT7fXoV1ooiBt3MHHQVNRtaAAB.mxl",
+          "streamId": "P2:1:2",
+          "score": 95.20535563511498,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 66.6435558365787,
+            "meter": 43,
+            "structural": 80,
+            "skeleton": 92,
+            "pillarPitch": 95,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-c5961f8cae7dda4e-aec934ed&start=18&end=23&source=search&targets=71%3A65%2C76%3A63%2C77%3A62%2C87%3A61%2C90%3A62%2C91%3A63"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 100,
+      "exactCount": 6,
+      "sameScoreBeforeSource": 1
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH03-L6-original.json",
+      "initialPath": "../runs/SH03-L6-original.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-7c5ee0ca6528fe87",
+      "sourceId": "2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "UN DI, FELICE",
+      "composer": "Composed by Giuseppe Verdi\nArranged by Reflet des Nuages",
+      "baseStartIndex": 12,
+      "baseStartMeasure": 6,
+      "baseEndMeasure": 7,
+      "baseTargets": [
+        {
+          "onset": 15,
+          "pitchMidi": 67,
+          "measure": 6,
+          "beat": 1
+        },
+        {
+          "onset": 17,
+          "pitchMidi": 65,
+          "measure": 6,
+          "beat": 3
+        },
+        {
+          "onset": 18,
+          "pitchMidi": 64,
+          "measure": 7,
+          "beat": 1
+        },
+        {
+          "onset": 20,
+          "pitchMidi": 63,
+          "measure": 7,
+          "beat": 3
+        },
+        {
+          "onset": 20.33203125,
+          "pitchMidi": 64,
+          "measure": 7,
+          "beat": 3.33203125
+        },
+        {
+          "onset": 20.6640625,
+          "pitchMidi": 65,
+          "measure": 7,
+          "beat": 3.6640625
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 4,
+      "endOrdinal": 9,
+      "xmlHash": "44d75189fe77158e586676127b5e2a6a2706bc34d80bc29edaaf6c5e9af7e159",
+      "xmlError": null,
+      "eventsHash": "ab7cccf01bdb4fc85f8c03aaea97d6c6e2c1b68fd4940bf8cebee2d672d9471b",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+      "sourceHash": "7c5ee0ca6528fe87c6ae33eb9eb8309e9bd0f033e736f03fa87b025d92ed5de6"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m6:n1",
+          "xmlNoteId": "P1:m6:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 6,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 6,
+          "originalMeasureLabel": "6",
+          "onsetQ": {
+            "n": 15,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m6:n2",
+          "xmlNoteId": "P1:m6:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 6,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 6,
+          "originalMeasureLabel": "6",
+          "onsetQ": {
+            "n": 17,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n1",
+          "xmlNoteId": "P1:m7:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 18,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n2",
+          "xmlNoteId": "P1:m7:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "rest",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 19,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": null,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          }
+        },
+        {
+          "id": "P1:m7:n3",
+          "xmlNoteId": "P1:m7:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 20,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 63,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 29,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n4",
+          "xmlNoteId": "P1:m7:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 5205,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 597,
+            "d": 256
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n5",
+          "xmlNoteId": "P1:m7:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 2645,
+            "d": 128
+          },
+          "durationQ": {
+            "n": 43,
+            "d": 128
+          },
+          "beatQ": {
+            "n": 341,
+            "d": 128
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH03-L6/context.musicxml",
+      "events": "../base-assets/SH03-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "original"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

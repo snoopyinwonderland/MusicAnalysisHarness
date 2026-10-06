@@ -1,0 +1,2916 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH01-L12-pitch-change",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH01-e0",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e1",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e2",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e3",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e6",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e7",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e8",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e9",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e10",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e11",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH01-e0",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e1",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e2",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e3",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e6",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e7",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e8",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e9",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e10",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e11",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "pitch-change",
+    "positive-probe"
+  ],
+  "description": "12음 중 네 번째 음 +1반음 변경",
+  "changes": {
+    "changedSourceIds": [
+      "SH01-e3"
+    ],
+    "originalDuration": 6,
+    "queryDuration": 6,
+    "transformation": {
+      "pitch": {
+        "eventId": "SH01-e3",
+        "from": 72,
+        "to": 73,
+        "semitones": 1
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-5b2dc28a9f25d724",
+    "sourceId": "13 Jours en France Melody.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "13 JOURS EN FRANCE",
+    "composer": "Composed by Francis Lai\nArranged by Reflet des Nuages",
+    "baseStartIndex": 0,
+    "baseStartMeasure": 3,
+    "baseEndMeasure": 4,
+    "baseTargets": [
+      {
+        "onset": 6,
+        "pitchMidi": 68,
+        "measure": 3,
+        "beat": 1
+      },
+      {
+        "onset": 6.5,
+        "pitchMidi": 69,
+        "measure": 3,
+        "beat": 1.5
+      },
+      {
+        "onset": 7,
+        "pitchMidi": 71,
+        "measure": 3,
+        "beat": 2
+      },
+      {
+        "onset": 7.5,
+        "pitchMidi": 72,
+        "measure": 3,
+        "beat": 2.5
+      },
+      {
+        "onset": 8,
+        "pitchMidi": 74,
+        "measure": 3,
+        "beat": 3
+      },
+      {
+        "onset": 8.5,
+        "pitchMidi": 76,
+        "measure": 3,
+        "beat": 3.5
+      },
+      {
+        "onset": 9,
+        "pitchMidi": 77,
+        "measure": 4,
+        "beat": 1
+      },
+      {
+        "onset": 9.5,
+        "pitchMidi": 76,
+        "measure": 4,
+        "beat": 1.5
+      },
+      {
+        "onset": 10,
+        "pitchMidi": 77,
+        "measure": 4,
+        "beat": 2
+      },
+      {
+        "onset": 10.5,
+        "pitchMidi": 76,
+        "measure": 4,
+        "beat": 2.5
+      },
+      {
+        "onset": 11,
+        "pitchMidi": 77,
+        "measure": 4,
+        "beat": 3
+      },
+      {
+        "onset": 11.5,
+        "pitchMidi": 76,
+        "measure": 4,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 4,
+      "elapsedMs": 34602.322999999975,
+      "trace": {
+        "rejections": {
+          "inferior-window": 5,
+          "admission-floor": 1
+        },
+        "scored": [
+          {
+            "sequence": 186,
+            "stage": "candidate-scored",
+            "elapsedMs": 12211.751600000018,
+            "key": "work-5b2dc28a9f25d724\u0000*",
+            "local": 100,
+            "scores": {
+              "pitch": 93,
+              "interval": 96.43636363636364,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 70.46321643118367,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 95.01046583555915,
+              "pillarPitch": 95.33333333333333,
+              "interval": 93.93333333333334,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 95.45454545454545,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 455,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 456,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 457,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 458,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 459,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 460,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 461,
+                  "cost": 0.05650285714285714,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 462,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 463,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 464,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 465,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 466,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 455,
+              "end": 466,
+              "coverage": 1,
+              "cost": 0.05650285714285714,
+              "similarity": 99.02384326311102
+            },
+            "windowStart": 0
+          },
+          {
+            "sequence": 5730,
+            "stage": "candidate-scored",
+            "elapsedMs": 14547.22390000004,
+            "key": "work-5b2dc28a9f25d724\u00000",
+            "local": 100,
+            "scores": {
+              "pitch": 98.83333333333333,
+              "interval": 98.0060606060606,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 74.63656267646198,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 11,
+              "coverage": 1,
+              "cost": 0.08264571428571428,
+              "similarity": 98.5754230787639
+            },
+            "windowStart": 0
+          },
+          {
+            "sequence": 5743,
+            "stage": "candidate-scored",
+            "elapsedMs": 14547.579599999997,
+            "key": "work-5b2dc28a9f25d724\u0000455",
+            "local": 100,
+            "scores": {
+              "pitch": 93,
+              "interval": 96.43636363636364,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 70.46321643118367,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 95.01046583555915,
+              "pillarPitch": 95.33333333333333,
+              "interval": 93.93333333333334,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 95.45454545454545,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0.05650285714285714,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 4,
+              "end": 15,
+              "coverage": 1,
+              "cost": 0.05650285714285714,
+              "similarity": 99.02384326311102
+            },
+            "windowStart": 451
+          },
+          {
+            "sequence": 5756,
+            "stage": "candidate-scored",
+            "elapsedMs": 14547.935700000031,
+            "key": "work-5b2dc28a9f25d724\u00002",
+            "local": 100,
+            "scores": {
+              "pitch": 98.83333333333333,
+              "interval": 98.0060606060606,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 74.63656267646198,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 11,
+              "coverage": 1,
+              "cost": 0.08264571428571428,
+              "similarity": 98.5754230787639
+            },
+            "windowStart": 0
+          },
+          {
+            "sequence": 5769,
+            "stage": "candidate-scored",
+            "elapsedMs": 14548.319699999993,
+            "key": "work-5b2dc28a9f25d724\u0000433",
+            "local": 100,
+            "scores": {
+              "pitch": 98.83333333333333,
+              "interval": 98.0060606060606,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 74.63656267646198,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 5,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 6,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 2,
+              "end": 13,
+              "coverage": 1,
+              "cost": 0.08264571428571428,
+              "similarity": 98.5754230787639
+            },
+            "windowStart": 429
+          },
+          {
+            "sequence": 38559,
+            "stage": "candidate-scored",
+            "elapsedMs": 27815.247700000007,
+            "key": "work-5b2dc28a9f25d724\u000012",
+            "local": 92.99929280574516,
+            "scores": {
+              "pitch": 86,
+              "interval": 91.88,
+              "contour": 90,
+              "rhythm": 33.77565184955881
+            },
+            "metric": {
+              "score": 95.9090909090909,
+              "adjustment": 5.2727272727272725,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 89.12954033692782,
+              "bonus": 3.5999999999999996,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 90.16162648495086,
+              "pillarPitch": 90.66666666666667,
+              "interval": 87.86666666666667,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 80,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0.03296,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0.1121904761904762,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": null,
+                  "cost": 0.39516666666666667,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 12,
+                  "cost": 0.03530470939577842,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 13,
+                  "cost": 0.0007454834090364926,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 4,
+              "end": 14,
+              "coverage": 0.9166666666666666,
+              "cost": 0.5763673356619579,
+              "similarity": 82.93814055811382
+            },
+            "windowStart": 8
+          },
+          {
+            "sequence": 38572,
+            "stage": "candidate-scored",
+            "elapsedMs": 27815.566900000034,
+            "key": "work-5b2dc28a9f25d724\u0000430",
+            "local": 100,
+            "scores": {
+              "pitch": 98.83333333333333,
+              "interval": 98.0060606060606,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 74.63656267646198,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 8,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 9,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 16,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 5,
+              "end": 16,
+              "coverage": 1,
+              "cost": 0.08264571428571428,
+              "similarity": 98.5754230787639
+            },
+            "windowStart": 426
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 3,
+      "sourceScore": 97,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 12,
+      "issues": [
+        "representative-window-differs"
+      ],
+      "reviewNotes": [
+        "Inspect equivalent repeated passages and occurrence links before declaring a wrong match."
+      ],
+      "suggestions": [
+        {
+          "id": "query-completion-v1-0",
+          "kind": "pitch",
+          "query": {
+            "version": 1,
+            "mode": "melody_rhythm",
+            "meter": "3/4",
+            "startsOnDownbeat": true,
+            "includeRests": true,
+            "absoluteExactOnly": false,
+            "events": [
+              {
+                "id": "SH01-e0",
+                "kind": "note",
+                "pitchMidi": 68,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e1",
+                "kind": "note",
+                "pitchMidi": 69,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e2",
+                "kind": "note",
+                "pitchMidi": 71,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e3",
+                "kind": "note",
+                "pitchMidi": 72,
+                "durationRatio": 0.5,
+                "spelling": "C5"
+              },
+              {
+                "id": "SH01-e4",
+                "kind": "note",
+                "pitchMidi": 74,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e5",
+                "kind": "note",
+                "pitchMidi": 76,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e6",
+                "kind": "note",
+                "pitchMidi": 77,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e7",
+                "kind": "note",
+                "pitchMidi": 76,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e8",
+                "kind": "note",
+                "pitchMidi": 77,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e9",
+                "kind": "note",
+                "pitchMidi": 76,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e10",
+                "kind": "note",
+                "pitchMidi": 77,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "SH01-e11",
+                "kind": "note",
+                "pitchMidi": 76,
+                "durationRatio": 0.5
+              }
+            ]
+          },
+          "changedIds": [
+            "SH01-e3"
+          ],
+          "reason": "4번째 음 undefined → C5",
+          "beforeFit": 0.9166666666666666,
+          "afterFit": 1,
+          "evidence": [
+            {
+              "workId": "work-4b5ea01d03c1afbe-88a85b71",
+              "sourceId": "mxl/3/29/QmdKHV5g4Vhg2Tv3fWyuP5MMjny1CodHRABGSm4kTEdy12.mxl",
+              "title": "Chaconne in G minor",
+              "streamId": "P2:1:1",
+              "startMeasure": 56,
+              "endMeasure": 56,
+              "transposition": 1,
+              "tempoRatio": 0.6666666666666666,
+              "notes": [
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-1",
+                  "kind": "note",
+                  "pitchMidi": 69,
+                  "spelling": "A4",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 330.3333333333333,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 1.3333333333333333,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-2",
+                  "kind": "note",
+                  "pitchMidi": 70,
+                  "spelling": "Bb4",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 330.6666666666667,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 1.6666666666666665,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-3",
+                  "kind": "note",
+                  "pitchMidi": 72,
+                  "spelling": "C5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 331,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-4",
+                  "kind": "note",
+                  "pitchMidi": 73,
+                  "spelling": "Db5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 331.3333333333333,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 2.333333333333333,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-5",
+                  "kind": "note",
+                  "pitchMidi": 75,
+                  "spelling": "Eb5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 331.6666666666667,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 2.666666666666667,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-6",
+                  "kind": "note",
+                  "pitchMidi": 77,
+                  "spelling": "F5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 332,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-7",
+                  "kind": "note",
+                  "pitchMidi": 78,
+                  "spelling": "Gb5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 332.3333333333333,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 3.3333333333333335,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-8",
+                  "kind": "note",
+                  "pitchMidi": 77,
+                  "spelling": "F5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 332.6666666666667,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 3.6666666666666665,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-9",
+                  "kind": "note",
+                  "pitchMidi": 78,
+                  "spelling": "Gb5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 333,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 4,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-10",
+                  "kind": "note",
+                  "pitchMidi": 77,
+                  "spelling": "F5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 333.3333333333333,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 4.333333333333334,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-11",
+                  "kind": "note",
+                  "pitchMidi": 78,
+                  "spelling": "Gb5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 333.6666666666667,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 4.666666666666666,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-4b5ea01d03c1afbe-88a85b71-12",
+                  "kind": "note",
+                  "pitchMidi": 77,
+                  "spelling": "F5",
+                  "durationRatio": 0.3333333333333333,
+                  "onset": 334,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 56,
+                  "beat": 5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 56,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 3,
+                  "meterUnit": 2,
+                  "partName": "Piano",
+                  "keyFifths": -2
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 4,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 5,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ]
+            },
+            {
+              "workId": "work-3a402ed18081cb3b-cb55a467",
+              "sourceId": "mxl/7/50/QmPw2w4ncjh1GSEuXAnk3qjgPCjWZumPHmhhB7afm9KEFM.mxl",
+              "title": "Symphony No.5 Op.67",
+              "streamId": "P13:1:1",
+              "startMeasure": 404,
+              "endMeasure": 406,
+              "transposition": 3,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-0",
+                  "kind": "note",
+                  "pitchMidi": 71,
+                  "spelling": "B4",
+                  "durationRatio": 0.5,
+                  "onset": 806,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 404,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 404,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-1",
+                  "kind": "note",
+                  "pitchMidi": 72,
+                  "spelling": "C5",
+                  "durationRatio": 0.5,
+                  "onset": 806.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 404,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 404,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-2",
+                  "kind": "note",
+                  "pitchMidi": 74,
+                  "spelling": "D5",
+                  "durationRatio": 0.5,
+                  "onset": 807,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 404,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 404,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-3",
+                  "kind": "note",
+                  "pitchMidi": 75,
+                  "spelling": "Eb5",
+                  "durationRatio": 0.5,
+                  "onset": 807.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 404,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 404,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-4",
+                  "kind": "note",
+                  "pitchMidi": 77,
+                  "spelling": "F5",
+                  "durationRatio": 0.5,
+                  "onset": 808,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 405,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 405,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-5",
+                  "kind": "note",
+                  "pitchMidi": 79,
+                  "spelling": "G5",
+                  "durationRatio": 0.5,
+                  "onset": 808.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 405,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 405,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-6",
+                  "kind": "note",
+                  "pitchMidi": 80,
+                  "spelling": "Ab5",
+                  "durationRatio": 0.5,
+                  "onset": 809,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 405,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 405,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-7",
+                  "kind": "note",
+                  "pitchMidi": 79,
+                  "spelling": "G5",
+                  "durationRatio": 0.5,
+                  "onset": 809.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 405,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 405,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-8",
+                  "kind": "note",
+                  "pitchMidi": 80,
+                  "spelling": "Ab5",
+                  "durationRatio": 0.5,
+                  "onset": 810,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 406,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 406,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-9",
+                  "kind": "note",
+                  "pitchMidi": 79,
+                  "spelling": "G5",
+                  "durationRatio": 0.5,
+                  "onset": 810.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 406,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 406,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-10",
+                  "kind": "note",
+                  "pitchMidi": 80,
+                  "spelling": "Ab5",
+                  "durationRatio": 0.5,
+                  "onset": 811,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 406,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 406,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-3a402ed18081cb3b-cb55a467-11",
+                  "kind": "note",
+                  "pitchMidi": 79,
+                  "spelling": "G5",
+                  "durationRatio": 0.5,
+                  "onset": 811.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 406,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 406,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 2,
+                  "meterUnit": 4,
+                  "partName": "Electric Guitar",
+                  "keyFifths": -3
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0.039908571428571425,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "top": [
+        {
+          "rank": 1,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "4. 13 Jours en France, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 32,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 70,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-3b86515b547154ba&start=5&end=6&source=search&targets=12%3A71%2C12.5%3A72%2C13%3A74%2C13.5%3A76%2C14%3A77%2C14.5%3A79%2C15%3A80%2C15.5%3A79%2C16%3A80%2C16.5%3A79%2C17%3A80%2C17.5%3A79"
+        },
+        {
+          "rank": 2,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "4. 13 Jours en France, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 32,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 70,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-45399432e6c9a119-88a85b71&start=5&end=6&source=search&targets=12%3A71%2C12.5%3A72%2C13%3A74%2C13.5%3A76%2C14%3A77%2C14.5%3A79%2C15%3A80%2C15.5%3A79%2C16%3A80%2C16.5%3A79%2C17%3A80%2C17.5%3A79"
+        },
+        {
+          "rank": 3,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "4. 13 Jours en France, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 32,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 70,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-aa3f70be77988c48-a71ddd21&start=5&end=6&source=search&targets=12%3A71%2C12.5%3A72%2C13%3A74%2C13.5%3A76%2C14%3A77%2C14.5%3A79%2C15%3A80%2C15.5%3A79%2C16%3A80%2C16.5%3A79%2C17%3A80%2C17.5%3A79"
+        },
+        {
+          "rank": 4,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "13 Jours en France Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 93,
+            "interval": 96.43636363636364,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 70,
+            "skeleton": 95,
+            "pillarPitch": 95,
+            "specificity": 70,
+            "repeatPattern": 95,
+            "phrase": 50
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-5b2dc28a9f25d724&start=123&end=124&source=search&targets=366%3A74%2C366.5%3A75%2C367%3A77%2C367.5%3A79%2C368%3A80%2C368.5%3A82%2C369%3A84%2C369.5%3A83%2C370%3A84%2C370.5%3A83%2C371%3A84%2C371.5%3A83"
+        },
+        {
+          "rank": 5,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "4. 13 Jours en France, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 93,
+            "interval": 96.43636363636364,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 70,
+            "skeleton": 95,
+            "pillarPitch": 95,
+            "specificity": 70,
+            "repeatPattern": 95,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-45399432e6c9a119&start=123&end=124&source=search&targets=366%3A74%2C366.5%3A75%2C367%3A77%2C367.5%3A79%2C368%3A80%2C368.5%3A82%2C369%3A84%2C369.5%3A83%2C370%3A84%2C370.5%3A83%2C371%3A84%2C371.5%3A83"
+        },
+        {
+          "rank": 6,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "4. 13 Jours en France, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 93,
+            "interval": 96.43636363636364,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 70,
+            "skeleton": 95,
+            "pillarPitch": 95,
+            "specificity": 70,
+            "repeatPattern": 95,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-aa3f70be77988c48&start=123&end=124&source=search&targets=366%3A74%2C366.5%3A75%2C367%3A77%2C367.5%3A79%2C368%3A80%2C368.5%3A82%2C369%3A84%2C369.5%3A83%2C370%3A84%2C370.5%3A83%2C371%3A84%2C371.5%3A83"
+        },
+        {
+          "rank": 7,
+          "title": "Symphonie No.3 Op.28",
+          "sourceId": "mxl/3/54/QmdyTGaQFYP8QE9N9Ltbc5De7B4Z8D934k6iUY6nrvuDyx.mxl",
+          "streamId": "P10:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 95.33333333333333,
+            "interval": 97.36969696969697,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 43,
+            "skeleton": 77,
+            "pillarPitch": 91,
+            "specificity": 70,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-ad163ea43fd9348f-1ac7cb09&start=68&end=69&source=search&targets=134.5%3A44%2C134.75%3A45%2C135%3A47%2C135.25%3A49%2C135.5%3A51%2C135.75%3A53%2C136%3A54%2C136.25%3A53%2C136.5%3A54%2C136.75%3A53%2C137%3A54%2C137.25%3A53"
+        },
+        {
+          "rank": 8,
+          "title": "Quatriéme Babiole",
+          "sourceId": "mxl/2/26/QmcjWK893B8TBWTpzLRzoFX67Gj9Pg6a7vGtJahykrtwe7.mxl",
+          "streamId": "P1:2:5",
+          "score": 97,
+          "scores": {
+            "pitch": 95.33333333333333,
+            "interval": 94.31515151515151,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 8,
+            "structural": 94,
+            "skeleton": 79,
+            "pillarPitch": 91,
+            "specificity": 70,
+            "repeatPattern": 94,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-fe2d4da0cfb497a8-57f4f3bb&start=4&end=6&source=search&targets=9.5%3A62%2C10%3A64%2C10.5%3A66%2C11%3A67%2C11.5%3A69%2C12%3A71%2C12.5%3A72%2C13%3A71%2C13.5%3A72%2C14%3A71%2C14.5%3A72%2C15%3A69"
+        },
+        {
+          "rank": 9,
+          "title": "EL PERDÓN DE PLOËRMEL",
+          "sourceId": "mxl/2/36/QmcpQPzUEgeE2x1fCwH4GSJGZUsgHoCuA44zxgXWcnBdJA.mxl",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 88.33333333333333,
+            "interval": 90.75151515151515,
+            "contour": 81.81818181818181,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 94,
+            "skeleton": 69,
+            "pillarPitch": 93,
+            "specificity": 70,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-04c4e261948b611b&start=184&end=185&source=search&targets=542%3A61%2C542.5%3A62%2C543%3A64%2C543.5%3A66%2C544%3A67%2C544.5%3A68%2C545%3A69%2C545.5%3A68%2C546%3A69%2C546.5%3A70%2C547%3A71%2C547.5%3A73"
+        },
+        {
+          "rank": 10,
+          "title": "Chaconne in G minor",
+          "sourceId": "mxl/3/29/QmdKHV5g4Vhg2Tv3fWyuP5MMjny1CodHRABGSm4kTEdy12.mxl",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 98.83333333333333,
+            "interval": 98.0060606060606,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 100,
+            "skeleton": 0,
+            "pillarPitch": 0,
+            "specificity": 70,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 12,
+          "url": "/score?workId=work-4b5ea01d03c1afbe-88a85b71&start=56&end=56&source=search&targets=330.3333333333333%3A69%2C330.6666666666667%3A70%2C331%3A72%2C331.3333333333333%3A73%2C331.6666666666667%3A75%2C332%3A77%2C332.3333333333333%3A78%2C332.6666666666667%3A77%2C333%3A78%2C333.3333333333333%3A77%2C333.6666666666667%3A78%2C334%3A77"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        "Expected source file ranks 4; ranks 1–3 all have title 13 JOURS EN FRANCE and are Piano Solo, Violin and Piano Duet, Violin/Cello/Piano Trio sources.",
+        "Rank 1–3 have reported score 100; expected source score 97."
+      ]
+    },
+    {
+      "kind": "changed-note-alignment",
+      "queryNoteIndex": 3,
+      "queryPitch": 73,
+      "originalPitch": 72,
+      "sourcePitch": 79,
+      "sourceOnset": 367.5,
+      "alignmentType": "match",
+      "unmatched": false
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 12,
+      "queryNoteLength": 12,
+      "returnedCount": 100,
+      "exactCount": 3,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "representative-window-differs",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Source-file rank 4 does not mean the work disappeared; alternative arrangements occupy preceding ranks. This is not evidence of incorrect ranking.",
+      "status": "explained"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "representative-window-differs",
+      "text": "Compare repeated occurrences and preserve links to the requested source passage.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Keep source-file recall separate from analyst-confirmed work identity; do not force the original source to rank first.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH01-L12-pitch-change.json",
+      "initialPath": "../runs/SH01-L12-pitch-change.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-5b2dc28a9f25d724",
+      "sourceId": "13 Jours en France Melody.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "13 JOURS EN FRANCE",
+      "composer": "Composed by Francis Lai\nArranged by Reflet des Nuages",
+      "baseStartIndex": 0,
+      "baseStartMeasure": 3,
+      "baseEndMeasure": 4,
+      "baseTargets": [
+        {
+          "onset": 6,
+          "pitchMidi": 68,
+          "measure": 3,
+          "beat": 1
+        },
+        {
+          "onset": 6.5,
+          "pitchMidi": 69,
+          "measure": 3,
+          "beat": 1.5
+        },
+        {
+          "onset": 7,
+          "pitchMidi": 71,
+          "measure": 3,
+          "beat": 2
+        },
+        {
+          "onset": 7.5,
+          "pitchMidi": 72,
+          "measure": 3,
+          "beat": 2.5
+        },
+        {
+          "onset": 8,
+          "pitchMidi": 74,
+          "measure": 3,
+          "beat": 3
+        },
+        {
+          "onset": 8.5,
+          "pitchMidi": 76,
+          "measure": 3,
+          "beat": 3.5
+        },
+        {
+          "onset": 9,
+          "pitchMidi": 77,
+          "measure": 4,
+          "beat": 1
+        },
+        {
+          "onset": 9.5,
+          "pitchMidi": 76,
+          "measure": 4,
+          "beat": 1.5
+        },
+        {
+          "onset": 10,
+          "pitchMidi": 77,
+          "measure": 4,
+          "beat": 2
+        },
+        {
+          "onset": 10.5,
+          "pitchMidi": 76,
+          "measure": 4,
+          "beat": 2.5
+        },
+        {
+          "onset": 11,
+          "pitchMidi": 77,
+          "measure": 4,
+          "beat": 3
+        },
+        {
+          "onset": 11.5,
+          "pitchMidi": 76,
+          "measure": 4,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 1,
+      "endOrdinal": 6,
+      "xmlHash": "0fab8fe690f92514d9ff2377ca77355d150ffe694dff6c101da2c22af4b0723c",
+      "xmlError": null,
+      "eventsHash": "ee87a5312295506602efb9e4a451e0f5334d42db1a4b9198508515e37f3f0bc8",
+      "sourcePath": "K:/Music Analysis/musicxml/13 Jours en France Melody.musicxml.xml",
+      "sourceHash": "5b2dc28a9f25d72417132b4a3e455442ad7e55b5a03436b67766aaa56be28e92"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m3:n1",
+          "xmlNoteId": "P1:m3:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 6,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n2",
+          "xmlNoteId": "P1:m3:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 13,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 69,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n3",
+          "xmlNoteId": "P1:m3:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 7,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n4",
+          "xmlNoteId": "P1:m3:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 15,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 72,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 35,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n5",
+          "xmlNoteId": "P1:m3:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 8,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 74,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n6",
+          "xmlNoteId": "P1:m3:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 17,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m4:n1",
+          "xmlNoteId": "P1:m4:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 9,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m4:n2",
+          "xmlNoteId": "P1:m4:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 19,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m4:n3",
+          "xmlNoteId": "P1:m4:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 10,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m4:n4",
+          "xmlNoteId": "P1:m4:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 21,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m4:n5",
+          "xmlNoteId": "P1:m4:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 11,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m4:n6",
+          "xmlNoteId": "P1:m4:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 23,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH01-L12/context.musicxml",
+      "events": "../base-assets/SH01-L12/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "pitch-change"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

@@ -1,0 +1,328 @@
+import { describe, expect, it } from 'vitest';
+import { addParallelRecurrenceContinuity, addRepeatedPassageContinuity, analyzePhraseBoundaries, applyMinimumPhraseAttackConstraint, applyRecurringMotifPhraseFrames, applyThematicCellPhraseGrouping, comparePhraseBoundaries, detectLongArrivalMotifCells } from './phrase-boundaries.mjs';
+
+const notes = (pitches, onsets, durations = []) => pitches.map((pitchMidi, i) => ({
+  pitchMidi, durationRatio: durations[i] ?? 1, ...(onsets ? { onset: onsets[i] } : {}),
+}));
+const pairs = length => Array.from({ length }, (_, index) => ({ queryIndex: index, candidateIndex: index }));
+const withRest = () => notes([60, 62, 64, 65, 67, 69], [0, 1, 2, 5, 6, 7]);
+const comparable = (query, candidate, mapping = pairs(query.length)) => comparePhraseBoundaries(analyzePhraseBoundaries(query), analyzePhraseBoundaries(candidate), mapping);
+
+describe('uncalibrated local boundary evidence', () => {
+  it('demotes Phrase fragments shorter than four attacks but keeps a four-attack repeated-note unit reviewable',()=>{
+    const events=Array.from({length:12},(_,index)=>({index,attack:true,pitch:60,duration:1,onset:index}));
+    const boundaries=Array.from({length:13},(_,index)=>({index,strength:0,continuity:0,cues:[]}));
+    for(const index of [1,2,6,10])boundaries[index].strength=.9;
+    const result=applyMinimumPhraseAttackConstraint(events,boundaries);
+    expect(result.suppressedBoundaryIndices).toEqual([1,2]);
+    expect(boundaries[6].strength).toBe(.9);
+    expect(boundaries[10].strength).toBe(.9);
+  });
+
+  it('groups a recurring prepared Motif core and its answer into one Phrase frame',()=>{
+    const events=Array.from({length:78},(_,index)=>({index,attack:true,pitch:60+index%7,duration:1,onset:index}));
+    const boundaries=Array.from({length:79},(_,index)=>({index,strength:0,continuity:0,cues:[]}));
+    for(const index of [2,9,15,19,26,32,48,52,59,65])boundaries[index].strength=.9;
+    applyMinimumPhraseAttackConstraint(events,boundaries);
+    const relations=[
+      {signatureKey:'shared-core',previousIndex:2,currentIndex:19,length:6},
+      {signatureKey:'shared-core',previousIndex:19,currentIndex:52,length:6},
+    ];
+    const result=applyRecurringMotifPhraseFrames(events,relations,boundaries);
+    expect(result.applicable).toBe(true);
+    expect(result.frames.map(frame=>[frame.frameStartIndex,frame.frameEndIndex])).toEqual([[0,15],[15,32],[48,65]]);
+    expect(result.suppressedBoundaryIndices).toEqual([2,9,19,26,52,59]);
+    expect(boundaries[15].strength).toBe(.9);
+    expect(boundaries[32].strength).toBe(.9);
+    expect(boundaries[65].strength).toBe(.9);
+  });
+
+  it('does not infer a Phrase frame from only two Motif occurrences',()=>{
+    const events=Array.from({length:30},(_,index)=>({index,attack:true,pitch:60,duration:1,onset:index}));
+    const boundaries=Array.from({length:31},(_,index)=>({index,strength:index%7===0?.9:0,continuity:0,cues:[]}));
+    expect(applyRecurringMotifPhraseFrames(events,[{signatureKey:'pair-only',previousIndex:2,currentIndex:16,length:6}],boundaries)).toMatchObject({applicable:false,frames:[]});
+  });
+
+  it('detects straight and middle-syncopated four-short-plus-long Motif cells',()=>{
+    const straight=notes([60,62,64,65,67],[0,.5,1,1.5,2],[.5,.5,.5,.5,2]).map((note,index)=>({...note,index,pitch:note.pitchMidi,duration:note.durationRatio,attack:true}));
+    const syncopated=notes([60,62,64,65,67],[4,4.5,5.25,5.5,6],[.5,.75,.25,.5,3]).map((note,index)=>({...note,index:index+5,pitch:note.pitchMidi,duration:note.durationRatio,attack:true}));
+    expect(detectLongArrivalMotifCells([...straight,...syncopated]).map(cell=>[cell.startIndex,cell.endIndex,cell.rhythmVariant])).toEqual([[0,4,'straight'],[5,9,'syncopated']]);
+  });
+
+  it('groups a dominant thematic-cell texture into two-to-three-cell Phrase spans',()=>{
+    const events=Array.from({length:70},(_,index)=>({index,pitch:60+(index%7),duration:.5,onset:index*.5,attack:true,measure:Math.floor(index/5)+1,tieEndMeasure:null}));
+    const motifCells=Array.from({length:13},(_,cell)=>({startIndex:5+cell*5,endIndex:9+cell*5,attackCount:5,rhythmFamily:'four-short-plus-long-arrival',rhythmVariant:cell%2?'syncopated':'straight'}));
+    const boundaries=Array.from({length:71},(_,index)=>({index,strength:0,continuity:0,cues:[],primaryLevel:'unknown'}));
+    for(const index of [5,10,15,20,40])boundaries[index].strength=.9;
+    const grouped=applyThematicCellPhraseGrouping(events,motifCells,boundaries);
+    expect(grouped).toMatchObject({applicable:true,suppressedBoundaryIndices:[10,20],promotedBoundaryIndices:[25,55]});
+    expect(grouped.phraseGroups.map(group=>[group.startIndex,group.endIndexExclusive,group.cellCount])).toEqual([[5,15,2],[15,25,2],[25,40,3],[40,55,3],[55,70,3]]);
+  });
+
+  it('does not apply thematic Phrase grouping without both rhythmic variants',()=>{
+    const events=Array.from({length:40},(_,index)=>({index,pitch:60,duration:.5,onset:index*.5,attack:true})),boundaries=Array.from({length:41},(_,index)=>({index,strength:index===5?0.9:0,continuity:0,cues:[]}));
+    const cells=Array.from({length:8},(_,cell)=>({startIndex:cell*5,endIndex:cell*5+4,rhythmVariant:'straight'}));
+    expect(applyThematicCellPhraseGrouping(events,cells,boundaries)).toMatchObject({applicable:false});
+  });
+
+  it('leaves both cropped endpoints unknown, including empty and one-note input', () => {
+    for (const input of [[], notes([60]), withRest()]) {
+      const analysis = analyzePhraseBoundaries(input);
+      expect(analysis.calibrated).toBe(false);
+      expect(analysis.boundaries).toHaveLength(input.length + 1);
+      for (const boundary of [analysis.boundaries[0], analysis.boundaries.at(-1)]) {
+        expect(boundary).toMatchObject({ strength: 0, supported: false, reliable: false, state: 'unknown', cues: [] });
+      }
+    }
+  });
+
+  it('identifies a rest after a tied ending only before the next genuine attack', () => {
+    const input = notes([60, 62, 62, 64, 65], [0, 1, 2, 5, 6]);
+    Object.assign(input[1], { tieStart: true, tieEndMeasure: 2 });
+    Object.assign(input[2], { tieStop: true, tieStart: true, measure: 2, beat: 1 });
+    const result = analyzePhraseBoundaries(input).boundaries;
+    expect(result[2]).toMatchObject({ strength: 0, supported: false, state: 'continuous', continuity: 1 });
+    expect(result[2].cues.map(item => item.name)).toEqual(['tie-continuation']);
+    expect(result[3].supported).toBe(true);
+    expect(result[3].cues.some(item => item.name === 'observed-gap')).toBe(true);
+  });
+
+  it('treats explicit non-attacks as continuations and tied starts as attacks', () => {
+    const input = withRest();
+    input[3].isAttack = false;
+    expect(analyzePhraseBoundaries(input).boundaries[3]).toMatchObject({ strength: 0, state: 'continuous' });
+    input[3].isAttack = true;
+    input[3].tieStart = true;
+    input[3].tieEndMeasure = 5;
+    expect(analyzePhraseBoundaries(input).boundaries[3].supported).toBe(true);
+  });
+
+  it('does not create positive boundary evidence from steady legato or inferred contact', () => {
+    const input = notes([60, 62, 64, 66, 68, 70], [0, 1, 2, 3, 4, 5]);
+    const observed = analyzePhraseBoundaries(input).boundaries;
+    expect(observed.every(boundary => !boundary.supported && boundary.strength === 0)).toBe(true);
+    expect(observed[2].state).toBe('continuous');
+    const inferred = analyzePhraseBoundaries(notes(input.map(note => note.pitchMidi))).boundaries;
+    expect(inferred.every(boundary => boundary.state === 'unknown')).toBe(true);
+  });
+
+  it('does not infer rests, attacks, or phrase starts from pickups, bars, or beats', () => {
+    const input = notes([60, 62, 64, 66, 68]);
+    input.forEach((note, i) => Object.assign(note, { measure: i ? 200 + i : 0, beat: i ? 1 : 3.5 }));
+    expect(analyzePhraseBoundaries(input).boundaries.every(boundary => boundary.strength === 0 && !boundary.reliable)).toBe(true);
+  });
+
+  it.each(['3/4', '6/8'])('uses quarter-unit timelines without assuming a 4/4 bar in %s', meter => {
+    const input = notes([60, 62, 64, 65, 67, 69], [0, .5, 1, 3, 3.5, 4], [.5, .5, .5, .5, .5, .5]);
+    const reference = analyzePhraseBoundaries(input);
+    input.forEach((note, i) => Object.assign(note, { meter, measure: i < 3 ? 9 : 10, beat: i < 3 ? i * .5 + 1 : (i - 3) * .5 + 1 }));
+    expect(analyzePhraseBoundaries(input)).toEqual(reference);
+    expect(reference.boundaries[3].supported).toBe(true);
+  });
+
+  it('is invariant under transposition, timeline translation, and uniform tempo scaling', () => {
+    const input = withRest();
+    const transformed = input.map(note => ({ ...note, pitchMidi: note.pitchMidi + 7, onset: note.onset * 3.7 + 21, durationRatio: note.durationRatio * 3.7 }));
+    expect(analyzePhraseBoundaries(transformed)).toEqual(analyzePhraseBoundaries(input));
+    const inferred = notes([60, 62, 67, 64, 65], null, [1, 1, 3, 1, 1]);
+    expect(analyzePhraseBoundaries(inferred.map(note => ({ ...note, pitchMidi: note.pitchMidi - 12, durationRatio: note.durationRatio / 8 })))).toEqual(analyzePhraseBoundaries(inferred));
+  });
+
+  it('keeps an isolated leap or long note below the reliable positive threshold', () => {
+    const leap = notes([60, 61, 62, 80, 81, 82], [0, 1, 2, 3, 4, 5]);
+    const sustain = notes([60, 62, 64, 66, 68, 70], [0, 1, 2, 6, 7, 8], [1, 1, 4, 1, 1, 1]);
+    for (const input of [leap, sustain]) {
+      const result = analyzePhraseBoundaries(input).boundaries;
+      expect(result.some(boundary => boundary.cues.some(item => item.name.endsWith('discontinuity')))).toBe(true);
+      expect(result.every(boundary => !boundary.supported)).toBe(true);
+    }
+  });
+
+  it('records bounded motif starts without adding Phrase-boundary strength', () => {
+    const input = notes([60, 64, 62, 67, 69, 71, 60, 64, 62, 67, 69, 71], [0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13]);
+    const boundary = analyzePhraseBoundaries(input).boundaries[6];
+    expect(boundary.supported).toBe(false);
+    expect(boundary).toMatchObject({ primaryLevel: 'subphrase-cell', state: 'continuous' });
+    expect(boundary.cues.find(item => item.name === 'repeated-motif-start')?.evidence).toMatchObject({ previousIndex: 0, currentIndex: 6, distanceInAttacks: 6, layer: 'motif', contributesToPhraseStrength: false, closeContinuation: true });
+    expect(boundary.cues.some(item=>item.name==='motif-repetition-continuation')).toBe(true);
+    expect(analyzePhraseBoundaries(input).motifRelations).toHaveLength(1);
+  });
+
+  it('does not report repeated scales, oscillations, or every ostinato rotation as motif starts', () => {
+    for (const pitches of [Array.from({ length: 32 }, (_, i) => 60 + i), Array.from({ length: 32 }, (_, i) => 60 + i % 2), Array.from({ length: 32 }, (_, i) => [60, 64, 67, 64][i % 4])]) {
+      const analysis = analyzePhraseBoundaries(notes(pitches, pitches.map((_, i) => i)));
+      expect(analysis.boundaries.every(boundary => !boundary.supported)).toBe(true);
+      expect(analysis.boundaries.flatMap(boundary => boundary.cues).some(item => item.name === 'repeated-motif-start')).toBe(false);
+    }
+  });
+
+  it('demotes the corresponding internal boundary when a two-cell unit recurs in parallel',()=>{
+    const boundaries=Array.from({length:40},(_,index)=>({index,strength:.8,continuity:0,cues:[],primaryLevel:'phrase-boundary'}));
+    const relations=[{previousIndex:0,currentIndex:27,length:5},{previousIndex:6,currentIndex:33,length:8}];
+    const groups=addParallelRecurrenceContinuity(relations,boundaries);
+    expect(groups).toHaveLength(1);
+    expect(boundaries[33]).toMatchObject({primaryLevel:'subphrase-cell',strength:.49});
+    expect(boundaries[33].cues.some(item=>item.name==='parallel-motif-recurrence-continuation')).toBe(true);
+  });
+
+  it('keeps strongly aligned repeated passages consistent at Phrase level',()=>{
+    const pitches=[60,62,64,65,67,69,67,65,64,62,60,59,57,59,60,62,64,65,67,69];
+    const events=[...pitches,...pitches].map((pitch,index)=>({pitch,duration:1,onset:index,attack:true,index}));
+    const boundaries=Array.from({length:events.length+1},(_,index)=>({index,strength:0,continuity:0,cues:[],primaryLevel:'unknown'}));
+    for(const index of [7,27])boundaries[index].strength=.82;
+    const groups=addRepeatedPassageContinuity(events,[{firstPair:[0,4],recurrencePair:[20,24],displacementInEvents:20}],boundaries);
+    expect(groups).toHaveLength(1);
+    for(const index of [7,27])expect(boundaries[index]).toMatchObject({strength:.49,primaryLevel:'internal-repeated-passage'});
+  });
+
+  it('preserves a true observed break but ignores a notated gap covered by a tie',()=>{
+    const pitches=[60,62,64,65,67,69,67,65,64,62,60,59,57,59,60,62,64,65,67,69];
+    const events=[...pitches,...pitches].map((pitch,index)=>({pitch,duration:1,onset:index,attack:true,index,measure:Math.floor(index/4)+1,tieEndMeasure:null}));
+    const boundaries=Array.from({length:events.length+1},(_,index)=>({index,strength:0,continuity:0,cues:[],primaryLevel:'unknown'}));
+    for(const index of [7,27]){boundaries[index].strength=.82;boundaries[index].cues.push({name:'observed-gap',strength:.8})}
+    events[26].tieEndMeasure=events[27].measure;
+    addRepeatedPassageContinuity(events,[{firstPair:[0,4],recurrencePair:[20,24],displacementInEvents:20}],boundaries);
+    expect(boundaries[7].strength).toBe(.82);
+    expect(boundaries[27]).toMatchObject({strength:.49,primaryLevel:'internal-repeated-passage'});
+  });
+
+  it('does not suppress a clear observed break inside a repeated passage',()=>{
+    const pitches=Array.from({length:16},(_,index)=>60+index%5),events=[...pitches,...pitches].map((pitch,index)=>({pitch,duration:1,onset:index,attack:true,index}));
+    const boundaries=Array.from({length:events.length+1},(_,index)=>({index,strength:0,continuity:0,cues:[],primaryLevel:'unknown'}));
+    boundaries[8]={...boundaries[8],strength:.9,cues:[{name:'observed-gap',strength:.9}]};
+    addRepeatedPassageContinuity(events,[{firstPair:[0,4],recurrencePair:[16,20],displacementInEvents:16}],boundaries);
+    expect(boundaries[8]).toMatchObject({strength:.9,primaryLevel:'unknown'});
+  });
+
+  it('moves a boundary from a barline-spanning tied carryover to the following same-pitch reattack',()=>{
+    const input=notes([60,62,64,65,65,67],[0,1,2,6,8,9]);
+    input[3].measureOrdinal=2;input[3].tieEndMeasure=3;input[3].durationRatio=2;
+    input[4].measureOrdinal=3;input[4].durationRatio=1;
+    const result=analyzePhraseBoundaries(input);
+    expect(result.boundaries[3]).toMatchObject({primaryLevel:'phrase-ending-carryover',state:'continuous'});
+    expect(result.boundaries[4].cues.some(item=>item.name==='post-tie-reattack-start')).toBe(true);
+    expect(result.tieCarryoverShifts).toHaveLength(1);
+  });
+
+  it('keeps consecutive repeated cells in one primary phrase while preserving internal cell boundaries', () => {
+    const input = notes(
+      [59, 73,69,74,71, 75,71,78,76, 77,73,80,78, 81,78,80,83, 76,73],
+      [0, 1,1.5,2,3, 5,5.5,6,7, 9,9.5,10,11, 13,13.5,14,15, 16,17],
+      [1, .5,.5,1,1, .5,.5,1,1, .5,.5,1,1, .5,.5,1,1, 1,1],
+    );
+    const analysis = analyzePhraseBoundaries(input), boundaries = analysis.boundaries;
+    expect(analysis.repeatedFigureRuns).toHaveLength(1);
+    expect(analysis.repeatedFigureRuns[0]).toMatchObject({ startIndex: 1, endIndex: 17, cellLengthInAttacks: 4, internalBoundaryIndices: [5, 9, 13] });
+    expect(boundaries[1].cues.find(item => item.name === 'repeated-figure-run-start')?.evidence).toMatchObject({ layer: 'motif', contributesToPhraseStrength: false, promotedToPhraseBoundary: false });
+    expect(boundaries[1].supported).toBe(false);
+    for (const index of [5, 9, 13]) {
+      expect(boundaries[index]).toMatchObject({ supported: false, state: 'continuous', primaryLevel: 'subphrase-cell' });
+      expect(boundaries[index].rawStrength).toBeGreaterThanOrEqual(.65);
+    }
+    const runEnd = boundaries[17].cues.find(item => item.name === 'repeated-figure-run-end');
+    expect(runEnd?.evidence).toMatchObject({ requiresIndependentClosureCue: true, promotedToPhraseBoundary: false });
+    expect(boundaries[17].supported).toBe(false);
+  });
+
+  it('merges two matching pickup gestures when the chain closes with a much larger gap', () => {
+    const input = notes(
+      [55, 66,68,69,64,61, 62,61,59,57, 77,74],
+      [0, 3,3.25,3.5,4,5, 7,7.25,7.5,8, 14,15],
+      [2, .25,.25,.5,1,1, .25,.25,.5,2, 1,1],
+    );
+    const analysis = analyzePhraseBoundaries(input), middle = analysis.boundaries[6];
+    expect(analysis.rhythmicGestureGroups).toHaveLength(1);
+    expect(analysis.rhythmicGestureGroups[0]).toMatchObject({ startIndex: 1, internalBoundaryIndex: 6, endIndex: 10, sharedRhythmPrefix: [1, 1, 2] });
+    expect(middle).toMatchObject({ supported: false, state: 'continuous', primaryLevel: 'subphrase-cell' });
+    expect(middle.cues.some(item => item.name === 'rhythmic-gesture-continuation')).toBe(true);
+  });
+
+  it('does not merge pickup gestures without a substantially larger closing gap', () => {
+    const input = notes(
+      [55, 66,68,69,64,61, 62,61,59,57, 77,74],
+      [0, 3,3.25,3.5,4,5, 7,7.25,7.5,8, 10,11],
+      [2, .25,.25,.5,1,1, .25,.25,.5,1, 1,1],
+    );
+    const analysis = analyzePhraseBoundaries(input);
+    expect(analysis.rhythmicGestureGroups).toHaveLength(0);
+    expect(analysis.boundaries[6].supported).toBe(true);
+  });
+
+  it('does not merge different rhythmic prefixes merely because the following gap is large', () => {
+    const input = notes(
+      [55, 66,68,69,64,61, 62,61,59,57, 77,74],
+      [0, 3,3.25,3.5,4,5, 7,7.5,7.75,8, 14,15],
+      [2, .25,.25,.5,1,1, .5,.25,.25,2, 1,1],
+    );
+    expect(analyzePhraseBoundaries(input).rhythmicGestureGroups).toHaveLength(0);
+  });
+
+  it('does not invent timing evidence from invalid or missing timestamps/durations', () => {
+    const input = notes([60, 62, 64, 65, 67]);
+    input[0].durationRatio = null;
+    input[1].onset = null;
+    input[2].onset = 4;
+    input[3].onset = 3;
+    input[3].durationRatio = -1;
+    expect(analyzePhraseBoundaries(input).boundaries.flatMap(boundary => boundary.cues).every(item => !item.name.startsWith('observed-'))).toBe(true);
+  });
+
+  it('does not mutate input notes', () => {
+    const input = withRest().map(Object.freeze);
+    const original = structuredClone(input);
+    analyzePhraseBoundaries(Object.freeze(input));
+    expect(input).toEqual(original);
+  });
+});
+
+describe('aligned local boundary comparison', () => {
+  it('rewards matching supported internal boundaries with a small bounded adjustment', () => {
+    const result = comparable(withRest(), withRest());
+    expect(result).toMatchObject({ applicable: true, calibrated: false, support: 1, conflicts: 0 });
+    expect(result.adjustment).toBeGreaterThan(0);
+    expect(result.adjustment).toBeLessThanOrEqual(3);
+    expect(result.score).toBeGreaterThan(50);
+  });
+
+  it('penalizes an observed query gap versus observed candidate continuity, but not unknown timing', () => {
+    const query = withRest(), pitches = query.map(note => note.pitchMidi);
+    const continuous = comparable(query, notes(pitches, pitches.map((_, i) => i)));
+    expect(continuous).toMatchObject({ applicable: true, support: 0, conflicts: 1 });
+    expect(continuous.adjustment).toBeLessThan(0);
+    expect(continuous.adjustment).toBeGreaterThanOrEqual(-3);
+    expect(comparable(query, notes(pitches))).toMatchObject({ applicable: false, conflicts: 0, score: 50, adjustment: 0 });
+  });
+
+  it('is neutral for continuous/unknown queries and crop endpoints', () => {
+    const input = notes([60, 62, 64], [0, 1, 2]);
+    expect(comparable(input, input)).toMatchObject({ applicable: false, support: 0, conflicts: 0, score: 50, adjustment: 0 });
+    expect(comparable(withRest(), withRest(), [{ queryIndex: 0, candidateIndex: 3 }])).toMatchObject({ applicable: false, score: 50 });
+  });
+
+  it('skips insertion and deletion crossings instead of transferring boundary indices', () => {
+    const query = withRest(), candidate = withRest();
+    for (const mapping of [
+      [{ queryIndex: 2, candidateIndex: 1 }, { queryIndex: null, candidateIndex: 2 }, { queryIndex: 3, candidateIndex: 3 }],
+      [{ queryIndex: 1, candidateIndex: 2 }, { queryIndex: 2, candidateIndex: null }, { queryIndex: 3, candidateIndex: 3 }],
+      [{ queryIndex: 2, candidateIndex: 1 }, { queryIndex: 3, candidateIndex: 3 }],
+      [{ queryIndex: 1, candidateIndex: 2 }, { queryIndex: 3, candidateIndex: 3 }],
+    ]) expect(comparable(query, candidate, mapping)).toMatchObject({ applicable: false, score: 50 });
+  });
+
+  it('uses original full candidate indices and supports genuinely adjacent partial mappings', () => {
+    const query = withRest();
+    const candidate = [...notes([55, 57], [0, 1]), ...query.map(note => ({ ...note, onset: note.onset + 2 }))];
+    const result = comparable(query, candidate, [{ queryIndex: 2, candidateIndex: 4 }, { queryIndex: 3, candidateIndex: 5 }]);
+    expect(result).toMatchObject({ applicable: true, support: 1, conflicts: 0 });
+    expect(result.details[0]).toMatchObject({ queryIndex: 3, candidateIndex: 5 });
+  });
+
+  it('is deterministic, rejects invalid mappings, and does not mutate analyses or pairs', () => {
+    const query = analyzePhraseBoundaries(withRest()), candidate = analyzePhraseBoundaries(withRest());
+    const mapping = [...pairs(6), { queryIndex: undefined, candidateIndex: 3 }, { queryIndex: -1, candidateIndex: 2 }];
+    const original = structuredClone({ query, candidate, mapping });
+    const result = comparePhraseBoundaries(query, candidate, mapping);
+    expect(comparePhraseBoundaries(query, candidate, mapping)).toEqual(result);
+    expect({ query, candidate, mapping }).toEqual(original);
+  });
+});

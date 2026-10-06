@@ -1,0 +1,109 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "Q-PAIR-001",
+  "createdAt": "2026-09-22",
+  "status": "diagnosed",
+  "source": "user",
+  "tags": ["pair-comparison", "melody-rhythm", "repeated-note", "transposition", "low-information-admission"],
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": false,
+    "events": [
+      { "id": "pair-0", "kind": "note", "pitchMidi": 78, "spelling": "Gb5", "durationRatio": 0.5 },
+      { "id": "pair-1", "kind": "note", "pitchMidi": 78, "spelling": "Gb5", "durationRatio": 0.5 },
+      { "id": "pair-2", "kind": "note", "pitchMidi": 78, "spelling": "Gb5", "durationRatio": 0.5 },
+      { "id": "pair-3", "kind": "note", "pitchMidi": 78, "spelling": "Gb5", "durationRatio": 0.5 },
+      { "id": "pair-4", "kind": "note", "pitchMidi": 77, "spelling": "F5", "durationRatio": 0.5 },
+      { "id": "pair-5", "kind": "note", "pitchMidi": 75, "spelling": "Eb5", "durationRatio": 0.5 },
+      { "id": "pair-6", "kind": "note", "pitchMidi": 77, "spelling": "F5", "durationRatio": 0.5 },
+      { "id": "pair-7", "kind": "note", "pitchMidi": 78, "spelling": "Gb5", "durationRatio": 1 }
+    ],
+    "absoluteExactOnly": false,
+    "scopeWorkIds": ["work-122b63dc2e7d1ef2"]
+  },
+  "expected": {
+    "primaryTitles": ["철없던 사랑"],
+    "confirmation": "user-stated-similarity",
+    "workIds": ["work-122b63dc2e7d1ef2"]
+  },
+  "observations": [
+    {
+      "kind": "user-observation",
+      "message": "When We Disco와 철없던 사랑의 주요 멜로디가 비슷한지 두 작품을 실제로 비교한다."
+    },
+    {
+      "kind": "direct-pair-evidence",
+      "message": "When We Disco 4–5마디와 철없던 사랑 23–24마디의 8음 정렬은 interval 98.1, rhythm 81.875, contour 85.7143, metrical skeleton 83.6131, structural 100으로 강한 유사성을 보였다."
+    },
+    {
+      "kind": "secondary-pair-evidence",
+      "message": "When We Disco 18–20마디와 철없던 사랑 44–46마디는 local 91.0727, interval 92.4, rhythm 99.2969, contour 100이지만 두 구절 사이 긴 공백을 포함하므로 대표 근거보다 보조 근거로 취급한다."
+    }
+  ],
+  "diagnoses": [
+    {
+      "stage": "candidate-retrieval",
+      "message": "scopeWorkIds가 기존 q-gram hit의 필터로만 작동해 명시된 비교 작품이 후보에서 빠질 수 있었다. 지정 작품을 full-scan 후보로 직접 포함하도록 일반 규칙을 수정했다."
+    },
+    {
+      "stage": "result-admission",
+      "message": "후보 포함 수정 뒤에도 이 Query는 반복음 비중이 높아 production 검색의 low-information-floors에서 제외된다. 이는 반복음 오탐을 억제하는 기존 정책과 일치하며, 두 작품 직접 비교의 근거 표시와 일반 코퍼스 검색의 입장 기준을 구별해야 한다."
+    }
+  ],
+  "proposals": [
+    {
+      "scope": "pair-comparison",
+      "message": "명시적으로 선택한 두 작품 비교에서는 strict corpus admission으로 근거를 숨기지 말고, 낮은 정보량 경고와 원시 정렬 점수를 함께 제시한다. 일반 검색의 반복음 하한은 유지한다."
+    }
+  ],
+  "runs": [
+    {
+      "runId": "Q-PAIR-001-R1",
+      "createdAt": "2026-09-22",
+      "engine": "server/search-api.mjs direct alignment and scoped search",
+      "result": {
+        "primaryPair": {
+          "sourceMeasures": [4, 5],
+          "targetMeasures": [23, 24],
+          "localSimilarity": 88.1196,
+          "interval": 98.1,
+          "rhythm": 81.875,
+          "contour": 85.7143,
+          "skeleton": 83.6131,
+          "structural": 100
+        },
+        "scopedProductionSearch": {
+          "candidateEvaluated": true,
+          "returned": false,
+          "rejectionReason": "low-information-floors"
+        }
+      },
+      "verification": "direct-pair-evidence-recorded"
+    },
+    {
+      "runId": "Q-PAIR-001-R2",
+      "createdAt": "2026-09-22",
+      "engine": "server/search-api.mjs scoped and full-corpus search",
+      "result": {
+        "query": {
+          "pitches": [78, 78, 78, 78, 77, 75, 77],
+          "durations": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+          "intervals": [0, 0, 0, -1, -2, 2]
+        },
+        "selectedWorkSearch": {
+          "whenWeDisco": { "rank": 1, "score": 100 },
+          "cheoleopdeonSarang": { "rank": 2, "score": 100 }
+        },
+        "fullCorpusSearch": {
+          "whenWeDisco": { "returnedTop200": false },
+          "cheoleopdeonSarang": { "returnedTop200": false },
+          "reason": "The seven-note repeated-note-heavy interval seed is too common to survive global candidate truncation; Exact Interval produced the same outcome."
+        }
+      },
+      "verification": "shared-seven-note-query-replayed"
+    }
+  ],
+  "replayable": true
+}

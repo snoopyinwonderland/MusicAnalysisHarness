@@ -1,0 +1,20 @@
+{
+  "schema": "musicanote-query-selection-policy/v1",
+  "updatedAt": "2026-09-17",
+  "primaryEvaluation": {
+    "excludeEntireUnidirectionalStepwiseQueries": true,
+    "excludeEntireRepeatedPitchQueries": true,
+    "selectBeforeSearch": true,
+    "applyToEachSelectedQueryLength": true,
+    "doNotExcludeMixedMotifsWithShortStepwiseOrRepeatedSegments": true
+  },
+  "simplePatternCases": {
+    "category": "optional-stress-test",
+    "includeInPrimarySuccessRate": false,
+    "preserveHistoricalQueriesAndResults": true
+  },
+  "plannedMeterChecks": {
+    "2/4": {"priority": "small-regression", "suggestedSourceWorks": 5, "suggestedSearches": 15, "status": "not-run"},
+    "5/8-and-7/8": {"priority": "grouping-contract-first", "status": "not-run", "knownLimitations": ["Production weighting currently assumes 2+3 and 2+2+3", "5/8 is absent from frontend Meter type and paste validation"]}
+  }
+}

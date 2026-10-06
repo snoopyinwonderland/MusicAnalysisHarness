@@ -1,0 +1,107 @@
+{
+  "schema": "musicanote-small-regression-summary/v1",
+  "completed": 6,
+  "total": 6,
+  "summary": [
+    {
+      "caseId": "TRIAD-01-exact-corpus",
+      "category": "global-tempo-scaling",
+      "status": "completed",
+      "targetRank": 3,
+      "elapsedMs": 10643,
+      "renderingAudit": {
+        "status": "rendered",
+        "requested": 12,
+        "resolved": 12,
+        "unresolved": 0,
+        "renderedTargets": 12,
+        "pages": 1,
+        "visualListeningReview": false
+      }
+    },
+    {
+      "caseId": "TRIAD-02-global-tempo-x2",
+      "category": "global-tempo-scaling",
+      "status": "completed",
+      "targetRank": 3,
+      "elapsedMs": 8683,
+      "renderingAudit": {
+        "status": "rendered",
+        "requested": 12,
+        "resolved": 12,
+        "unresolved": 0,
+        "renderedTargets": 12,
+        "pages": 1,
+        "visualListeningReview": false
+      }
+    },
+    {
+      "caseId": "TRIAD-03-local-duration-rest-mismatch",
+      "category": "global-tempo-scaling",
+      "status": "completed",
+      "targetRank": 3,
+      "elapsedMs": 9611,
+      "renderingAudit": {
+        "status": "rendered",
+        "requested": 12,
+        "resolved": 12,
+        "unresolved": 0,
+        "renderedTargets": 12,
+        "pages": 1,
+        "visualListeningReview": false
+      }
+    },
+    {
+      "caseId": "TRIAD-04-pickup-weak-beat-bar-crossing",
+      "category": "start-context",
+      "status": "completed",
+      "targetRank": 2,
+      "elapsedMs": 13055,
+      "renderingAudit": {
+        "status": "rendered",
+        "requested": 11,
+        "resolved": 11,
+        "unresolved": 0,
+        "renderedTargets": 11,
+        "pages": 1,
+        "visualListeningReview": false
+      }
+    },
+    {
+      "caseId": "TRIAD-05-same-intervals-different-rhythm",
+      "category": "negative-control",
+      "status": "completed",
+      "targetRank": 3,
+      "elapsedMs": 10908,
+      "renderingAudit": {
+        "status": "rendered",
+        "requested": 12,
+        "resolved": 12,
+        "unresolved": 0,
+        "renderedTargets": 12,
+        "pages": 1,
+        "visualListeningReview": false
+      }
+    },
+    {
+      "caseId": "TRIAD-06-same-rhythm-different-melody",
+      "category": "negative-control",
+      "status": "completed",
+      "targetRank": null,
+      "elapsedMs": 7086,
+      "renderingAudit": {
+        "status": "target-not-returned",
+        "requested": 0,
+        "resolved": [],
+        "unresolved": [],
+        "renderedTargets": 0,
+        "pages": 0,
+        "visualListeningReview": false
+      }
+    }
+  ],
+  "limitations": [
+    "Offline local index only; no collection or DB sync.",
+    "SVG audit checks target IDs, not human layout or listening."
+  ]
+}

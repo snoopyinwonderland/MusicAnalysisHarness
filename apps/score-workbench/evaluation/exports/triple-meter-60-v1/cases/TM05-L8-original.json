@@ -1,0 +1,2486 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "triple-meter-60-v1-TM05-L8-original",
+  "createdAt": "2026-09-17",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM05-e0",
+        "kind": "note",
+        "pitchMidi": 39,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e1",
+        "kind": "note",
+        "pitchMidi": 46,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e2",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e3",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e4",
+        "kind": "note",
+        "pitchMidi": 55,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e5",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e6",
+        "kind": "note",
+        "pitchMidi": 46,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e7",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM05-e0",
+        "kind": "note",
+        "pitchMidi": 39,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e1",
+        "kind": "note",
+        "pitchMidi": 46,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e2",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e3",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e4",
+        "kind": "note",
+        "pitchMidi": 55,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e5",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e6",
+        "kind": "note",
+        "pitchMidi": 46,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM05-e7",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "original",
+    "positive-probe"
+  ],
+  "description": "8음 원형 대조",
+  "changes": {
+    "changedSourceIds": [],
+    "originalDuration": 4,
+    "queryDuration": 4,
+    "transformation": {}
+  },
+  "expected": {
+    "workId": "work-077f36e3e4d42efb",
+    "sourceId": "3. Feed the Birds, Piano Solo.musicxml.xml",
+    "streamId": "P1:2:2",
+    "title": "FEED THE BIRDS",
+    "composer": "Composed by Richard M. Sherman\nArranged by Reflet des Nuages",
+    "baseStartIndex": 151,
+    "baseStartMeasure": 39,
+    "baseEndMeasure": 40,
+    "baseTargets": [
+      {
+        "onset": 114,
+        "pitchMidi": 39,
+        "measure": 39,
+        "beat": 1
+      },
+      {
+        "onset": 114.5,
+        "pitchMidi": 46,
+        "measure": 39,
+        "beat": 1.5
+      },
+      {
+        "onset": 115,
+        "pitchMidi": 51,
+        "measure": 39,
+        "beat": 2
+      },
+      {
+        "onset": 115.5,
+        "pitchMidi": 53,
+        "measure": 39,
+        "beat": 2.5
+      },
+      {
+        "onset": 116,
+        "pitchMidi": 55,
+        "measure": 39,
+        "beat": 3
+      },
+      {
+        "onset": 116.5,
+        "pitchMidi": 51,
+        "measure": 39,
+        "beat": 3.5
+      },
+      {
+        "onset": 117,
+        "pitchMidi": 46,
+        "measure": 40,
+        "beat": 1
+      },
+      {
+        "onset": 117.5,
+        "pitchMidi": 53,
+        "measure": 40,
+        "beat": 1.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 15488.385200000019,
+      "trace": {
+        "rejections": {
+          "inferior-window": 4
+        },
+        "scored": [
+          {
+            "sequence": 763,
+            "stage": "candidate-scored",
+            "elapsedMs": 3067.7800999999745,
+            "key": "work-077f36e3e4d42efb\u0000*",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 50.13372801778907,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 7,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 151
+          },
+          {
+            "sequence": 3852,
+            "stage": "candidate-scored",
+            "elapsedMs": 4112.235899999971,
+            "key": "work-077f36e3e4d42efb\u0000151",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 50.13372801778907,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 7,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 151
+          },
+          {
+            "sequence": 3863,
+            "stage": "candidate-scored",
+            "elapsedMs": 4112.405299999984,
+            "key": "work-077f36e3e4d42efb\u0000162",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 50.13372801778907,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 7,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 151
+          },
+          {
+            "sequence": 3874,
+            "stage": "candidate-scored",
+            "elapsedMs": 4112.572999999975,
+            "key": "work-077f36e3e4d42efb\u0000301",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 50.13372801778907,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 7,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 151
+          },
+          {
+            "sequence": 3885,
+            "stage": "candidate-scored",
+            "elapsedMs": 4112.739500000025,
+            "key": "work-077f36e3e4d42efb\u0000347",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 50.13372801778907,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 7,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 151
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-17T01:05:34.050Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 100,
+      "representativeWindowRank": 1,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 8,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [
+        {
+          "id": "query-completion-v1-0",
+          "kind": "pitch",
+          "query": {
+            "version": 1,
+            "mode": "melody_rhythm",
+            "meter": "3/4",
+            "startsOnDownbeat": true,
+            "includeRests": true,
+            "absoluteExactOnly": false,
+            "events": [
+              {
+                "id": "TM05-e0",
+                "kind": "note",
+                "pitchMidi": 39,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e1",
+                "kind": "note",
+                "pitchMidi": 46,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e2",
+                "kind": "note",
+                "pitchMidi": 51,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e3",
+                "kind": "note",
+                "pitchMidi": 53,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e4",
+                "kind": "note",
+                "pitchMidi": 55,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e5",
+                "kind": "note",
+                "pitchMidi": 51,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e6",
+                "kind": "note",
+                "pitchMidi": 46,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM05-e7",
+                "kind": "note",
+                "pitchMidi": 51,
+                "durationRatio": 0.5,
+                "spelling": "D♯3"
+              }
+            ]
+          },
+          "changedIds": [
+            "TM05-e7"
+          ],
+          "reason": "8번째 음 undefined → D♯3",
+          "beforeFit": 0.875,
+          "afterFit": 1,
+          "evidence": [
+            {
+              "workId": "work-913ad6b5c232a5bd-a71ddd21",
+              "sourceId": "kysing/07461.xml",
+              "title": "나 혼자만의 사랑",
+              "streamId": "P3:1:1",
+              "startMeasure": 29,
+              "endMeasure": 29,
+              "transposition": 21,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-0",
+                  "kind": "note",
+                  "pitchMidi": 60,
+                  "spelling": "C4",
+                  "durationRatio": 0.5,
+                  "onset": 112,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-1",
+                  "kind": "note",
+                  "pitchMidi": 67,
+                  "spelling": "G4",
+                  "durationRatio": 0.5,
+                  "onset": 112.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-2",
+                  "kind": "note",
+                  "pitchMidi": 72,
+                  "spelling": "C5",
+                  "durationRatio": 0.5,
+                  "onset": 113,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-3",
+                  "kind": "note",
+                  "pitchMidi": 74,
+                  "spelling": "D5",
+                  "durationRatio": 0.5,
+                  "onset": 113.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-4",
+                  "kind": "note",
+                  "pitchMidi": 76,
+                  "spelling": "E5",
+                  "durationRatio": 0.5,
+                  "onset": 114,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-5",
+                  "kind": "note",
+                  "pitchMidi": 72,
+                  "spelling": "C5",
+                  "durationRatio": 0.5,
+                  "onset": 114.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-6",
+                  "kind": "note",
+                  "pitchMidi": 67,
+                  "spelling": "G4",
+                  "durationRatio": 0.5,
+                  "onset": 115,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 4,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                },
+                {
+                  "id": "work-913ad6b5c232a5bd-a71ddd21-7",
+                  "kind": "note",
+                  "pitchMidi": 72,
+                  "spelling": "C5",
+                  "durationRatio": 0.5,
+                  "onset": 115.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 29,
+                  "beat": 4.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 29,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -1
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0.09429942857142856,
+                  "type": "match"
+                }
+              ]
+            },
+            {
+              "workId": "work-0f2f928219628a12-a71ddd21",
+              "sourceId": "kysing/58682.xml",
+              "title": "사랑한다는 이 말 (드라마\"추적자\")",
+              "streamId": "P3:1:1",
+              "startMeasure": 52,
+              "endMeasure": 52,
+              "transposition": 23,
+              "tempoRatio": 0.5,
+              "notes": [
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-0",
+                  "kind": "note",
+                  "pitchMidi": 62,
+                  "spelling": "D4",
+                  "durationRatio": 0.25,
+                  "onset": 202,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-1",
+                  "kind": "note",
+                  "pitchMidi": 69,
+                  "spelling": "A4",
+                  "durationRatio": 0.25,
+                  "onset": 202.25,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 1.25,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-2",
+                  "kind": "note",
+                  "pitchMidi": 74,
+                  "spelling": "D5",
+                  "durationRatio": 0.25,
+                  "onset": 202.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-3",
+                  "kind": "note",
+                  "pitchMidi": 76,
+                  "spelling": "E5",
+                  "durationRatio": 0.25,
+                  "onset": 202.75,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 1.75,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-4",
+                  "kind": "note",
+                  "pitchMidi": 78,
+                  "spelling": "F#5",
+                  "durationRatio": 0.25,
+                  "onset": 203,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-5",
+                  "kind": "note",
+                  "pitchMidi": 74,
+                  "spelling": "D5",
+                  "durationRatio": 0.25,
+                  "onset": 203.25,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 2.25,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-6",
+                  "kind": "note",
+                  "pitchMidi": 69,
+                  "spelling": "A4",
+                  "durationRatio": 0.25,
+                  "onset": 203.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                },
+                {
+                  "id": "work-0f2f928219628a12-a71ddd21-7",
+                  "kind": "note",
+                  "pitchMidi": 74,
+                  "spelling": "D5",
+                  "durationRatio": 0.25,
+                  "onset": 203.75,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 52,
+                  "beat": 2.75,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 52,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Mtn. Dulcimer, S4",
+                  "keyFifths": 1
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0.08886857142857142,
+                  "type": "match"
+                }
+              ]
+            },
+            {
+              "workId": "work-76ad1fa662754b4a-a71ddd21",
+              "sourceId": "kysing/59765.xml",
+              "title": "놀라운 평범함 (뮤지컬\"레베카\")",
+              "streamId": "P3:1:1",
+              "startMeasure": 18,
+              "endMeasure": 18,
+              "transposition": 25,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-0",
+                  "kind": "note",
+                  "pitchMidi": 64,
+                  "spelling": "E4",
+                  "durationRatio": 0.5,
+                  "onset": 68,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-1",
+                  "kind": "note",
+                  "pitchMidi": 71,
+                  "spelling": "Cb5",
+                  "durationRatio": 0.5,
+                  "onset": 68.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-2",
+                  "kind": "note",
+                  "pitchMidi": 76,
+                  "spelling": "E5",
+                  "durationRatio": 0.5,
+                  "onset": 69,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-3",
+                  "kind": "note",
+                  "pitchMidi": 78,
+                  "spelling": "Gb5",
+                  "durationRatio": 0.5,
+                  "onset": 69.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-4",
+                  "kind": "note",
+                  "pitchMidi": 80,
+                  "spelling": "Ab5",
+                  "durationRatio": 0.5,
+                  "onset": 70,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-5",
+                  "kind": "note",
+                  "pitchMidi": 76,
+                  "spelling": "E5",
+                  "durationRatio": 0.5,
+                  "onset": 70.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-6",
+                  "kind": "note",
+                  "pitchMidi": 71,
+                  "spelling": "Cb5",
+                  "durationRatio": 0.5,
+                  "onset": 71,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 4,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                },
+                {
+                  "id": "work-76ad1fa662754b4a-a71ddd21-7",
+                  "kind": "note",
+                  "pitchMidi": 76,
+                  "spelling": "E5",
+                  "durationRatio": 0.5,
+                  "onset": 71.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 18,
+                  "beat": 4.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 18,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Piano, S3",
+                  "keyFifths": -4
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0.09429942857142856,
+                  "type": "match"
+                }
+              ]
+            },
+            {
+              "workId": "work-65347356f0c761ba-a71ddd21",
+              "sourceId": "kysing/86227.xml",
+              "title": "애증의 늪",
+              "streamId": "P3:1:1",
+              "startMeasure": 16,
+              "endMeasure": 16,
+              "transposition": 14,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-0",
+                  "kind": "note",
+                  "pitchMidi": 53,
+                  "spelling": "F3",
+                  "durationRatio": 0.5,
+                  "onset": 58,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-1",
+                  "kind": "note",
+                  "pitchMidi": 60,
+                  "spelling": "C4",
+                  "durationRatio": 0.5,
+                  "onset": 58.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-2",
+                  "kind": "note",
+                  "pitchMidi": 65,
+                  "spelling": "F4",
+                  "durationRatio": 0.5,
+                  "onset": 59,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-3",
+                  "kind": "note",
+                  "pitchMidi": 67,
+                  "spelling": "G4",
+                  "durationRatio": 0.5,
+                  "onset": 59.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-4",
+                  "kind": "note",
+                  "pitchMidi": 69,
+                  "spelling": "A4",
+                  "durationRatio": 0.5,
+                  "onset": 60,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-5",
+                  "kind": "note",
+                  "pitchMidi": 65,
+                  "spelling": "F4",
+                  "durationRatio": 0.5,
+                  "onset": 60.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-6",
+                  "kind": "note",
+                  "pitchMidi": 60,
+                  "spelling": "C4",
+                  "durationRatio": 0.5,
+                  "onset": 61,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 4,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                },
+                {
+                  "id": "work-65347356f0c761ba-a71ddd21-7",
+                  "kind": "note",
+                  "pitchMidi": 65,
+                  "spelling": "F4",
+                  "durationRatio": 0.5,
+                  "onset": 61.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 16,
+                  "beat": 4.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 16,
+                  "clefShape": "G",
+                  "clefLine": 2,
+                  "meterCount": 4,
+                  "meterUnit": 4,
+                  "partName": "Soprano Guitar, S3",
+                  "keyFifths": -2
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0.09429942857142856,
+                  "type": "match"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "top": [
+        {
+          "rank": 1,
+          "title": "FEED THE BIRDS",
+          "sourceId": "3. Feed the Birds, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 50,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-077f36e3e4d42efb&start=39&end=40&source=search&targets=114%3A39%2C114.5%3A46%2C115%3A51%2C115.5%3A53%2C116%3A55%2C116.5%3A51%2C117%3A46%2C117.5%3A53"
+        },
+        {
+          "rank": 2,
+          "title": "FEED THE BIRDS",
+          "sourceId": "3. Feed the Birds, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 50,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-af263568b0f7f2a8-3ba9e1fb&start=39&end=40&source=search&targets=114%3A39%2C114.5%3A46%2C115%3A51%2C115.5%3A53%2C116%3A55%2C116.5%3A51%2C117%3A46%2C117.5%3A53"
+        },
+        {
+          "rank": 3,
+          "title": "FEED THE BIRDS",
+          "sourceId": "3. Feed the Birds, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:2:2",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 50,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-ce6a0878411ac4cf-a22005a1&start=39&end=40&source=search&targets=114%3A39%2C114.5%3A46%2C115%3A51%2C115.5%3A53%2C116%3A55%2C116.5%3A51%2C117%3A46%2C117.5%3A53"
+        },
+        {
+          "rank": 4,
+          "title": "나 혼자만의 사랑",
+          "sourceId": "kysing/07461.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 52,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-913ad6b5c232a5bd-a71ddd21&start=29&end=29&source=search&targets=112%3A60%2C112.5%3A67%2C113%3A72%2C113.5%3A74%2C114%3A76%2C114.5%3A72%2C115%3A67%2C115.5%3A72"
+        },
+        {
+          "rank": 5,
+          "title": "사랑한다는 이 말 (드라마\"추적자\")",
+          "sourceId": "kysing/58682.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 100,
+            "skeleton": 64,
+            "pillarPitch": 81,
+            "specificity": 74,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-0f2f928219628a12-a71ddd21&start=52&end=52&source=search&targets=202%3A62%2C202.25%3A69%2C202.5%3A74%2C202.75%3A76%2C203%3A78%2C203.25%3A74%2C203.5%3A69%2C203.75%3A74"
+        },
+        {
+          "rank": 6,
+          "title": "놀라운 평범함 (뮤지컬\"레베카\")",
+          "sourceId": "kysing/59765.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 52,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-76ad1fa662754b4a-a71ddd21&start=18&end=18&source=search&targets=68%3A64%2C68.5%3A71%2C69%3A76%2C69.5%3A78%2C70%3A80%2C70.5%3A76%2C71%3A71%2C71.5%3A76"
+        },
+        {
+          "rank": 7,
+          "title": "애증의 늪",
+          "sourceId": "kysing/86227.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 52,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-65347356f0c761ba-a71ddd21&start=16&end=16&source=search&targets=58%3A53%2C58.5%3A60%2C59%3A65%2C59.5%3A67%2C60%3A69%2C60.5%3A65%2C61%3A60%2C61.5%3A65"
+        },
+        {
+          "rank": 8,
+          "title": "Angustia",
+          "sourceId": "mxl/10/36/QmSp7e7ZEyszaVzz4pfHUNoNZroT9biRmjAkYDVUGo2tWd.mxl",
+          "streamId": "P1:2:5",
+          "score": 97,
+          "scores": {
+            "pitch": 87.75,
+            "interval": 90.3,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 94,
+            "structural": 84,
+            "skeleton": 63,
+            "pillarPitch": 77,
+            "specificity": 74,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-cb58677c1c742b81&start=20&end=22&source=search&targets=57%3A50%2C58%3A57%2C59%3A62%2C60%3A64%2C61%3A66%2C62%3A62%2C63%3A54%2C64%3A60"
+        },
+        {
+          "rank": 9,
+          "title": "I SEE THE LIGHT",
+          "sourceId": "3. I See the Light, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 96.70374918783529,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 95.91894571091382,
+            "meter": 51,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-93fdb783553b822f-5f596005&start=15&end=15&source=search&targets=56%3A41%2C56.5%3A48%2C57%3A53%2C57.5%3A55%2C58%3A57%2C58.5%3A53%2C59%3A48"
+        },
+        {
+          "rank": 10,
+          "title": "I SEE THE LIGHT",
+          "sourceId": "3. I See the Light, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 96.70374918783529,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 95.91894571091382,
+            "meter": 51,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 74,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-44fe0665649dfd25-3ba9e1fb&start=15&end=15&source=search&targets=56%3A41%2C56.5%3A48%2C57%3A53%2C57.5%3A55%2C58%3A57%2C58.5%3A53%2C59%3A48"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 8,
+      "returnedCount": 100,
+      "exactCount": 3,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/TM05-L8-original.json",
+      "initialPath": "../runs/TM05-L8-original.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-077f36e3e4d42efb",
+      "sourceId": "3. Feed the Birds, Piano Solo.musicxml.xml",
+      "streamId": "P1:2:2",
+      "title": "FEED THE BIRDS",
+      "composer": "Composed by Richard M. Sherman\nArranged by Reflet des Nuages",
+      "baseStartIndex": 151,
+      "baseStartMeasure": 39,
+      "baseEndMeasure": 40,
+      "baseTargets": [
+        {
+          "onset": 114,
+          "pitchMidi": 39,
+          "measure": 39,
+          "beat": 1
+        },
+        {
+          "onset": 114.5,
+          "pitchMidi": 46,
+          "measure": 39,
+          "beat": 1.5
+        },
+        {
+          "onset": 115,
+          "pitchMidi": 51,
+          "measure": 39,
+          "beat": 2
+        },
+        {
+          "onset": 115.5,
+          "pitchMidi": 53,
+          "measure": 39,
+          "beat": 2.5
+        },
+        {
+          "onset": 116,
+          "pitchMidi": 55,
+          "measure": 39,
+          "beat": 3
+        },
+        {
+          "onset": 116.5,
+          "pitchMidi": 51,
+          "measure": 39,
+          "beat": 3.5
+        },
+        {
+          "onset": 117,
+          "pitchMidi": 46,
+          "measure": 40,
+          "beat": 1
+        },
+        {
+          "onset": 117.5,
+          "pitchMidi": 53,
+          "measure": 40,
+          "beat": 1.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 37,
+      "endOrdinal": 42,
+      "xmlHash": "7bd9bf7167db8c51096f4919d0d28dfa078c5b1bd396304703584b99cb79ff77",
+      "xmlError": null,
+      "eventsHash": "5f0dab2b2f1c6c127e058bda84f662903ca241c7257043fdb12360a3b24e7c16",
+      "sourcePath": "K:/Music Analysis/musicxml/3. Feed the Birds, Piano Solo.musicxml.xml",
+      "sourceHash": "077f36e3e4d42efb65a8bff7a09f64f5c13e98aadb7b5aaccc8cb0a8921771ed"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m39:n13",
+          "xmlNoteId": "P1:m39:n13",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 39,
+            "noteIndex": 13
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 39,
+          "originalMeasureLabel": "39",
+          "onsetQ": {
+            "n": 114,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 39,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 16,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m39:n14",
+          "xmlNoteId": "P1:m39:n14",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 39,
+            "noteIndex": 14
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 39,
+          "originalMeasureLabel": "39",
+          "onsetQ": {
+            "n": 229,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 46,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 20,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m39:n15",
+          "xmlNoteId": "P1:m39:n15",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 39,
+            "noteIndex": 15
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 39,
+          "originalMeasureLabel": "39",
+          "onsetQ": {
+            "n": 115,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 51,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 23,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m39:n16",
+          "xmlNoteId": "P1:m39:n16",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 39,
+            "noteIndex": 16
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 39,
+          "originalMeasureLabel": "39",
+          "onsetQ": {
+            "n": 231,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 53,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 24,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m39:n17",
+          "xmlNoteId": "P1:m39:n17",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 39,
+            "noteIndex": 17
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 39,
+          "originalMeasureLabel": "39",
+          "onsetQ": {
+            "n": 116,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 55,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 25,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m39:n18",
+          "xmlNoteId": "P1:m39:n18",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 39,
+            "noteIndex": 18
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 39,
+          "originalMeasureLabel": "39",
+          "onsetQ": {
+            "n": 233,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 51,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 23,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m40:n5",
+          "xmlNoteId": "P1:m40:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 40,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 117,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 46,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 20,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m40:n6",
+          "xmlNoteId": "P1:m40:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 40,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 235,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 53,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 24,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 3
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/TM05-L8/context.musicxml",
+      "events": "../base-assets/TM05-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "original"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

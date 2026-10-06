@@ -1,0 +1,56 @@
+{
+  "schema": "musicanote-case-review-brief/v1",
+  "caseId": "RC-004",
+  "input": "Twinkle — Lemon19",
+  "reference": "Ma Boy — SISTAR19",
+  "source": "user-observation",
+  "priority": "primary-real-world-case",
+  "observation": "완전히 같은 멜로디라기보다 얼핏 비슷한 느낌이 군데군데 계속 나온다. 단일 완전 일치 구간보다 탐지가 어려운 사례다.",
+  "hypotheses": [
+    "distributed-local-variation",
+    "multiple-related-but-not-identical-phrases"
+  ],
+  "notEstablished": [
+    "legal-infringement",
+    "independent-phrase-count",
+    "protectable-expression-similarity"
+  ],
+  "reviewRequirements": [
+    "구간별 실제 음정·리듬·윤곽·기둥음 유지와 변형을 따로 제시",
+    "같은 구절 반복과 독립된 여러 구절을 구분",
+    "전체 검사/선별 검사 범위와 미검사 위치를 명시",
+    "흔한 음형과 분위기만의 일치를 독립 침해 증거로 합산하지 않음",
+    "사용자 지정 원곡과 주석 마디를 검색 후보/점수 선정에 주입하지 않음"
+  ],
+  "baselineEvidence": {
+    "directory": "evaluation/reports/real-pairs-existing-v1/RC-004",
+    "selectedPhraseQueries": 7,
+    "failedQueries": 0,
+    "candidateSourceGroups": 59,
+    "referenceRetrieved": false,
+    "referenceSourceId": "kysing/76909.xml",
+    "sourceStreamAttacks": 439,
+    "directlySearchedAttacks": 175,
+    "representedIncludingRepeatsAttacks": 329,
+    "fullScoreExamined": false,
+    "knownAnnotationUsedToSelectQueries": false,
+    "diagnosis": "Selected queries included parser measures 14-15; failure stage within retrieval, admission or result cutoff remains unlocalized."
+  },
+  "executionEvidence": {
+    "baselineTrace": "evaluation/runs/twinkle-stage-trace-v1",
+    "baselineQueriesIdentical": 7,
+    "referenceReachedDetailedComparison": false,
+    "contourExperiment": "evaluation/runs/twinkle-contour-seeds-v1",
+    "contourExperimentRetrievedReference": false,
+    "contourExperimentEnabledByDefault": false,
+    "boundaryIndependentExperiment": "evaluation/reports/real-pairs-windows-v1",
+    "productionScoreBoostForCase": false,
+    "boundaryIndependentCompletedQueries": 7,
+    "boundaryIndependentCandidateGroups": 81,
+    "boundaryIndependentRetrievedReference": false,
+    "boundaryIndependentDirectAttacks": 104,
+    "boundaryIndependentRepresentedAttacks": 255,
+    "boundaryIndependentVerifiedSvgCount": 20
+  },
+  "status": "candidate-retrieval-failure-localized; contour-supplement-insufficient; window-experiment-complete-reference-not-retrieved"
+}

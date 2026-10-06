@@ -1,0 +1,28 @@
+{
+  "schema": "musicanote-evaluation-review/v1",
+  "createdAt": "2026-09-16",
+  "scope": "Evidence review, not production per-work rules or human relevance ground truth",
+  "cases": [
+    {
+      "caseId": "MEM10-absorb-ornament",
+      "observations": [
+        "Source retrieved at rank 1, score 89.78298470644603; rhythm score 47.94381756496392.",
+        "Query first F4 lasts 3 beats, but aligns to source F4 at onset 255.5 lasting 0.5 beat, rather than original onset 252 lasting 3 beats.",
+        "Query note index 2 F#4 lasting 3 beats is unmatched. Query index 1 F#4 lasting 1 beat instead aligns to source onset 256 F#4 lasting 3 beats."
+      ],
+      "diagnosis": "Local alignment returned the correct work but chose an offset repeated-pitch alignment near the deletion. This is not an expected harmless extra repeated attack.",
+      "proposal": "Compare competing paths using retained arrival-time consistency, sustained-note coverage and duration evidence; test on repeated-note negative controls before changing search. Do not add a work-specific rule.",
+      "status": "observed-not-fixed"
+    },
+    {
+      "caseId": "MEM09-original",
+      "observations": [
+        "Original passage starts at measure 45; exact representative starts at measure 17.",
+        "Returned partOccurrences contains the same P4:1:1 stream at measures 17 and 45."
+      ],
+      "diagnosis": "Representative-window mismatch alone is not retrieval failure; source occurrence is retained in the repeat list.",
+      "proposal": "Report work retrieval, representative-window alignment and occurrence inclusion separately.",
+      "status": "explained"
+    }
+  ]
+}

@@ -1,0 +1,831 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH10-L6-pitch-change",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH10-e0",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH10-e1",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH10-e2",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH10-e3",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH10-e4",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH10-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH10-e0",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH10-e1",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH10-e2",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH10-e3",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH10-e4",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH10-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "pitch-change",
+    "positive-probe"
+  ],
+  "description": "6음 중 네 번째 음 -1반음 변경",
+  "changes": {
+    "changedSourceIds": [
+      "SH10-e3"
+    ],
+    "originalDuration": 4,
+    "queryDuration": 4,
+    "transformation": {
+      "pitch": {
+        "eventId": "SH10-e3",
+        "from": 68,
+        "to": 67,
+        "semitones": -1
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-3943fcf844e2a003",
+    "sourceId": "2002.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "2002",
+    "composer": "Composed by Benjamin Levin, Julla Cavazos, Steve McCutcheon, \nEdward Christopher Sheeran, Anne-Marie Nicholson, Andreas Carlsson, George Clinton, \nEl DeBarge, Randy DeBarge, Jay E Ice-T, Etterlene Jordan, Kristian Lundin, \nMax Martin, Cornell Haynes, Alphonso Henderson, Jake Schulze, City Spud\nArranged by Reflet des Nuages",
+    "baseStartIndex": 23,
+    "baseStartMeasure": 9,
+    "baseEndMeasure": 9,
+    "baseTargets": [
+      {
+        "onset": 32,
+        "pitchMidi": 64,
+        "measure": 9,
+        "beat": 1
+      },
+      {
+        "onset": 33,
+        "pitchMidi": 64,
+        "measure": 9,
+        "beat": 2
+      },
+      {
+        "onset": 33.5,
+        "pitchMidi": 66,
+        "measure": 9,
+        "beat": 2.5
+      },
+      {
+        "onset": 34,
+        "pitchMidi": 68,
+        "measure": 9,
+        "beat": 3
+      },
+      {
+        "onset": 35,
+        "pitchMidi": 66,
+        "measure": 9,
+        "beat": 4
+      },
+      {
+        "onset": 35.5,
+        "pitchMidi": 64,
+        "measure": 9,
+        "beat": 4.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 6145.575499999803,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "I Believe I Can Fly",
+          "sourceId": "3. I Believe I Can Fly, Violin, Cello and Piano Trio.musicxml(1).xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 50,
+            "structural": 40,
+            "skeleton": 73,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 73
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-91d56f687dabd86e-88a85b71&start=72&end=72&source=search&targets=284%3A54%2C286%3A54%2C286.25%3A56%2C286.5%3A57%2C287.25%3A56%2C287.5%3A54"
+        },
+        {
+          "rank": 2,
+          "title": "A CHRISTMAS FESTIVAL",
+          "sourceId": "4. A Christmas Festival, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 65,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-a9e7f6b5f58f6aa4-d08f9a8a&start=14&end=14&source=search&targets=53%3A64%2C53.5%3A64%2C53.75%3A66%2C54%3A67%2C55.5%3A66%2C55.75%3A64"
+        },
+        {
+          "rank": 3,
+          "title": "A CHRISTMAS FESTIVAL",
+          "sourceId": "4. A Christmas Festival, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 56,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-e38ff09b753407fb&start=14&end=14&source=search&targets=53%3A76%2C53.5%3A76%2C53.75%3A78%2C54%3A79%2C55.5%3A78%2C55.75%3A76"
+        },
+        {
+          "rank": 4,
+          "title": "A CHRISTMAS FESTIVAL",
+          "sourceId": "4. A Christmas Festival, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 56,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-6e5438411a2b77ea&start=14&end=14&source=search&targets=53%3A76%2C53.5%3A76%2C53.75%3A78%2C54%3A79%2C55.5%3A78%2C55.75%3A76"
+        },
+        {
+          "rank": 5,
+          "title": "A CHRISTMAS FESTIVAL",
+          "sourceId": "4. A Christmas Festival, Violin, Viola, Cello and Piano Quaret.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 56,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-f0fa63feb59746db&start=14&end=14&source=search&targets=53%3A76%2C53.5%3A76%2C53.75%3A78%2C54%3A79%2C55.5%3A78%2C55.75%3A76"
+        },
+        {
+          "rank": 6,
+          "title": "A CHRISTMAS FESTIVAL",
+          "sourceId": "4. A Christmas Festival, Violin1, Violin2, Viola, Cello and Piano Quintet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 56,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-eed1c79e19342494&start=14&end=14&source=search&targets=53%3A76%2C53.5%3A76%2C53.75%3A78%2C54%3A79%2C55.5%3A78%2C55.75%3A76"
+        },
+        {
+          "rank": 7,
+          "title": "A CHRISTMAS FESTIVAL",
+          "sourceId": "4. A Christmas Festival, Violin1, Violin2, Viola, Cello and Piano Quintet.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 58,
+            "structural": 56,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-eed1c79e19342494-a71ddd21&start=14&end=14&source=search&targets=53%3A64%2C53.5%3A64%2C53.75%3A66%2C54%3A67%2C55.5%3A66%2C55.75%3A64"
+        },
+        {
+          "rank": 8,
+          "title": "Belle (From 'Beauty and the Beast')",
+          "sourceId": "4. Belle, Violin and Piano Duet.musicxml(1).xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 94,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-aa37f65a876f3af7&start=69&end=70&source=search&targets=270%3A81%2C275%3A81%2C275.5%3A83%2C276%3A84%2C277%3A83%2C277.5%3A81"
+        },
+        {
+          "rank": 9,
+          "title": "Belle (From 'Beauty and the Beast')",
+          "sourceId": "4. Belle, Violin, Cello and Piano Trio.musicxml(1).xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 94,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-514eefe16458b0e4-88a85b71&start=69&end=70&source=search&targets=270%3A57%2C275%3A57%2C275.5%3A59%2C276%3A60%2C277%3A59%2C277.5%3A57"
+        },
+        {
+          "rank": 10,
+          "title": "BELLE",
+          "sourceId": "4. Belle, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 94,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-d424171587ec382d-a71ddd21&start=69&end=70&source=search&targets=270%3A57%2C275%3A57%2C275.5%3A59%2C276%3A60%2C277%3A59%2C277.5%3A57"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 14,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "changed-note-alignment",
+      "queryNoteIndex": 3,
+      "queryPitch": 67,
+      "originalPitch": 68,
+      "sourcePitch": null,
+      "sourceOnset": null,
+      "alignmentType": null,
+      "unmatched": true
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 100,
+      "exactCount": 14,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH10-L6-pitch-change.json",
+      "initialPath": "../runs/SH10-L6-pitch-change.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-3943fcf844e2a003",
+      "sourceId": "2002.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "2002",
+      "composer": "Composed by Benjamin Levin, Julla Cavazos, Steve McCutcheon, \nEdward Christopher Sheeran, Anne-Marie Nicholson, Andreas Carlsson, George Clinton, \nEl DeBarge, Randy DeBarge, Jay E Ice-T, Etterlene Jordan, Kristian Lundin, \nMax Martin, Cornell Haynes, Alphonso Henderson, Jake Schulze, City Spud\nArranged by Reflet des Nuages",
+      "baseStartIndex": 23,
+      "baseStartMeasure": 9,
+      "baseEndMeasure": 9,
+      "baseTargets": [
+        {
+          "onset": 32,
+          "pitchMidi": 64,
+          "measure": 9,
+          "beat": 1
+        },
+        {
+          "onset": 33,
+          "pitchMidi": 64,
+          "measure": 9,
+          "beat": 2
+        },
+        {
+          "onset": 33.5,
+          "pitchMidi": 66,
+          "measure": 9,
+          "beat": 2.5
+        },
+        {
+          "onset": 34,
+          "pitchMidi": 68,
+          "measure": 9,
+          "beat": 3
+        },
+        {
+          "onset": 35,
+          "pitchMidi": 66,
+          "measure": 9,
+          "beat": 4
+        },
+        {
+          "onset": 35.5,
+          "pitchMidi": 64,
+          "measure": 9,
+          "beat": 4.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 7,
+      "endOrdinal": 11,
+      "xmlHash": "87bf32ee3e08476b6bea9f03c558c2b7d4aa11e49a37715598fda05cf05714b6",
+      "xmlError": null,
+      "eventsHash": "fe2eafca9de104b88ea664f155d72bb012b8f8c41bdfa3c2b9a578ac78428804",
+      "sourcePath": "K:/Music Analysis/musicxml/2002.musicxml.xml",
+      "sourceHash": "3943fcf844e2a003c033fa9d59031fbc79c266881a17f1e9a4f5a0aa21e43eba"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m9:n1",
+          "xmlNoteId": "P1:m9:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 9,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 9,
+          "originalMeasureLabel": "9",
+          "onsetQ": {
+            "n": 32,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m9:n2",
+          "xmlNoteId": "P1:m9:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 9,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 9,
+          "originalMeasureLabel": "9",
+          "onsetQ": {
+            "n": 33,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m9:n3",
+          "xmlNoteId": "P1:m9:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 9,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 9,
+          "originalMeasureLabel": "9",
+          "onsetQ": {
+            "n": 67,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 66,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m9:n4",
+          "xmlNoteId": "P1:m9:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 9,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 9,
+          "originalMeasureLabel": "9",
+          "onsetQ": {
+            "n": 34,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m9:n5",
+          "xmlNoteId": "P1:m9:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 9,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 9,
+          "originalMeasureLabel": "9",
+          "onsetQ": {
+            "n": 35,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 66,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m9:n6",
+          "xmlNoteId": "P1:m9:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 9,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 9,
+          "originalMeasureLabel": "9",
+          "onsetQ": {
+            "n": 71,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH10-L6/context.musicxml",
+      "events": "../base-assets/SH10-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "pitch-change"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

@@ -1,0 +1,877 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH05-L6-original",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH05-e0",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e1",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e2",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e3",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e4",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "SH05-e5",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.25
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH05-e0",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e1",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e2",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e3",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e4",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "SH05-e5",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.25
+      }
+    ]
+  },
+  "tags": [
+    "original",
+    "positive-probe"
+  ],
+  "description": "6음 원형 대조",
+  "changes": {
+    "changedSourceIds": [],
+    "originalDuration": 2,
+    "queryDuration": 2,
+    "transformation": {}
+  },
+  "expected": {
+    "workId": "work-a1ec5f2aea11beb9",
+    "sourceId": "2 Become 1.xml",
+    "streamId": "P1:1:1",
+    "title": "2 Become 1",
+    "composer": "Composed by Spice Girls, Matt Rowe, Richard Stannard\nArranged by Reflet des Nuages",
+    "baseStartIndex": 224,
+    "baseStartMeasure": 37,
+    "baseEndMeasure": 37,
+    "baseTargets": [
+      {
+        "onset": 144,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 1
+      },
+      {
+        "onset": 144.25,
+        "pitchMidi": 80,
+        "measure": 37,
+        "beat": 1.25
+      },
+      {
+        "onset": 144.5,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 1.5
+      },
+      {
+        "onset": 144.75,
+        "pitchMidi": 80,
+        "measure": 37,
+        "beat": 1.75
+      },
+      {
+        "onset": 145,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 2
+      },
+      {
+        "onset": 145.75,
+        "pitchMidi": 78,
+        "measure": 37,
+        "beat": 2.75
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 8626.82799999998,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 53,
+            "stage": "candidate-scored",
+            "elapsedMs": 1397.306399999885,
+            "key": "work-a1ec5f2aea11beb9\u0000100",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 1,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 43.34318674336146,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 5,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 100
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 100,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 6,
+      "issues": [
+        "representative-window-differs"
+      ],
+      "reviewNotes": [
+        "Inspect equivalent repeated passages and occurrence links before declaring a wrong match."
+      ],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "2 Become 1",
+          "sourceId": "2 Become 1.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-a1ec5f2aea11beb9&start=19&end=19&source=search&targets=72%3A82%2C72.25%3A80%2C72.5%3A82%2C72.75%3A80%2C73%3A82%2C73.75%3A78"
+        },
+        {
+          "rank": 2,
+          "title": "2 Become 1",
+          "sourceId": "4. 2 Become 1, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 64
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-f86dbc77495c8fa4&start=51&end=51&source=search&targets=200%3A70%2C200.25%3A68%2C200.5%3A70%2C200.75%3A68%2C201%3A70%2C201.75%3A66"
+        },
+        {
+          "rank": 3,
+          "title": "2 Become 1",
+          "sourceId": "4. 2 Become 1, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-49a78c34d676f9a3&start=19&end=19&source=search&targets=72%3A82%2C72.25%3A80%2C72.5%3A82%2C72.75%3A80%2C73%3A82%2C73.75%3A78"
+        },
+        {
+          "rank": 4,
+          "title": "2 Become 1",
+          "sourceId": "4. 2 Become 1, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 64
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-49a78c34d676f9a3-88a85b71&start=51&end=51&source=search&targets=200%3A70%2C200.25%3A68%2C200.5%3A70%2C200.75%3A68%2C201%3A70%2C201.75%3A66"
+        },
+        {
+          "rank": 5,
+          "title": "2 Become 1",
+          "sourceId": "4. 2 Become 1, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 41,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-2353768547fcc770&start=37&end=37&source=search&targets=144%3A82%2C144.25%3A80%2C144.5%3A82%2C144.75%3A80%2C145%3A82%2C145.75%3A78"
+        },
+        {
+          "rank": 6,
+          "title": "2 Become 1",
+          "sourceId": "4. 2 Become 1, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 64
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-2353768547fcc770-a71ddd21&start=51&end=51&source=search&targets=200%3A70%2C200.25%3A68%2C200.5%3A70%2C200.75%3A68%2C201%3A70%2C201.75%3A66"
+        },
+        {
+          "rank": 7,
+          "title": "THE LAND BEFORE TIME END CREDITS",
+          "sourceId": "4. The Land Before Time End Credits, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 0,
+            "structural": 43,
+            "skeleton": 75,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-f9ca4efa5347e64f-88a85b71&start=8&end=10&source=search&targets=30%3A64%2C31%3A62%2C32%3A64%2C33%3A62%2C34%3A64%2C39%3A60"
+        },
+        {
+          "rank": 8,
+          "title": "WHEN EMMA FALLS IN LOVE",
+          "sourceId": "4. When Emma Falls in Love, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 38,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-427c69729ee20483&start=5&end=5&source=search&targets=16%3A78%2C16.25%3A76%2C16.5%3A78%2C16.75%3A76%2C17%3A78%2C17.5%3A74"
+        },
+        {
+          "rank": 9,
+          "title": "WHEN EMMA FALLS IN LOVE",
+          "sourceId": "4. When Emma Falls in Love, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 87,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-1b283e9812a84f5b&start=64&end=64&source=search&targets=252%3A78%2C252.25%3A76%2C252.5%3A78%2C252.75%3A76%2C253%3A78%2C253.5%3A74"
+        },
+        {
+          "rank": 10,
+          "title": "WHEN EMMA FALLS IN LOVE",
+          "sourceId": "4. When Emma Falls in Love, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 87,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 60,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-5b69267fdc95aa80&start=64&end=64&source=search&targets=252%3A78%2C252.25%3A76%2C252.5%3A78%2C252.75%3A76%2C253%3A78%2C253.5%3A74"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 100,
+      "exactCount": 13,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "representative-window-differs",
+      "status": "observation-not-confirmed-cause"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "representative-window-differs",
+      "text": "Compare repeated occurrences and preserve links to the requested source passage.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH05-L6-original.json",
+      "initialPath": "../runs/SH05-L6-original.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-a1ec5f2aea11beb9",
+      "sourceId": "2 Become 1.xml",
+      "streamId": "P1:1:1",
+      "title": "2 Become 1",
+      "composer": "Composed by Spice Girls, Matt Rowe, Richard Stannard\nArranged by Reflet des Nuages",
+      "baseStartIndex": 224,
+      "baseStartMeasure": 37,
+      "baseEndMeasure": 37,
+      "baseTargets": [
+        {
+          "onset": 144,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 1
+        },
+        {
+          "onset": 144.25,
+          "pitchMidi": 80,
+          "measure": 37,
+          "beat": 1.25
+        },
+        {
+          "onset": 144.5,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 1.5
+        },
+        {
+          "onset": 144.75,
+          "pitchMidi": 80,
+          "measure": 37,
+          "beat": 1.75
+        },
+        {
+          "onset": 145,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 2
+        },
+        {
+          "onset": 145.75,
+          "pitchMidi": 78,
+          "measure": 37,
+          "beat": 2.75
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 35,
+      "endOrdinal": 39,
+      "xmlHash": "2660e6e22f3285fd3c521785cc1972e5c9a078c8764daa183f80a3f6bbb1fc42",
+      "xmlError": null,
+      "eventsHash": "80b042db26034406769a915812c1a8a72b0c7f00d40fc15255bb4b69c9994e8c",
+      "sourcePath": "K:/Music Analysis/musicxml/2 Become 1.xml",
+      "sourceHash": "a1ec5f2aea11beb944c46f85c088f615fea373ab7c5b1b43b7de696bbfb28516"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m37:n1",
+          "xmlNoteId": "P1:m37:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 144,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n2",
+          "xmlNoteId": "P1:m37:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 577,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 80,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 40,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n3",
+          "xmlNoteId": "P1:m37:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 289,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n4",
+          "xmlNoteId": "P1:m37:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 579,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 80,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 40,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n5",
+          "xmlNoteId": "P1:m37:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 145,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n6",
+          "xmlNoteId": "P1:m37:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 583,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 78,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "-1",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH05-L6/context.musicxml",
+      "events": "../base-assets/SH05-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "original"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

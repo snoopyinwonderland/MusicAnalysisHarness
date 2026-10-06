@@ -1,0 +1,38 @@
+{
+  "name": "@musicanote/verovio-score-tools",
+  "version": "0.2.1",
+  "description": "Portable, non-destructive Score Tools for MusicXML and Verovio viewers.",
+  "private": true,
+  "type": "module",
+  "sideEffects": ["./dist/score-tools.css"],
+  "files": ["dist", "README.md", "THIRD_PARTY_NOTICES.md"],
+  "main": "./dist/core.js",
+  "module": "./dist/core.js",
+  "types": "./dist/types/score-tools/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/score-tools/index.d.ts",
+      "import": "./dist/core.js"
+    },
+    "./image": {
+      "types": "./dist/types/score-tools/image.d.ts",
+      "import": "./dist/image.js"
+    },
+    "./verovio": {
+      "types": "./dist/types/score-tools/verovio.d.ts",
+      "import": "./dist/verovio.js"
+    },
+    "./react": {
+      "types": "./dist/types/score-tools/react.d.ts",
+      "import": "./dist/react.js"
+    },
+    "./style.css": "./dist/score-tools.css",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.400.0",
+    "react": ">=18.0.0 <20",
+    "react-dom": ">=18.0.0 <20",
+    "verovio": ">=6.3.0 <7"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./packages/verovio-score-tools/dist/types",
+    "rootDir": "./src",
+    "tsBuildInfoFile": "./packages/verovio-score-tools/dist/.tsbuildinfo"
+  },
+  "include": [
+    "src/vite-env.d.ts",
+    "src/score-tools/index.ts",
+    "src/score-tools/image.ts",
+    "src/score-tools/verovio.ts",
+    "src/score-tools/react.ts"
+  ],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
+}

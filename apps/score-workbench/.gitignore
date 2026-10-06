@@ -1,0 +1,41 @@
+node_modules/
+.pnpm-store/
+dist/
+
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Generated search indexes are hundreds of MB and can be rebuilt with package scripts.
+data/**/*.sqlite
+data/**/*.sqlite-*
+data/**/*.jsonl
+
+.env
+.env.*
+!.env.example
+*.log
+/data/youtube-quarantine/
+
+# Local databases, index backups, and runtime caches (rebuildable).
+*.sqlite
+*.sqlite-*
+*.sqlite.*
+__pycache__/
+*.pyc
+*.inspect.ndjson
+data/*-run.out
+data/*-run.err
+
+# Full source copies used for local pair experiments; retain the derived reports.
+evaluation/runs/twinkle-first-region-*/*.musicxml
+evaluation/reports/twinkle-system-only-*/xml/
+
+# Downloaded third-party corpora and local desktop tooling are intentionally
+# kept outside Git. Their manifests and reproducible acquisition scripts remain
+# versioned in this repository.
+/data/classical-corpora/
+/data/global-pop-midi/
+/data/jazz-corpora/
+/data/pop-and-analysis-corpora/
+/tools/

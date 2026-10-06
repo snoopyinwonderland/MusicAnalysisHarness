@@ -1,0 +1,831 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH05-L6-pitch-change",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH05-e0",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e1",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e2",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e3",
+        "kind": "note",
+        "pitchMidi": 81,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e4",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "SH05-e5",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.25
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH05-e0",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e1",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e2",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e3",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e4",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "SH05-e5",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.25
+      }
+    ]
+  },
+  "tags": [
+    "pitch-change",
+    "positive-probe"
+  ],
+  "description": "6음 중 네 번째 음 +1반음 변경",
+  "changes": {
+    "changedSourceIds": [
+      "SH05-e3"
+    ],
+    "originalDuration": 2,
+    "queryDuration": 2,
+    "transformation": {
+      "pitch": {
+        "eventId": "SH05-e3",
+        "from": 80,
+        "to": 81,
+        "semitones": 1
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-a1ec5f2aea11beb9",
+    "sourceId": "2 Become 1.xml",
+    "streamId": "P1:1:1",
+    "title": "2 Become 1",
+    "composer": "Composed by Spice Girls, Matt Rowe, Richard Stannard\nArranged by Reflet des Nuages",
+    "baseStartIndex": 224,
+    "baseStartMeasure": 37,
+    "baseEndMeasure": 37,
+    "baseTargets": [
+      {
+        "onset": 144,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 1
+      },
+      {
+        "onset": 144.25,
+        "pitchMidi": 80,
+        "measure": 37,
+        "beat": 1.25
+      },
+      {
+        "onset": 144.5,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 1.5
+      },
+      {
+        "onset": 144.75,
+        "pitchMidi": 80,
+        "measure": 37,
+        "beat": 1.75
+      },
+      {
+        "onset": 145,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 2
+      },
+      {
+        "onset": 145.75,
+        "pitchMidi": 78,
+        "measure": 37,
+        "beat": 2.75
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 5564.092699999921,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "Adagio and Rondo in C minor K.617",
+          "sourceId": "mxl/4/25/QmeiJk8gTSKPYsZceSEEDsHVVpe8YuuVuc7sd5wX4ijWua.mxl",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 8,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-40d9c39de43866ac-88a85b71&start=54&end=54&source=search&targets=159.875%3A79%2C160%3A77%2C160.125%3A79%2C160.25%3A78%2C160.375%3A79%2C160.5%3A75"
+        },
+        {
+          "rank": 2,
+          "title": "Requiem",
+          "sourceId": "mxl/4/39/QmeQfNVvBM6TFdiwz22NTscFGoDkr5g7fgGJfeYPhH6xXg.mxl",
+          "streamId": "P14:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 85,
+            "structural": 70,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 64
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-2521cf6be20ea142-a1d3a46b&start=39&end=53&source=search&targets=152%3A74%2C154%3A72%2C156%3A74%2C158%3A73%2C160%3A74%2C210%3A70"
+        },
+        {
+          "rank": 3,
+          "title": "Andante in G minor",
+          "sourceId": "mxl/5/2/Qmf3k9i5nc3VHucP8utZ4aufsKMQnfEWED8BfJRRGYS1tj.mxl",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 80.83333333333334,
+            "meter": 0,
+            "structural": 31,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-0db38cea52638613&start=10&end=12&source=search&targets=14%3A76%2C14.5%3A74%2C15%3A76%2C16%3A75%2C16.5%3A76%2C17%3A72"
+        },
+        {
+          "rank": 4,
+          "title": "Qui vult venire post me SwWV 169",
+          "sourceId": "mxl/8/45/QmQTmsqY5F5Nrtrsy7iACwuAWgQH2XpWB5wYXgq1Ax8tGG.mxl",
+          "streamId": "P5:1:1",
+          "score": 96.4798533092214,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 80.83333333333334,
+            "meter": 93,
+            "structural": 29,
+            "skeleton": 79,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-bd50471c75e66e93-45795dd6&start=26&end=29&source=search&targets=200%3A74%2C202%3A72%2C206%3A74%2C210%3A73%2C212%3A74%2C224%3A70"
+        },
+        {
+          "rank": 5,
+          "title": "See see the Word is incarnate",
+          "sourceId": "mxl/3/50/QmdwEm4zxEJ9YFopr5ZY5j5NBv2fuFoBPwf2ed5kGy5YP4.mxl",
+          "streamId": "P5:1:3",
+          "score": 95.863356781418,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 71.25,
+            "meter": 0,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-42fbe3529b3a43f4-57afc928&start=37&end=38&source=search&targets=149%3A65%2C150%3A63%2C150.5%3A65%2C151%3A64%2C152%3A65%2C153%3A61"
+        },
+        {
+          "rank": 6,
+          "title": "La Belle Americaine",
+          "sourceId": "mxl/13/21/QmVg9kfR68UYrNbDbpzb1JqoycXoUk7u6XaeqWu8ryTjkR.mxl",
+          "streamId": "P1:1:1",
+          "score": 95.85221854699385,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 8,
+            "structural": 50,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-ba26680fd255bc8f&start=121&end=122&source=search&targets=456.75%3A62%2C457%3A60%2C457.25%3A62%2C457.5%3A61%2C457.75%3A62%2C458%3A58"
+        },
+        {
+          "rank": 7,
+          "title": "Da pacem",
+          "sourceId": "mxl/3/47/QmdUiiGM7U86efEBTarjYPJKxUZropEeRfTbj6dBKe2VuV.mxl",
+          "streamId": "P1:1:1",
+          "score": 95.56007369266891,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 71.25,
+            "meter": 85,
+            "structural": 100,
+            "skeleton": 58,
+            "pillarPitch": 86,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-256ff47b08e58a0a&start=12&end=14&source=search&targets=44%3A69%2C48%3A67%2C49%3A69%2C51%3A68%2C52%3A69%2C53%3A65"
+        },
+        {
+          "rank": 8,
+          "title": "Jesus Sun and Shield art Thou",
+          "sourceId": "mxl/4/24/QmeHWkdzsKCwDStioEkQLZKWHv6cdHHbf2NMj3EozP67xd.mxl",
+          "streamId": "P1:1:1",
+          "score": 95.5223421866887,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 65.40037499278844,
+            "meter": 93,
+            "structural": 14,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-6e0a76a06ed60403&start=4&end=5&source=search&targets=18%3A72%2C21%3A70%2C24%3A72%2C26%3A71%2C27%3A72%2C29%3A68"
+        },
+        {
+          "rank": 9,
+          "title": "단장의 미아리 고개 (이해연)",
+          "sourceId": "kysing/87181.xml",
+          "streamId": "P3:1:1",
+          "score": 95.37643154290102,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 63,
+            "structural": 70,
+            "skeleton": 79,
+            "pillarPitch": 97,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-bfa36a2df02be858-a71ddd21&start=47&end=51&source=search&targets=183%3A77%2C185%3A75%2C187%3A77%2C189%3A76%2C191%3A77%2C199%3A73"
+        },
+        {
+          "rank": 10,
+          "title": "7 Lieder",
+          "sourceId": "mxl/15/40/QmXrYyGNCuXvkHYVkoVja6FCp6antHLKduZGZKeTWqVxZX.mxl",
+          "streamId": "P1:1:1",
+          "score": 95.35107590443543,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 80.83333333333334,
+            "meter": 8,
+            "structural": 50,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 68,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-de2fa7043888cff3&start=3&end=4&source=search&targets=11.25%3A69%2C11.5%3A67%2C12%3A69%2C12.5%3A68%2C13%3A69%2C13.5%3A65"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "changed-note-alignment",
+      "queryNoteIndex": 3,
+      "queryPitch": 81,
+      "originalPitch": 80,
+      "sourcePitch": null,
+      "sourceOnset": null,
+      "alignmentType": null,
+      "unmatched": true
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 61,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH05-L6-pitch-change.json",
+      "initialPath": "../runs/SH05-L6-pitch-change.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-a1ec5f2aea11beb9",
+      "sourceId": "2 Become 1.xml",
+      "streamId": "P1:1:1",
+      "title": "2 Become 1",
+      "composer": "Composed by Spice Girls, Matt Rowe, Richard Stannard\nArranged by Reflet des Nuages",
+      "baseStartIndex": 224,
+      "baseStartMeasure": 37,
+      "baseEndMeasure": 37,
+      "baseTargets": [
+        {
+          "onset": 144,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 1
+        },
+        {
+          "onset": 144.25,
+          "pitchMidi": 80,
+          "measure": 37,
+          "beat": 1.25
+        },
+        {
+          "onset": 144.5,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 1.5
+        },
+        {
+          "onset": 144.75,
+          "pitchMidi": 80,
+          "measure": 37,
+          "beat": 1.75
+        },
+        {
+          "onset": 145,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 2
+        },
+        {
+          "onset": 145.75,
+          "pitchMidi": 78,
+          "measure": 37,
+          "beat": 2.75
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 35,
+      "endOrdinal": 39,
+      "xmlHash": "2660e6e22f3285fd3c521785cc1972e5c9a078c8764daa183f80a3f6bbb1fc42",
+      "xmlError": null,
+      "eventsHash": "80b042db26034406769a915812c1a8a72b0c7f00d40fc15255bb4b69c9994e8c",
+      "sourcePath": "K:/Music Analysis/musicxml/2 Become 1.xml",
+      "sourceHash": "a1ec5f2aea11beb944c46f85c088f615fea373ab7c5b1b43b7de696bbfb28516"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m37:n1",
+          "xmlNoteId": "P1:m37:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 144,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n2",
+          "xmlNoteId": "P1:m37:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 577,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 80,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 40,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n3",
+          "xmlNoteId": "P1:m37:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 289,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n4",
+          "xmlNoteId": "P1:m37:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 579,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 80,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 40,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n5",
+          "xmlNoteId": "P1:m37:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 145,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n6",
+          "xmlNoteId": "P1:m37:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 583,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 78,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "-1",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH05-L6/context.musicxml",
+      "events": "../base-assets/SH05-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "pitch-change"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

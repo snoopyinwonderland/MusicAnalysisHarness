@@ -1,0 +1,333 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "PC50-f966a6bcebd2",
+  "createdAt": "2026-09-15",
+  "status": "draft",
+  "replayable": true,
+  "tags": [
+    "arpeggio-like",
+    "one-note-octave"
+  ],
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": false,
+    "includeRests": true,
+    "events": [
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-82",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 5.5
+      },
+      {
+        "id": "gap-work-027a57bba4ee7745-88a85b71-83",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 24.5
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-83",
+        "kind": "note",
+        "pitchMidi": 58,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-84",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 4
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-85",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 2
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-86",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-87",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-88",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-89",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 2
+      }
+    ]
+  },
+  "expected": {
+    "sourceId": "3. Endless Love, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+    "workId": "work-027a57bba4ee7745-88a85b71",
+    "streamId": "P2:1:1",
+    "focus": [
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-82",
+        "onset": 145.5,
+        "pitchMidi": 62,
+        "measure": "37",
+        "measureOrdinal": 37
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-83",
+        "onset": 175.5,
+        "pitchMidi": 58,
+        "measure": "44",
+        "measureOrdinal": 44
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-84",
+        "onset": 176,
+        "pitchMidi": 63,
+        "measure": "45",
+        "measureOrdinal": 45
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-85",
+        "onset": 180,
+        "pitchMidi": 60,
+        "measure": "46",
+        "measureOrdinal": 46
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-86",
+        "onset": 182,
+        "pitchMidi": 65,
+        "measure": "46",
+        "measureOrdinal": 46
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-87",
+        "onset": 182.75,
+        "pitchMidi": 67,
+        "measure": "46",
+        "measureOrdinal": 46
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-88",
+        "onset": 183.5,
+        "pitchMidi": 69,
+        "measure": "46",
+        "measureOrdinal": 46
+      },
+      {
+        "id": "work-027a57bba4ee7745-88a85b71-89",
+        "onset": 184,
+        "pitchMidi": 65,
+        "measure": "47",
+        "measureOrdinal": 47
+      }
+    ],
+    "status": "source-retrieval-probe-not-human-relevance-label"
+  },
+  "observations": [
+    {
+      "source": "automated-search",
+      "sourceRank": null,
+      "sourceWindowProxyRank": null,
+      "elapsedMs": 30664.525599999994,
+      "issues": [
+        "Original source absent within returned results; edition alternatives need review"
+      ],
+      "invalidAlignmentRanks": []
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [
+    {
+      "text": "Inspect retrieval vs reranking before changing thresholds; compare paired source case",
+      "status": "hypothesis-needs-review"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "K:\\MusicSearch\\evaluation\\runs\\preclearance-variation50-final-2026-09-16\\PC50-f966a6bcebd2.json",
+      "fingerprint": "bdf0b1378197a190336978848b108ebc1ae87b5ad1407866b44321c23c051cd7"
+    }
+  ],
+  "humanReview": {
+    "status": "unreviewed",
+    "rankingJustification": null
+  },
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "status": "automatic-unreviewed",
+    "identity": {
+      "sourceId": "3. Endless Love, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+      "workId": "work-027a57bba4ee7745-88a85b71",
+      "streamId": "P2:1:1"
+    },
+    "sourceSnapshot": {
+      "xmlHash": "05fd82bb1df77ed351654f7051d303ff3433968a3d86f7cda5ff6682ca036ff5",
+      "eventsHash": "4b7b8ce97ddb3677e09f732f262a4f9fa8e459e408998e5f7f96614e1e23fe5e",
+      "xmlCaptureError": null
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-82",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "onset": 145.5,
+          "durationRatio": 5.5,
+          "measure": "37",
+          "measureOrdinal": 37,
+          "beat": 2.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false,
+          "tieEndMeasure": 38
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-83",
+          "kind": "note",
+          "pitchMidi": 58,
+          "spelling": "Bb3",
+          "onset": 175.5,
+          "durationRatio": 0.5,
+          "measure": "44",
+          "measureOrdinal": 44,
+          "beat": 4.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-84",
+          "kind": "note",
+          "pitchMidi": 63,
+          "spelling": "Eb4",
+          "onset": 176,
+          "durationRatio": 4,
+          "measure": "45",
+          "measureOrdinal": 45,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-85",
+          "kind": "note",
+          "pitchMidi": 60,
+          "spelling": "C4",
+          "onset": 180,
+          "durationRatio": 2,
+          "measure": "46",
+          "measureOrdinal": 46,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-86",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "onset": 182,
+          "durationRatio": 0.75,
+          "measure": "46",
+          "measureOrdinal": 46,
+          "beat": 3,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-87",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "onset": 182.75,
+          "durationRatio": 0.75,
+          "measure": "46",
+          "measureOrdinal": 46,
+          "beat": 3.75,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false,
+          "tieEndMeasure": 46
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-88",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "onset": 183.5,
+          "durationRatio": 0.5,
+          "measure": "46",
+          "measureOrdinal": 46,
+          "beat": 4.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-027a57bba4ee7745-88a85b71-89",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "onset": 184,
+          "durationRatio": 2,
+          "measure": "47",
+          "measureOrdinal": 47,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        }
+      ]
+    },
+    "context": {
+      "policy": "source snapshot context plus up-to-two-ordinal-measures original XML"
+    },
+    "assets": {
+      "musicXml": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B03\\context.musicxml",
+      "events": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B03\\events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "arpeggio-like",
+        "one-note-octave"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4",
+          "noteCount": 8
+        }
+      ],
+      "exclusions": [
+        "Source retrieval is not proof of correct ranking or copyright infringement"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "alignment-review",
+        "transformation-comparison"
+      ]
+    }
+  }
+}

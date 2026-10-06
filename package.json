@@ -1,0 +1,11 @@
+{
+  "name": "musicanote-analysis-harness",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev:score": "pnpm --dir apps/score-workbench dev --host 127.0.0.1 --port 5173",
+    "build:score": "pnpm --dir apps/score-workbench build",
+    "test:score": "pnpm --dir apps/score-workbench test"
+  }
+}

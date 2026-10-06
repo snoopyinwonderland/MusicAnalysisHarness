@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {aggregatePreclearanceResults} from '../server/preclearance-search.mjs';
+import {createWorkIdentityResolver,suggestWorkFamilies} from '../server/work-identity.mjs';
+import {structureHash} from '../server/structure-analysis-adapter.mjs';
+const [input,output]=process.argv.slice(2);if(!input||!output)throw new Error('Input report and NEW output are required');
+const report=JSON.parse(readFileSync(input,'utf8')),registry=JSON.parse(readFileSync(new URL('../data/work-identities.json',import.meta.url),'utf8'));
+const resolveIdentity=createWorkIdentityResolver(registry,report.runtime.database);
+const works=aggregatePreclearanceResults(null,report.runs,resolveIdentity);
+const updated={...report,works,identityRevision:{registryVersion:registry.version,hash:structureHash(registry),originalReport:input,searchRerun:false,before:report.works.length,after:works.length},identitySuggestions:suggestWorkFamilies(report.runs)};
+writeFileSync(output,JSON.stringify(updated,null,2),{flag:'wx'});
+console.log(JSON.stringify({before:report.works.length,after:works.length,merged:works.filter(w=>w.editionCount>1).map(w=>({title:w.title,editions:w.editionCount,matches:w.matches.length})),suggestions:updated.identitySuggestions.length}));

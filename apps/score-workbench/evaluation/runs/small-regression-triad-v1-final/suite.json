@@ -1,0 +1,632 @@
+{
+  "schema": "musicanote-small-regression-triad/v1",
+  "createdAt": "2026-09-18T06:42:46.357Z",
+  "selection": "One actual 2/4 corpus source from duple-meter-15-v1; policy-eligible mixed contour with leaps/repetition, not an entirely stepwise or repeated-pitch query. Variants are fixed before execution.",
+  "policy": "evaluation/query-selection-policy.json",
+  "fingerprint": {
+    "database": {
+      "path": "data/search-index-v2/search.sqlite",
+      "size": 28887048192,
+      "mtimeMs": 1788871621598.7124
+    },
+    "files": {
+      "server/search-api.mjs": "c4ad062581b44924e65d41a3bee62dc77279683dc6c3b4e2c6ea10fba04615b6",
+      "server/search-worker.mjs": "94389fbebd9f0059507366102dce1caca9bc4c535ec2984a15031fec5a2a45e8",
+      "server/xml-target-verification.mjs": "74f582d71ca91854ac5fdc6179757e2f2abc37c720209b390ec1471923b774c3",
+      "scripts/run-small-regression-triad-v1.mjs": "dbee6a8e3ae97348cca74f5914bc1a32b92f9d0007cba90288df374d6c9e543c"
+    },
+    "sourceCase": {
+      "path": "evaluation/exports/duple-meter-15-v1/cases/DM02-L12-original.json",
+      "sha256": "dfa29f4c9d03d4c552155d3a1b48d1f9a54398261a5f684f01c3fb5661692971"
+    }
+  },
+  "cases": [
+    {
+      "caseId": "TRIAD-01-exact-corpus",
+      "category": "global-tempo-scaling",
+      "expectation": "Baseline corpus query; target source should be returned and aligned.",
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "2/4",
+        "startsOnDownbeat": true,
+        "includeRests": true,
+        "absoluteExactOnly": false,
+        "events": [
+          {
+            "id": "DM02-e0",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e1",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e2",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e3",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e4",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e5",
+            "kind": "note",
+            "pitchMidi": 66,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e6",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e7",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e8",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e9",
+            "kind": "note",
+            "pitchMidi": 72,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e10",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e11",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "TRIAD-02-global-tempo-x2",
+      "category": "global-tempo-scaling",
+      "expectation": "Uniformly doubled durations should be equivalent to baseline for scale-normalized rhythm evidence.",
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "2/4",
+        "startsOnDownbeat": true,
+        "includeRests": true,
+        "absoluteExactOnly": false,
+        "events": [
+          {
+            "id": "DM02-e0",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e1",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 1.5
+          },
+          {
+            "id": "DM02-e2",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e3",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e4",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e5",
+            "kind": "note",
+            "pitchMidi": 66,
+            "durationRatio": 1.5
+          },
+          {
+            "id": "DM02-e6",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e7",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e8",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e9",
+            "kind": "note",
+            "pitchMidi": 72,
+            "durationRatio": 1.5
+          },
+          {
+            "id": "DM02-e10",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e11",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 1
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "TRIAD-03-local-duration-rest-mismatch",
+      "category": "global-tempo-scaling",
+      "expectation": "A local duration change plus an inserted rest is not exact-equivalent; preserve its observed rank and score rather than asserting a rule.",
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "2/4",
+        "startsOnDownbeat": true,
+        "includeRests": true,
+        "absoluteExactOnly": false,
+        "events": [
+          {
+            "id": "TRIAD-03-rest",
+            "kind": "rest",
+            "pitchMidi": null,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e0",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e1",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e2",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e3",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e4",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e5",
+            "kind": "note",
+            "pitchMidi": 66,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e6",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e7",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e8",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e9",
+            "kind": "note",
+            "pitchMidi": 72,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e10",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e11",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "TRIAD-04-pickup-weak-beat-bar-crossing",
+      "category": "start-context",
+      "expectation": "Actual pickup-origin source, weak-beat query start, and cross-bar span are retained as context; no rank assertion.",
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "2/4",
+        "startsOnDownbeat": false,
+        "includeRests": true,
+        "absoluteExactOnly": false,
+        "events": [
+          {
+            "id": "TRIAD-04-e0",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "TRIAD-04-e1",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "TRIAD-04-e2",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "TRIAD-04-e3",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "TRIAD-04-e4",
+            "kind": "note",
+            "pitchMidi": 66,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "TRIAD-04-e5",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "TRIAD-04-e6",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "TRIAD-04-e7",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "TRIAD-04-e8",
+            "kind": "note",
+            "pitchMidi": 72,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "TRIAD-04-e9",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "TRIAD-04-e10",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "TRIAD-05-same-intervals-different-rhythm",
+      "category": "negative-control",
+      "expectation": "Pitch intervals are retained while rhythm changes locally; inspect whether score is lower than the exact control without claiming a threshold.",
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "2/4",
+        "startsOnDownbeat": true,
+        "includeRests": true,
+        "absoluteExactOnly": false,
+        "events": [
+          {
+            "id": "DM02-e0",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e1",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e2",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 1
+          },
+          {
+            "id": "DM02-e3",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e4",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e5",
+            "kind": "note",
+            "pitchMidi": 66,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e6",
+            "kind": "note",
+            "pitchMidi": 67,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e7",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e8",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e9",
+            "kind": "note",
+            "pitchMidi": 72,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e10",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e11",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "TRIAD-06-same-rhythm-different-melody",
+      "category": "negative-control",
+      "expectation": "Rhythm is retained while melody changes; inspect whether score is lower than the exact control without claiming a threshold.",
+      "query": {
+        "version": 1,
+        "mode": "melody_rhythm",
+        "meter": "2/4",
+        "startsOnDownbeat": true,
+        "includeRests": true,
+        "absoluteExactOnly": false,
+        "events": [
+          {
+            "id": "DM02-e0",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e1",
+            "kind": "note",
+            "pitchMidi": 75,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e2",
+            "kind": "note",
+            "pitchMidi": 66,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e3",
+            "kind": "note",
+            "pitchMidi": 72,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e4",
+            "kind": "note",
+            "pitchMidi": 63,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e5",
+            "kind": "note",
+            "pitchMidi": 69,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e6",
+            "kind": "note",
+            "pitchMidi": 62,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e7",
+            "kind": "note",
+            "pitchMidi": 71,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e8",
+            "kind": "note",
+            "pitchMidi": 68,
+            "durationRatio": 0.5
+          },
+          {
+            "id": "DM02-e9",
+            "kind": "note",
+            "pitchMidi": 70,
+            "durationRatio": 0.75
+          },
+          {
+            "id": "DM02-e10",
+            "kind": "note",
+            "pitchMidi": 75,
+            "durationRatio": 0.25
+          },
+          {
+            "id": "DM02-e11",
+            "kind": "note",
+            "pitchMidi": 63,
+            "durationRatio": 0.5
+          }
+        ]
+      }
+    }
+  ],
+  "source": {
+    "workId": "work-85d804c3a08b060f",
+    "sourceId": "3. Ich liebe Dich, Violin and Piano Duet.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "ICH LIEBE DICH",
+    "composer": "Composed by Ludwig van Beethoven\nArranged by Reflet des Nuages",
+    "baseStartIndex": 0,
+    "baseStartMeasure": 1,
+    "baseEndMeasure": 4,
+    "baseTargets": [
+      {
+        "onset": 0,
+        "pitchMidi": 62,
+        "measure": 1,
+        "beat": 1
+      },
+      {
+        "onset": 2,
+        "pitchMidi": 71,
+        "measure": 2,
+        "beat": 1
+      },
+      {
+        "onset": 2.75,
+        "pitchMidi": 69,
+        "measure": 2,
+        "beat": 1.75
+      },
+      {
+        "onset": 3,
+        "pitchMidi": 67,
+        "measure": 2,
+        "beat": 2
+      },
+      {
+        "onset": 3.5,
+        "pitchMidi": 67,
+        "measure": 2,
+        "beat": 2.5
+      },
+      {
+        "onset": 4,
+        "pitchMidi": 66,
+        "measure": 3,
+        "beat": 1
+      },
+      {
+        "onset": 4.75,
+        "pitchMidi": 67,
+        "measure": 3,
+        "beat": 1.75
+      },
+      {
+        "onset": 5,
+        "pitchMidi": 69,
+        "measure": 3,
+        "beat": 2
+      },
+      {
+        "onset": 5.5,
+        "pitchMidi": 62,
+        "measure": 3,
+        "beat": 2.5
+      },
+      {
+        "onset": 6,
+        "pitchMidi": 72,
+        "measure": 4,
+        "beat": 1
+      },
+      {
+        "onset": 6.75,
+        "pitchMidi": 71,
+        "measure": 4,
+        "beat": 1.75
+      },
+      {
+        "onset": 7,
+        "pitchMidi": 69,
+        "measure": 4,
+        "beat": 2
+      }
+    ],
+    "status": "source-retrieval-probe"
+  }
+}

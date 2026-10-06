@@ -1,0 +1,46 @@
+{
+  "schema": "musicanote-user-structure-feedback/v1",
+  "caseId": "S-STRUCT-007",
+  "sourceHash": "3817b61638e9efc048d8caac9a8f2a26093224ff6a94836c4fbe02073846d15b",
+  "status": "review-preference-not-gold",
+  "userDescription": "Phrase1 전주와 Phrase2는 적절. Phrase3의 첫 beamed note는 다음 솔을 준비. Phrase3/4/5는 합치되 10마디 첫 라·도 2분음표까지. 뒤 시는 다음 도를 위한 비화성음이며 전타음 가능성, 다음 Phrase에 포함. Phrase6은14마디 첫 음까지.",
+  "proposedRanges": [
+    {
+      "startEventId": "work-3817b61638e9efc0-37",
+      "lastEventId": "work-3817b61638e9efc0-59",
+      "endExclusiveEventId": "work-3817b61638e9efc0-60",
+      "status": "mapped-from-explicit-measure-endpoint"
+    },
+    {
+      "startEventId": "work-3817b61638e9efc0-60",
+      "lastEventId": "work-3817b61638e9efc0-80",
+      "endExclusiveEventId": "work-3817b61638e9efc0-81",
+      "status": "inferred-next-span-start-confirm-in-review"
+    }
+  ],
+  "preservedBaselineStarts": [
+    "work-3817b61638e9efc0-0",
+    "work-3817b61638e9efc0-17",
+    "work-3817b61638e9efc0-37"
+  ],
+  "harmonicHypotheses": [
+    {
+      "targetEventId": "work-3817b61638e9efc0-60",
+      "label": "non-chord-tone preparing following C",
+      "subtypeCandidate": "appoggiatura",
+      "status": "user-hypothesis-awaiting-harmony",
+      "confirmed": false
+    }
+  ],
+  "sourceObservations": [
+    "m10 first notated chord Ab3+C4 half notes; selected melody C4 index59",
+    "m10 following note Bb3 quarter index60, not B natural",
+    "m14 first selected note F4 quarter index80",
+    "m10 boundary60 strength0.083333 without gap",
+    "m14 boundary81 rawStrength0.905726 suppressed to0.49 by minimum4attacks, local fragment start79"
+  ],
+  "limitations": [
+    "Current Phrase6 numbering and proposed second-span start are not equivalent; the proposed start is inferred from user next-phrase wording",
+    "No harmony or NCT label promoted to Core; no runtime rule change"
+  ]
+}

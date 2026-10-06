@@ -1,0 +1,954 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH02-L8-ornament-delete",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH02-e0",
+        "kind": "note",
+        "pitchMidi": 29,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e1",
+        "kind": "note",
+        "pitchMidi": 36,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e2",
+        "kind": "note",
+        "pitchMidi": 41,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e4",
+        "kind": "note",
+        "pitchMidi": 45,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH02-e5",
+        "kind": "note",
+        "pitchMidi": 41,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e6",
+        "kind": "note",
+        "pitchMidi": 50,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e7",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 1
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH02-e0",
+        "kind": "note",
+        "pitchMidi": 29,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e1",
+        "kind": "note",
+        "pitchMidi": 36,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e2",
+        "kind": "note",
+        "pitchMidi": 41,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e3",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e4",
+        "kind": "note",
+        "pitchMidi": 45,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH02-e5",
+        "kind": "note",
+        "pitchMidi": 41,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e6",
+        "kind": "note",
+        "pitchMidi": 50,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH02-e7",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 1
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "8음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 7음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "SH02-e3"
+    ],
+    "originalDuration": 5,
+    "queryDuration": 4.5,
+    "transformation": {
+      "omission": {
+        "eventId": "SH02-e3",
+        "index": 3,
+        "evidence": {
+          "index": 3,
+          "type": "passing",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P1:m137:n5",
+            "P1:m137:n7"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-bfef6f9da3828ed1",
+    "sourceId": "2. Angel, Piano Solo.musicxml.xml",
+    "streamId": "P1:2:2",
+    "title": "ANGEL",
+    "composer": "Composed by Sarah McLachlan\nArranged by Reflet des Nuages",
+    "baseStartIndex": 249,
+    "baseStartMeasure": 137,
+    "baseEndMeasure": 138,
+    "baseTargets": [
+      {
+        "onset": 408,
+        "pitchMidi": 29,
+        "measure": 137,
+        "beat": 1
+      },
+      {
+        "onset": 408.5,
+        "pitchMidi": 36,
+        "measure": 137,
+        "beat": 1.5
+      },
+      {
+        "onset": 409,
+        "pitchMidi": 41,
+        "measure": 137,
+        "beat": 2
+      },
+      {
+        "onset": 409.5,
+        "pitchMidi": 43,
+        "measure": 137,
+        "beat": 2.5
+      },
+      {
+        "onset": 410,
+        "pitchMidi": 45,
+        "measure": 137,
+        "beat": 3
+      },
+      {
+        "onset": 411,
+        "pitchMidi": 41,
+        "measure": 138,
+        "beat": 1
+      },
+      {
+        "onset": 411.5,
+        "pitchMidi": 50,
+        "measure": 138,
+        "beat": 1.5
+      },
+      {
+        "onset": 412,
+        "pitchMidi": 53,
+        "measure": 138,
+        "beat": 2
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 4261.206899999874,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "AND I LOVE YOU SO",
+          "sourceId": "3. And I Love You So, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 91.33601314517864,
+          "scores": {
+            "pitch": 96,
+            "interval": 97,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 67,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-371a7af509117111-5f596005&start=71&end=71&source=search&targets=280%3A36%2C280.5%3A43%2C281%3A48%2C281.5%3A52%2C282%3A48%2C282.5%3A56%2C283%3A59"
+        },
+        {
+          "rank": 2,
+          "title": "AND I LOVE YOU SO",
+          "sourceId": "3. And I Love You So, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 91.33601314517864,
+          "scores": {
+            "pitch": 96,
+            "interval": 97,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 67,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-0fb3ffdf5a233aff-3ba9e1fb&start=71&end=71&source=search&targets=280%3A36%2C280.5%3A43%2C281%3A48%2C281.5%3A52%2C282%3A48%2C282.5%3A56%2C283%3A59"
+        },
+        {
+          "rank": 3,
+          "title": "AND I LOVE YOU SO",
+          "sourceId": "3. And I Love You So, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:2:2",
+          "score": 91.33601314517864,
+          "scores": {
+            "pitch": 96,
+            "interval": 97,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 67,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-7b8c8663da8a81b8-a22005a1&start=71&end=71&source=search&targets=280%3A36%2C280.5%3A43%2C281%3A48%2C281.5%3A52%2C282%3A48%2C282.5%3A56%2C283%3A59"
+        },
+        {
+          "rank": 4,
+          "title": "SOMEWHERE OUT THERE",
+          "sourceId": "3. Somewhere Out There, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 89.70058295023992,
+          "scores": {
+            "pitch": 96,
+            "interval": 95.6,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 39,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-3f5fd1c9d71d8e73-5f596005&start=41&end=41&source=search&targets=162%3A36%2C162.5%3A43%2C163%3A48%2C163.5%3A52%2C164%3A48%2C164.5%3A57%2C165%3A62"
+        },
+        {
+          "rank": 5,
+          "title": "SOMEWHERE OUT THERE",
+          "sourceId": "4. Somewhere Out There, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 89.70058295023992,
+          "scores": {
+            "pitch": 96,
+            "interval": 95.6,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 39,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-403cbf82363a0447-3ba9e1fb&start=41&end=41&source=search&targets=162%3A36%2C162.5%3A43%2C163%3A48%2C163.5%3A52%2C164%3A48%2C164.5%3A57%2C165%3A62"
+        },
+        {
+          "rank": 6,
+          "title": "SOMEWHERE OUT THERE",
+          "sourceId": "4. Somewhere Out There, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:2:2",
+          "score": 89.70058295023992,
+          "scores": {
+            "pitch": 96,
+            "interval": 95.6,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 39,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-f7724b0d7672d40e-a22005a1&start=41&end=41&source=search&targets=162%3A36%2C162.5%3A43%2C163%3A48%2C163.5%3A52%2C164%3A48%2C164.5%3A57%2C165%3A62"
+        },
+        {
+          "rank": 7,
+          "title": "BOTH SIDES NOW",
+          "sourceId": "4. Both Sides Now, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 88.64218705924777,
+          "scores": {
+            "pitch": 94,
+            "interval": 93.4,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 67,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-b62218bf8171aca8-5f596005&start=22&end=22&source=search&targets=84%3A33%2C84.5%3A40%2C85%3A45%2C85.5%3A49%2C86%3A45%2C86.5%3A52%2C87%3A56"
+        },
+        {
+          "rank": 8,
+          "title": "BOTH SIDES NOW",
+          "sourceId": "4. Both Sides Now, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 88.64218705924777,
+          "scores": {
+            "pitch": 94,
+            "interval": 93.4,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 67,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-846b61374a4b7cf3-3ba9e1fb&start=22&end=22&source=search&targets=84%3A33%2C84.5%3A40%2C85%3A45%2C85.5%3A49%2C86%3A45%2C86.5%3A52%2C87%3A56"
+        },
+        {
+          "rank": 9,
+          "title": "BOTH SIDES NOW",
+          "sourceId": "4. Both Sides Now, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:2:2",
+          "score": 88.64218705924777,
+          "scores": {
+            "pitch": 94,
+            "interval": 93.4,
+            "contour": 100,
+            "rhythm": 73.08445800350296,
+            "meter": 51,
+            "structural": 67,
+            "skeleton": 67,
+            "pillarPitch": 100,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-01388af0a25d064b-a22005a1&start=22&end=22&source=search&targets=84%3A33%2C84.5%3A40%2C85%3A45%2C85.5%3A49%2C86%3A45%2C86.5%3A52%2C87%3A56"
+        },
+        {
+          "rank": 10,
+          "title": "LONG, LONG TIME",
+          "sourceId": "4. Long, Long Time, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 85.16810033108625,
+          "scores": {
+            "pitch": 92,
+            "interval": 92.6,
+            "contour": 100,
+            "rhythm": 59.96537590177806,
+            "meter": 15,
+            "structural": 41,
+            "skeleton": 69,
+            "pillarPitch": 81,
+            "specificity": 84,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-0c709ab9c6bdaec4&start=64&end=65&source=search&targets=254%3A57%2C254.5%3A64%2C255%3A69%2C255.5%3A73%2C257%3A69%2C258%3A77%2C258.5%3A78"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 7,
+      "returnedCount": 56,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH02-L8-ornament-delete.json",
+      "initialPath": "../runs/SH02-L8-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-bfef6f9da3828ed1",
+      "sourceId": "2. Angel, Piano Solo.musicxml.xml",
+      "streamId": "P1:2:2",
+      "title": "ANGEL",
+      "composer": "Composed by Sarah McLachlan\nArranged by Reflet des Nuages",
+      "baseStartIndex": 249,
+      "baseStartMeasure": 137,
+      "baseEndMeasure": 138,
+      "baseTargets": [
+        {
+          "onset": 408,
+          "pitchMidi": 29,
+          "measure": 137,
+          "beat": 1
+        },
+        {
+          "onset": 408.5,
+          "pitchMidi": 36,
+          "measure": 137,
+          "beat": 1.5
+        },
+        {
+          "onset": 409,
+          "pitchMidi": 41,
+          "measure": 137,
+          "beat": 2
+        },
+        {
+          "onset": 409.5,
+          "pitchMidi": 43,
+          "measure": 137,
+          "beat": 2.5
+        },
+        {
+          "onset": 410,
+          "pitchMidi": 45,
+          "measure": 137,
+          "beat": 3
+        },
+        {
+          "onset": 411,
+          "pitchMidi": 41,
+          "measure": 138,
+          "beat": 1
+        },
+        {
+          "onset": 411.5,
+          "pitchMidi": 50,
+          "measure": 138,
+          "beat": 1.5
+        },
+        {
+          "onset": 412,
+          "pitchMidi": 53,
+          "measure": 138,
+          "beat": 2
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 135,
+      "endOrdinal": 140,
+      "xmlHash": "9270608a24f2fdb8a1c9b5575973cca96e6a2f89d1511bdd376b10831d042af2",
+      "xmlError": null,
+      "eventsHash": "a2b3f48158e820e9cdeb9b08b4d65980bfbcd37c0925aab4750a7798d8a343f7",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Angel, Piano Solo.musicxml.xml",
+      "sourceHash": "bfef6f9da3828ed145c09316fb5fe4a39fb0d71f7d3e73027eecf766a744179b"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m137:n3",
+          "xmlNoteId": "P1:m137:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 137,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 137,
+          "originalMeasureLabel": "137",
+          "onsetQ": {
+            "n": 408,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 29,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 10,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 1
+          }
+        },
+        {
+          "id": "P1:m137:n4",
+          "xmlNoteId": "P1:m137:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 137,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 137,
+          "originalMeasureLabel": "137",
+          "onsetQ": {
+            "n": 817,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 36,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 14,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m137:n5",
+          "xmlNoteId": "P1:m137:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 137,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 137,
+          "originalMeasureLabel": "137",
+          "onsetQ": {
+            "n": 409,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 41,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 17,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m137:n6",
+          "xmlNoteId": "P1:m137:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 137,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 137,
+          "originalMeasureLabel": "137",
+          "onsetQ": {
+            "n": 819,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 43,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 18,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m137:n7",
+          "xmlNoteId": "P1:m137:n7",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 137,
+            "noteIndex": 7
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 137,
+          "originalMeasureLabel": "137",
+          "onsetQ": {
+            "n": 410,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 45,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 19,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m138:n7",
+          "xmlNoteId": "P1:m138:n7",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 138,
+            "noteIndex": 7
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 138,
+          "originalMeasureLabel": "138",
+          "onsetQ": {
+            "n": 411,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 41,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 17,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m138:n8",
+          "xmlNoteId": "P1:m138:n8",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 138,
+            "noteIndex": 8
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 138,
+          "originalMeasureLabel": "138",
+          "onsetQ": {
+            "n": 823,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 50,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 22,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m138:n9",
+          "xmlNoteId": "P1:m138:n9",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 138,
+            "noteIndex": 9
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 138,
+          "originalMeasureLabel": "138",
+          "onsetQ": {
+            "n": 412,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 53,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 24,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 3
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH02-L8/context.musicxml",
+      "events": "../base-assets/SH02-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

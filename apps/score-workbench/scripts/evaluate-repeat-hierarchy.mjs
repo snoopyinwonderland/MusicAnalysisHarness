@@ -1,0 +1,13 @@
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {discoverRepeatHierarchy,reviewHierarchyBoundaries} from '../server/repeat-hierarchy.mjs';
+const [id,run]=process.argv.slice(2);if(!/^S-STRUCT-\d+$/.test(id??'')||!/^[-a-z0-9]+$/.test(run??''))throw Error('case/run required');
+const out=`evaluation/reports/${run}`;if(existsSync(out))throw Error('Refusing overwrite');
+const root=`evaluation/case-assets/${id}`,raw=readFileSync(root+'/review-snapshot.json'),s=JSON.parse(raw),xml=readFileSync(root+'/context.musicxml'),hash=x=>createHash('sha256').update(x).digest('hex');if(hash(xml)!==s.xmlSha256)throw Error('Source mismatch');
+const n=s.work.notes,discovery=discoverRepeatHierarchy(n),review=reviewHierarchyBoundaries(n,s.work.phraseAnalysis.boundaries,discovery);
+const feedbackPath=root+'/feedback-revision-02.json';
+const preferences=existsSync(feedbackPath)?JSON.parse(readFileSync(feedbackPath)).ranges:[];
+const checks=preferences.map(r=>({range:[r.startIndex,r.endIndexExclusive],recovered:discovery.candidates.some(c=>[c.left,c.right].some(x=>x.startIndex===r.startIndex&&x.endIndexExclusive===r.endIndexExclusive))}));
+mkdirSync(out,{recursive:true});writeFileSync(out+'/report.json',JSON.stringify({sourceHash:hash(xml),snapshotHash:hash(raw),codeHash:hash(readFileSync('server/repeat-hierarchy.mjs')),feedbackHash:preferences.length?hash(readFileSync(feedbackPath)):null,discovery,review,checks},null,2));
+const lines=['# 반복 구조 우선 분석',`사례 ${id} · ${discovery.status} · seed ${discovery.seedChecks} · 정렬 ${discovery.alignments} · 후보 ${discovery.candidates.length}`,'후보는 정답/모티프 가족/병합 명령이 아니다. 운영 경계는 변경하지 않았다.',...checks.map(c=>`- 선호 범위 [${c.range.join(',')}) 후보 회수: ${c.recovered}`)];
+writeFileSync(out+'/review.md',lines.join('\n'));console.log(lines.join('\n'));

@@ -1,0 +1,954 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "triple-meter-60-v1-TM06-L8-ornament-delete",
+  "createdAt": "2026-09-17",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM06-e0",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM06-e1",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM06-e3",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM06-e4",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM06-e5",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM06-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM06-e7",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM06-e0",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM06-e1",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM06-e2",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM06-e3",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM06-e4",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM06-e5",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM06-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM06-e7",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "8음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 7음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "TM06-e2"
+    ],
+    "originalDuration": 9,
+    "queryDuration": 8.5,
+    "transformation": {
+      "omission": {
+        "eventId": "TM06-e2",
+        "index": 2,
+        "evidence": {
+          "index": 2,
+          "type": "passing",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P1:m12:n2",
+            "P1:m13:n1"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-13aabf7f1da82d7f",
+    "sourceId": "3. In the Garden, Violin and Piano Duet.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "IN THE GARDEN",
+    "composer": "Composed by C. Austin Miles\nArranged by Reflet des Nuages",
+    "baseStartIndex": 16,
+    "baseStartMeasure": 12,
+    "baseEndMeasure": 14,
+    "baseTargets": [
+      {
+        "onset": 33,
+        "pitchMidi": 63,
+        "measure": 12,
+        "beat": 1
+      },
+      {
+        "onset": 35,
+        "pitchMidi": 67,
+        "measure": 12,
+        "beat": 3
+      },
+      {
+        "onset": 35.5,
+        "pitchMidi": 68,
+        "measure": 12,
+        "beat": 3.5
+      },
+      {
+        "onset": 36,
+        "pitchMidi": 70,
+        "measure": 13,
+        "beat": 1
+      },
+      {
+        "onset": 38,
+        "pitchMidi": 70,
+        "measure": 13,
+        "beat": 3
+      },
+      {
+        "onset": 39,
+        "pitchMidi": 67,
+        "measure": 14,
+        "beat": 1
+      },
+      {
+        "onset": 41,
+        "pitchMidi": 65,
+        "measure": 14,
+        "beat": 3
+      },
+      {
+        "onset": 41.5,
+        "pitchMidi": 67,
+        "measure": 14,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 6917.918300000019,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-17T01:05:34.050Z",
+      "baselineRank": 2,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 71,
+            "pillarPitch": 91,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-6efbb01df779ebe6&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.75%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 2,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 81,
+            "pillarPitch": 90,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-7ee04b3969c67b13&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.5%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 3,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 71,
+            "pillarPitch": 91,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-7ee04b3969c67b13-88a85b71&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.75%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 4,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 81,
+            "pillarPitch": 90,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-5b526b3ae13cdc98&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.5%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 5,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 71,
+            "pillarPitch": 91,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-5b526b3ae13cdc98-a71ddd21&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.75%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 6,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 81,
+            "pillarPitch": 90,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-eae663a0ba412001&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.5%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 7,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "4. Your Heart Will Lead You Home, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P4:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 71,
+            "pillarPitch": 91,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-eae663a0ba412001-e2ac527d&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.75%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 8,
+          "title": "YOUR HEART WILL LEAD YOU HOME",
+          "sourceId": "Your Heart Will Lead You Home Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.87608559602351,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 100,
+            "rhythm": 69.94298307576447,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 81,
+            "pillarPitch": 90,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-156e6a2fdeb0995d&start=19&end=20&source=search&targets=72%3A66%2C73%3A71%2C73.25%3A74%2C73.5%3A74%2C75.5%3A71%2C76%3A69%2C77%3A71"
+        },
+        {
+          "rank": 9,
+          "title": "아찔한 그녀",
+          "sourceId": "kysing/58515.xml",
+          "streamId": "P2:1:1",
+          "score": 94.77232142857143,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 44.64285714285714,
+            "meter": 94,
+            "structural": 94,
+            "skeleton": 66,
+            "pillarPitch": 81,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-d0e1dfac7c756f93-88a85b71&start=24&end=25&source=search&targets=92%3A71%2C93%3A75%2C93.5%3A78%2C94%3A78%2C95%3A75%2C95.5%3A73%2C96.5%3A75"
+        },
+        {
+          "rank": 10,
+          "title": "Bound For Canaan",
+          "sourceId": "mxl/12/28/QmUkutEmYzqjzuUo1Pgirv56Mvvgvt5gUYYAUjDc3JAQB8.mxl",
+          "streamId": "P3:1:1",
+          "score": 94.3742642857143,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 58.92857142857143,
+            "meter": 81,
+            "structural": 43,
+            "skeleton": 70,
+            "pillarPitch": 86,
+            "specificity": 62,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-a4a3de16dabbb97a-a71ddd21&start=11&end=12&source=search&targets=40%3A51%2C41%3A55%2C42%3A58%2C44%3A58%2C45%3A55%2C46%3A53%2C47%3A55"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 2,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 7,
+      "returnedCount": 100,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/TM06-L8-ornament-delete.json",
+      "initialPath": "../runs/TM06-L8-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-13aabf7f1da82d7f",
+      "sourceId": "3. In the Garden, Violin and Piano Duet.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "IN THE GARDEN",
+      "composer": "Composed by C. Austin Miles\nArranged by Reflet des Nuages",
+      "baseStartIndex": 16,
+      "baseStartMeasure": 12,
+      "baseEndMeasure": 14,
+      "baseTargets": [
+        {
+          "onset": 33,
+          "pitchMidi": 63,
+          "measure": 12,
+          "beat": 1
+        },
+        {
+          "onset": 35,
+          "pitchMidi": 67,
+          "measure": 12,
+          "beat": 3
+        },
+        {
+          "onset": 35.5,
+          "pitchMidi": 68,
+          "measure": 12,
+          "beat": 3.5
+        },
+        {
+          "onset": 36,
+          "pitchMidi": 70,
+          "measure": 13,
+          "beat": 1
+        },
+        {
+          "onset": 38,
+          "pitchMidi": 70,
+          "measure": 13,
+          "beat": 3
+        },
+        {
+          "onset": 39,
+          "pitchMidi": 67,
+          "measure": 14,
+          "beat": 1
+        },
+        {
+          "onset": 41,
+          "pitchMidi": 65,
+          "measure": 14,
+          "beat": 3
+        },
+        {
+          "onset": 41.5,
+          "pitchMidi": 67,
+          "measure": 14,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 10,
+      "endOrdinal": 16,
+      "xmlHash": "bd75e42bb96374b37236da8edd9ef41bb248034c181596a247d07d3c9a9b19da",
+      "xmlError": null,
+      "eventsHash": "b294de974c775dc0f4e1a08ece429525fd7767d5097ee420314c553fb31feca5",
+      "sourcePath": "K:/Music Analysis/musicxml/3. In the Garden, Violin and Piano Duet.musicxml.xml",
+      "sourceHash": "13aabf7f1da82d7f16a9c1c67b6fa1435a3bfbead5a1eec97ea8cc33d4b2a2c2"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m12:n1",
+          "xmlNoteId": "P1:m12:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 33,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 63,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m12:n2",
+          "xmlNoteId": "P1:m12:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 35,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m12:n3",
+          "xmlNoteId": "P1:m12:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 71,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m13:n1",
+          "xmlNoteId": "P1:m13:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 36,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m13:n2",
+          "xmlNoteId": "P1:m13:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 38,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m14:n1",
+          "xmlNoteId": "P1:m14:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 14,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 14,
+          "originalMeasureLabel": "14",
+          "onsetQ": {
+            "n": 39,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m14:n2",
+          "xmlNoteId": "P1:m14:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 14,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 14,
+          "originalMeasureLabel": "14",
+          "onsetQ": {
+            "n": 41,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m14:n3",
+          "xmlNoteId": "P1:m14:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 14,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 14,
+          "originalMeasureLabel": "14",
+          "onsetQ": {
+            "n": 83,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/TM06-L8/context.musicxml",
+      "events": "../base-assets/TM06-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2586 @@
+{
+  "schema": "phrase-structure-shadow/v0.1",
+  "createdAt": "2026-09-21T15:45:19.143Z",
+  "codeHashes": {
+    "scripts/compare-phrase-structure.mjs": "73fc3c5be3a626d2493661d59ea4f7e96794f4e373c671fe712dbc12acd066c2",
+    "src/music/structureTemplateAlignment.ts": "e5db5c1225e83a03d82335bc6eaf14bed78c2baee630c0e3a3cffa2aa9e6fcc7",
+    "src/music/motifSimilarity.ts": "1e1e9d8463348c005db3e84bbe6ab001d4acba0b1bbbfd59def01bcfe9c5abe7",
+    "server/phrase-source-closure.mjs": "7e3fdf45dd91644ead9f4865554918e48ac3513a76ff40369d71c9d8101dfddd",
+    "server/phrase-meter-review.mjs": "02ae02a1708231220a774ffe6fd6c75e38b5b4dc44e2a6bc3c4a5b7036dd2083"
+  },
+  "caseId": "S-STRUCT-006",
+  "revision": "phrase-structure-v1-baseline",
+  "baselineEngineHash": "1e8acc3b02dccfe599e8d8f682a4bbf1dd6a09ee4991d60e48f6997413a265d3",
+  "sourceHash": "6eaae4861c93a539e9b0608480b0a573a81b7de3c7e90b4e3f0950603a0eafac",
+  "mode": "shadow-no-ui-change",
+  "decision": "cannot_judge",
+  "reason": "Uncalibrated comparisons require review; beam/meter adapter incomplete",
+  "first": {
+    "phraseNumber": 4,
+    "startIndex": 42,
+    "endIndexExclusive": 51,
+    "startEventId": "work-6eaae4861c93a539-42",
+    "endEventId": "work-6eaae4861c93a539-50",
+    "startMeasure": 16,
+    "endMeasure": 17
+  },
+  "second": {
+    "phraseNumber": 5,
+    "startIndex": 51,
+    "endIndexExclusive": 57,
+    "startEventId": "work-6eaae4861c93a539-51",
+    "endEventId": "work-6eaae4861c93a539-56",
+    "startMeasure": 17,
+    "endMeasure": 18
+  },
+  "combined": {
+    "phraseNumber": null,
+    "startIndex": 42,
+    "endIndexExclusive": 57,
+    "startEventId": "work-6eaae4861c93a539-42",
+    "endEventId": "work-6eaae4861c93a539-56",
+    "startMeasure": 16,
+    "endMeasure": 18,
+    "phraseNumbers": [
+      4,
+      5
+    ]
+  },
+  "beamGroups": [
+    {
+      "id": "beam:notation:6eaae4861c93a539:31614:1",
+      "count": 3,
+      "complete": true,
+      "fullyInside": true
+    },
+    {
+      "id": "beam:notation:6eaae4861c93a539:33213:1",
+      "count": 4,
+      "complete": true,
+      "fullyInside": true
+    },
+    {
+      "id": "beam:notation:6eaae4861c93a539:36575:1",
+      "count": 3,
+      "complete": true,
+      "fullyInside": true
+    },
+    {
+      "id": "beam:notation:6eaae4861c93a539:38099:1",
+      "count": 2,
+      "complete": true,
+      "fullyInside": true
+    }
+  ],
+  "internalBoundary": {
+    "index": 51,
+    "strength": 0.9,
+    "supported": true,
+    "reliable": true,
+    "state": "boundary",
+    "continuity": 0,
+    "cues": [
+      {
+        "name": "ioi-discontinuity",
+        "strength": 0.15,
+        "evidence": {
+          "localPeak": 0.6,
+          "method": "neighbor-relative, LBDM-inspired"
+        }
+      },
+      {
+        "name": "observed-gap",
+        "strength": 0.75,
+        "evidence": {
+          "gapRatio": 1,
+          "relativeTo": "local IOI or duration",
+          "explicitOnsets": true
+        }
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "template": {
+        "phraseNumber": 1,
+        "startIndex": 0,
+        "endIndexExclusive": 13,
+        "startEventId": "work-6eaae4861c93a539-0",
+        "endEventId": "work-6eaae4861c93a539-12",
+        "startMeasure": 4,
+        "endMeasure": 6
+      },
+      "beamGroups": [
+        {
+          "id": "beam:notation:6eaae4861c93a539:6841:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:8354:1",
+          "count": 4,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:11317:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": true
+        }
+      ],
+      "merge": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 83,
+        "melodic": 79,
+        "interval": 77,
+        "contour": 83,
+        "shape": 83,
+        "rhythm": 87,
+        "coverage": 87,
+        "matchedNotes": 13,
+        "transformations": [
+          "transposition",
+          "ornament-insertion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": 8,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 9,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 10,
+            "type": "match"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": 11,
+            "type": "match"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 12,
+            "type": "insertion"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 13,
+            "type": "insertion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 14,
+            "type": "substitution"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 8,
+          "leftRatio": 0.6153846153846154,
+          "rightRatio": 0.5333333333333333,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": true,
+          "leftDuration": 1.5,
+          "rightDuration": 2.5
+        },
+        "restComparisons": [
+          {
+            "leftEventId": "work-6eaae4861c93a539-9",
+            "rightEventId": "work-6eaae4861c93a539-51",
+            "leftGapUnits": 1,
+            "rightGapUnits": 1,
+            "kind": "inferred-stream-gap"
+          }
+        ],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-0",
+            "rightEventId": "work-6eaae4861c93a539-42"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-1",
+            "rightEventId": "work-6eaae4861c93a539-43"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-2",
+            "rightEventId": "work-6eaae4861c93a539-44"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-3",
+            "rightEventId": "work-6eaae4861c93a539-45"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-4",
+            "rightEventId": "work-6eaae4861c93a539-46"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-5",
+            "rightEventId": "work-6eaae4861c93a539-47"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-6",
+            "rightEventId": "work-6eaae4861c93a539-48"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-7",
+            "rightEventId": "work-6eaae4861c93a539-49"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": 8,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-8",
+            "rightEventId": "work-6eaae4861c93a539-50"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 9,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-9",
+            "rightEventId": "work-6eaae4861c93a539-51"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 10,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-10",
+            "rightEventId": "work-6eaae4861c93a539-52"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": 11,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-11",
+            "rightEventId": "work-6eaae4861c93a539-53"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 12,
+            "type": "insertion",
+            "leftEventId": null,
+            "rightEventId": "work-6eaae4861c93a539-54"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 13,
+            "type": "insertion",
+            "leftEventId": null,
+            "rightEventId": "work-6eaae4861c93a539-55"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 14,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-12",
+            "rightEventId": "work-6eaae4861c93a539-56"
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "keepFirst": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 85,
+        "melodic": 88,
+        "interval": 88,
+        "contour": 88,
+        "shape": 88,
+        "rhythm": 88,
+        "coverage": 69,
+        "matchedNotes": 9,
+        "transformations": [
+          "transposition",
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 8,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 8,
+          "leftRatio": 0.6153846153846154,
+          "rightRatio": 0.8888888888888888,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": false,
+          "leftDuration": 1.5,
+          "rightDuration": 1.5
+        },
+        "restComparisons": [
+          {
+            "leftEventId": "work-6eaae4861c93a539-9",
+            "rightEventId": "work-6eaae4861c93a539-50",
+            "leftGapUnits": 1,
+            "rightGapUnits": 0,
+            "kind": "inferred-stream-gap"
+          }
+        ],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-0",
+            "rightEventId": "work-6eaae4861c93a539-42"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-1",
+            "rightEventId": "work-6eaae4861c93a539-43"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-2",
+            "rightEventId": "work-6eaae4861c93a539-44"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-3",
+            "rightEventId": "work-6eaae4861c93a539-45"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-4",
+            "rightEventId": "work-6eaae4861c93a539-46"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-5",
+            "rightEventId": "work-6eaae4861c93a539-47"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-6",
+            "rightEventId": "work-6eaae4861c93a539-48"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-7",
+            "rightEventId": "work-6eaae4861c93a539-49"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-8",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 8,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-9",
+            "rightEventId": "work-6eaae4861c93a539-50"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-10",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-11",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-12",
+            "rightEventId": null
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "keepSecond": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 70,
+        "melodic": 82,
+        "interval": 94,
+        "contour": 60,
+        "shape": 60,
+        "rhythm": 74,
+        "coverage": 46,
+        "matchedNotes": 6,
+        "transformations": [
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 1,
+          "leftRatio": 0.07692307692307693,
+          "rightRatio": 0.16666666666666666,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": false,
+          "leftDuration": 1.5,
+          "rightDuration": 2.5
+        },
+        "restComparisons": [],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-0",
+            "rightEventId": "work-6eaae4861c93a539-51"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-1",
+            "rightEventId": "work-6eaae4861c93a539-52"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-2",
+            "rightEventId": "work-6eaae4861c93a539-53"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-3",
+            "rightEventId": "work-6eaae4861c93a539-54"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-4",
+            "rightEventId": "work-6eaae4861c93a539-55"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-5",
+            "rightEventId": "work-6eaae4861c93a539-56"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-6",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-7",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-8",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-9",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-10",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-11",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-12",
+            "rightEventId": null
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "sourceGapComparisons": [
+        {
+          "left": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-8",
+            "nextEventId": "work-6eaae4861c93a539-9",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:10847"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:11154"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 5,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "right": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-50",
+            "nextEventId": "work-6eaae4861c93a539-51",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:35893"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:36412"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 17,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "template": {
+        "phraseNumber": 2,
+        "startIndex": 13,
+        "endIndexExclusive": 29,
+        "startEventId": "work-6eaae4861c93a539-13",
+        "endEventId": "work-6eaae4861c93a539-28",
+        "startMeasure": 8,
+        "endMeasure": 10
+      },
+      "beamGroups": [
+        {
+          "id": "beam:notation:6eaae4861c93a539:14559:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:16081:1",
+          "count": 4,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:18912:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:20871:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": false
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:22016:1",
+          "count": 2,
+          "complete": true,
+          "fullyInside": true
+        }
+      ],
+      "merge": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 90,
+        "melodic": 91,
+        "interval": 90,
+        "contour": 92,
+        "shape": 87,
+        "rhythm": 90,
+        "coverage": 88,
+        "matchedNotes": 14,
+        "transformations": [
+          "transposition",
+          "ornament-insertion",
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 8,
+            "type": "insertion"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": 9,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 10,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 11,
+            "type": "match"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 12,
+            "type": "match"
+          },
+          {
+            "leftIndex": 13,
+            "rightIndex": 13,
+            "type": "match"
+          },
+          {
+            "leftIndex": 14,
+            "rightIndex": 14,
+            "type": "match"
+          },
+          {
+            "leftIndex": 15,
+            "rightIndex": null,
+            "type": "deletion"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 8,
+          "leftRatio": 0.5,
+          "rightRatio": 0.5333333333333333,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": false,
+          "leftDuration": 2.5,
+          "rightDuration": 2.5
+        },
+        "restComparisons": [
+          {
+            "leftEventId": "work-6eaae4861c93a539-21",
+            "rightEventId": "work-6eaae4861c93a539-51",
+            "leftGapUnits": 3,
+            "rightGapUnits": 1,
+            "kind": "inferred-stream-gap"
+          }
+        ],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-13",
+            "rightEventId": "work-6eaae4861c93a539-42"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-14",
+            "rightEventId": "work-6eaae4861c93a539-43"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-15",
+            "rightEventId": "work-6eaae4861c93a539-44"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-16",
+            "rightEventId": "work-6eaae4861c93a539-45"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-17",
+            "rightEventId": "work-6eaae4861c93a539-46"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-18",
+            "rightEventId": "work-6eaae4861c93a539-47"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-19",
+            "rightEventId": "work-6eaae4861c93a539-48"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-20",
+            "rightEventId": "work-6eaae4861c93a539-49"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 8,
+            "type": "insertion",
+            "leftEventId": null,
+            "rightEventId": "work-6eaae4861c93a539-50"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": 9,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-21",
+            "rightEventId": "work-6eaae4861c93a539-51"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 10,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-22",
+            "rightEventId": "work-6eaae4861c93a539-52"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 11,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-23",
+            "rightEventId": "work-6eaae4861c93a539-53"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-24",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 12,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-25",
+            "rightEventId": "work-6eaae4861c93a539-54"
+          },
+          {
+            "leftIndex": 13,
+            "rightIndex": 13,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-26",
+            "rightEventId": "work-6eaae4861c93a539-55"
+          },
+          {
+            "leftIndex": 14,
+            "rightIndex": 14,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-27",
+            "rightEventId": "work-6eaae4861c93a539-56"
+          },
+          {
+            "leftIndex": 15,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-28",
+            "rightEventId": null
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "keepFirst": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 85,
+        "melodic": 87,
+        "interval": 86,
+        "contour": 88,
+        "shape": 88,
+        "rhythm": 95,
+        "coverage": 56,
+        "matchedNotes": 9,
+        "transformations": [
+          "transposition",
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 13,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 14,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 15,
+            "rightIndex": 8,
+            "type": "substitution"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 8,
+          "leftRatio": 0.5,
+          "rightRatio": 0.8888888888888888,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": true,
+          "leftDuration": 2.5,
+          "rightDuration": 1.5
+        },
+        "restComparisons": [],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-13",
+            "rightEventId": "work-6eaae4861c93a539-42"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-14",
+            "rightEventId": "work-6eaae4861c93a539-43"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-15",
+            "rightEventId": "work-6eaae4861c93a539-44"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-16",
+            "rightEventId": "work-6eaae4861c93a539-45"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-17",
+            "rightEventId": "work-6eaae4861c93a539-46"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-18",
+            "rightEventId": "work-6eaae4861c93a539-47"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-19",
+            "rightEventId": "work-6eaae4861c93a539-48"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-20",
+            "rightEventId": "work-6eaae4861c93a539-49"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-21",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-22",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-23",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-24",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-25",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 13,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-26",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 14,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-27",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 15,
+            "rightIndex": 8,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-28",
+            "rightEventId": "work-6eaae4861c93a539-50"
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "keepSecond": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 75,
+        "melodic": 86,
+        "interval": 89,
+        "contour": 80,
+        "shape": 73,
+        "rhythm": 83,
+        "coverage": 38,
+        "matchedNotes": 6,
+        "transformations": [
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 13,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 14,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 15,
+            "rightIndex": null,
+            "type": "deletion"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 0,
+          "leftRatio": 0,
+          "rightRatio": 0,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": false,
+          "leftDuration": 2.5,
+          "rightDuration": 2.5
+        },
+        "restComparisons": [],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-13",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-14",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-15",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-16",
+            "rightEventId": "work-6eaae4861c93a539-51"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-17",
+            "rightEventId": "work-6eaae4861c93a539-52"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-18",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-19",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-20",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-21",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-22",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-23",
+            "rightEventId": "work-6eaae4861c93a539-53"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-24",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-25",
+            "rightEventId": "work-6eaae4861c93a539-54"
+          },
+          {
+            "leftIndex": 13,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-26",
+            "rightEventId": "work-6eaae4861c93a539-55"
+          },
+          {
+            "leftIndex": 14,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-27",
+            "rightEventId": "work-6eaae4861c93a539-56"
+          },
+          {
+            "leftIndex": 15,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-28",
+            "rightEventId": null
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "sourceGapComparisons": [
+        {
+          "left": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-20",
+            "nextEventId": "work-6eaae4861c93a539-21",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:18114"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:18583",
+              "notation:6eaae4861c93a539:18748"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 1.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 1.5,
+            "releaseNotation": {
+              "measureOrdinal": 9,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "right": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-50",
+            "nextEventId": "work-6eaae4861c93a539-51",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:35893"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:36412"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 17,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "template": {
+        "phraseNumber": 3,
+        "startIndex": 29,
+        "endIndexExclusive": 42,
+        "startEventId": "work-6eaae4861c93a539-29",
+        "endEventId": "work-6eaae4861c93a539-41",
+        "startMeasure": 12,
+        "endMeasure": 14
+      },
+      "beamGroups": [
+        {
+          "id": "beam:notation:6eaae4861c93a539:23891:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:25401:1",
+          "count": 4,
+          "complete": true,
+          "fullyInside": true
+        },
+        {
+          "id": "beam:notation:6eaae4861c93a539:28369:1",
+          "count": 3,
+          "complete": true,
+          "fullyInside": true
+        }
+      ],
+      "merge": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 83,
+        "melodic": 79,
+        "interval": 77,
+        "contour": 83,
+        "shape": 83,
+        "rhythm": 87,
+        "coverage": 87,
+        "matchedNotes": 13,
+        "transformations": [
+          "transposition",
+          "ornament-insertion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": 8,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 9,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 10,
+            "type": "match"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": 11,
+            "type": "match"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 12,
+            "type": "insertion"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 13,
+            "type": "insertion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 14,
+            "type": "substitution"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 8,
+          "leftRatio": 0.6153846153846154,
+          "rightRatio": 0.5333333333333333,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": true,
+          "leftDuration": 1.5,
+          "rightDuration": 2.5
+        },
+        "restComparisons": [
+          {
+            "leftEventId": "work-6eaae4861c93a539-38",
+            "rightEventId": "work-6eaae4861c93a539-51",
+            "leftGapUnits": 1,
+            "rightGapUnits": 1,
+            "kind": "inferred-stream-gap"
+          }
+        ],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-29",
+            "rightEventId": "work-6eaae4861c93a539-42"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-30",
+            "rightEventId": "work-6eaae4861c93a539-43"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-31",
+            "rightEventId": "work-6eaae4861c93a539-44"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-32",
+            "rightEventId": "work-6eaae4861c93a539-45"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-33",
+            "rightEventId": "work-6eaae4861c93a539-46"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-34",
+            "rightEventId": "work-6eaae4861c93a539-47"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-35",
+            "rightEventId": "work-6eaae4861c93a539-48"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-36",
+            "rightEventId": "work-6eaae4861c93a539-49"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": 8,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-37",
+            "rightEventId": "work-6eaae4861c93a539-50"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 9,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-38",
+            "rightEventId": "work-6eaae4861c93a539-51"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": 10,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-39",
+            "rightEventId": "work-6eaae4861c93a539-52"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": 11,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-40",
+            "rightEventId": "work-6eaae4861c93a539-53"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 12,
+            "type": "insertion",
+            "leftEventId": null,
+            "rightEventId": "work-6eaae4861c93a539-54"
+          },
+          {
+            "leftIndex": null,
+            "rightIndex": 13,
+            "type": "insertion",
+            "leftEventId": null,
+            "rightEventId": "work-6eaae4861c93a539-55"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": 14,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-41",
+            "rightEventId": "work-6eaae4861c93a539-56"
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "keepFirst": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 85,
+        "melodic": 88,
+        "interval": 88,
+        "contour": 88,
+        "shape": 88,
+        "rhythm": 88,
+        "coverage": 69,
+        "matchedNotes": 9,
+        "transformations": [
+          "transposition",
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 8,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 8,
+          "leftRatio": 0.6153846153846154,
+          "rightRatio": 0.8888888888888888,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": false,
+          "leftDuration": 1.5,
+          "rightDuration": 1.5
+        },
+        "restComparisons": [
+          {
+            "leftEventId": "work-6eaae4861c93a539-38",
+            "rightEventId": "work-6eaae4861c93a539-50",
+            "leftGapUnits": 1,
+            "rightGapUnits": 0,
+            "kind": "inferred-stream-gap"
+          }
+        ],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-29",
+            "rightEventId": "work-6eaae4861c93a539-42"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-30",
+            "rightEventId": "work-6eaae4861c93a539-43"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-31",
+            "rightEventId": "work-6eaae4861c93a539-44"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-32",
+            "rightEventId": "work-6eaae4861c93a539-45"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-33",
+            "rightEventId": "work-6eaae4861c93a539-46"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-34",
+            "rightEventId": "work-6eaae4861c93a539-47"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": 6,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-35",
+            "rightEventId": "work-6eaae4861c93a539-48"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": 7,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-36",
+            "rightEventId": "work-6eaae4861c93a539-49"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-37",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": 8,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-38",
+            "rightEventId": "work-6eaae4861c93a539-50"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-39",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-40",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-41",
+            "rightEventId": null
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "keepSecond": {
+        "status": "compared",
+        "version": "structure-template-alignment-v0.1",
+        "calibrated": false,
+        "similarity": 70,
+        "melodic": 82,
+        "interval": 94,
+        "contour": 60,
+        "shape": 60,
+        "rhythm": 74,
+        "coverage": 46,
+        "matchedNotes": 6,
+        "transformations": [
+          "note-deletion",
+          "pitch-substitution",
+          "rhythm-variation"
+        ],
+        "alignment": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "substitution"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion"
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion"
+          }
+        ],
+        "prefix": {
+          "alignedAttackCount": 1,
+          "leftRatio": 0.07692307692307693,
+          "rightRatio": 0.16666666666666666,
+          "meaning": "contiguous leading match, not a inferred musical section"
+        },
+        "terminal": {
+          "bothEndpointsPaired": false,
+          "leftDuration": 1.5,
+          "rightDuration": 2.5
+        },
+        "restComparisons": [],
+        "alignmentRefs": [
+          {
+            "leftIndex": 0,
+            "rightIndex": 0,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-29",
+            "rightEventId": "work-6eaae4861c93a539-51"
+          },
+          {
+            "leftIndex": 1,
+            "rightIndex": 1,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-30",
+            "rightEventId": "work-6eaae4861c93a539-52"
+          },
+          {
+            "leftIndex": 2,
+            "rightIndex": 2,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-31",
+            "rightEventId": "work-6eaae4861c93a539-53"
+          },
+          {
+            "leftIndex": 3,
+            "rightIndex": 3,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-32",
+            "rightEventId": "work-6eaae4861c93a539-54"
+          },
+          {
+            "leftIndex": 4,
+            "rightIndex": 4,
+            "type": "match",
+            "leftEventId": "work-6eaae4861c93a539-33",
+            "rightEventId": "work-6eaae4861c93a539-55"
+          },
+          {
+            "leftIndex": 5,
+            "rightIndex": 5,
+            "type": "substitution",
+            "leftEventId": "work-6eaae4861c93a539-34",
+            "rightEventId": "work-6eaae4861c93a539-56"
+          },
+          {
+            "leftIndex": 6,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-35",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 7,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-36",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 8,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-37",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 9,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-38",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 10,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-39",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 11,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-40",
+            "rightEventId": null
+          },
+          {
+            "leftIndex": 12,
+            "rightIndex": null,
+            "type": "deletion",
+            "leftEventId": "work-6eaae4861c93a539-41",
+            "rightEventId": null
+          }
+        ],
+        "limitations": [
+          "gap channel is diagnostic only and not added to similarity",
+          "beam and metric grouping are observations, not scored here",
+          "no harmonic prolongation or cadence judgment"
+        ]
+      },
+      "sourceGapComparisons": [
+        {
+          "left": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-37",
+            "nextEventId": "work-6eaae4861c93a539-38",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:27898"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:28206"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 13,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "right": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-50",
+            "nextEventId": "work-6eaae4861c93a539-51",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:35893"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:36412"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 17,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "sourceChecks": {
+    "12": {
+      "status": "observed",
+      "eventId": "work-6eaae4861c93a539-12",
+      "nextEventId": "work-6eaae4861c93a539-13",
+      "sourceNoteIds": [
+        "notation:6eaae4861c93a539:13316"
+      ],
+      "sourceRestIds": [
+        "notation:6eaae4861c93a539:13674",
+        "notation:6eaae4861c93a539:13893",
+        "notation:6eaae4861c93a539:14395"
+      ],
+      "sourceDuration": 1.5,
+      "explicitRestDuration": 6.5,
+      "durationMatches": true,
+      "gapMatches": true,
+      "flattenedDuration": 1.5,
+      "inferredGap": 6.5,
+      "releaseNotation": {
+        "measureOrdinal": 6,
+        "quarterPosition": 2
+      },
+      "breathSymbols": [],
+      "limitations": [
+        "legacy numeric positions",
+        "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+        "duration/rest agreement is not a phrase or cadence decision"
+      ]
+    },
+    "28": {
+      "status": "observed",
+      "eventId": "work-6eaae4861c93a539-28",
+      "nextEventId": "work-6eaae4861c93a539-29",
+      "sourceNoteIds": [
+        "notation:6eaae4861c93a539:22361",
+        "notation:6eaae4861c93a539:23130"
+      ],
+      "sourceRestIds": [
+        "notation:6eaae4861c93a539:23507",
+        "notation:6eaae4861c93a539:23728"
+      ],
+      "sourceDuration": 2.5,
+      "explicitRestDuration": 2.5,
+      "durationMatches": true,
+      "gapMatches": true,
+      "flattenedDuration": 2.5,
+      "inferredGap": 2.5,
+      "releaseNotation": {
+        "measureOrdinal": 11,
+        "quarterPosition": 2
+      },
+      "breathSymbols": [],
+      "limitations": [
+        "legacy numeric positions",
+        "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+        "duration/rest agreement is not a phrase or cadence decision"
+      ]
+    },
+    "41": {
+      "status": "observed",
+      "eventId": "work-6eaae4861c93a539-41",
+      "nextEventId": "work-6eaae4861c93a539-42",
+      "sourceNoteIds": [
+        "notation:6eaae4861c93a539:30369"
+      ],
+      "sourceRestIds": [
+        "notation:6eaae4861c93a539:30727",
+        "notation:6eaae4861c93a539:31242",
+        "notation:6eaae4861c93a539:31451"
+      ],
+      "sourceDuration": 1.5,
+      "explicitRestDuration": 6.5,
+      "durationMatches": true,
+      "gapMatches": true,
+      "flattenedDuration": 1.5,
+      "inferredGap": 6.5,
+      "releaseNotation": {
+        "measureOrdinal": 14,
+        "quarterPosition": 2
+      },
+      "breathSymbols": [],
+      "limitations": [
+        "legacy numeric positions",
+        "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+        "duration/rest agreement is not a phrase or cadence decision"
+      ]
+    },
+    "50": {
+      "status": "observed",
+      "eventId": "work-6eaae4861c93a539-50",
+      "nextEventId": "work-6eaae4861c93a539-51",
+      "sourceNoteIds": [
+        "notation:6eaae4861c93a539:35893"
+      ],
+      "sourceRestIds": [
+        "notation:6eaae4861c93a539:36412"
+      ],
+      "sourceDuration": 1.5,
+      "explicitRestDuration": 0.5,
+      "durationMatches": true,
+      "gapMatches": true,
+      "flattenedDuration": 1.5,
+      "inferredGap": 0.5,
+      "releaseNotation": {
+        "measureOrdinal": 17,
+        "quarterPosition": 2
+      },
+      "breathSymbols": [],
+      "limitations": [
+        "legacy numeric positions",
+        "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+        "duration/rest agreement is not a phrase or cadence decision"
+      ]
+    },
+    "56": {
+      "status": "observed",
+      "eventId": "work-6eaae4861c93a539-56",
+      "nextEventId": "work-6eaae4861c93a539-57",
+      "sourceNoteIds": [
+        "notation:6eaae4861c93a539:38825",
+        "notation:6eaae4861c93a539:39283"
+      ],
+      "sourceRestIds": [
+        "notation:6eaae4861c93a539:39690",
+        "notation:6eaae4861c93a539:40212",
+        "notation:6eaae4861c93a539:40421"
+      ],
+      "sourceDuration": 2.5,
+      "explicitRestDuration": 5.5,
+      "durationMatches": true,
+      "gapMatches": true,
+      "flattenedDuration": 2.5,
+      "inferredGap": 5.5,
+      "releaseNotation": {
+        "measureOrdinal": 18,
+        "quarterPosition": 3
+      },
+      "breathSymbols": [],
+      "limitations": [
+        "legacy numeric positions",
+        "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+        "duration/rest agreement is not a phrase or cadence decision"
+      ]
+    }
+  },
+  "meterChecks": {
+    "12": {
+      "status": "normalized",
+      "meter": {
+        "count": 4,
+        "unit": 4
+      },
+      "beatQuarter": 1,
+      "beatConvention": "denominator-beat",
+      "durationBeats": 1.5,
+      "restBeats": 6.5,
+      "decision": "protect-boundary",
+      "reasons": [
+        "long-rest"
+      ],
+      "policy": "existing-v1.14-protection-shadow",
+      "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+    },
+    "28": {
+      "status": "normalized",
+      "meter": {
+        "count": 4,
+        "unit": 4
+      },
+      "beatQuarter": 1,
+      "beatConvention": "denominator-beat",
+      "durationBeats": 2.5,
+      "restBeats": 2.5,
+      "decision": "protect-boundary",
+      "reasons": [
+        "sustained-arrival-and-rest"
+      ],
+      "policy": "existing-v1.14-protection-shadow",
+      "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+    },
+    "41": {
+      "status": "normalized",
+      "meter": {
+        "count": 4,
+        "unit": 4
+      },
+      "beatQuarter": 1,
+      "beatConvention": "denominator-beat",
+      "durationBeats": 1.5,
+      "restBeats": 6.5,
+      "decision": "protect-boundary",
+      "reasons": [
+        "long-rest"
+      ],
+      "policy": "existing-v1.14-protection-shadow",
+      "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+    },
+    "50": {
+      "status": "normalized",
+      "meter": {
+        "count": 4,
+        "unit": 4
+      },
+      "beatQuarter": 1,
+      "beatConvention": "denominator-beat",
+      "durationBeats": 1.5,
+      "restBeats": 0.5,
+      "decision": "cannot_judge",
+      "reasons": [],
+      "policy": "existing-v1.14-protection-shadow",
+      "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+    },
+    "56": {
+      "status": "normalized",
+      "meter": {
+        "count": 4,
+        "unit": 4
+      },
+      "beatQuarter": 1,
+      "beatConvention": "denominator-beat",
+      "durationBeats": 2.5,
+      "restBeats": 5.5,
+      "decision": "protect-boundary",
+      "reasons": [
+        "long-rest",
+        "sustained-arrival-and-rest"
+      ],
+      "policy": "existing-v1.14-protection-shadow",
+      "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+    }
+  }
+}

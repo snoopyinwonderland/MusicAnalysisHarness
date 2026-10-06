@@ -1,0 +1,58 @@
+{
+  "createdAt": "2026-09-21T15:53:37.040Z",
+  "codeHashes": {
+    "scripts/evaluate-structure-feedback.mjs": "29f9bdb57d87ec66ef95149bba23ec8f31acdcba4ae7d3e5beb4e4e7928148cc",
+    "server/phrase-structure-registry.mjs": "d20409846119f065ef6840b553dd82a8f89d9dd712b5539ff65d52d4ae4babdd",
+    "src/music/structureTemplateAlignment.ts": "e5db5c1225e83a03d82335bc6eaf14bed78c2baee630c0e3a3cffa2aa9e6fcc7",
+    "src/music/motifSimilarity.ts": "1e1e9d8463348c005db3e84bbe6ab001d4acba0b1bbbfd59def01bcfe9c5abe7",
+    "server/phrase-boundaries.mjs": "0b6f5b7432d06be221bc3a724642e42cff2e1897c38b529519f629f51d84a75f",
+    "server/phrase-breath-symbols.mjs": "35f97e2cca5f61b9713d3f16e32d7236daf68a6af5c1a6306232f56befec8dfe",
+    "server/notation-structure-evidence.mjs": "2b10fb68ab825bad247ed15b440bafc710d94278139439842f1e8d4fc5cbafa1",
+    "server/xml-target-verification.mjs": "91d0eced262e4151547956409d53d75191c267e50ee54647232721efbdbf24cb",
+    "server/phrase-source-closure.mjs": "7e3fdf45dd91644ead9f4865554918e48ac3513a76ff40369d71c9d8101dfddd",
+    "server/phrase-meter-review.mjs": "af8649b417b9e39d78dddbdfe1fe889dbd575406639987e197e272a10c95a29a"
+  },
+  "summary": [
+    {
+      "caseId": "S-STRUCT-004",
+      "comparisons": 3168,
+      "status": "complete",
+      "proposals": 33,
+      "protected": 8,
+      "checks": 0,
+      "passed": 0,
+      "failures": []
+    },
+    {
+      "caseId": "S-STRUCT-005",
+      "comparisons": 2268,
+      "status": "complete",
+      "proposals": 28,
+      "protected": 11,
+      "checks": 7,
+      "passed": 7,
+      "failures": []
+    },
+    {
+      "caseId": "S-STRUCT-006",
+      "comparisons": 4920,
+      "status": "complete",
+      "proposals": 41,
+      "protected": 15,
+      "checks": 5,
+      "passed": 4,
+      "failures": [
+        {
+          "nextEventId": "work-6eaae4861c93a539-51",
+          "previousEventId": "work-6eaae4861c93a539-50",
+          "sourceDocument": "evaluation/cases/s-struct-006-structure-baseline.md",
+          "sourceDocumentHash": "3351da395bff9fea236f067cb4055f490de8a7d6df119d482c3abc6649c673bc",
+          "interpretation": "documented-user-preference-not-gold",
+          "expected": "suppress",
+          "actual": "keep",
+          "pass": false
+        }
+      ]
+    }
+  ]
+}

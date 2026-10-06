@@ -1,0 +1,958 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "triple-meter-60-v1-TM09-L8-ornament-delete-preserve-time",
+  "createdAt": "2026-09-17",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM09-e0",
+        "kind": "note",
+        "pitchMidi": 48,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM09-e1",
+        "kind": "note",
+        "pitchMidi": 52,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM09-e2",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM09-e4",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e7",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM09-e0",
+        "kind": "note",
+        "pitchMidi": 48,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM09-e1",
+        "kind": "note",
+        "pitchMidi": 52,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM09-e2",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e3",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e4",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM09-e7",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete-preserve-time",
+    "positive-probe"
+  ],
+  "description": "8음에서 장식음 후보 삭제, 앞 음으로 음가 흡수: 뒤 음 시작 시각 유지",
+  "changes": {
+    "changedSourceIds": [
+      "TM09-e3",
+      "TM09-e2"
+    ],
+    "originalDuration": 6,
+    "queryDuration": 6,
+    "transformation": {
+      "omission": {
+        "eventId": "TM09-e3",
+        "index": 3,
+        "evidence": {
+          "index": 3,
+          "type": "passing",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P1:m33:n2",
+            "P1:m33:n4"
+          ]
+        },
+        "timing": "absorb-duration-into-previous",
+        "absorbedBy": "TM09-e2",
+        "previousDuration": 0.5,
+        "deletedDuration": 0.5
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-cef6f737fa204cbf",
+    "sourceId": "3. La valse d_Amelie, Piano Solo.musicxml.xml",
+    "streamId": "P1:2:2",
+    "title": "LA VALSE D'AMELIE",
+    "composer": "Composed by Yann Tiersen\nArranged by Reflet des Nuages",
+    "baseStartIndex": 77,
+    "baseStartMeasure": 32,
+    "baseEndMeasure": 33,
+    "baseTargets": [
+      {
+        "onset": 77,
+        "pitchMidi": 48,
+        "measure": 32,
+        "beat": 1
+      },
+      {
+        "onset": 78,
+        "pitchMidi": 52,
+        "measure": 32,
+        "beat": 2
+      },
+      {
+        "onset": 80,
+        "pitchMidi": 62,
+        "measure": 33,
+        "beat": 1
+      },
+      {
+        "onset": 80.5,
+        "pitchMidi": 64,
+        "measure": 33,
+        "beat": 1.5
+      },
+      {
+        "onset": 81,
+        "pitchMidi": 65,
+        "measure": 33,
+        "beat": 2
+      },
+      {
+        "onset": 81.5,
+        "pitchMidi": 64,
+        "measure": 33,
+        "beat": 2.5
+      },
+      {
+        "onset": 82,
+        "pitchMidi": 65,
+        "measure": 33,
+        "beat": 3
+      },
+      {
+        "onset": 82.5,
+        "pitchMidi": 64,
+        "measure": 33,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 1103.20279999997,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-17T01:05:34.050Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "MAKING LOVE OUT OF NOTHING AT ALL",
+          "sourceId": "4. Making Love Out of Nothing at All, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 78.88921816659729,
+          "scores": {
+            "pitch": 71.71428571428572,
+            "interval": 77.28571428571429,
+            "contour": 100,
+            "rhythm": 77.00875832936175,
+            "meter": 9,
+            "structural": 71,
+            "skeleton": 57,
+            "pillarPitch": 63,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-b28eba274ae8262d&start=1&end=1&source=search&targets=0.5%3A74%2C1%3A79%2C1.5%3A81%2C2%3A84%2C2.5%3A83%2C2.75%3A84%2C3%3A83"
+        },
+        {
+          "rank": 2,
+          "title": "MAKING LOVE OUT OF NOTHING AT ALL",
+          "sourceId": "4. Making Love Out of Nothing at All, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 78.88921816659729,
+          "scores": {
+            "pitch": 71.71428571428572,
+            "interval": 77.28571428571429,
+            "contour": 100,
+            "rhythm": 77.00875832936175,
+            "meter": 9,
+            "structural": 71,
+            "skeleton": 57,
+            "pillarPitch": 63,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-7ca43704d8c2931a-88a85b71&start=1&end=1&source=search&targets=0.5%3A74%2C1%3A79%2C1.5%3A81%2C2%3A84%2C2.5%3A83%2C2.75%3A84%2C3%3A83"
+        },
+        {
+          "rank": 3,
+          "title": "MAKING LOVE OUT OF NOTHING AT ALL",
+          "sourceId": "4. Making Love Out of Nothing at All, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 78.88921816659729,
+          "scores": {
+            "pitch": 71.71428571428572,
+            "interval": 77.28571428571429,
+            "contour": 100,
+            "rhythm": 77.00875832936175,
+            "meter": 9,
+            "structural": 71,
+            "skeleton": 57,
+            "pillarPitch": 63,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-2b8463329b22a2dc-a71ddd21&start=1&end=1&source=search&targets=0.5%3A74%2C1%3A79%2C1.5%3A81%2C2%3A84%2C2.5%3A83%2C2.75%3A84%2C3%3A83"
+        },
+        {
+          "rank": 4,
+          "title": "티가 나요 (드라마\"너를 기억해\")",
+          "sourceId": "kysing/48897.xml",
+          "streamId": "P3:1:1",
+          "score": 76.0367161401509,
+          "scores": {
+            "pitch": 90.66666666666667,
+            "interval": 89.54666666666667,
+            "contour": 80,
+            "rhythm": 60.13214659850359,
+            "meter": 8,
+            "structural": 41,
+            "skeleton": 76,
+            "pillarPitch": 100,
+            "specificity": 77,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-24de077d4e6eb6e3-a71ddd21&start=15&end=15&source=search&targets=56.5%3A62%2C56.75%3A66%2C57%3A76%2C58%3A79%2C58.333333333333336%3A78%2C58.666666666666664%3A74"
+        },
+        {
+          "rank": 5,
+          "title": "INDIANA JONES THEME",
+          "sourceId": "4. Indiana Jones Theme, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 74.77608444303772,
+          "scores": {
+            "pitch": 71.42857142857143,
+            "interval": 72.97142857142858,
+            "contour": 66.66666666666666,
+            "rhythm": 90.9156442876713,
+            "meter": 2,
+            "structural": 41,
+            "skeleton": 39,
+            "pillarPitch": 50,
+            "specificity": 77,
+            "repeatPattern": 86,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-bbe4734829cbdf20-88a85b71&start=21&end=22&source=search&targets=81.5%3A62%2C82%3A62%2C82.5%3A62%2C83%3A65%2C83.5%3A64%2C83.75%3A65%2C84%3A64"
+        },
+        {
+          "rank": 6,
+          "title": "MAN OR MUPPET",
+          "sourceId": "4. Man or Muppet, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 73.85455581045943,
+          "scores": {
+            "pitch": 71.42857142857143,
+            "interval": 78.57142857142857,
+            "contour": 83.33333333333333,
+            "rhythm": 63.06485436967717,
+            "meter": 45,
+            "structural": 43,
+            "skeleton": 55,
+            "pillarPitch": 50,
+            "specificity": 77,
+            "repeatPattern": 90,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-a3f4adb4033ea0e1&start=19&end=20&source=search&targets=72%3A70%2C76%3A74%2C77%3A67%2C77.75%3A70%2C78%3A69%2C78.25%3A70%2C78.75%3A69"
+        },
+        {
+          "rank": 7,
+          "title": "MAN OR MUPPET",
+          "sourceId": "4. Man or Muppet, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 73.85455581045943,
+          "scores": {
+            "pitch": 71.42857142857143,
+            "interval": 78.57142857142857,
+            "contour": 83.33333333333333,
+            "rhythm": 63.06485436967717,
+            "meter": 45,
+            "structural": 43,
+            "skeleton": 55,
+            "pillarPitch": 50,
+            "specificity": 77,
+            "repeatPattern": 90,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-09eb48464e21f399-88a85b71&start=19&end=20&source=search&targets=72%3A70%2C76%3A74%2C77%3A67%2C77.75%3A70%2C78%3A69%2C78.25%3A70%2C78.75%3A69"
+        },
+        {
+          "rank": 8,
+          "title": "MAN OR MUPPET",
+          "sourceId": "4. Man or Muppet, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 73.85455581045943,
+          "scores": {
+            "pitch": 71.42857142857143,
+            "interval": 78.57142857142857,
+            "contour": 83.33333333333333,
+            "rhythm": 63.06485436967717,
+            "meter": 45,
+            "structural": 43,
+            "skeleton": 55,
+            "pillarPitch": 50,
+            "specificity": 77,
+            "repeatPattern": 90,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-1de9daa519b80db1-a71ddd21&start=19&end=20&source=search&targets=72%3A70%2C76%3A74%2C77%3A67%2C77.75%3A70%2C78%3A69%2C78.25%3A70%2C78.75%3A69"
+        },
+        {
+          "rank": 9,
+          "title": "MAN OR MUPPET",
+          "sourceId": "4. Man or Muppet, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P4:1:1",
+          "score": 73.85455581045943,
+          "scores": {
+            "pitch": 71.42857142857143,
+            "interval": 78.57142857142857,
+            "contour": 83.33333333333333,
+            "rhythm": 63.06485436967717,
+            "meter": 45,
+            "structural": 43,
+            "skeleton": 55,
+            "pillarPitch": 50,
+            "specificity": 77,
+            "repeatPattern": 90,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-6783bc847b3356f4-e2ac527d&start=19&end=20&source=search&targets=72%3A70%2C76%3A74%2C77%3A67%2C77.75%3A70%2C78%3A69%2C78.25%3A70%2C78.75%3A69"
+        },
+        {
+          "rank": 10,
+          "title": "CHA-LA HEAD CHA-LA",
+          "sourceId": "4. Cha-La Head Cha-La, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 73.80654068258784,
+          "scores": {
+            "pitch": 67.42857142857143,
+            "interval": 72.77142857142857,
+            "contour": 83.33333333333333,
+            "rhythm": 73.50927549334243,
+            "meter": 45,
+            "structural": 41,
+            "skeleton": 39,
+            "pillarPitch": 50,
+            "specificity": 77,
+            "repeatPattern": 81,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-e8f18ac4cd9a1046-88a85b71&start=50&end=51&source=search&targets=196%3A55%2C200%3A58%2C200.5%3A57%2C201%3A58%2C201.5%3A57%2C202%3A58%2C202.5%3A57"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 7,
+      "returnedCount": 29,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/TM09-L8-ornament-delete-preserve-time.json",
+      "initialPath": "../runs/TM09-L8-ornament-delete-preserve-time.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-cef6f737fa204cbf",
+      "sourceId": "3. La valse d_Amelie, Piano Solo.musicxml.xml",
+      "streamId": "P1:2:2",
+      "title": "LA VALSE D'AMELIE",
+      "composer": "Composed by Yann Tiersen\nArranged by Reflet des Nuages",
+      "baseStartIndex": 77,
+      "baseStartMeasure": 32,
+      "baseEndMeasure": 33,
+      "baseTargets": [
+        {
+          "onset": 77,
+          "pitchMidi": 48,
+          "measure": 32,
+          "beat": 1
+        },
+        {
+          "onset": 78,
+          "pitchMidi": 52,
+          "measure": 32,
+          "beat": 2
+        },
+        {
+          "onset": 80,
+          "pitchMidi": 62,
+          "measure": 33,
+          "beat": 1
+        },
+        {
+          "onset": 80.5,
+          "pitchMidi": 64,
+          "measure": 33,
+          "beat": 1.5
+        },
+        {
+          "onset": 81,
+          "pitchMidi": 65,
+          "measure": 33,
+          "beat": 2
+        },
+        {
+          "onset": 81.5,
+          "pitchMidi": 64,
+          "measure": 33,
+          "beat": 2.5
+        },
+        {
+          "onset": 82,
+          "pitchMidi": 65,
+          "measure": 33,
+          "beat": 3
+        },
+        {
+          "onset": 82.5,
+          "pitchMidi": 64,
+          "measure": 33,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 30,
+      "endOrdinal": 35,
+      "xmlHash": "d82bd375ad32c55f1bcd1cc60dbfc1ebc3f864cf864b4b13c93582e33bca4552",
+      "xmlError": null,
+      "eventsHash": "1de39c687cabc500fb535245cbac9a128c37fbaa109a66b05b38dbd26815b869",
+      "sourcePath": "K:/Music Analysis/musicxml/3. La valse d_Amelie, Piano Solo.musicxml.xml",
+      "sourceHash": "cef6f737fa204cbfb74b6ad86fe22eeb4e7f0112a5c063e8a53ff1b130a7965a"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m32:n2",
+          "xmlNoteId": "P1:m32:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 32,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 32,
+          "originalMeasureLabel": "32",
+          "onsetQ": {
+            "n": 77,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 48,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 21,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m32:n3",
+          "xmlNoteId": "P1:m32:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 32,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 32,
+          "originalMeasureLabel": "32",
+          "onsetQ": {
+            "n": 78,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 52,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 23,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m33:n2",
+          "xmlNoteId": "P1:m33:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 33,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 33,
+          "originalMeasureLabel": "33",
+          "onsetQ": {
+            "n": 80,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 62,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 29,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m33:n3",
+          "xmlNoteId": "P1:m33:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 33,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 33,
+          "originalMeasureLabel": "33",
+          "onsetQ": {
+            "n": 161,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m33:n4",
+          "xmlNoteId": "P1:m33:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 33,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 33,
+          "originalMeasureLabel": "33",
+          "onsetQ": {
+            "n": 81,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m33:n5",
+          "xmlNoteId": "P1:m33:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 33,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 33,
+          "originalMeasureLabel": "33",
+          "onsetQ": {
+            "n": 163,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m33:n6",
+          "xmlNoteId": "P1:m33:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 33,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 33,
+          "originalMeasureLabel": "33",
+          "onsetQ": {
+            "n": 82,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m33:n7",
+          "xmlNoteId": "P1:m33:n7",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 33,
+            "noteIndex": 7
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 33,
+          "originalMeasureLabel": "33",
+          "onsetQ": {
+            "n": 165,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/TM09-L8/context.musicxml",
+      "events": "../base-assets/TM09-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete-preserve-time"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

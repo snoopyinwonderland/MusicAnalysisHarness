@@ -1,0 +1,871 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH03-L6-ornament-delete",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH03-e0",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 2
+      },
+      {
+        "id": "SH03-e1",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e2",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e3",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e4",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.3359375
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH03-e0",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 2
+      },
+      {
+        "id": "SH03-e1",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e2",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e3",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH03-e4",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e5",
+        "kind": "note",
+        "pitchMidi": 64,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH03-e6",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.3359375
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "6음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 5음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "SH03-e5"
+    ],
+    "originalDuration": 6,
+    "queryDuration": 5.66796875,
+    "transformation": {
+      "omission": {
+        "eventId": "SH03-e5",
+        "index": 5,
+        "evidence": {
+          "index": 5,
+          "type": "passing",
+          "metric": 0.2,
+          "duration": 0.33203125,
+          "endpoints": [
+            "P1:m7:n3",
+            "P1:m7:n5"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-7c5ee0ca6528fe87",
+    "sourceId": "2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "UN DI, FELICE",
+    "composer": "Composed by Giuseppe Verdi\nArranged by Reflet des Nuages",
+    "baseStartIndex": 12,
+    "baseStartMeasure": 6,
+    "baseEndMeasure": 7,
+    "baseTargets": [
+      {
+        "onset": 15,
+        "pitchMidi": 67,
+        "measure": 6,
+        "beat": 1
+      },
+      {
+        "onset": 17,
+        "pitchMidi": 65,
+        "measure": 6,
+        "beat": 3
+      },
+      {
+        "onset": 18,
+        "pitchMidi": 64,
+        "measure": 7,
+        "beat": 1
+      },
+      {
+        "onset": 20,
+        "pitchMidi": 63,
+        "measure": 7,
+        "beat": 3
+      },
+      {
+        "onset": 20.33203125,
+        "pitchMidi": 64,
+        "measure": 7,
+        "beat": 3.33203125
+      },
+      {
+        "onset": 20.6640625,
+        "pitchMidi": 65,
+        "measure": 7,
+        "beat": 3.6640625
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 9717.83890000009,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 2,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "YELLOW SUBMARINE",
+          "sourceId": "3. Yellow Submarine, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 73.52370914936574,
+            "meter": 0,
+            "structural": 100,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-e6c837bb664dc6f5-88a85b71&start=53&end=55&source=search&targets=214%3A54%2C216%3A52%2C218%3A51%2C221%3A50%2C222%3A52"
+        },
+        {
+          "rank": 2,
+          "title": "ÐÐÑÑ ÐÑÑÑÐÐÐµÐ½ÐÐµ ÐÑÐÑÐ½Ð¾Ð¹ ÐÑÐ¼ÐÐ Ð² ÐÑÐÐÐÐµÑÑ (ÐÑÐÐÐÐµÑÑÑÐºÐÐ¹ Ð¼ÐÑÑ ÐÐÑÑ ÐÑÐÐÐÐµÑÑ)",
+          "sourceId": "mxl/2/51/QmcWzZKcYuTRoVxH5USSWdKzUE67NhGbKnW287Bjwvw1Gi.mxl",
+          "streamId": "P6:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 82.39875708861362,
+            "meter": 91,
+            "structural": 97,
+            "skeleton": 99,
+            "pillarPitch": 100,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 100
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-c31a1881506c1a80-2098637a&start=35&end=37&source=search&targets=68%3A74%2C69%3A72%2C70%3A71%2C72%3A70%2C72.5%3A72"
+        },
+        {
+          "rank": 3,
+          "title": "Psalm 90 - Herr du bist uns're Zuflucht",
+          "sourceId": "mxl/10/26/QmSjcutfPijpJPFnCwwpuuVbszjuAFHSg9WFtvMiFZZ8D7.mxl",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 93.0139341450388,
+            "meter": 15,
+            "structural": 94,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 86
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-18f79cb0f30bca02&start=17&end=19&source=search&targets=67%3A76%2C69%3A74%2C70%3A73%2C72.5%3A72%2C73%3A74"
+        },
+        {
+          "rank": 4,
+          "title": "Chorale",
+          "sourceId": "mxl/2/10/QmcAcXxP8kmmTdw8pn8xvHfrb2L5GrCqd5uQ44ETsDXusi.mxl",
+          "streamId": "P1:1:2",
+          "score": 96.68246759131688,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 93.0139341450388,
+            "meter": 82,
+            "structural": 43,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 46
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-bb3aca26b47db5bd-44e65995&start=14&end=16&source=search&targets=4356%3A71%2C4358%3A69%2C4359%3A68%2C4362%3A67%2C4362.5%3A69"
+        },
+        {
+          "rank": 5,
+          "title": "Exigence - MVMT IV",
+          "sourceId": "mxl/3/56/QmdzktB8a1QAwBc3xFAQvxffYXWpy9eZd2oH2RA8bABdUF.mxl",
+          "streamId": "P11:1:1",
+          "score": 96.33281759131687,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 58.5139341450388,
+            "meter": 73,
+            "structural": 100,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 100
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-6f9ee61d13feedb7-3b944251&start=33&end=38&source=search&targets=112%3A70%2C115.5%3A68%2C119%3A67%2C126%3A66%2C129.5%3A68"
+        },
+        {
+          "rank": 6,
+          "title": "Second Suite for Military Band Op.28 No.2",
+          "sourceId": "mxl/1/18/QmbEddJPo7HQoc91BAWGPNyGdeNwHbZw1Xu9zT4jtyJ9vH.mxl",
+          "streamId": "P12:1:1",
+          "score": 96.27289008322524,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 70.0139341450388,
+            "meter": 0,
+            "structural": 71,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 93
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-182f7285239dcc14-ac13f927&start=252&end=256&source=search&targets=864.5%3A40%2C867.5%3A38%2C870.5%3A37%2C873.5%3A36%2C875%3A38"
+        },
+        {
+          "rank": 7,
+          "title": "Adiós Nonino",
+          "sourceId": "Adiós Nonino, Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.22526759131688,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 81.5139341450388,
+            "meter": 40,
+            "structural": 80,
+            "skeleton": 91,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 56
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-171a101cecd773b5&start=18&end=19&source=search&targets=68%3A76%2C70%3A74%2C71%3A73%2C72%3A72%2C72.5%3A74"
+        },
+        {
+          "rank": 8,
+          "title": "IT'S A SMALL WORLD",
+          "sourceId": "3. It_s a Small World, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:1",
+          "score": 96.06596759131688,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 70.0139341450388,
+            "meter": 82,
+            "structural": 92,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 83
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-9daba41a7e27afb2-e7752bf1&start=41&end=44&source=search&targets=164%3A48%2C168%3A46%2C172%3A45%2C176%3A44%2C178%3A46"
+        },
+        {
+          "rank": 9,
+          "title": "IT'S A SMALL WORLD",
+          "sourceId": "3. It_s a Small World, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:1",
+          "score": 96.06596759131688,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 70.0139341450388,
+            "meter": 82,
+            "structural": 92,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 83
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-d62714f245907e60-7955bcfc&start=41&end=44&source=search&targets=164%3A48%2C168%3A46%2C172%3A45%2C176%3A44%2C178%3A46"
+        },
+        {
+          "rank": 10,
+          "title": "IT'S A SMALL WORLD",
+          "sourceId": "3. It_s a Small World, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:2:1",
+          "score": 96.06596759131688,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 70.0139341450388,
+            "meter": 82,
+            "structural": 92,
+            "skeleton": 94,
+            "pillarPitch": 95,
+            "specificity": 77,
+            "repeatPattern": 100,
+            "phrase": 83
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-3ee2cee34f2edd96-878db0d4&start=41&end=44&source=search&targets=164%3A48%2C168%3A46%2C172%3A45%2C176%3A44%2C178%3A46"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 2,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 5,
+      "returnedCount": 100,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH03-L6-ornament-delete.json",
+      "initialPath": "../runs/SH03-L6-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-7c5ee0ca6528fe87",
+      "sourceId": "2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "UN DI, FELICE",
+      "composer": "Composed by Giuseppe Verdi\nArranged by Reflet des Nuages",
+      "baseStartIndex": 12,
+      "baseStartMeasure": 6,
+      "baseEndMeasure": 7,
+      "baseTargets": [
+        {
+          "onset": 15,
+          "pitchMidi": 67,
+          "measure": 6,
+          "beat": 1
+        },
+        {
+          "onset": 17,
+          "pitchMidi": 65,
+          "measure": 6,
+          "beat": 3
+        },
+        {
+          "onset": 18,
+          "pitchMidi": 64,
+          "measure": 7,
+          "beat": 1
+        },
+        {
+          "onset": 20,
+          "pitchMidi": 63,
+          "measure": 7,
+          "beat": 3
+        },
+        {
+          "onset": 20.33203125,
+          "pitchMidi": 64,
+          "measure": 7,
+          "beat": 3.33203125
+        },
+        {
+          "onset": 20.6640625,
+          "pitchMidi": 65,
+          "measure": 7,
+          "beat": 3.6640625
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 4,
+      "endOrdinal": 9,
+      "xmlHash": "44d75189fe77158e586676127b5e2a6a2706bc34d80bc29edaaf6c5e9af7e159",
+      "xmlError": null,
+      "eventsHash": "ab7cccf01bdb4fc85f8c03aaea97d6c6e2c1b68fd4940bf8cebee2d672d9471b",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Un di, felice, Violin and Piano Duet.musicxml.xml",
+      "sourceHash": "7c5ee0ca6528fe87c6ae33eb9eb8309e9bd0f033e736f03fa87b025d92ed5de6"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m6:n1",
+          "xmlNoteId": "P1:m6:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 6,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 6,
+          "originalMeasureLabel": "6",
+          "onsetQ": {
+            "n": 15,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m6:n2",
+          "xmlNoteId": "P1:m6:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 6,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 6,
+          "originalMeasureLabel": "6",
+          "onsetQ": {
+            "n": 17,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n1",
+          "xmlNoteId": "P1:m7:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 18,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n2",
+          "xmlNoteId": "P1:m7:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "rest",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 19,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": null,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          }
+        },
+        {
+          "id": "P1:m7:n3",
+          "xmlNoteId": "P1:m7:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 20,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 63,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 29,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n4",
+          "xmlNoteId": "P1:m7:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 5205,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 597,
+            "d": 256
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 64,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m7:n5",
+          "xmlNoteId": "P1:m7:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 7,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 7,
+          "originalMeasureLabel": "7",
+          "onsetQ": {
+            "n": 2645,
+            "d": 128
+          },
+          "durationQ": {
+            "n": 43,
+            "d": 128
+          },
+          "beatQ": {
+            "n": 341,
+            "d": 128
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH03-L6/context.musicxml",
+      "events": "../base-assets/SH03-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

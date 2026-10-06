@@ -1,0 +1,22 @@
+{
+  "schema": "musicanote-user-structure-feedback/v1",
+  "caseId": "S-STRUCT-009",
+  "revision": 2,
+  "status": "user-preferred-interpretation-not-exclusive-gold",
+  "sourceSnapshot": "review-snapshot.json",
+  "sourceMusicXml": "context.musicxml",
+  "sourceHashReference": "feedback.json#/sourceHash",
+  "supersedes": "feedback-addendum.md: unresolved 45–50 measure reference",
+  "userDescription": "아 그러네요. 잘못 썼네. 32부터 39까지가 프레이즈 1, 40부터 47까지가 다음 프레이즈, 48부터 55, 56부터 65, 이렇게 나눌 수 있겠습니다.",
+  "earlierPreference": "첫 등장 Phrase 1+2는 하나의 호흡으로 묶는 것을 선호하지만 기존 두 Phrase 해석도 허용한다. 내부 음형은 Motif 수준에서 구분한다.",
+  "indexContract": "zero-based [startIndex, endIndexExclusive) in sourceSnapshot.work.notes",
+  "ranges": [
+    {"localNumber":1,"startMeasure":32,"endMeasure":39,"startIndex":49,"endIndexExclusive":67,"startEventId":"work-421a4e08f6839dbe-49","lastEventId":"work-421a4e08f6839dbe-66"},
+    {"localNumber":2,"startMeasure":40,"endMeasure":47,"startIndex":67,"endIndexExclusive":86,"startEventId":"work-421a4e08f6839dbe-67","lastEventId":"work-421a4e08f6839dbe-85"},
+    {"localNumber":3,"startMeasure":48,"endMeasure":55,"startIndex":86,"endIndexExclusive":105,"startEventId":"work-421a4e08f6839dbe-86","lastEventId":"work-421a4e08f6839dbe-104"},
+    {"localNumber":4,"startMeasure":56,"endMeasure":65,"startIndex":105,"endIndexExclusive":129,"startEventId":"work-421a4e08f6839dbe-105","lastEventId":"work-421a4e08f6839dbe-128","lastNoteOnsetMeasure":63,"lastNoteTieEndMeasure":65}
+  ],
+  "baselineVersion": "local-boundary-evidence-v1.16",
+  "baselineComparison": {"preferredInternalCutsToSuppress":[62,95,99,116],"preferredStartToRecover":[86],"note":"Evaluation targets only; not production conditions. Range 56–65 retains the tied D5 through measure65."},
+  "implementationStatus": "recorded-for-general-rule-evaluation-no-new-production-rule"
+}

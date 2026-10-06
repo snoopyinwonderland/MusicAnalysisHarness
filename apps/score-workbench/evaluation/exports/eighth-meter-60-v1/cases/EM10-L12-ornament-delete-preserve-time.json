@@ -1,0 +1,1304 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "eighth-meter-60-v1-EM10-L12-ornament-delete-preserve-time",
+  "createdAt": "2026-09-17",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/8",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "EM10-e0",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "EM10-e1",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "EM10-e2",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "EM10-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.375
+      },
+      {
+        "id": "EM10-e5",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 0.125
+      },
+      {
+        "id": "EM10-e6",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 1
+      },
+      {
+        "id": "EM10-e7",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "EM10-e8",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.375
+      },
+      {
+        "id": "EM10-e9",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.125
+      },
+      {
+        "id": "EM10-e10",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "EM10-e11",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.125
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/8",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "EM10-e0",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "EM10-e1",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "EM10-e2",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.375
+      },
+      {
+        "id": "EM10-e3",
+        "kind": "note",
+        "pitchMidi": 65,
+        "durationRatio": 0.125
+      },
+      {
+        "id": "EM10-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.375
+      },
+      {
+        "id": "EM10-e5",
+        "kind": "note",
+        "pitchMidi": 63,
+        "durationRatio": 0.125
+      },
+      {
+        "id": "EM10-e6",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 1
+      },
+      {
+        "id": "EM10-e7",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "EM10-e8",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.375
+      },
+      {
+        "id": "EM10-e9",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.125
+      },
+      {
+        "id": "EM10-e10",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "EM10-e11",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.125
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete-preserve-time",
+    "positive-probe"
+  ],
+  "description": "12음에서 장식음 후보 삭제, 앞 음으로 음가 흡수: 뒤 음 시작 시각 유지",
+  "changes": {
+    "changedSourceIds": [
+      "EM10-e3",
+      "EM10-e2"
+    ],
+    "originalDuration": 4.125,
+    "queryDuration": 4.125,
+    "transformation": {
+      "omission": {
+        "eventId": "EM10-e3",
+        "index": 3,
+        "evidence": {
+          "index": 3,
+          "type": "neighbor",
+          "metric": 0.2,
+          "duration": 0.125,
+          "endpoints": [
+            "P1:m3:n5",
+            "P1:m3:n7"
+          ]
+        },
+        "timing": "absorb-duration-into-previous",
+        "absorbedBy": "EM10-e2",
+        "previousDuration": 0.375,
+        "deletedDuration": 0.125
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-80d009a390385527",
+    "sourceId": "Beethoven/Beethoven, Ludwig van_5_6_Piano Sonata No.12 in A flat major, Op.26 1st.xml",
+    "streamId": "P1:1:1",
+    "title": "Beethoven Ludwig van 5 6 Piano Sonata No.12 in A flat major Op.26 1st",
+    "composer": "",
+    "baseStartIndex": 4,
+    "baseStartMeasure": 3,
+    "baseEndMeasure": 5,
+    "baseTargets": [
+      {
+        "onset": 3,
+        "pitchMidi": 68,
+        "measure": 3,
+        "beat": 1
+      },
+      {
+        "onset": 3.25,
+        "pitchMidi": 67,
+        "measure": 3,
+        "beat": 1.25
+      },
+      {
+        "onset": 3.5,
+        "pitchMidi": 67,
+        "measure": 3,
+        "beat": 1.5
+      },
+      {
+        "onset": 3.875,
+        "pitchMidi": 65,
+        "measure": 3,
+        "beat": 1.875
+      },
+      {
+        "onset": 4,
+        "pitchMidi": 67,
+        "measure": 3,
+        "beat": 2
+      },
+      {
+        "onset": 4.375,
+        "pitchMidi": 63,
+        "measure": 3,
+        "beat": 2.375
+      },
+      {
+        "onset": 4.5,
+        "pitchMidi": 68,
+        "measure": 4,
+        "beat": 1
+      },
+      {
+        "onset": 5.5,
+        "pitchMidi": 70,
+        "measure": 4,
+        "beat": 2
+      },
+      {
+        "onset": 6,
+        "pitchMidi": 73,
+        "measure": 5,
+        "beat": 1
+      },
+      {
+        "onset": 6.375,
+        "pitchMidi": 72,
+        "measure": 5,
+        "beat": 1.375
+      },
+      {
+        "onset": 6.5,
+        "pitchMidi": 70,
+        "measure": 5,
+        "beat": 1.5
+      },
+      {
+        "onset": 7,
+        "pitchMidi": 70,
+        "measure": 5,
+        "beat": 2
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 12196.80389999994,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 21276,
+            "stage": "candidate-scored",
+            "elapsedMs": 8934.884500000044,
+            "key": "work-80d009a390385527\u00005",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 97.26044771163484
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 3,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0.009099005442523185,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": null,
+                  "candidateIndex": 6,
+                  "cost": 0.2163,
+                  "type": "insertion"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 7,
+                  "cost": 0.3780470571428571,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 3,
+              "end": 14,
+              "coverage": 1,
+              "cost": 0.6034460625853802,
+              "similarity": 89.20001065024165
+            },
+            "windowStart": 1
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-17T05:22:45.322Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 97,
+      "representativeWindowRank": 1,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 11,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "Beethoven Ludwig van 5 6 Piano Sonata No.12 in A flat major Op.26 1st",
+          "sourceId": "Beethoven/Beethoven, Ludwig van_5_6_Piano Sonata No.12 in A flat major, Op.26 1st.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 97.26044771163484,
+            "meter": 100,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-80d009a390385527&start=3&end=5&source=search&targets=3%3A68%2C3.25%3A67%2C3.5%3A67%2C4%3A67%2C4.375%3A63%2C4.5%3A68%2C5.5%3A70%2C6%3A73%2C6.375%3A72%2C6.5%3A70%2C7%3A70"
+        },
+        {
+          "rank": 2,
+          "title": "Higher",
+          "sourceId": "kysing/77878.xml",
+          "streamId": "P1:1:1",
+          "score": 87.61470216321209,
+          "scores": {
+            "pitch": 96.18181818181819,
+            "interval": 96.79272727272728,
+            "contour": 90,
+            "rhythm": 35.26945390426977,
+            "meter": 11,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-148349674c994e2c-d08f9a8a&start=20&end=21&source=search&targets=78%3A62%2C78.5%3A62%2C79.5%3A62%2C80%3A62%2C80.25%3A57%2C80.75%3A62%2C81.25%3A64%2C81.75%3A67%2C82.5%3A66%2C83%3A64%2C83.5%3A64"
+        },
+        {
+          "rank": 3,
+          "title": "Ariodante HWV 33",
+          "sourceId": "mxl/1/26/QmbjwXW6VMLNHKXuDZs5SGSYQrqtE81U6VShfmvNfasHWM.mxl",
+          "streamId": "P2:2:5",
+          "score": 87.43398939679363,
+          "scores": {
+            "pitch": 96.88888888888889,
+            "interval": 96.65555555555557,
+            "contour": 87.5,
+            "rhythm": 80.12094506378588,
+            "meter": 53,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 9,
+          "url": "/score?workId=work-a8f0b9fe9c7bf240-6d4cc08f&start=30&end=32&source=search&targets=88%3A52%2C89%3A51%2C90%3A52%2C91%3A52%2C92%3A54%2C93%3A57%2C93.5%3A56%2C94%3A54%2C95%3A54"
+        },
+        {
+          "rank": 4,
+          "title": "He that has made his refuge God",
+          "sourceId": "mxl/3/36/QmdpfgDex1Y2Ae3CiaWzpHAyzdUMejhWVf6NYgtiwmbB6h.mxl",
+          "streamId": "P3:1:1",
+          "score": 86.5830075924458,
+          "scores": {
+            "pitch": 91.0909090909091,
+            "interval": 94.75636363636363,
+            "contour": 100,
+            "rhythm": 54.53402732655053,
+            "meter": 63,
+            "structural": 43,
+            "skeleton": 75,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 87,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-f71b07868b668840-a71ddd21&start=4&end=7&source=search&targets=16%3A57%2C18%3A56%2C20%3A56%2C22%3A56%2C23%3A52%2C24%3A57%2C25.5%3A59%2C26%3A61%2C27%3A59%2C27.5%3A57%2C28%3A57"
+        },
+        {
+          "rank": 5,
+          "title": "Adieu magnificques festins",
+          "sourceId": "mxl/7/6/QmP7Zr9oAmLUCNykT92VqEhJn9Ep5285TDHWfD3AaBidBq.mxl",
+          "streamId": "P1:1:1",
+          "score": 84.59438981665521,
+          "scores": {
+            "pitch": 92.22222222222223,
+            "interval": 92.6888888888889,
+            "contour": 100,
+            "rhythm": 63.97406691727681,
+            "meter": 62,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 86,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 9,
+          "url": "/score?workId=work-2526e16c62b555b1&start=20&end=24&source=search&targets=82%3A69%2C84%3A67%2C86%3A64%2C88%3A67%2C90%3A69%2C92%3A72%2C94%3A71%2C96%3A69%2C98%3A69"
+        },
+        {
+          "rank": 6,
+          "title": "The word of faith",
+          "sourceId": "mxl/7/28/QmPk3wYrciaFx4XSear2LPgBzDxkzJpLCkhTcRCCeHsQN1.mxl",
+          "streamId": "P1:1:1",
+          "score": 84.31609053142009,
+          "scores": {
+            "pitch": 94.9090909090909,
+            "interval": 92.92363636363635,
+            "contour": 80,
+            "rhythm": 55.31972065554627,
+            "meter": 84,
+            "structural": 43,
+            "skeleton": 75,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 95,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-36a46599396af3ca&start=13&end=16&source=search&targets=52%3A70%2C52.5%3A69%2C53.5%3A69%2C54%3A69%2C55%3A65%2C56%3A70%2C58%3A72%2C60%3A74%2C63%3A75%2C64%3A74%2C66%3A72"
+        },
+        {
+          "rank": 7,
+          "title": "6 Petits Duos Op.34",
+          "sourceId": "mxl/0/29/QmaKMCaMMbb4M15Uc7MS1YrDJTyyUHLxMd9gYc6shvN9xK.mxl",
+          "streamId": "P2:1:1",
+          "score": 83.59594876741957,
+          "scores": {
+            "pitch": 92.36363636363636,
+            "interval": 95.26545454545455,
+            "contour": 100,
+            "rhythm": 43.92776932371809,
+            "meter": 68,
+            "structural": 43,
+            "skeleton": 75,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 87,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-6bb984fd668da666-88a85b71&start=112&end=114&source=search&targets=264%3A64%2C264.25%3A63%2C264.5%3A63%2C265%3A63%2C265.75%3A59%2C266%3A64%2C266.75%3A66%2C267%3A69%2C267.5%3A66%2C267.75%3A64%2C268%3A64"
+        },
+        {
+          "rank": 8,
+          "title": "We are a band of merry children",
+          "sourceId": "mxl/14/34/QmWNY1HYty4XJNnQzM28wb51gskQ3RhtpL763CPQK6Tnhk.mxl",
+          "streamId": "P2:1:1",
+          "score": 83.46550992771336,
+          "scores": {
+            "pitch": 92.36363636363636,
+            "interval": 91.06545454545454,
+            "contour": 60,
+            "rhythm": 80.12094506378588,
+            "meter": 31,
+            "structural": 39,
+            "skeleton": 75,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 80,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-ec5f1b893b81365c-88a85b71&start=19&end=20&source=search&targets=72%3A57%2C72.5%3A57%2C73%3A57%2C73.5%3A57%2C74%3A53%2C75%3A58%2C76%3A60%2C77%3A60%2C77.75%3A60%2C78%3A60%2C79%3A60"
+        },
+        {
+          "rank": 9,
+          "title": "Tried and true",
+          "sourceId": "mxl/17/18/QmZELPuPGFRHzvL5rKb9R7fZXoz46MeHuXLtPsXQiKUC1v.mxl",
+          "streamId": "P2:1:1",
+          "score": 83.46550992771336,
+          "scores": {
+            "pitch": 92.36363636363636,
+            "interval": 91.06545454545454,
+            "contour": 60,
+            "rhythm": 80.12094506378588,
+            "meter": 31,
+            "structural": 39,
+            "skeleton": 75,
+            "pillarPitch": 100,
+            "specificity": 64,
+            "repeatPattern": 80,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-41309a4fe5b6bd4c-88a85b71&start=19&end=20&source=search&targets=72%3A57%2C72.5%3A57%2C73%3A57%2C73.5%3A57%2C74%3A53%2C75%3A58%2C76%3A60%2C77%3A60%2C77.75%3A60%2C78%3A60%2C79%3A60"
+        },
+        {
+          "rank": 10,
+          "title": "Domine salvum fac",
+          "sourceId": "mxl/14/38/QmWqasa88u8GQ8tjzjKoKowjmFBrCRA3ZRHbQ3UUbgyMPn.mxl",
+          "streamId": "P3:1:1",
+          "score": 81.5970808592293,
+          "scores": {
+            "pitch": 92.22222222222223,
+            "interval": 94.78888888888889,
+            "contour": 100,
+            "rhythm": 48.795282193359526,
+            "meter": 0,
+            "structural": 94,
+            "skeleton": 95,
+            "pillarPitch": 95,
+            "specificity": 64,
+            "repeatPattern": 92,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 9,
+          "url": "/score?workId=work-4d198ed21f4ac0c3-a71ddd21&start=23&end=26&source=search&targets=91.5%3A60%2C92%3A58%2C94%3A58%2C96%3A58%2C98%3A60%2C99%3A63%2C100%3A62%2C102%3A60%2C103.5%3A60"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 12,
+      "queryNoteLength": 11,
+      "returnedCount": 100,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/EM10-L12-ornament-delete-preserve-time.json",
+      "initialPath": "../runs/EM10-L12-ornament-delete-preserve-time.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-80d009a390385527",
+      "sourceId": "Beethoven/Beethoven, Ludwig van_5_6_Piano Sonata No.12 in A flat major, Op.26 1st.xml",
+      "streamId": "P1:1:1",
+      "title": "Beethoven Ludwig van 5 6 Piano Sonata No.12 in A flat major Op.26 1st",
+      "composer": "",
+      "baseStartIndex": 4,
+      "baseStartMeasure": 3,
+      "baseEndMeasure": 5,
+      "baseTargets": [
+        {
+          "onset": 3,
+          "pitchMidi": 68,
+          "measure": 3,
+          "beat": 1
+        },
+        {
+          "onset": 3.25,
+          "pitchMidi": 67,
+          "measure": 3,
+          "beat": 1.25
+        },
+        {
+          "onset": 3.5,
+          "pitchMidi": 67,
+          "measure": 3,
+          "beat": 1.5
+        },
+        {
+          "onset": 3.875,
+          "pitchMidi": 65,
+          "measure": 3,
+          "beat": 1.875
+        },
+        {
+          "onset": 4,
+          "pitchMidi": 67,
+          "measure": 3,
+          "beat": 2
+        },
+        {
+          "onset": 4.375,
+          "pitchMidi": 63,
+          "measure": 3,
+          "beat": 2.375
+        },
+        {
+          "onset": 4.5,
+          "pitchMidi": 68,
+          "measure": 4,
+          "beat": 1
+        },
+        {
+          "onset": 5.5,
+          "pitchMidi": 70,
+          "measure": 4,
+          "beat": 2
+        },
+        {
+          "onset": 6,
+          "pitchMidi": 73,
+          "measure": 5,
+          "beat": 1
+        },
+        {
+          "onset": 6.375,
+          "pitchMidi": 72,
+          "measure": 5,
+          "beat": 1.375
+        },
+        {
+          "onset": 6.5,
+          "pitchMidi": 70,
+          "measure": 5,
+          "beat": 1.5
+        },
+        {
+          "onset": 7,
+          "pitchMidi": 70,
+          "measure": 5,
+          "beat": 2
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 1,
+      "endOrdinal": 7,
+      "xmlHash": "5c4c18e058cfc6c85df28e54867cafaa8eb897121c9f36dee8c4765e1407d6bd",
+      "xmlError": null,
+      "eventsHash": "f7bfc66b9f6519f3580b26209882772e5bf2037c2030d0b2145c0bcc319d6a76",
+      "sourcePath": "K:/Music Analysis/musicxml/Beethoven/Beethoven, Ludwig van_5_6_Piano Sonata No.12 in A flat major, Op.26 1st.xml",
+      "sourceHash": "80d009a3903855278ca52538a57b36c7bc4217177fd99785e6040ceeaa6f5e89"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m3:n1",
+          "xmlNoteId": "P1:m3:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 2,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n4",
+          "xmlNoteId": "P1:m3:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 9,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 4
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n5",
+          "xmlNoteId": "P1:m3:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 5,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n6",
+          "xmlNoteId": "P1:m3:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 23,
+            "d": 8
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 8
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 65,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n7",
+          "xmlNoteId": "P1:m3:n7",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 7
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 3,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n8",
+          "xmlNoteId": "P1:m3:n8",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 8
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 27,
+            "d": 8
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 11,
+            "d": 8
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 63,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 30,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m4:n1",
+          "xmlNoteId": "P1:m4:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 7,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m4:n4",
+          "xmlNoteId": "P1:m4:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 9,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n1",
+          "xmlNoteId": "P1:m5:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 5,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 73,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m5:n5",
+          "xmlNoteId": "P1:m5:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 43,
+            "d": 8
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 8
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 72,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 35,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m5:n6",
+          "xmlNoteId": "P1:m5:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 11,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n10",
+          "xmlNoteId": "P1:m5:n10",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 10
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 6,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 8
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/8",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/EM10-L12/context.musicxml",
+      "events": "../base-assets/EM10-L12/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete-preserve-time"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/8"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "musicanote-evaluation-user-policy/v1",
+  "date": "2026-09-17",
+  "batch": "short-query-90-v1",
+  "provenance": "user-feedback",
+  "criteria": [
+    {"originalNotes": 6, "deletedNotes": 1, "classification": "optional-stress", "requireRetrieval": false},
+    {"originalNotes": 8, "deletedNotes": 1, "classification": "boundary-diagnostic", "requireRetrieval": false, "investigateZeroTop10": true}
+  ],
+  "rankOneRequired": false,
+  "preserveRawResults": true,
+  "productionChangesDeferred": true,
+  "nextTestPlan": {
+    "status": "planned-not-run",
+    "meter": "3/4",
+    "newSourceWorks": 10,
+    "originalNoteLengths": [12, 8],
+    "conditions": ["original", "ornament-delete-compress-time", "ornament-delete-preserve-following-onsets"],
+    "plannedSearches": 60,
+    "selection": "Source-only selection before retrieval; retain deleted note duration by extending preceding note in the time-preserving variant; record all edits and metric positions."
+  }
+}

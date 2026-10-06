@@ -1,0 +1,926 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH01-L6-ornament-delete",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH01-e0",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e2",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e3",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH01-e0",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e1",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e2",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e3",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH01-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "6음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 5음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "SH01-e1"
+    ],
+    "originalDuration": 3,
+    "queryDuration": 2.5,
+    "transformation": {
+      "omission": {
+        "eventId": "SH01-e1",
+        "index": 1,
+        "evidence": {
+          "index": 1,
+          "type": "passing",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P1:m3:n1",
+            "P1:m3:n3"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-5b2dc28a9f25d724",
+    "sourceId": "13 Jours en France Melody.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "13 JOURS EN FRANCE",
+    "composer": "Composed by Francis Lai\nArranged by Reflet des Nuages",
+    "baseStartIndex": 0,
+    "baseStartMeasure": 3,
+    "baseEndMeasure": 3,
+    "baseTargets": [
+      {
+        "onset": 6,
+        "pitchMidi": 68,
+        "measure": 3,
+        "beat": 1
+      },
+      {
+        "onset": 6.5,
+        "pitchMidi": 69,
+        "measure": 3,
+        "beat": 1.5
+      },
+      {
+        "onset": 7,
+        "pitchMidi": 71,
+        "measure": 3,
+        "beat": 2
+      },
+      {
+        "onset": 7.5,
+        "pitchMidi": 72,
+        "measure": 3,
+        "beat": 2.5
+      },
+      {
+        "onset": 8,
+        "pitchMidi": 74,
+        "measure": 3,
+        "beat": 3
+      },
+      {
+        "onset": 8.5,
+        "pitchMidi": 76,
+        "measure": 3,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 57,
+      "elapsedMs": 3729.2338000000454,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 1036,
+            "stage": "candidate-scored",
+            "elapsedMs": 710.3953000002075,
+            "key": "work-5b2dc28a9f25d724\u00000",
+            "local": 94.16278237328423,
+            "scores": {
+              "pitch": 97.2,
+              "interval": 96.78,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 15,
+              "adjustment": -14,
+              "matches": 0,
+              "conflicts": 1,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 81.93157696683753,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 0,
+              "pillarPitch": 0,
+              "interval": 0,
+              "contour": 0,
+              "queryNotes": 3,
+              "candidateNotes": 2,
+              "coverage": 0,
+              "strongCoverage": 0
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 2,
+                  "cost": 0.07065874285714287,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 1,
+              "end": 5,
+              "coverage": 1,
+              "cost": 0.07065874285714287,
+              "similarity": 97.09880255403284
+            },
+            "windowStart": 0
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 56,
+      "sourceScore": 96.70278030530633,
+      "representativeWindowRank": 57,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 5,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "HE'S A TRAMP",
+          "sourceId": "4. He_s a Tramp, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 0,
+            "structural": 33,
+            "skeleton": 92,
+            "pillarPitch": 95,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-dfb5389b180dad68-88a85b71&start=23&end=24&source=search&targets=94%3A66%2C95%3A69%2C96%3A70%2C97%3A72%2C98%3A74"
+        },
+        {
+          "rank": 2,
+          "title": "NEW YORK, NEW YORK",
+          "sourceId": "4. New York, New York, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 82,
+            "structural": 82,
+            "skeleton": 92,
+            "pillarPitch": 95,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-c537fe6fa109ec1d-d08f9a8a&start=83&end=84&source=search&targets=333.64453125%3A67%2C334.64453125%3A70%2C335.64453125%3A71%2C336.64453125%3A73%2C337.64453125%3A75"
+        },
+        {
+          "rank": 3,
+          "title": "NEW YORK, NEW YORK",
+          "sourceId": "4. New York, New York, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 82,
+            "structural": 82,
+            "skeleton": 92,
+            "pillarPitch": 95,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-a307682a9d267226-88a85b71&start=83&end=84&source=search&targets=333.64453125%3A67%2C334.64453125%3A70%2C335.64453125%3A71%2C336.64453125%3A73%2C337.64453125%3A75"
+        },
+        {
+          "rank": 4,
+          "title": "NEW YORK, NEW YORK",
+          "sourceId": "4. New York, New York, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 82,
+            "structural": 82,
+            "skeleton": 92,
+            "pillarPitch": 95,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-c3149202defecd01-a71ddd21&start=83&end=84&source=search&targets=333.64453125%3A67%2C334.64453125%3A70%2C335.64453125%3A71%2C336.64453125%3A73%2C337.64453125%3A75"
+        },
+        {
+          "rank": 5,
+          "title": "SOMEONE IS PRAYING FOR YOU",
+          "sourceId": "4. Someone Is Praying for You, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 6,
+            "structural": 41,
+            "skeleton": 84,
+            "pillarPitch": 86,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-17448005740c77ef&start=61&end=62&source=search&targets=185%3A59%2C185.5%3A62%2C186%3A63%2C186.5%3A65%2C187%3A67"
+        },
+        {
+          "rank": 6,
+          "title": "SOMEONE IS PRAYING FOR YOU",
+          "sourceId": "4. Someone Is Praying for You, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 6,
+            "structural": 41,
+            "skeleton": 84,
+            "pillarPitch": 86,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-6f56eb5c96c937cd-88a85b71&start=61&end=62&source=search&targets=185%3A59%2C185.5%3A62%2C186%3A63%2C186.5%3A65%2C187%3A67"
+        },
+        {
+          "rank": 7,
+          "title": "SOMEONE IS PRAYING FOR YOU",
+          "sourceId": "4. Someone Is Praying for You, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 6,
+            "structural": 41,
+            "skeleton": 84,
+            "pillarPitch": 86,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-b90437da15678225-a71ddd21&start=61&end=62&source=search&targets=185%3A59%2C185.5%3A62%2C186%3A63%2C186.5%3A65%2C187%3A67"
+        },
+        {
+          "rank": 8,
+          "title": "ROUNDTABLE RIVAL",
+          "sourceId": "5. Roundtable Rival, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 40,
+            "skeleton": 99,
+            "pillarPitch": 100,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-582c1c9f8816bdd7-5f596005&start=50&end=50&source=search&targets=196.25%3A41%2C196.5%3A44%2C196.75%3A45%2C197%3A47%2C197.25%3A49"
+        },
+        {
+          "rank": 9,
+          "title": "ROUNDTABLE RIVAL",
+          "sourceId": "5. Roundtable Rival, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 40,
+            "skeleton": 99,
+            "pillarPitch": 100,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-bede714649747d14-3ba9e1fb&start=50&end=50&source=search&targets=196.25%3A41%2C196.5%3A44%2C196.75%3A45%2C197%3A47%2C197.25%3A49"
+        },
+        {
+          "rank": 10,
+          "title": "ROUNDTABLE RIVAL",
+          "sourceId": "5. Roundtable Rival, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 29,
+            "skeleton": 99,
+            "pillarPitch": 100,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-b58a1d931bc338d0-88a85b71&start=50&end=50&source=search&targets=196.25%3A41%2C196.5%3A44%2C196.75%3A45%2C197%3A47%2C197.25%3A49"
+        },
+        {
+          "rank": 57,
+          "title": "13 JOURS EN FRANCE",
+          "sourceId": "13 Jours en France Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 96.70278030530633,
+          "scores": {
+            "pitch": 97.2,
+            "interval": 96.78,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 82,
+            "skeleton": 0,
+            "pillarPitch": 0,
+            "specificity": 93,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-5b2dc28a9f25d724&start=3&end=3&source=search&targets=6.5%3A69%2C7%3A71%2C7.5%3A72%2C8%3A74%2C8.5%3A76"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": 57,
+          "baselineRank": 1,
+          "exactCount": 14,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 94.16278237328423,
+            "pitch": 97.2,
+            "interval": 96.78,
+            "rhythm": 100,
+            "meter": 15,
+            "equality": 100,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 5,
+      "returnedCount": 100,
+      "exactCount": 14,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "text": "Rank/coverage needs review; this is not a confirmed relevance error.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "text": "Inspect the source passage and preceding candidates; do not require rank 1.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH01-L6-ornament-delete.json",
+      "initialPath": "../runs/SH01-L6-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-5b2dc28a9f25d724",
+      "sourceId": "13 Jours en France Melody.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "13 JOURS EN FRANCE",
+      "composer": "Composed by Francis Lai\nArranged by Reflet des Nuages",
+      "baseStartIndex": 0,
+      "baseStartMeasure": 3,
+      "baseEndMeasure": 3,
+      "baseTargets": [
+        {
+          "onset": 6,
+          "pitchMidi": 68,
+          "measure": 3,
+          "beat": 1
+        },
+        {
+          "onset": 6.5,
+          "pitchMidi": 69,
+          "measure": 3,
+          "beat": 1.5
+        },
+        {
+          "onset": 7,
+          "pitchMidi": 71,
+          "measure": 3,
+          "beat": 2
+        },
+        {
+          "onset": 7.5,
+          "pitchMidi": 72,
+          "measure": 3,
+          "beat": 2.5
+        },
+        {
+          "onset": 8,
+          "pitchMidi": 74,
+          "measure": 3,
+          "beat": 3
+        },
+        {
+          "onset": 8.5,
+          "pitchMidi": 76,
+          "measure": 3,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 1,
+      "endOrdinal": 5,
+      "xmlHash": "1f3f8dc7386aeab2863f3811fa5c88ded4dbe684712b6162825762af813485e2",
+      "xmlError": null,
+      "eventsHash": "c707c0540418427edb78ac135dd53b5a4be0faf8a459f57f37e4050b382ef491",
+      "sourcePath": "K:/Music Analysis/musicxml/13 Jours en France Melody.musicxml.xml",
+      "sourceHash": "5b2dc28a9f25d72417132b4a3e455442ad7e55b5a03436b67766aaa56be28e92"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m3:n1",
+          "xmlNoteId": "P1:m3:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 6,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n2",
+          "xmlNoteId": "P1:m3:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 13,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 69,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n3",
+          "xmlNoteId": "P1:m3:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 7,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m3:n4",
+          "xmlNoteId": "P1:m3:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 15,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 72,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 35,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n5",
+          "xmlNoteId": "P1:m3:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 8,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 74,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n6",
+          "xmlNoteId": "P1:m3:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 17,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH01-L6/context.musicxml",
+      "events": "../base-assets/SH01-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

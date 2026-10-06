@@ -1,0 +1,776 @@
+{
+  "schema": "musicanote-evaluation-review/v1",
+  "createdAt": "2026-09-17",
+  "cases": [
+    {
+      "caseId": "SH02-L6-original",
+      "observations": [
+        "Unmodified ANGEL source passage starts at raw index 249 / measure 137. Query and indexed source durations both equal [0.5,0.5,0.5,0.5,1,0.5].",
+        "The only captured scoring path uses index 232 / measure 131, same transposed intervals but durations [1,0.5,0.5,0.5,0.5,1]. Interval score 100, rhythm 71.25. Expected source absent among 82 exact plus 18 similar results."
+      ],
+      "diagnosis": "A different rhythmic occurrence was selected for scoring despite the exact source passage existing. Candidate-window selection and result truncation need investigation; original query itself is not changed.",
+      "proposal": "Compare multiple same-interval occurrences using full rhythm before choosing a representative; preserve source window provenance and test repeated-motif counterexamples.",
+      "status": "observed-not-fixed"
+    },
+    {
+      "caseId": "SH01-L8-ornament-delete",
+      "observations": [
+        "Expected source ranks 38. Top 10 labeled Exact all pass the independent pitch, onset and duration audit under one transposition and tempo scale."
+      ],
+      "diagnosis": "Seven-note simplified query genuinely matches other passages more exactly under these comparison dimensions. Lower source rank alone is not a scoring defect.",
+      "proposal": "Prefer asking for a longer distinctive continuation over forcing the original source above genuine exact matches.",
+      "status": "explained"
+    },
+    {
+      "caseId": "SH05-L8-ornament-delete",
+      "observations": [
+        "Expected source ranks 74. Top three Exact labels have maximum duration differences of 0.25 query beat after median tempo normalization; first two also have 0.25-beat onset differences."
+      ],
+      "diagnosis": "Default Exact labeling can conceal material rhythmic differences, consistent with the previously deferred strict-exact issue. This audit is not a full exact-option regression or human relevance judgment.",
+      "proposal": "Separate tolerant rhythm retrieval from explicit duration/rest exact classification, then reassess ranking without work-specific boosts.",
+      "status": "observed-not-fixed"
+    },
+    {
+      "caseId": "SH03-L8-pitch-change",
+      "observations": [
+        "UN DI, FELICE expected stream: inHits=true, inCandidates=false; no scored paths or rejection events for that stream. Expected source absent from returned results."
+      ],
+      "diagnosis": "Expected stream disappears between initial hits and alignment candidates, unlike a final similarity-score rejection.",
+      "proposal": "Audit short-query candidate truncation and retained anchor/offset diversity; compare cost and negative controls before expansion.",
+      "status": "observed-not-fixed"
+    },
+    {
+      "caseId": "SH01-L8-pitch-change",
+      "observations": [
+        "Expected melody source ranks 33 at score 97; ranks 1–3 are the 13 JOURS EN FRANCE Piano Solo, Violin and Piano Duet, and Trio sources at score 100.",
+        "The work is visible at the top through alternate arrangements. Source-file Top10 failure must not be reported as work retrieval failure."
+      ],
+      "diagnosis": "Expected-file rank and confirmed alternate-arrangement retrieval differ.",
+      "proposal": "Retain separate source-file and reviewed work-level outcomes; do not force the exact source ahead of other valid arrangements.",
+      "status": "explained"
+    },
+    {
+      "caseId": "SH01-L12-pitch-change",
+      "observations": [
+        "Expected source file ranks 4; ranks 1–3 all have title 13 JOURS EN FRANCE and are Piano Solo, Violin and Piano Duet, Violin/Cello/Piano Trio sources.",
+        "Rank 1–3 have reported score 100; expected source score 97."
+      ],
+      "diagnosis": "Source-file rank 4 does not mean the work disappeared; alternative arrangements occupy preceding ranks. This is not evidence of incorrect ranking.",
+      "proposal": "Keep source-file recall separate from analyst-confirmed work identity; do not force the original source to rank first.",
+      "status": "explained"
+    },
+    {
+      "caseId": "SH05-L12-ornament-delete",
+      "observations": [
+        "Expected source 2 Become 1 enters hits and candidates, but all 5 traced paths are rejected by low-information-floors.",
+        "Two scored paths reach local 93.0769, pitch 97.4545, interval 97.3018, rhythm 100 and coverage 1. Their equality score is 85.4545 and meter score 10.9091.",
+        "Current low-information floors require equality >=88 and meter >=60, among other conditions; these traced paths fail both. Deletion removes 0.25 beat, shifting subsequent query onsets."
+      ],
+      "diagnosis": "Candidate recall succeeds but low-information admission rejects high melodic similarity. Arrival-phase shift, repetitive pitch alignment and admission policy require joint review; not a simple missing candidate.",
+      "proposal": "Evaluate onset-phase consistency and competing ornament-omission paths for repetitive queries; retain strict negative controls and do not globally lower the floors.",
+      "status": "observed-not-fixed"
+    },
+    {
+      "caseId": "SH03-L12-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 12,
+          "queryNotes": 12,
+          "sourceRank": 1,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {
+            "inferior-window": 1,
+            "admission-floor": 3
+          },
+          "bestScoredTrace": {
+            "local": 81.79934855557117,
+            "pitch": 93.63636363636364,
+            "interval": 95.77454545454546,
+            "rhythm": 59.5021399654033,
+            "meter": 61.90909090909091,
+            "equality": 89.0909090909091,
+            "coverage": 0.9166666666666666,
+            "gaps": 1
+          }
+        }
+      ],
+      "diagnosis": "Source retrieved but some query attacks remain unmatched.",
+      "proposal": "Check which changed/retained notes were excluded, separately from successful work retrieval.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH09-L12-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 12,
+          "queryNotes": 11,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {
+            "low-information-floors": 4,
+            "query-coverage": 1
+          },
+          "bestScoredTrace": {
+            "local": 98.47847186401049,
+            "pitch": 100,
+            "interval": 100,
+            "rhythm": 87.70307714255739,
+            "meter": 23.977272727272727,
+            "equality": 100,
+            "coverage": 1,
+            "gaps": 1
+          }
+        }
+      ],
+      "diagnosis": "Expected stream entered scoring and has low-information-floor rejection evidence. Other traced rejections may also apply.",
+      "proposal": "Compare deletion-induced onset shifts and strict metrical/equality floors using repetitive-query negative controls; do not globally relax admission.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH04-L8-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 8,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {
+            "low-information-floors": 5
+          },
+          "bestScoredTrace": {
+            "local": 78.99174705883983,
+            "pitch": 82.5,
+            "interval": 85.8,
+            "rhythm": 49.534705819700726,
+            "meter": 9.375,
+            "equality": 64.28571428571429,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ],
+      "diagnosis": "Expected stream entered scoring and has low-information-floor rejection evidence. Other traced rejections may also apply.",
+      "proposal": "Compare deletion-induced onset shifts and strict metrical/equality floors using repetitive-query negative controls; do not globally relax admission.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH08-L8-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 8,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 1,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 74.62138606500923,
+            "pitch": 100,
+            "interval": 100,
+            "rhythm": 67.79569720126604,
+            "meter": 8.571428571428573,
+            "equality": 100,
+            "coverage": 0.875,
+            "gaps": 1
+          }
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH02-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH03-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH04-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 7,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {
+            "low-information-floors": 1
+          },
+          "bestScoredTrace": {
+            "local": 86.35670107923342,
+            "pitch": 96,
+            "interval": 95.6,
+            "rhythm": 28.073579721351045,
+            "meter": 57.5,
+            "equality": 80.95238095238095,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ],
+      "diagnosis": "Expected stream entered scoring and has low-information-floor rejection evidence. Other traced rejections may also apply.",
+      "proposal": "Compare deletion-induced onset shifts and strict metrical/equality floors using repetitive-query negative controls; do not globally relax admission.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH06-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH07-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH08-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": 73,
+          "baselineRank": 1,
+          "exactCount": 19,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 91.49899821238232,
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "rhythm": 100,
+            "meter": 8.571428571428573,
+            "equality": 95.23809523809524,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ],
+      "diagnosis": "Rank/coverage needs review; this is not a confirmed relevance error.",
+      "proposal": "Inspect the source passage and preceding candidates; do not require rank 1.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH09-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH10-L8-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": 33,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 89.71458991621898,
+            "pitch": 100,
+            "interval": 100,
+            "rhythm": 85.71428571428571,
+            "meter": 0,
+            "equality": 100,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ],
+      "diagnosis": "Rank/coverage needs review; this is not a confirmed relevance error.",
+      "proposal": "Inspect the source passage and preceding candidates; do not require rank 1.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH02-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": null,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH03-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 2,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH04-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH05-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH07-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 8,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH08-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 7,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH09-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH10-L6-pitch-change",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 6,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 14,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH01-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": 57,
+          "baselineRank": 1,
+          "exactCount": 14,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 94.16278237328423,
+            "pitch": 97.2,
+            "interval": 96.78,
+            "rhythm": 100,
+            "meter": 15,
+            "equality": 100,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ],
+      "diagnosis": "Rank/coverage needs review; this is not a confirmed relevance error.",
+      "proposal": "Inspect the source passage and preceding candidates; do not require rank 1.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH02-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": null,
+          "exactCount": 41,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH03-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 2,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH04-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH05-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 3,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "bestScoredTrace": {
+            "local": 64.34283304705711,
+            "pitch": 100,
+            "interval": 100,
+            "rhythm": 20.897404461925344,
+            "meter": 3.75,
+            "equality": 100,
+            "coverage": 0.8,
+            "gaps": 1
+          }
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH06-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 15,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH07-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 8,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH08-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 26,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH09-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 3,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    },
+    {
+      "caseId": "SH10-L6-ornament-delete",
+      "observations": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 6,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 94.75031079281274,
+            "pitch": 100,
+            "interval": 100,
+            "rhythm": 42.5,
+            "meter": 0,
+            "equality": 100,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ],
+      "diagnosis": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "proposal": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "observed-not-fixed",
+      "provenance": "automated-trace-review"
+    }
+  ]
+}

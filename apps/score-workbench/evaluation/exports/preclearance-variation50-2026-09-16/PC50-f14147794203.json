@@ -1,0 +1,318 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "PC50-f14147794203",
+  "createdAt": "2026-09-15",
+  "status": "draft",
+  "replayable": true,
+  "tags": [
+    "arpeggio-like",
+    "transpose-2"
+  ],
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": false,
+    "includeRests": true,
+    "events": [
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-85",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-86",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-87",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-88",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 2
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-89",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-90",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-91",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-92",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 1
+      }
+    ]
+  },
+  "expected": {
+    "sourceId": "kysing/27004.xml",
+    "workId": "work-896c5f47be50eb60-88a85b71",
+    "streamId": "P2:1:1",
+    "focus": [
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-85",
+        "onset": 104.75,
+        "pitchMidi": 69,
+        "measure": "27",
+        "measureOrdinal": 27
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-86",
+        "onset": 105,
+        "pitchMidi": 70,
+        "measure": "27",
+        "measureOrdinal": 27
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-87",
+        "onset": 105.5,
+        "pitchMidi": 72,
+        "measure": "27",
+        "measureOrdinal": 27
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-88",
+        "onset": 106,
+        "pitchMidi": 69,
+        "measure": "27",
+        "measureOrdinal": 27
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-89",
+        "onset": 108,
+        "pitchMidi": 72,
+        "measure": "28",
+        "measureOrdinal": 28
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-90",
+        "onset": 109,
+        "pitchMidi": 67,
+        "measure": "28",
+        "measureOrdinal": 28
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-91",
+        "onset": 109.5,
+        "pitchMidi": 72,
+        "measure": "28",
+        "measureOrdinal": 28
+      },
+      {
+        "id": "work-896c5f47be50eb60-88a85b71-92",
+        "onset": 110,
+        "pitchMidi": 69,
+        "measure": "28",
+        "measureOrdinal": 28
+      }
+    ],
+    "status": "source-retrieval-probe-not-human-relevance-label"
+  },
+  "observations": [
+    {
+      "source": "automated-search",
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "elapsedMs": 7068.660799999954,
+      "issues": [],
+      "invalidAlignmentRanks": []
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "K:\\MusicSearch\\evaluation\\runs\\preclearance-variation50-final-2026-09-16\\PC50-f14147794203.json",
+      "fingerprint": "bdf0b1378197a190336978848b108ebc1ae87b5ad1407866b44321c23c051cd7"
+    }
+  ],
+  "humanReview": {
+    "status": "unreviewed",
+    "rankingJustification": null
+  },
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "status": "automatic-unreviewed",
+    "identity": {
+      "sourceId": "kysing/27004.xml",
+      "workId": "work-896c5f47be50eb60-88a85b71",
+      "streamId": "P2:1:1"
+    },
+    "sourceSnapshot": {
+      "xmlHash": "1cd37a9cd13d65ddc0164b1f40fff946d2072655a2ef6e3b57f23fa26f486208",
+      "eventsHash": "054d1145d8cf1d4ba74968964f1ec134f798c46187bf5b32fd8715266afce0d7",
+      "xmlCaptureError": null
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-85",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "onset": 104.75,
+          "durationRatio": 0.25,
+          "measure": "27",
+          "measureOrdinal": 27,
+          "beat": 1.75,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-86",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "onset": 105,
+          "durationRatio": 0.5,
+          "measure": "27",
+          "measureOrdinal": 27,
+          "beat": 2,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-87",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 105.5,
+          "durationRatio": 0.5,
+          "measure": "27",
+          "measureOrdinal": 27,
+          "beat": 2.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-88",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "onset": 106,
+          "durationRatio": 2,
+          "measure": "27",
+          "measureOrdinal": 27,
+          "beat": 3,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-89",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 108,
+          "durationRatio": 1,
+          "measure": "28",
+          "measureOrdinal": 28,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-90",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "onset": 109,
+          "durationRatio": 0.5,
+          "measure": "28",
+          "measureOrdinal": 28,
+          "beat": 2,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-91",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "onset": 109.5,
+          "durationRatio": 0.5,
+          "measure": "28",
+          "measureOrdinal": 28,
+          "beat": 2.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-896c5f47be50eb60-88a85b71-92",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "onset": 110,
+          "durationRatio": 1,
+          "measure": "28",
+          "measureOrdinal": 28,
+          "beat": 3,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        }
+      ]
+    },
+    "context": {
+      "policy": "source snapshot context plus up-to-two-ordinal-measures original XML"
+    },
+    "assets": {
+      "musicXml": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B05\\context.musicxml",
+      "events": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B05\\events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "arpeggio-like",
+        "transpose-2"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4",
+          "noteCount": 8
+        }
+      ],
+      "exclusions": [
+        "Source retrieval is not proof of correct ranking or copyright infringement"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "alignment-review",
+        "transformation-comparison"
+      ]
+    }
+  }
+}

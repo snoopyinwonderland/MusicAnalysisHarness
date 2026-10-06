@@ -1,0 +1,320 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "PC50-89175a489b00",
+  "createdAt": "2026-09-15",
+  "status": "draft",
+  "replayable": true,
+  "tags": [
+    "stepwise",
+    "tempo-double"
+  ],
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": false,
+    "includeRests": true,
+    "events": [
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-122",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 2
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-123",
+        "kind": "note",
+        "pitchMidi": 60,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-124",
+        "kind": "note",
+        "pitchMidi": 58,
+        "durationRatio": 5
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-125",
+        "kind": "note",
+        "pitchMidi": 57,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-126",
+        "kind": "note",
+        "pitchMidi": 58,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-127",
+        "kind": "note",
+        "pitchMidi": 57,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-128",
+        "kind": "note",
+        "pitchMidi": 55,
+        "durationRatio": 8
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-129",
+        "kind": "note",
+        "pitchMidi": 53,
+        "durationRatio": 3
+      }
+    ]
+  },
+  "expected": {
+    "sourceId": "3. Endless Love, Violin, Cello and Piano Trio.musicxml.xml",
+    "workId": "work-bc068f1f4ca2254b-88a85b71",
+    "streamId": "P2:1:1",
+    "focus": [
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-122",
+        "onset": 218.5,
+        "pitchMidi": 62,
+        "measure": "55",
+        "measureOrdinal": 55
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-123",
+        "onset": 219.5,
+        "pitchMidi": 60,
+        "measure": "55",
+        "measureOrdinal": 55
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-124",
+        "onset": 220,
+        "pitchMidi": 58,
+        "measure": "56",
+        "measureOrdinal": 56
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-125",
+        "onset": 222.5,
+        "pitchMidi": 57,
+        "measure": "56",
+        "measureOrdinal": 56
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-126",
+        "onset": 223,
+        "pitchMidi": 58,
+        "measure": "56",
+        "measureOrdinal": 56
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-127",
+        "onset": 223.5,
+        "pitchMidi": 57,
+        "measure": "56",
+        "measureOrdinal": 56
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-128",
+        "onset": 224,
+        "pitchMidi": 55,
+        "measure": "57",
+        "measureOrdinal": 57
+      },
+      {
+        "id": "work-bc068f1f4ca2254b-88a85b71-129",
+        "onset": 228,
+        "pitchMidi": 53,
+        "measure": "58",
+        "measureOrdinal": 58
+      }
+    ],
+    "status": "source-retrieval-probe-not-human-relevance-label"
+  },
+  "observations": [
+    {
+      "source": "automated-search",
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "elapsedMs": 12525.191599999991,
+      "issues": [],
+      "invalidAlignmentRanks": []
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "K:\\MusicSearch\\evaluation\\runs\\preclearance-variation50-final-2026-09-16\\PC50-89175a489b00.json",
+      "fingerprint": "bdf0b1378197a190336978848b108ebc1ae87b5ad1407866b44321c23c051cd7"
+    }
+  ],
+  "humanReview": {
+    "status": "unreviewed",
+    "rankingJustification": null
+  },
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "status": "automatic-unreviewed",
+    "identity": {
+      "sourceId": "3. Endless Love, Violin, Cello and Piano Trio.musicxml.xml",
+      "workId": "work-bc068f1f4ca2254b-88a85b71",
+      "streamId": "P2:1:1"
+    },
+    "sourceSnapshot": {
+      "xmlHash": "e1355bc7201794d9fb39ab62ac2f6ffefe51ab9abe4fb01da58eacec7b98d17e",
+      "eventsHash": "7422c684b3a765199c45cdcee11c430d72ed39e523e1418eb7bcbd7b2a61db41",
+      "xmlCaptureError": null
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-122",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "onset": 218.5,
+          "durationRatio": 1,
+          "measure": "55",
+          "measureOrdinal": 55,
+          "beat": 3.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false,
+          "tieEndMeasure": 55
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-123",
+          "kind": "note",
+          "pitchMidi": 60,
+          "spelling": "C4",
+          "onset": 219.5,
+          "durationRatio": 0.5,
+          "measure": "55",
+          "measureOrdinal": 55,
+          "beat": 4.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-124",
+          "kind": "note",
+          "pitchMidi": 58,
+          "spelling": "Bb3",
+          "onset": 220,
+          "durationRatio": 2.5,
+          "measure": "56",
+          "measureOrdinal": 56,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false,
+          "tieEndMeasure": 56
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-125",
+          "kind": "note",
+          "pitchMidi": 57,
+          "spelling": "A3",
+          "onset": 222.5,
+          "durationRatio": 0.5,
+          "measure": "56",
+          "measureOrdinal": 56,
+          "beat": 3.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-126",
+          "kind": "note",
+          "pitchMidi": 58,
+          "spelling": "Bb3",
+          "onset": 223,
+          "durationRatio": 0.5,
+          "measure": "56",
+          "measureOrdinal": 56,
+          "beat": 4,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-127",
+          "kind": "note",
+          "pitchMidi": 57,
+          "spelling": "A3",
+          "onset": 223.5,
+          "durationRatio": 0.5,
+          "measure": "56",
+          "measureOrdinal": 56,
+          "beat": 4.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-128",
+          "kind": "note",
+          "pitchMidi": 55,
+          "spelling": "G3",
+          "onset": 224,
+          "durationRatio": 4,
+          "measure": "57",
+          "measureOrdinal": 57,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-bc068f1f4ca2254b-88a85b71-129",
+          "kind": "note",
+          "pitchMidi": 53,
+          "spelling": "F3",
+          "onset": 228,
+          "durationRatio": 1.5,
+          "measure": "58",
+          "measureOrdinal": 58,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        }
+      ]
+    },
+    "context": {
+      "policy": "source snapshot context plus up-to-two-ordinal-measures original XML"
+    },
+    "assets": {
+      "musicXml": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B02\\context.musicxml",
+      "events": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B02\\events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "stepwise",
+        "tempo-double"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4",
+          "noteCount": 8
+        }
+      ],
+      "exclusions": [
+        "Source retrieval is not proof of correct ranking or copyright infringement"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "alignment-review",
+        "transformation-comparison"
+      ]
+    }
+  }
+}

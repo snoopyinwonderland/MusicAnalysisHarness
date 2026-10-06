@@ -1,0 +1,326 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "PC50-57eec2840de6",
+  "createdAt": "2026-09-15",
+  "status": "draft",
+  "replayable": true,
+  "tags": [
+    "repeated-note",
+    "transpose-octave"
+  ],
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": false,
+    "includeRests": true,
+    "events": [
+      {
+        "id": "work-183856781fbd38b7-7",
+        "kind": "note",
+        "pitchMidi": 85,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "work-183856781fbd38b7-8",
+        "kind": "note",
+        "pitchMidi": 86,
+        "durationRatio": 2
+      },
+      {
+        "id": "gap-work-183856781fbd38b7-9",
+        "kind": "rest",
+        "pitchMidi": null,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "work-183856781fbd38b7-9",
+        "kind": "note",
+        "pitchMidi": 83,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-183856781fbd38b7-10",
+        "kind": "note",
+        "pitchMidi": 83,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-183856781fbd38b7-11",
+        "kind": "note",
+        "pitchMidi": 83,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-183856781fbd38b7-12",
+        "kind": "note",
+        "pitchMidi": 83,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "work-183856781fbd38b7-13",
+        "kind": "note",
+        "pitchMidi": 85,
+        "durationRatio": 1
+      },
+      {
+        "id": "work-183856781fbd38b7-14",
+        "kind": "note",
+        "pitchMidi": 85,
+        "durationRatio": 2.5
+      }
+    ]
+  },
+  "expected": {
+    "sourceId": "3. Endless Love, Violin and Piano Duet.musicxml.xml",
+    "workId": "work-183856781fbd38b7",
+    "streamId": "P1:1:1",
+    "focus": [
+      {
+        "id": "work-183856781fbd38b7-7",
+        "onset": 17.75,
+        "pitchMidi": 73,
+        "measure": "5",
+        "measureOrdinal": 5
+      },
+      {
+        "id": "work-183856781fbd38b7-8",
+        "onset": 18,
+        "pitchMidi": 74,
+        "measure": "5",
+        "measureOrdinal": 5
+      },
+      {
+        "id": "work-183856781fbd38b7-9",
+        "onset": 21.5,
+        "pitchMidi": 71,
+        "measure": "6",
+        "measureOrdinal": 6
+      },
+      {
+        "id": "work-183856781fbd38b7-10",
+        "onset": 22,
+        "pitchMidi": 71,
+        "measure": "6",
+        "measureOrdinal": 6
+      },
+      {
+        "id": "work-183856781fbd38b7-11",
+        "onset": 23,
+        "pitchMidi": 71,
+        "measure": "6",
+        "measureOrdinal": 6
+      },
+      {
+        "id": "work-183856781fbd38b7-12",
+        "onset": 24,
+        "pitchMidi": 71,
+        "measure": "7",
+        "measureOrdinal": 7
+      },
+      {
+        "id": "work-183856781fbd38b7-13",
+        "onset": 24.5,
+        "pitchMidi": 73,
+        "measure": "7",
+        "measureOrdinal": 7
+      },
+      {
+        "id": "work-183856781fbd38b7-14",
+        "onset": 25.5,
+        "pitchMidi": 73,
+        "measure": "7",
+        "measureOrdinal": 7
+      }
+    ],
+    "status": "source-retrieval-probe-not-human-relevance-label"
+  },
+  "observations": [
+    {
+      "source": "automated-search",
+      "sourceRank": 1,
+      "sourceWindowProxyRank": 1,
+      "elapsedMs": 2918.4614,
+      "issues": [],
+      "invalidAlignmentRanks": []
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "K:\\MusicSearch\\evaluation\\runs\\preclearance-variation50-final-2026-09-16\\PC50-57eec2840de6.json",
+      "fingerprint": "bdf0b1378197a190336978848b108ebc1ae87b5ad1407866b44321c23c051cd7"
+    }
+  ],
+  "humanReview": {
+    "status": "unreviewed",
+    "rankingJustification": null
+  },
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "status": "automatic-unreviewed",
+    "identity": {
+      "sourceId": "3. Endless Love, Violin and Piano Duet.musicxml.xml",
+      "workId": "work-183856781fbd38b7",
+      "streamId": "P1:1:1"
+    },
+    "sourceSnapshot": {
+      "xmlHash": "456865375f68c6def9070cb6e9dc41d915043a5f7c56cdf0985a07032528de16",
+      "eventsHash": "cead38ec016d3fad6dbaddaf610408cefa1c9a8d18a28c3935fecfd65350b2ac",
+      "xmlCaptureError": null
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "work-183856781fbd38b7-7",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "onset": 17.75,
+          "durationRatio": 0.25,
+          "measure": "5",
+          "measureOrdinal": 5,
+          "beat": 2.75,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-183856781fbd38b7-8",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "onset": 18,
+          "durationRatio": 2,
+          "measure": "5",
+          "measureOrdinal": 5,
+          "beat": 3,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-183856781fbd38b7-9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "onset": 21.5,
+          "durationRatio": 0.5,
+          "measure": "6",
+          "measureOrdinal": 6,
+          "beat": 2.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-183856781fbd38b7-10",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "onset": 22,
+          "durationRatio": 1,
+          "measure": "6",
+          "measureOrdinal": 6,
+          "beat": 3,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-183856781fbd38b7-11",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "onset": 23,
+          "durationRatio": 1,
+          "measure": "6",
+          "measureOrdinal": 6,
+          "beat": 4,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-183856781fbd38b7-12",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "onset": 24,
+          "durationRatio": 0.5,
+          "measure": "7",
+          "measureOrdinal": 7,
+          "beat": 1,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false
+        },
+        {
+          "id": "work-183856781fbd38b7-13",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "onset": 24.5,
+          "durationRatio": 1,
+          "measure": "7",
+          "measureOrdinal": 7,
+          "beat": 1.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false,
+          "tieEndMeasure": 7
+        },
+        {
+          "id": "work-183856781fbd38b7-14",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "onset": 25.5,
+          "durationRatio": 2.5,
+          "measure": "7",
+          "measureOrdinal": 7,
+          "beat": 2.5,
+          "meter": "4/4",
+          "tieStart": false,
+          "tieStop": false,
+          "tieEndMeasure": 7
+        }
+      ]
+    },
+    "context": {
+      "policy": "source snapshot context plus up-to-two-ordinal-measures original XML"
+    },
+    "assets": {
+      "musicXml": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B01\\context.musicxml",
+      "events": "evaluation\\exports\\preclearance-variation50-2026-09-16\\B01\\events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "repeated-note",
+        "transpose-octave"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4",
+          "noteCount": 8
+        }
+      ],
+      "exclusions": [
+        "Source retrieval is not proof of correct ranking or copyright infringement"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "alignment-review",
+        "transformation-comparison"
+      ]
+    }
+  }
+}

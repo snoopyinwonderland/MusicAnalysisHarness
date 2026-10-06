@@ -1,0 +1,954 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH06-L8-ornament-delete",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH06-e0",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e1",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e2",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e4",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 2
+      },
+      {
+        "id": "SH06-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH06-e6",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH06-e7",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 1
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH06-e0",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e1",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e2",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e3",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH06-e4",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 2
+      },
+      {
+        "id": "SH06-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH06-e6",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 1
+      },
+      {
+        "id": "SH06-e7",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 1
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "8음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 7음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "SH06-e3"
+    ],
+    "originalDuration": 7,
+    "queryDuration": 6.5,
+    "transformation": {
+      "omission": {
+        "eventId": "SH06-e3",
+        "index": 3,
+        "evidence": {
+          "index": 3,
+          "type": "passing",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P3:m40:n3",
+            "P3:m40:n5"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-9357c9a4be1d8280",
+    "sourceId": "2. Last Christmas, Violin, Cello and Piano Trio.xml",
+    "streamId": "P3:1:1",
+    "title": "Last Christmas",
+    "composer": "Arranged by Reflet des Nuages",
+    "baseStartIndex": 191,
+    "baseStartMeasure": 40,
+    "baseEndMeasure": 41,
+    "baseTargets": [
+      {
+        "onset": 156,
+        "pitchMidi": 74,
+        "measure": 40,
+        "beat": 1
+      },
+      {
+        "onset": 156.5,
+        "pitchMidi": 73,
+        "measure": 40,
+        "beat": 1.5
+      },
+      {
+        "onset": 157,
+        "pitchMidi": 73,
+        "measure": 40,
+        "beat": 2
+      },
+      {
+        "onset": 157.5,
+        "pitchMidi": 71,
+        "measure": 40,
+        "beat": 2.5
+      },
+      {
+        "onset": 158,
+        "pitchMidi": 69,
+        "measure": 40,
+        "beat": 3
+      },
+      {
+        "onset": 160,
+        "pitchMidi": 76,
+        "measure": 41,
+        "beat": 1
+      },
+      {
+        "onset": 161,
+        "pitchMidi": 76,
+        "measure": 41,
+        "beat": 2
+      },
+      {
+        "onset": 162,
+        "pitchMidi": 76,
+        "measure": 41,
+        "beat": 3
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 12731.635599999921,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "Lost Stars (영화\"Begin Again\")",
+          "sourceId": "kysing/79374.xml",
+          "streamId": "P8:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 75.35714285714286,
+            "meter": 9,
+            "structural": 29,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-3c257ae7441d40d0-a9e64f59&start=63&end=64&source=search&targets=250.25%3A65%2C250.5%3A64%2C251%3A64%2C251.5%3A60%2C252%3A67%2C252.5%3A67%2C253%3A67"
+        },
+        {
+          "rank": 2,
+          "title": "Iphigénie en Aulide Wq.40",
+          "sourceId": "mxl/5/22/QmfGfWNgG8XrHsc8uXkB9GQua7ptT62HPpyDJJq5MaUs1Y.mxl",
+          "streamId": "P19:1:1",
+          "score": 96.92204435046558,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 77.5,
+            "meter": 2,
+            "structural": 79,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-ceee6abbc59b1cc3&start=1&end=3&source=search&targets=6620.5%3A72%2C6621%3A71%2C6622%3A71%2C6622.5%3A67%2C6623%3A74%2C6624%3A74%2C6625%3A74"
+        },
+        {
+          "rank": 3,
+          "title": "The Lord is loving unto every man",
+          "sourceId": "mxl/0/19/QmafJqknDrUhpE1Lk6VYWM2jhxuccVzr3CrGyoNPuQyTky.mxl",
+          "streamId": "P2:1:1",
+          "score": 95.82798787475987,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 91.78571428571428,
+            "meter": 87,
+            "structural": 43,
+            "skeleton": 79,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-1cadc0caf6c073e6-88a85b71&start=28&end=31&source=search&targets=108%3A63%2C110%3A62%2C111%3A62%2C112%3A58%2C122%3A65%2C124%3A65%2C126%3A65"
+        },
+        {
+          "rank": 4,
+          "title": "Veränderungen über einen Walzer Op.120",
+          "sourceId": "mxl/8/26/QmQjjtEVQpEBdzsbFjzhXE4ayv9Xvcjcqk5CCbMRzg59W7.mxl",
+          "streamId": "P1:2:5",
+          "score": 95.06077142857143,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 67.14285714285714,
+            "meter": 94,
+            "structural": 41,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-c08fd06e5e6a582e-57f4f3bb&start=96&end=97&source=search&targets=3467.195833333333%3A44%2C3468.195833333333%3A43%2C3469.195833333333%3A43%2C3470.195833333333%3A39%2C3471.195833333333%3A46%2C3472.195833333333%3A46%2C3473.195833333333%3A46"
+        },
+        {
+          "rank": 5,
+          "title": "1982",
+          "sourceId": "kysing/77317.xml",
+          "streamId": "P1:1:1",
+          "score": 94.91961914006897,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 66.77873213976648,
+            "meter": 15,
+            "structural": 71,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-e3be67f6c585e4ac-d08f9a8a&start=11&end=12&source=search&targets=42.5%3A69%2C43%3A68%2C43.5%3A68%2C45%3A64%2C45.5%3A71%2C46.5%3A71%2C47.5%3A71"
+        },
+        {
+          "rank": 6,
+          "title": "O sacrum convivium (full anthem) (Webbe wrote a verse anthem as well)",
+          "sourceId": "mxl/9/13/QmRcvP2S7KQqtFU6aCr5SzGZi7aGPcMvpHXMjZrkALP6eg.mxl",
+          "streamId": "P1:1:1",
+          "score": 94.28534322118786,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 64.63587499690934,
+            "meter": 81,
+            "structural": 39,
+            "skeleton": 78,
+            "pillarPitch": 86,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-71f0a4edb34a2b0c&start=7&end=8&source=search&targets=24%3A67%2C25.5%3A66%2C26%3A66%2C27%3A62%2C28%3A69%2C30%3A69%2C31%3A69"
+        },
+        {
+          "rank": 7,
+          "title": "그대라면 좋겠어",
+          "sourceId": "kysing/94405.xml",
+          "streamId": "P2:1:1",
+          "score": 94.27587834856199,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 51.792696431662094,
+            "meter": 94,
+            "structural": 71,
+            "skeleton": 78,
+            "pillarPitch": 86,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-7d4f1b2ea506b39f-88a85b71&start=45&end=46&source=search&targets=176%3A67%2C176.5%3A66%2C177.5%3A66%2C179.5%3A62%2C180%3A69%2C180.75%3A69%2C181.5%3A69"
+        },
+        {
+          "rank": 8,
+          "title": "The gospel train (oatman)",
+          "sourceId": "mxl/9/49/QmRVSup47GaRtH4twwPg3bFBpfjs7fgByENHyh5W7qggG1.mxl",
+          "streamId": "P1:1:1",
+          "score": 94.15974320197184,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 67.14285714285714,
+            "meter": 2,
+            "structural": 89,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-ad238e1a6676c8b0&start=5&end=6&source=search&targets=21.5%3A67%2C22%3A66%2C22.5%3A66%2C23%3A62%2C24%3A69%2C24.5%3A69%2C25%3A69"
+        },
+        {
+          "rank": 9,
+          "title": "There's a train that runs from the earth to the sky",
+          "sourceId": "mxl/13/42/QmVsKB9LJfdCCkRk8Fei3yAbH49br1uVwZSruQZJLHosGL.mxl",
+          "streamId": "P1:1:1",
+          "score": 94.15974320197184,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 67.14285714285714,
+            "meter": 2,
+            "structural": 89,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-e93f8b0e90e29de9&start=5&end=6&source=search&targets=21.5%3A67%2C22%3A66%2C22.5%3A66%2C23%3A62%2C24%3A69%2C24.5%3A69%2C25%3A69"
+        },
+        {
+          "rank": 10,
+          "title": "PANG!",
+          "sourceId": "kysing/29150.xml",
+          "streamId": "P1:1:1",
+          "score": 94.14040190738683,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 77.5,
+            "meter": 9,
+            "structural": 41,
+            "skeleton": 96,
+            "pillarPitch": 97,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 58
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-d5c8768fc65b903e&start=37&end=38&source=search&targets=146.125%3A76%2C146.25%3A75%2C146.375%3A75%2C147.25%3A71%2C147.5%3A78%2C147.75%3A78%2C148%3A78"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 0,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 7,
+      "returnedCount": 97,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH06-L8-ornament-delete.json",
+      "initialPath": "../runs/SH06-L8-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-9357c9a4be1d8280",
+      "sourceId": "2. Last Christmas, Violin, Cello and Piano Trio.xml",
+      "streamId": "P3:1:1",
+      "title": "Last Christmas",
+      "composer": "Arranged by Reflet des Nuages",
+      "baseStartIndex": 191,
+      "baseStartMeasure": 40,
+      "baseEndMeasure": 41,
+      "baseTargets": [
+        {
+          "onset": 156,
+          "pitchMidi": 74,
+          "measure": 40,
+          "beat": 1
+        },
+        {
+          "onset": 156.5,
+          "pitchMidi": 73,
+          "measure": 40,
+          "beat": 1.5
+        },
+        {
+          "onset": 157,
+          "pitchMidi": 73,
+          "measure": 40,
+          "beat": 2
+        },
+        {
+          "onset": 157.5,
+          "pitchMidi": 71,
+          "measure": 40,
+          "beat": 2.5
+        },
+        {
+          "onset": 158,
+          "pitchMidi": 69,
+          "measure": 40,
+          "beat": 3
+        },
+        {
+          "onset": 160,
+          "pitchMidi": 76,
+          "measure": 41,
+          "beat": 1
+        },
+        {
+          "onset": 161,
+          "pitchMidi": 76,
+          "measure": 41,
+          "beat": 2
+        },
+        {
+          "onset": 162,
+          "pitchMidi": 76,
+          "measure": 41,
+          "beat": 3
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 38,
+      "endOrdinal": 43,
+      "xmlHash": "be36d55594f8f5a22b54b1fa4f09511e691ca943d71d5fa4142b7aada8f6d114",
+      "xmlError": null,
+      "eventsHash": "f6c41ef225cad21f5e2eca00a957d419dfe4afd5b33db982bf1775bc09039c81",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Last Christmas, Violin, Cello and Piano Trio.xml",
+      "sourceHash": "9357c9a4be1d82802580af51bcc1b0c57841f71343c35f8dddf5ba1bc4d4519a"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P3:m40:n1",
+          "xmlNoteId": "P3:m40:n1",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 40,
+            "noteIndex": 1
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 156,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 74,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P3:m40:n2",
+          "xmlNoteId": "P3:m40:n2",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 40,
+            "noteIndex": 2
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 313,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 73,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 35,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P3:m40:n3",
+          "xmlNoteId": "P3:m40:n3",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 40,
+            "noteIndex": 3
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 157,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 73,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 35,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P3:m40:n4",
+          "xmlNoteId": "P3:m40:n4",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 40,
+            "noteIndex": 4
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 315,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P3:m40:n5",
+          "xmlNoteId": "P3:m40:n5",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 40,
+            "noteIndex": 5
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 40,
+          "originalMeasureLabel": "40",
+          "onsetQ": {
+            "n": 158,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 69,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P3:m41:n1",
+          "xmlNoteId": "P3:m41:n1",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 41,
+            "noteIndex": 1
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 41,
+          "originalMeasureLabel": "41",
+          "onsetQ": {
+            "n": 160,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P3:m41:n2",
+          "xmlNoteId": "P3:m41:n2",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 41,
+            "noteIndex": 2
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 41,
+          "originalMeasureLabel": "41",
+          "onsetQ": {
+            "n": 161,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P3:m41:n3",
+          "xmlNoteId": "P3:m41:n3",
+          "xmlLocator": {
+            "partId": "P3",
+            "measureOrdinal": 41,
+            "noteIndex": 3
+          },
+          "partId": "P3",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 41,
+          "originalMeasureLabel": "41",
+          "onsetQ": {
+            "n": 162,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH06-L8/context.musicxml",
+      "events": "../base-assets/SH06-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

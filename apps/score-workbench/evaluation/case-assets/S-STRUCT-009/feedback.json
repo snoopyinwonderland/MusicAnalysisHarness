@@ -1,0 +1,342 @@
+{
+  "caseId": "S-STRUCT-009",
+  "status": "user-feedback-not-gold",
+  "description": "Phrase1/2와6/7은 같은 멜로디인데 경계가 다르다. 반복 파악의 일관성을 개선해야 한다.",
+  "sourceHash": "5cd5d5025487c893585e34a54b168dd6af77a53678fac2eef411f37689dcb0cd",
+  "engineVersion": "local-boundary-evidence-v1.16",
+  "reference": {
+    "startEventId": "work-421a4e08f6839dbe-0",
+    "lastEventId": "work-421a4e08f6839dbe-17"
+  },
+  "repeat": {
+    "startEventId": "work-421a4e08f6839dbe-49",
+    "lastEventId": "work-421a4e08f6839dbe-66"
+  },
+  "correspondence": [
+    {
+      "left": "work-421a4e08f6839dbe-0",
+      "right": "work-421a4e08f6839dbe-49",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-1",
+      "right": "work-421a4e08f6839dbe-50",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-2",
+      "right": "work-421a4e08f6839dbe-51",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-3",
+      "right": "work-421a4e08f6839dbe-52",
+      "pitchEqual": true,
+      "durations": [
+        2,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-4",
+      "right": "work-421a4e08f6839dbe-53",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-5",
+      "right": "work-421a4e08f6839dbe-54",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-6",
+      "right": "work-421a4e08f6839dbe-55",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-7",
+      "right": "work-421a4e08f6839dbe-56",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-8",
+      "right": "work-421a4e08f6839dbe-57",
+      "pitchEqual": true,
+      "durations": [
+        3,
+        2
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-9",
+      "right": "work-421a4e08f6839dbe-58",
+      "pitchEqual": true,
+      "durations": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-10",
+      "right": "work-421a4e08f6839dbe-59",
+      "pitchEqual": true,
+      "durations": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-11",
+      "right": "work-421a4e08f6839dbe-60",
+      "pitchEqual": true,
+      "durations": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-12",
+      "right": "work-421a4e08f6839dbe-61",
+      "pitchEqual": true,
+      "durations": [
+        2,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-13",
+      "right": "work-421a4e08f6839dbe-62",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-14",
+      "right": "work-421a4e08f6839dbe-63",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-15",
+      "right": "work-421a4e08f6839dbe-64",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-16",
+      "right": "work-421a4e08f6839dbe-65",
+      "pitchEqual": true,
+      "durations": [
+        1,
+        1
+      ]
+    },
+    {
+      "left": "work-421a4e08f6839dbe-17",
+      "right": "work-421a4e08f6839dbe-66",
+      "pitchEqual": true,
+      "durations": [
+        3,
+        2
+      ]
+    }
+  ],
+  "boundaryEvidence": [
+    {
+      "index": 9,
+      "nextEventId": "work-421a4e08f6839dbe-9",
+      "previousEventId": "work-421a4e08f6839dbe-8",
+      "gap": 1.5,
+      "boundary": {
+        "index": 9,
+        "strength": 1,
+        "supported": true,
+        "reliable": true,
+        "state": "boundary",
+        "continuity": 0,
+        "cues": [
+          {
+            "name": "pitch-discontinuity",
+            "strength": 0.05,
+            "evidence": {
+              "localPeak": 0.2,
+              "method": "neighbor-relative, LBDM-inspired"
+            }
+          },
+          {
+            "name": "ioi-discontinuity",
+            "strength": 0.178571,
+            "evidence": {
+              "localPeak": 0.714286,
+              "method": "neighbor-relative, LBDM-inspired"
+            }
+          },
+          {
+            "name": "observed-gap",
+            "strength": 0.814386,
+            "evidence": {
+              "gapRatio": 1.5,
+              "relativeTo": "local IOI or duration",
+              "explicitOnsets": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "nextEventId": "work-421a4e08f6839dbe-13",
+      "previousEventId": "work-421a4e08f6839dbe-12",
+      "gap": 0,
+      "boundary": {
+        "index": 13,
+        "strength": 0.113636,
+        "supported": false,
+        "reliable": false,
+        "state": "unknown",
+        "continuity": 0,
+        "cues": [
+          {
+            "name": "ioi-discontinuity",
+            "strength": 0.113636,
+            "evidence": {
+              "localPeak": 0.454545,
+              "method": "neighbor-relative, LBDM-inspired"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "index": 58,
+      "nextEventId": "work-421a4e08f6839dbe-58",
+      "previousEventId": "work-421a4e08f6839dbe-57",
+      "gap": 1,
+      "boundary": {
+        "index": 58,
+        "strength": 0.49,
+        "supported": false,
+        "reliable": true,
+        "state": "continuous",
+        "continuity": 0.9,
+        "cues": [
+          {
+            "name": "pitch-discontinuity",
+            "strength": 0.05,
+            "evidence": {
+              "localPeak": 0.2,
+              "method": "neighbor-relative, LBDM-inspired"
+            }
+          },
+          {
+            "name": "ioi-discontinuity",
+            "strength": 0.125,
+            "evidence": {
+              "localPeak": 0.5,
+              "method": "neighbor-relative, LBDM-inspired"
+            }
+          },
+          {
+            "name": "observed-gap",
+            "strength": 0.75,
+            "evidence": {
+              "gapRatio": 1,
+              "relativeTo": "local IOI or duration",
+              "explicitOnsets": true
+            }
+          },
+          {
+            "name": "recurring-motif-answer-continuation",
+            "strength": 0.9,
+            "evidence": {
+              "groupId": "recurring-motif-phrase-frame-53",
+              "signatureKey": "8|-2,-2,-1,1,-3,3,4|1,1,1,1,2,1,1,1|1,1,1,1,3,1,1",
+              "occurrenceCount": 4,
+              "frameStartIndex": 49,
+              "motifCoreIndex": 53,
+              "internalBoundaryIndex": 58,
+              "frameEndIndex": 62,
+              "leadAttacks": 4,
+              "coreAttacks": 5,
+              "answerAttacks": 4,
+              "requiresCadenceReview": true
+            }
+          }
+        ],
+        "rawStrength": 0.925,
+        "primaryLevel": "subphrase-cell",
+        "suppressedBy": "recurring-motif-phrase-frame-53"
+      }
+    },
+    {
+      "index": 62,
+      "nextEventId": "work-421a4e08f6839dbe-62",
+      "previousEventId": "work-421a4e08f6839dbe-61",
+      "gap": 1,
+      "boundary": {
+        "index": 62,
+        "strength": 0.833333,
+        "supported": true,
+        "reliable": true,
+        "state": "boundary",
+        "continuity": 0,
+        "cues": [
+          {
+            "name": "ioi-discontinuity",
+            "strength": 0.083333,
+            "evidence": {
+              "localPeak": 0.333333,
+              "method": "neighbor-relative, LBDM-inspired"
+            }
+          },
+          {
+            "name": "observed-gap",
+            "strength": 0.75,
+            "evidence": {
+              "gapRatio": 1,
+              "relativeTo": "local IOI or duration",
+              "explicitOnsets": true
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diagnosis": "Boundary58 is demoted by recurring-motif-answer-continuation; boundary62 is promoted by a one-quarter rest unlike reference13. Full pitch recurrence exists but rhythm/rest changes and partial-frame suppression conflict.",
+  "decision": "defer-new-rule-until-full-recurrence-and-local-closure-validation"
+}

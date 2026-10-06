@@ -1,0 +1,35 @@
+import {readFileSync,writeFileSync,existsSync,mkdirSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+import {alignStructureTemplate} from '../src/music/structureTemplateAlignment.ts';
+import {sourceClosure} from '../server/phrase-source-closure.mjs';
+import {sourceMeterTimeline,reviewClosureInMeter} from '../server/phrase-meter-review.mjs';
+const [caseId,revision,firstText,secondText,run]=process.argv.slice(2),first=Number(firstText),second=Number(secondText);
+if(!/^S-STRUCT-\d+$/.test(caseId)||![revision,run].every(s=>/^[-a-zA-Z0-9]+$/.test(s))||!Number.isInteger(first)||second!==first+1)throw Error('case revision adjacent-phrase-numbers run required');
+const root=resolve('evaluation/case-assets',caseId),baseline=JSON.parse(readFileSync(resolve(root,revision,'baseline.json'))),snapshot=JSON.parse(readFileSync(resolve(root,'review-snapshot.json'))),evidence=JSON.parse(readFileSync(resolve(root,revision,'notation-evidence.json')));
+if(snapshot.xmlSha256!==baseline.sourceHash||evidence.sourceHash!==baseline.sourceHash)throw Error('Source mismatch');
+const sourceHash=createHash('sha256').update(readFileSync(resolve(root,'context.musicxml'))).digest('hex');if(sourceHash!==baseline.sourceHash)throw Error('XML changed');
+const notes=snapshot.work.notes,left=baseline.spans.find(s=>s.phraseNumber===first),right=baseline.spans.find(s=>s.phraseNumber===second);
+if(!left||!right||left.endIndexExclusive!==right.startIndex)throw Error('Invalid adjacent spans');
+const select=s=>notes.slice(s.startIndex,s.endIndexExclusive);
+const combined={...left,phraseNumber:null,phraseNumbers:[first,second],endIndexExclusive:right.endIndexExclusive,endEventId:right.endEventId,endMeasure:right.endMeasure};
+const beamSummary=s=>{const ids=new Set(evidence.mappings.filter(m=>m.index>=s.startIndex&&m.index<s.endIndexExclusive).map(m=>m.sourceEventId));return evidence.beamGroups.filter(g=>g.level===1&&g.eventIds.some(id=>ids.has(id))).map(g=>({id:g.id,count:g.eventIds.length,complete:g.complete,fullyInside:g.eventIds.every(id=>ids.has(id))}))};
+const comparisons=baseline.spans.filter(s=>s.endIndexExclusive<=left.startIndex).map(template=>({template,beamGroups:beamSummary(template),merge:alignStructureTemplate(select(template),select(combined)),keepFirst:alignStructureTemplate(select(template),select(left)),keepSecond:alignStructureTemplate(select(template),select(right))}));
+const sourceChecks=Object.fromEntries([...new Set([right.startIndex-1,...baseline.spans.filter(s=>s.endIndexExclusive<=right.endIndexExclusive).map(s=>s.endIndexExclusive-1)])].map(index=>[index,sourceClosure(evidence,notes,index)]));
+for(const c of comparisons){
+ c.sourceGapComparisons=c.merge.status==='compared'?c.merge.alignmentRefs.filter(p=>p.leftIndex>0&&p.rightIndex>0).map(p=>({left:sourceClosure(evidence,notes,c.template.startIndex+p.leftIndex-1),right:sourceClosure(evidence,notes,combined.startIndex+p.rightIndex-1)})).filter(p=>p.left.explicitRestDuration>0||p.right.explicitRestDuration>0):[];
+}
+const meterTimeline=sourceMeterTimeline(readFileSync(resolve(root,'context.musicxml'),'utf8'),evidence.streamId.split(':')[0]);
+const meterChecks=Object.fromEntries(Object.entries(sourceChecks).map(([i,c])=>[i,reviewClosureInMeter(c,evidence,meterTimeline)]));
+const dependencies=['scripts/compare-phrase-structure.mjs','src/music/structureTemplateAlignment.ts','src/music/motifSimilarity.ts','server/phrase-source-closure.mjs','server/phrase-meter-review.mjs'];
+const codeHashes=Object.fromEntries(dependencies.map(path=>[path,createHash('sha256').update(readFileSync(path)).digest('hex')]));
+const report={schema:'phrase-structure-shadow/v0.1',createdAt:new Date().toISOString(),codeHashes,caseId,revision,baselineEngineHash:baseline.engineHash,sourceHash,mode:'shadow-no-ui-change',decision:'cannot_judge',reason:'Uncalibrated comparisons require review; beam/meter adapter incomplete',first:left,second:right,combined,beamGroups:beamSummary(combined),internalBoundary:baseline.analysis.boundaries.find(b=>b.index===right.startIndex),comparisons};
+const output=resolve(root,run);if(existsSync(output))throw Error('Refusing overwrite');mkdirSync(output);
+report.sourceChecks=sourceChecks;
+report.meterChecks=meterChecks;
+writeFileSync(resolve(output,'comparison.json'),JSON.stringify(report,null,2));
+const lines=['# Phrase 구조 비교 — shadow 결과','',`대상: Phrase ${first}+${second}. 자동적용 없음. 결정: 판단 보류.`, '', '| 기준 | 결합 유사도 | 첫 구간만 | 둘째 구간만 | 결합 coverage | 시작 연속 일치음 | 끝음 대응 |','|---|---:|---:|---:|---:|---:|---|',...comparisons.map(c=>`| Phrase ${c.template.phraseNumber} | ${c.merge.similarity??'-'} | ${c.keepFirst.similarity??'-'} | ${c.keepSecond.similarity??'-'} | ${c.merge.coverage??'-'} | ${c.merge.prefix?.alignedAttackCount??'-'} | ${c.merge.terminal?.bothEndpointsPaired??'-'} |`),'','점수는 기존 Motif 비교기의 미보정 수치이며 병합확률이 아니다. 부분구간 비교와 결합 비교는 길이가 다르므로 점수 차이만으로 결론내리지 않는다.','beam 묶음은 원본 관찰로 별도 저장하고 쉼은 정렬쌍의 inferred gap으로 비교했다. 명시적 rest와의 검증 및 박자/타이체인 보강은 남아 있다.'];
+lines.push('','## 원본 tie / 쉼 대조','', '단위는 quarter이며 기준 박의 길이와는 다르다. 아래 일치는 XML 음가와 기존 데이터의 일치이지 종결 판정이 아니다.', '', '| 끝음 index (0부터) | 원본 연결 음표 수 | 누적 음가 | 명시적 쉼 | 음가 일치 | 쉼 일치 | 상태 |','|---|---:|---:|---:|---|---|---|',...Object.entries(sourceChecks).map(([i,r])=>`| ${i} | ${r.sourceNoteIds?.length??'-'} | ${r.sourceDuration??'-'} | ${r.explicitRestDuration??'-'} | ${r.durationMatches??'-'} | ${r.gapMatches??'-'} | ${r.reason??r.status} |`),'','마디를 넘는 연결은 이전 마디의 끝을 별도 검증하지 못하므로 조건부 관찰이다. 명시적 쉼은 보강했지만 meter/tie 정규화는 여전히 완전한 Canonical 검증이 아니다.');
+lines.push('','## 박자 기준의 경계 보호 검토','', '| 끝음 index | 박자 | 음가(박) | 쉼(박) | 판단 |','|---|---|---:|---:|---|',...Object.entries(meterChecks).map(([i,r])=>`| ${i} | ${r.meter?`${r.meter.count}/${r.meter.unit}`:'unknown'} | ${r.durationBeats??'-'} | ${r.restBeats??'-'} | ${r.decision}: ${r.reasons?.join(', ')||r.reason||'병합 승인 아님'} |`),'','기존 v1.14의 긴 쉼/긴 도착음 보호 기준을 오프라인에서 재사용했다. 보호 조건이 없다는 것만으로 합치지 않는다.');
+writeFileSync(resolve(output,'review.md'),lines.join('\n'));
+console.log(lines.join('\n'));

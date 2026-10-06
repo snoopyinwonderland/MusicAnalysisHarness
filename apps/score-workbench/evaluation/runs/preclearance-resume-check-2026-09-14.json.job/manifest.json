@@ -1,0 +1,64 @@
+{
+  "schema": "preclearance-job/1",
+  "fingerprint": {
+    "snapshotId": "8ed71ff0fc3845bb91aaab13804ed0385e2e336418ca2b13cbb43f646bc303cf",
+    "snapshotHash": "0d46f0a4fac5e6ad3bc80dab7057ef8dda05320b5a47f92451302df7f54998ec",
+    "selection": {
+      "version": "preclearance-selection/1",
+      "maximumTasks": 1,
+      "minimumNotes": 7,
+      "maximumNotes": 48,
+      "maximumRepeatRatio": 0.65,
+      "minimumIntervalKinds": 3,
+      "maximumOverlap": 0.7,
+      "minimumKnownMelodyRole": 0.35,
+      "weights": {
+        "melodicProminence": 0.25,
+        "repetition": 0.2,
+        "structuralPosition": 0.2,
+        "metricalDuration": 0.15,
+        "cadence": 0.1,
+        "structuralTone": 0.1
+      }
+    },
+    "resultLimit": 30,
+    "includeSelf": false,
+    "database": {
+      "path": "K:\\MusicSearch\\data\\search-index-v2\\search.sqlite",
+      "size": 28887048192,
+      "mtimeMs": 1788871621598.7124,
+      "wal": null
+    },
+    "code": [
+      [
+        "search-api.mjs",
+        "5d825eca5a44e3734da6d62b776aa330ba496e318ea0b07e81d24e970816306d"
+      ],
+      [
+        "retrieval-cache.mjs",
+        "734618bcfd28f0562653b936f88bf6c0b93d1576d2239a9253539423da6d5c52"
+      ],
+      [
+        "preclearance-search.mjs",
+        "3a85d3c3895bbfd08015f49ebb5917b497440ccd64ac37c4f68623c8c542ceaa"
+      ],
+      [
+        "structure-analysis-adapter.mjs",
+        "037d232c7a666b72c898c34c6d97025a5e2acc8ca08a39741b21b3cee752804a"
+      ],
+      [
+        "phrase-boundaries.mjs",
+        "cb3e20e06485ec5bec61b51d7af544154961a373bf0e04296839ea9aa33cd116"
+      ],
+      [
+        "seed-windows.mjs",
+        "f6d0c9509f4b638afeefa4b0e3a58982f98c02cb44ad07dd0885e3fa7b0a6df3"
+      ]
+    ],
+    "searchEnvironment": {
+      "MUSICANOTE_PROFILE_SEARCH": "1",
+      "MUSICANOTE_RETRIEVAL_CACHE": "1"
+    }
+  },
+  "hash": "5f656733e428c132458d6f2b45bfaec02cd931b6a0de7ffee36ff00da419ada3"
+}

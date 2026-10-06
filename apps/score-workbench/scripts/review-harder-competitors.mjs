@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {join} from 'node:path';
+const dir=process.argv[2],suite=JSON.parse(readFileSync(join(dir,'suite.json'))),summary=JSON.parse(readFileSync(join(dir,'summary.json')));
+const title=x=>String(x).normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+const rows=[];
+for(const c of suite.cases){let brief=summary.runs.find(r=>r.caseId===c.caseId);const retry=join(dir,'retry-180s',c.caseId+'.json');const usedRetry=brief?.status!=='completed'&&existsSync(retry);const r=JSON.parse(readFileSync(usedRetry?retry:join(dir,c.caseId+'.json')));if(r.status!=='completed')continue;if(usedRetry)brief=r;const all=[...r.result.exact,...r.result.similar],source=all.find(x=>x.work.sourceId===c.expected.sourceId),proxy=all.findIndex(x=>title(x.work.title)===title(c.expected.title));
+ const limit=source?all.indexOf(source):3;
+ const higher=all.slice(0,Math.min(10,limit)).map((x,i)=>({rank:i+1,title:x.work.title,sourceId:x.work.sourceId,start:x.startMeasure,end:x.endMeasure,kind:x.kind,ranking:x.ranking,local:x.localSimilarity,scores:x.scores,sameTitleProxy:title(x.work.title)===title(c.expected.title),scoreRelation:!source?'source-not-returned':Math.abs(x.ranking-source.ranking)<1e-6?'tied-ranking':x.localSimilarity>source.localSimilarity&&x.scores.interval>=source.scores.interval?'stronger-local-and-interval':'mixed-evidence-needs-review'}));
+ rows.push({caseId:c.caseId,sourceRank:brief.sourceRank,sameTitleProxyRank:proxy<0?null:proxy+1,sourceWindowProxyRank:brief.sourceWindowProxyRank,higherCandidates:higher,humanVerdict:'unreviewed',warning:'Title equality is not verified work identity. Metric dominance is not a musical relevance verdict.'});
+}writeFileSync(join(dir,'competitor-review.json'),JSON.stringify({rows},null,2));console.log(JSON.stringify({cases:rows.length,sameTitleProxyFound:rows.filter(r=>r.sameTitleProxyRank).length,sourceFound:rows.filter(r=>r.sourceRank).length}));

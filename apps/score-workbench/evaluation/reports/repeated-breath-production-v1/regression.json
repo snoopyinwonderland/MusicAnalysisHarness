@@ -1,0 +1,86 @@
+{
+  "version": "local-boundary-evidence-v1.15",
+  "codeHashes": {
+    "server/phrase-boundaries.mjs": "071dce38728263ab2a3847e505eb77e7ac25aaaf07463fcb9fa6e971f239c454",
+    "server/repeated-breath-rule.mjs": "45dcc532de34f66a86009e945104d486fe9e4e9dc82f763921809bb7d4f25f37",
+    "server/phrase-breath-symbols.mjs": "35f97e2cca5f61b9713d3f16e32d7236daf68a6af5c1a6306232f56befec8dfe"
+  },
+  "rows": [
+    {
+      "caseId": "004",
+      "sourceHash": "2aa84a8385adb471b9f9f77a9b1ea44b562f7c38c415f13270ae02320f7d83cf",
+      "snapshotHash": "d2142d065f8187f2b419335abb0e6a1de1e35e8a9575c81a5294fd193bb50ed2",
+      "changed": [],
+      "evidence": {
+        "decisions": [],
+        "comparisons": 0,
+        "status": "complete"
+      }
+    },
+    {
+      "caseId": "005",
+      "sourceHash": "5262519faf644779893a97843e7601aeb9a2ce1a017faa726c8f9b5798047126",
+      "snapshotHash": "d3c13deb65541c50b2d8bfb28246dc66bd4222ef1c22d829a1c593d9db630a00",
+      "changed": [],
+      "evidence": {
+        "decisions": [],
+        "comparisons": 0,
+        "status": "complete"
+      }
+    },
+    {
+      "caseId": "006",
+      "sourceHash": "6eaae4861c93a539e9b0608480b0a573a81b7de3c7e90b4e3f0950603a0eafac",
+      "snapshotHash": "5b6ee9f47f967c7ad1adfcee4246d2b305ad0f76c99a52a22baf34a10532c719",
+      "changed": [],
+      "evidence": {
+        "decisions": [],
+        "comparisons": 0,
+        "status": "complete"
+      }
+    },
+    {
+      "caseId": "007",
+      "sourceHash": "3817b61638e9efc048d8caac9a8f2a26093224ff6a94836c4fbe02073846d15b",
+      "snapshotHash": "ef7ff03672a6d2e5a4e94ce06b66d04536ac3dec9f7e144eea5dc007afe4af0d",
+      "changed": [],
+      "evidence": {
+        "decisions": [],
+        "comparisons": 0,
+        "status": "complete"
+      }
+    },
+    {
+      "caseId": "008",
+      "sourceHash": "4e78a1a6baf5bc0a2596e6fe4b2790daafc4485ade4ac7855140a7d76bf7c39c",
+      "snapshotHash": "6f3e3de00700b5d3467d9ae9c2f2616dae104a0e9170ce439fb4c70db599278a",
+      "changed": [
+        {
+          "index": 35,
+          "eventId": "work-15fa42f2e80b3722-35",
+          "supported": false
+        }
+      ],
+      "evidence": {
+        "decisions": [
+          {
+            "boundaryIndex": 35,
+            "sourceStart": 0,
+            "sourceEnd": 30,
+            "targetStart": 30,
+            "targetEnd": 60,
+            "sourceBoundaryIndex": 5,
+            "sourceEventId": "work-15fa42f2e80b3722-5",
+            "targetEventId": "work-15fa42f2e80b3722-35",
+            "pitchSupport": 0.9,
+            "rhythmSupport": 0.8620689655172413,
+            "gapQuarters": 0.5,
+            "beatQuarters": 1
+          }
+        ],
+        "comparisons": 1,
+        "status": "complete"
+      }
+    }
+  ]
+}

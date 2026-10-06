@@ -1,0 +1,1548 @@
+{
+  "attempted": 5,
+  "total": 25,
+  "remaining": 20,
+  "byType": {
+    "cluster-3": {
+      "attempted": 1,
+      "completed": 0,
+      "found": 0,
+      "top5": 0
+    },
+    "cluster-6": {
+      "attempted": 1,
+      "completed": 1,
+      "found": 0,
+      "top5": 0
+    },
+    "cluster-4": {
+      "attempted": 1,
+      "completed": 1,
+      "found": 0,
+      "top5": 0
+    },
+    "original": {
+      "attempted": 1,
+      "completed": 1,
+      "found": 1,
+      "top5": 1
+    },
+    "cluster-5": {
+      "attempted": 1,
+      "completed": 1,
+      "found": 1,
+      "top5": 1
+    }
+  },
+  "runs": [
+    {
+      "caseId": "OC01-cluster-3",
+      "kind": "cluster-3",
+      "status": "failed",
+      "error": "Search timed out after 60000ms",
+      "elapsedMs": 60226.206099999996,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 1781,
+            "stage": "candidate-scored",
+            "elapsedMs": 58016.1009,
+            "key": "work-b71d22eb3cb32b95\u0000*",
+            "local": 99.71471889128573,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 65.14390575310556
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 9,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 10,
+              "queryPillars": 7,
+              "candidatePillars": 8,
+              "confidence": 1
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 10,
+              "candidateNotes": 10,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 16,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 17,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 18,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 19,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 20,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 21,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 22,
+                  "cost": 0.013816598350992713,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": null,
+                  "cost": 0.3692,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": null,
+                  "cost": 0.3692,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": null,
+                  "cost": 0.3692,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 23,
+                  "cost": 0.07472000000000001,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 24,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 16,
+                  "candidateIndex": 25,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 17,
+                  "candidateIndex": 26,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 18,
+                  "candidateIndex": 27,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 12,
+              "end": 27,
+              "coverage": 0.8421052631578947,
+              "cost": 1.1961365983509928,
+              "similarity": 73.8594970794043
+            },
+            "windowStart": 0
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "caseId": "OC01-cluster-6",
+      "kind": "cluster-6",
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 41057.1116,
+      "trace": {
+        "rejections": {
+          "query-coverage": 1
+        },
+        "scored": [],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "caseId": "OC02-cluster-4",
+      "kind": "cluster-4",
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 32207.603499999983,
+      "trace": {
+        "rejections": {
+          "admission-floor": 3
+        },
+        "scored": [
+          {
+            "sequence": 710,
+            "stage": "candidate-scored",
+            "elapsedMs": 13387.989300000001,
+            "key": "work-5a4664ce7cd70ec3\u0000*",
+            "local": 91.90290171091291,
+            "scores": {
+              "pitch": 88.8,
+              "interval": 88.88842105263157,
+              "contour": 94.73684210526315,
+              "rhythm": 20.712682970866076
+            },
+            "metric": {
+              "score": 6,
+              "adjustment": -15.6,
+              "matches": 0,
+              "conflicts": 10,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 10,
+              "queryPillars": 7,
+              "candidatePillars": 11,
+              "confidence": 1
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 11,
+              "candidateNotes": 14,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 90,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 13,
+                  "cost": 0.2531201142857143,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 14,
+                  "cost": 0.031074223484163416,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 15,
+                  "cost": 0.2681275688720275,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 16,
+                  "cost": 0.2708609142857143,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 17,
+                  "cost": 0.20325759999999998,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 18,
+                  "cost": 0.07010000000000001,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 19,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 20,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 21,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 22,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 23,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 24,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 25,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 26,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 27,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 16,
+                  "candidateIndex": 28,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 17,
+                  "candidateIndex": 29,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 18,
+                  "candidateIndex": 30,
+                  "cost": 4.421862511383451e-8,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 19,
+                  "candidateIndex": 31,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 12,
+              "end": 31,
+              "coverage": 1,
+              "cost": 1.0965404651462447,
+              "similarity": 89.20590356576989
+            },
+            "windowStart": 0
+          },
+          {
+            "sequence": 3337,
+            "stage": "candidate-scored",
+            "elapsedMs": 21119.936,
+            "key": "work-5a4664ce7cd70ec3\u000012",
+            "local": 91.90290171091291,
+            "scores": {
+              "pitch": 88.8,
+              "interval": 88.88842105263157,
+              "contour": 94.73684210526315,
+              "rhythm": 20.712682970866076
+            },
+            "metric": {
+              "score": 6,
+              "adjustment": -15.6,
+              "matches": 0,
+              "conflicts": 10,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 10,
+              "queryPillars": 7,
+              "candidatePillars": 11,
+              "confidence": 1
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 11,
+              "candidateNotes": 14,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 90,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 7,
+                  "cost": 0.2531201142857143,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 8,
+                  "cost": 0.031074223484163416,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 9,
+                  "cost": 0.2681275688720275,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 10,
+                  "cost": 0.2708609142857143,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 11,
+                  "cost": 0.20325759999999998,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 12,
+                  "cost": 0.07010000000000001,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 16,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 17,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 18,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 19,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 20,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 21,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 16,
+                  "candidateIndex": 22,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 17,
+                  "candidateIndex": 23,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 18,
+                  "candidateIndex": 24,
+                  "cost": 4.421862511383451e-8,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 19,
+                  "candidateIndex": 25,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 6,
+              "end": 25,
+              "coverage": 1,
+              "cost": 1.0965404651462447,
+              "similarity": 89.20590356576989
+            },
+            "windowStart": 6
+          },
+          {
+            "sequence": 3350,
+            "stage": "candidate-scored",
+            "elapsedMs": 21121.1385,
+            "key": "work-5a4664ce7cd70ec3\u000064",
+            "local": 86.4606692416344,
+            "scores": {
+              "pitch": 91.44444444444444,
+              "interval": 90.6483660130719,
+              "contour": 88.23529411764706,
+              "rhythm": 24.04084445221156
+            },
+            "metric": {
+              "score": 18.5,
+              "adjustment": -12.88888888888889,
+              "matches": 1,
+              "conflicts": 9,
+              "overAccents": 2
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 10,
+              "queryPillars": 7,
+              "candidatePillars": 10,
+              "confidence": 1
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 11,
+              "candidateNotes": 13,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 92.81045751633987,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": null,
+                  "cost": 0.36729999999999996,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": null,
+                  "cost": 0.3084,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 9,
+                  "cost": 0.03538285714285714,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 10,
+                  "cost": 0.2708609142857143,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 11,
+                  "cost": 0.20325759999999998,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 12,
+                  "cost": 0.07010000000000001,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 16,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 17,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 18,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 19,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 20,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 21,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 16,
+                  "candidateIndex": 22,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 17,
+                  "candidateIndex": 23,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 18,
+                  "candidateIndex": 24,
+                  "cost": 4.421862511383451e-8,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 19,
+                  "candidateIndex": 25,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 8,
+              "end": 25,
+              "coverage": 0.9,
+              "cost": 1.2553014156471967,
+              "similarity": 78.96850532454228
+            },
+            "windowStart": 58
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "caseId": "OC03-original",
+      "kind": "original",
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 34025.24709999998,
+      "trace": {
+        "rejections": {
+          "inferior-window": 3
+        },
+        "scored": [
+          {
+            "sequence": 538,
+            "stage": "candidate-scored",
+            "elapsedMs": 27662.234599999996,
+            "key": "work-71ff9821151d7c18\u0000*",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 99.99998376969702
+            },
+            "metric": {
+              "score": 88.75,
+              "adjustment": 4,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 20,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 75.52744051780397,
+              "pillarPitch": 75.5,
+              "interval": 70.60000000000001,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 6,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 15,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 56
+          },
+          {
+            "sequence": 2679,
+            "stage": "candidate-scored",
+            "elapsedMs": 30202.646099999984,
+            "key": "work-71ff9821151d7c18\u000056",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 99.99998376969702
+            },
+            "metric": {
+              "score": 88.75,
+              "adjustment": 4,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 20,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 75.52744051780397,
+              "pillarPitch": 75.5,
+              "interval": 70.60000000000001,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 6,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 15,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 56
+          },
+          {
+            "sequence": 2690,
+            "stage": "candidate-scored",
+            "elapsedMs": 30203.45079999999,
+            "key": "work-71ff9821151d7c18\u0000147",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 99.99998376969702
+            },
+            "metric": {
+              "score": 88.75,
+              "adjustment": 4,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 20,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 75.52744051780397,
+              "pillarPitch": 75.5,
+              "interval": 70.60000000000001,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 6,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 15,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 56
+          },
+          {
+            "sequence": 2701,
+            "stage": "candidate-scored",
+            "elapsedMs": 30204.69099999999,
+            "key": "work-71ff9821151d7c18\u000088",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 99.99998376969702
+            },
+            "metric": {
+              "score": 88.75,
+              "adjustment": 4,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 20,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 75.52744051780397,
+              "pillarPitch": 75.5,
+              "interval": 70.60000000000001,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 6,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 15,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 56
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "caseId": "OC03-cluster-5",
+      "kind": "cluster-5",
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 23991.365900000004,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 15328,
+            "stage": "candidate-scored",
+            "elapsedMs": 21981.947400000005,
+            "key": "work-71ff9821151d7c18\u000051",
+            "local": 82.2031900471398,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 51.73671942607883
+            },
+            "metric": {
+              "score": 88.75,
+              "adjustment": 4,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 4
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 6,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 75.52744051780397,
+              "pillarPitch": 75.5,
+              "interval": 70.60000000000001,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 6,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 13,
+                  "cost": 0.029330000000000002,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": null,
+                  "cost": 0.3084,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": null,
+                  "cost": 0.28559999999999997,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": null,
+                  "cost": 0.3692,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": null,
+                  "cost": 0.3692,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": null,
+                  "cost": 0.28559999999999997,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 14,
+                  "cost": 0.06658000000000001,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 15,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 16,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 17,
+                  "cost": 6.717181393393017e-8,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 11,
+                  "candidateIndex": 18,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 12,
+                  "candidateIndex": 19,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 13,
+                  "candidateIndex": 20,
+                  "cost": 9.256322126149399e-8,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 14,
+                  "candidateIndex": 21,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 15,
+                  "candidateIndex": 22,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 16,
+                  "candidateIndex": 23,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 17,
+                  "candidateIndex": 24,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 18,
+                  "candidateIndex": 25,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 19,
+                  "candidateIndex": 26,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 20,
+                  "candidateIndex": 27,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 12,
+              "end": 27,
+              "coverage": 0.7619047619047619,
+              "cost": 1.713910159735035,
+              "similarity": 64.27724629222459
+            },
+            "windowStart": 44
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    }
+  ]
+}

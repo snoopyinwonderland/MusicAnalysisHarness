@@ -1,0 +1,862 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH08-L6-original",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH08-e0",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e1",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e2",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.3359375
+      },
+      {
+        "id": "SH08-e3",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.3359375
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH08-e0",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e1",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e2",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.3359375
+      },
+      {
+        "id": "SH08-e3",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.3359375
+      }
+    ]
+  },
+  "tags": [
+    "original",
+    "positive-probe"
+  ],
+  "description": "6음 원형 대조",
+  "changes": {
+    "changedSourceIds": [],
+    "originalDuration": 2,
+    "queryDuration": 2,
+    "transformation": {}
+  },
+  "expected": {
+    "workId": "work-a94065d6dfa92c04",
+    "sourceId": "2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+    "composer": "Composed by Mark Harrison et al.\nArranged by Reflet des Nuages",
+    "baseStartIndex": 12,
+    "baseStartMeasure": 3,
+    "baseEndMeasure": 3,
+    "baseTargets": [
+      {
+        "onset": 8,
+        "pitchMidi": 79,
+        "measure": 3,
+        "beat": 1
+      },
+      {
+        "onset": 8.33203125,
+        "pitchMidi": 78,
+        "measure": 3,
+        "beat": 1.33203125
+      },
+      {
+        "onset": 8.6640625,
+        "pitchMidi": 79,
+        "measure": 3,
+        "beat": 1.6640625
+      },
+      {
+        "onset": 9,
+        "pitchMidi": 76,
+        "measure": 3,
+        "beat": 2
+      },
+      {
+        "onset": 9.33203125,
+        "pitchMidi": 74,
+        "measure": 3,
+        "beat": 2.33203125
+      },
+      {
+        "onset": 9.6640625,
+        "pitchMidi": 76,
+        "measure": 3,
+        "beat": 2.6640625
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 8153.5625,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 50,
+            "stage": "candidate-scored",
+            "elapsedMs": 1531.2375999998767,
+            "key": "work-a94065d6dfa92c04\u000012",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 1,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 43.34318674336146,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 5,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 12
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 100,
+      "representativeWindowRank": 1,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 6,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+          "sourceId": "2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-a94065d6dfa92c04&start=3&end=3&source=search&targets=8%3A79%2C8.33203125%3A78%2C8.6640625%3A79%2C9%3A76%2C9.33203125%3A74%2C9.6640625%3A76"
+        },
+        {
+          "rank": 2,
+          "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+          "sourceId": "3. The SpongeBob SquarePants Theme Song, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-e74d891a9847db56&start=3&end=3&source=search&targets=8%3A79%2C8.33203125%3A78%2C8.6640625%3A79%2C9%3A76%2C9.33203125%3A74%2C9.6640625%3A76"
+        },
+        {
+          "rank": 3,
+          "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+          "sourceId": "3. The SpongeBob SquarePants Theme Song, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-1fa3cdd6ca5757d6&start=3&end=3&source=search&targets=8%3A79%2C8.33203125%3A78%2C8.6640625%3A79%2C9%3A76%2C9.33203125%3A74%2C9.6640625%3A76"
+        },
+        {
+          "rank": 4,
+          "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+          "sourceId": "3. The SpongeBob SquarePants Theme Song, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-cc4e5274fbd14326&start=3&end=3&source=search&targets=8%3A79%2C8.33203125%3A78%2C8.6640625%3A79%2C9%3A76%2C9.33203125%3A74%2C9.6640625%3A76"
+        },
+        {
+          "rank": 5,
+          "title": "SILENCE",
+          "sourceId": "5. Silence, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.83126181435604,
+            "meter": 0,
+            "structural": 53,
+            "skeleton": 88,
+            "pillarPitch": 97,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-ab67b209f205ce3f&start=10&end=11&source=search&targets=37.5%3A84%2C38%3A83%2C38.5%3A84%2C39%3A81%2C39.5%3A79%2C40%3A81"
+        },
+        {
+          "rank": 6,
+          "title": "SILENCE",
+          "sourceId": "5. Silence, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.83126181435604,
+            "meter": 0,
+            "structural": 53,
+            "skeleton": 88,
+            "pillarPitch": 97,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-5f120620730578b4-88a85b71&start=10&end=11&source=search&targets=37.5%3A84%2C38%3A83%2C38.5%3A84%2C39%3A81%2C39.5%3A79%2C40%3A81"
+        },
+        {
+          "rank": 7,
+          "title": "SILENCE",
+          "sourceId": "5. Silence, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.83126181435604,
+            "meter": 0,
+            "structural": 53,
+            "skeleton": 88,
+            "pillarPitch": 97,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-8aed85d173a2fbb4-a71ddd21&start=10&end=11&source=search&targets=37.5%3A84%2C38%3A83%2C38.5%3A84%2C39%3A81%2C39.5%3A79%2C40%3A81"
+        },
+        {
+          "rank": 8,
+          "title": "아리랑 주제에 의한 판타지",
+          "sourceId": "Level V Youngmin Choi- Fantasy from Arirang for Solo Piano.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.8312618143548,
+            "meter": 15,
+            "structural": 67,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-1c74dcf9fcf6b802-d08f9a8a&start=27&end=27&source=search&targets=79%3A80%2C79.16666666666667%3A79%2C79.33333333333333%3A80%2C79.5%3A77%2C79.66666666666667%3A75%2C79.83333333333333%3A77"
+        },
+        {
+          "rank": 9,
+          "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+          "sourceId": "The SpongeBob SquarePants Theme Song Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-f4755ecff8fab948&start=3&end=3&source=search&targets=8%3A79%2C8.33203125%3A78%2C8.6640625%3A79%2C9%3A76%2C9.33203125%3A74%2C9.6640625%3A76"
+        },
+        {
+          "rank": 10,
+          "title": "Missa pro defunctis a 6",
+          "sourceId": "mxl/1/26/QmbjoTeHeA5d2FKoftb6pnAcrZPEPB9VhXrFV4qGWyJVAb.mxl",
+          "streamId": "P5:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.83126181435604,
+            "meter": 8,
+            "structural": 31,
+            "skeleton": 81,
+            "pillarPitch": 93,
+            "specificity": 73,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-87c3ad1f0395b57a-45795dd6&start=592&end=593&source=search&targets=2496%3A53%2C2497%3A52%2C2498%3A53%2C2499%3A50%2C2500%3A48%2C2501%3A50"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 100,
+      "exactCount": 39,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH08-L6-original.json",
+      "initialPath": "../runs/SH08-L6-original.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-a94065d6dfa92c04",
+      "sourceId": "2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+      "composer": "Composed by Mark Harrison et al.\nArranged by Reflet des Nuages",
+      "baseStartIndex": 12,
+      "baseStartMeasure": 3,
+      "baseEndMeasure": 3,
+      "baseTargets": [
+        {
+          "onset": 8,
+          "pitchMidi": 79,
+          "measure": 3,
+          "beat": 1
+        },
+        {
+          "onset": 8.33203125,
+          "pitchMidi": 78,
+          "measure": 3,
+          "beat": 1.33203125
+        },
+        {
+          "onset": 8.6640625,
+          "pitchMidi": 79,
+          "measure": 3,
+          "beat": 1.6640625
+        },
+        {
+          "onset": 9,
+          "pitchMidi": 76,
+          "measure": 3,
+          "beat": 2
+        },
+        {
+          "onset": 9.33203125,
+          "pitchMidi": 74,
+          "measure": 3,
+          "beat": 2.33203125
+        },
+        {
+          "onset": 9.6640625,
+          "pitchMidi": 76,
+          "measure": 3,
+          "beat": 2.6640625
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 1,
+      "endOrdinal": 5,
+      "xmlHash": "7184aa99b58a49742364edd5fcf03bb2976376efd2ae8620897fa3503ceee2d8",
+      "xmlError": null,
+      "eventsHash": "359516715c7f89f8ed33a876672ca13d9dcf133f6de84792b79f5177cd04d344",
+      "sourcePath": "K:/Music Analysis/musicxml/2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+      "sourceHash": "a94065d6dfa92c04318ba036b62556ec064af4dd9c4aa05e4938acb038ab0ec6"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m3:n1",
+          "xmlNoteId": "P1:m3:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 8,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 79,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n2",
+          "xmlNoteId": "P1:m3:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 2133,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 85,
+            "d": 256
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 78,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n3",
+          "xmlNoteId": "P1:m3:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 1109,
+            "d": 128
+          },
+          "durationQ": {
+            "n": 43,
+            "d": 128
+          },
+          "beatQ": {
+            "n": 85,
+            "d": 128
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 79,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n4",
+          "xmlNoteId": "P1:m3:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 9,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n5",
+          "xmlNoteId": "P1:m3:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 2389,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 341,
+            "d": 256
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 74,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n6",
+          "xmlNoteId": "P1:m3:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 1237,
+            "d": 128
+          },
+          "durationQ": {
+            "n": 43,
+            "d": 128
+          },
+          "beatQ": {
+            "n": 213,
+            "d": 128
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH08-L6/context.musicxml",
+      "events": "../base-assets/SH08-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "original"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

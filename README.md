@@ -1,4 +1,36 @@
-# MUSICANOTE MusicXML Harness Prototype
+# MUSICANOTE — 분석·검색·악보 워크벤치 통합 저장소
+
+개발과 GitHub 업로드의 기준 저장소는 **MusicAnalysisHarness**다. Python의 Canonical IR/화성 연구와 웹의 검색·Phrase·Motif·악보 뷰어 코드를 한 저장소에서 관리한다. 기존 저장소/폴더는 보존했으며, 원본 악보·대용량 코퍼스·비밀키는 이 저장소에 넣지 않는다.
+
+## 먼저 읽기
+
+- [전체 문서 지도](docs/README.md)
+- [구조 분석·웹 개발 문서](docs/structure/README.md)
+- [화성 분석 개발 문서와 v1 마감 판단](docs/harmony/README.md)
+- [통합 출처·실행·검증·제외 정책](docs/REPOSITORY_CONSOLIDATION.md)
+
+```text
+src/musicanote_harness/      Python Canonical IR·화성 연구
+apps/score-workbench/        웹 검색·악보 뷰어·Phrase·Motif·재생
+docs/harmony/               화성 개발 기록
+docs/structure/             구조 분석 문서 진입점
+MUSICANOTE_Canonical_Music_IR/  장기 데이터 계약
+```
+
+## 악보 워크벤치 실행
+
+Node 24 이상과 lockfile에 맞는 pnpm 환경을 사용한다. 새 clone에서는 다음으로 웹 의존성을 설치한다.
+
+```powershell
+pnpm --dir apps/score-workbench install --frozen-lockfile
+pnpm dev:score
+```
+
+Windows에서는 `powershell -NoProfile -File scripts/start_score_workbench.ps1`도 사용할 수 있다. 실제 검색은 별도 데이터 연결이 필요하다. 현재 컴퓨터의 local junction을 다른 컴퓨터에서도 있다고 가정하지 않는다. 설치/데이터/검증 범위는 [통합 기록](docs/REPOSITORY_CONSOLIDATION.md)을 따른다.
+
+새 연구 화성 엔진 v1은 편곡 연결 **보류로 평가 마감**했다. 저장소 통합은 음악 정확도 개선이나 새 엔진의 운영 승격이 아니다. 웹의 기존 화면용 분석과 실험 비교 레이어는 그대로 보존한다.
+
+## 기존 Python 프로토타입 사용법
 
 이 저장소는 대화에서 합의한 `Claim + Evidence + Alternative + Decision` 원칙을 실행 가능한 형태로 만든 최소 프로토타입입니다.
 

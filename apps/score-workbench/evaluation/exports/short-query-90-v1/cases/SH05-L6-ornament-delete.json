@@ -1,0 +1,918 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH05-L6-ornament-delete",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH05-e0",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e2",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e3",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e4",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "SH05-e5",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.25
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH05-e0",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e1",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e2",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e3",
+        "kind": "note",
+        "pitchMidi": 80,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "SH05-e4",
+        "kind": "note",
+        "pitchMidi": 82,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "SH05-e5",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.25
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "6음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 5음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "SH05-e1"
+    ],
+    "originalDuration": 2,
+    "queryDuration": 1.75,
+    "transformation": {
+      "omission": {
+        "eventId": "SH05-e1",
+        "index": 1,
+        "evidence": {
+          "index": 1,
+          "type": "neighbor",
+          "metric": 0.2,
+          "duration": 0.25,
+          "endpoints": [
+            "P1:m37:n1",
+            "P1:m37:n3"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-a1ec5f2aea11beb9",
+    "sourceId": "2 Become 1.xml",
+    "streamId": "P1:1:1",
+    "title": "2 Become 1",
+    "composer": "Composed by Spice Girls, Matt Rowe, Richard Stannard\nArranged by Reflet des Nuages",
+    "baseStartIndex": 224,
+    "baseStartMeasure": 37,
+    "baseEndMeasure": 37,
+    "baseTargets": [
+      {
+        "onset": 144,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 1
+      },
+      {
+        "onset": 144.25,
+        "pitchMidi": 80,
+        "measure": 37,
+        "beat": 1.25
+      },
+      {
+        "onset": 144.5,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 1.5
+      },
+      {
+        "onset": 144.75,
+        "pitchMidi": 80,
+        "measure": 37,
+        "beat": 1.75
+      },
+      {
+        "onset": 145,
+        "pitchMidi": 82,
+        "measure": 37,
+        "beat": 2
+      },
+      {
+        "onset": 145.75,
+        "pitchMidi": 78,
+        "measure": 37,
+        "beat": 2.75
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 3676.709499999881,
+      "trace": {
+        "rejections": {
+          "admission-floor": 1
+        },
+        "scored": [
+          {
+            "sequence": 5029,
+            "stage": "candidate-scored",
+            "elapsedMs": 2336.3230000000913,
+            "key": "work-a1ec5f2aea11beb9\u000063",
+            "local": 64.34283304705711,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 20.897404461925344
+            },
+            "metric": {
+              "score": 3.75,
+              "adjustment": -16,
+              "matches": 0,
+              "conflicts": 1,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 43.34318674336146,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 79.4361538462256,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 3,
+              "coverage": 0.75,
+              "strongCoverage": 0.75
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0.051840000000000004,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0.01876559702313469,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": null,
+                  "cost": 0.40415999999999996,
+                  "type": "deletion"
+                }
+              ],
+              "start": 3,
+              "end": 6,
+              "coverage": 0.8,
+              "cost": 0.47476559702313464,
+              "similarity": 65.64146836302933
+            },
+            "windowStart": 60
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-candidate-not-returned"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "PHOTOGRAPH",
+          "sourceId": "3. Photograph, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-c4348741c1212212&start=10&end=11&source=search&targets=38%3A68%2C38.5%3A68%2C39%3A66%2C39.5%3A68%2C41%3A64"
+        },
+        {
+          "rank": 2,
+          "title": "PHOTOGRAPH",
+          "sourceId": "3. Photograph, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-fc27ee1dc7bb161c&start=10&end=11&source=search&targets=38%3A68%2C38.5%3A68%2C39%3A66%2C39.5%3A68%2C41%3A64"
+        },
+        {
+          "rank": 3,
+          "title": "PHOTOGRAPH",
+          "sourceId": "3. Photograph, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 15,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-66d4b26b5f2dcc90&start=10&end=11&source=search&targets=38%3A68%2C38.5%3A68%2C39%3A66%2C39.5%3A68%2C41%3A64"
+        },
+        {
+          "rank": 4,
+          "title": "Like a Virgin",
+          "sourceId": "3. Like a Virgin, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 65.5,
+            "meter": 100,
+            "structural": 70,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-a5b77291b8c37399&start=7&end=7&source=search&targets=24%3A69%2C25%3A69%2C25.5%3A67%2C26.5%3A69%2C27.5%3A65"
+        },
+        {
+          "rank": 5,
+          "title": "Like a Virgin",
+          "sourceId": "3. Like a Virgin, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 65.5,
+            "meter": 100,
+            "structural": 70,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 80
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-dda007aabc46e9d5&start=7&end=7&source=search&targets=24%3A69%2C25%3A69%2C25.5%3A67%2C26.5%3A69%2C27.5%3A65"
+        },
+        {
+          "rank": 6,
+          "title": "Stand Up for Love",
+          "sourceId": "3. Stand Up for Love, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 88.5,
+            "meter": 15,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 85
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-b34a22492f2065e5&start=7&end=8&source=search&targets=30.5%3A60%2C31%3A60%2C31.5%3A58%2C31.75%3A60%2C35%3A56"
+        },
+        {
+          "rank": 7,
+          "title": "DIE WITH A SMILE",
+          "sourceId": "4. Die With a Smile, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 77,
+            "meter": 6,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 95
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-408a1edae70640c2&start=28&end=29&source=search&targets=83%3A78%2C83.5%3A78%2C83.75%3A76%2C84%3A78%2C85%3A74"
+        },
+        {
+          "rank": 8,
+          "title": "DIE WITH A SMILE",
+          "sourceId": "4. Die With a Smile, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 77,
+            "meter": 6,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 95
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-6b22f3b1dd652a3f&start=28&end=29&source=search&targets=83%3A78%2C83.5%3A78%2C83.75%3A76%2C84%3A78%2C85%3A74"
+        },
+        {
+          "rank": 9,
+          "title": "DITTO",
+          "sourceId": "4. Ditto, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 84.99022499567306,
+            "meter": 6,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 74
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-a8a797a8c9af74d9&start=15&end=15&source=search&targets=56.75%3A61%2C57.5%3A61%2C58%3A59%2C58.25%3A61%2C59.5%3A57"
+        },
+        {
+          "rank": 10,
+          "title": "DITTO",
+          "sourceId": "4. Ditto, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 84.99022499567306,
+            "meter": 6,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 56,
+            "repeatPattern": 100,
+            "phrase": 74
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 5,
+          "url": "/score?workId=work-cbfc6c9a7f0661d9&start=15&end=15&source=search&targets=56.75%3A61%2C57.5%3A61%2C58%3A59%2C58.25%3A61%2C59.5%3A57"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 6,
+          "queryNotes": 5,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 3,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {
+            "admission-floor": 1
+          },
+          "bestScoredTrace": {
+            "local": 64.34283304705711,
+            "pitch": 100,
+            "interval": 100,
+            "rhythm": 20.897404461925344,
+            "meter": 3.75,
+            "equality": 100,
+            "coverage": 0.8,
+            "gaps": 1
+          }
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 5,
+      "returnedCount": 100,
+      "exactCount": 3,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-candidate-not-returned",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-candidate-not-returned",
+      "text": "Inspect seed positions, candidate windows and admission trace before changing thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH05-L6-ornament-delete.json",
+      "initialPath": "../runs/SH05-L6-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-a1ec5f2aea11beb9",
+      "sourceId": "2 Become 1.xml",
+      "streamId": "P1:1:1",
+      "title": "2 Become 1",
+      "composer": "Composed by Spice Girls, Matt Rowe, Richard Stannard\nArranged by Reflet des Nuages",
+      "baseStartIndex": 224,
+      "baseStartMeasure": 37,
+      "baseEndMeasure": 37,
+      "baseTargets": [
+        {
+          "onset": 144,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 1
+        },
+        {
+          "onset": 144.25,
+          "pitchMidi": 80,
+          "measure": 37,
+          "beat": 1.25
+        },
+        {
+          "onset": 144.5,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 1.5
+        },
+        {
+          "onset": 144.75,
+          "pitchMidi": 80,
+          "measure": 37,
+          "beat": 1.75
+        },
+        {
+          "onset": 145,
+          "pitchMidi": 82,
+          "measure": 37,
+          "beat": 2
+        },
+        {
+          "onset": 145.75,
+          "pitchMidi": 78,
+          "measure": 37,
+          "beat": 2.75
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 35,
+      "endOrdinal": 39,
+      "xmlHash": "2660e6e22f3285fd3c521785cc1972e5c9a078c8764daa183f80a3f6bbb1fc42",
+      "xmlError": null,
+      "eventsHash": "80b042db26034406769a915812c1a8a72b0c7f00d40fc15255bb4b69c9994e8c",
+      "sourcePath": "K:/Music Analysis/musicxml/2 Become 1.xml",
+      "sourceHash": "a1ec5f2aea11beb944c46f85c088f615fea373ab7c5b1b43b7de696bbfb28516"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m37:n1",
+          "xmlNoteId": "P1:m37:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 144,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n2",
+          "xmlNoteId": "P1:m37:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 577,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 80,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 40,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n3",
+          "xmlNoteId": "P1:m37:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 289,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n4",
+          "xmlNoteId": "P1:m37:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 579,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 80,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 40,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n5",
+          "xmlNoteId": "P1:m37:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 145,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 82,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 41,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m37:n6",
+          "xmlNoteId": "P1:m37:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 37,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 37,
+          "originalMeasureLabel": "37",
+          "onsetQ": {
+            "n": 583,
+            "d": 4
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 4
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 4
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 78,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "-1",
+            "octave": 5
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH05-L6/context.musicxml",
+      "events": "../base-assets/SH05-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

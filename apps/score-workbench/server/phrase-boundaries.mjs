@@ -1,0 +1,675 @@
+// Uncalibrated local boundary evidence, not harmonic cadence or phrase analysis.
+import {applyBreathSymbolEvidence} from './phrase-breath-symbols.mjs';
+import {repeatedBreathDecisions} from './repeated-breath-rule.mjs';
+import {shortCellContinuity} from './short-cell-continuity.mjs';
+const VERSION = 'local-boundary-evidence-v1.17';
+const clamp = value => Math.max(0, Math.min(1, value));
+const round = value => Math.round(value * 1e6) / 1e6;
+const finite = value => value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value));
+const median = values => {
+  const sorted = values.filter(value => Number.isFinite(value) && value > 0).sort((a, b) => a - b);
+  return sorted.length ? sorted[Math.floor(sorted.length / 2)] : null;
+};
+const unknown = index => ({ index, strength: 0, supported: false, reliable: false, state: 'unknown', continuity: 0, cues: [] });
+const cue = (name, strength, evidence) => ({ name, strength: round(clamp(strength)), evidence });
+
+function timeline(notes) {
+  let cursor = 0;
+  return notes.map((note, index) => {
+    const duration = finite(note?.durationRatio) && Number(note.durationRatio) > 0 ? Number(note.durationRatio) : null;
+    const explicit = finite(note?.onset);
+    const onset = explicit ? Number(note.onset) : cursor;
+    cursor = onset !== null && duration !== null ? onset + duration : null;
+    return {
+      index, duration, onset, explicit, end: cursor,beatQuarters:metricBeatQuarters(note),
+      pitch: finite(note?.pitchMidi) ? Number(note.pitchMidi) : null,
+      attack: note?.isAttack !== false && !note?.tieStop,
+      measure: finite(note?.measureOrdinal??note?.measure) ? Number(note.measureOrdinal??note.measure) : null,
+      tieEndMeasure: finite(note?.tieEndMeasure) ? Number(note.tieEndMeasure) : null,
+    };
+  });
+}
+
+// A local peak relative to BOTH neighboring transitions. No absolute tempo unit.
+function discontinuity(values, index) {
+  const value = values[index], left = values[index - 1], right = values[index + 1];
+  if (![value, left, right].every(Number.isFinite) || value <= 0 || value < left || value < right) return 0;
+  const baseline = (left + right) / 2;
+  return clamp((value - baseline) / (value + baseline));
+}
+
+function localUnit(events, attacks, position, trace) {
+  const durations = [], iois = [];
+  for (let j = Math.max(0, position - 3); j <= Math.min(attacks.length - 1, position + 3); j++) {
+    durations.push(attacks[j].duration);
+    trace?.reads.push({index:attacks[j].index,field:'durationRatio'});
+    if(j&&j!==position)trace?.reads.push({index:attacks[j].index,field:'onset'},{index:attacks[j-1].index,field:'onset'});
+    if (j && j !== position && attacks[j].onset !== null && attacks[j - 1].onset !== null) {
+      iois.push(attacks[j].onset - attacks[j - 1].onset);
+    }
+  }
+  const index = attacks[position].index;
+  durations.push(events[index - 1]?.duration);
+  if(index>0)trace?.reads.push({index:index-1,field:'durationRatio'});
+  const ioiUnit=median(iois),unit=ioiUnit??median(durations);
+  if(trace){trace.iois=[...iois];trace.durations=[...durations];trace.selected=ioiUnit!==null?'ioi':'duration';trace.unit=unit;}
+  return unit;
+}
+
+function motifSignature(attacks, start, length) {
+  const phrase = attacks.slice(start, start + length);
+  if (phrase.length !== length || phrase.some(note => note.pitch === null || note.duration === null || note.onset === null)) return null;
+  const intervals = phrase.slice(1).map((note, i) => round(note.pitch - phrase[i].pitch));
+  // Constant scales, repeated notes and two-note oscillations provide little identity.
+  if (new Set(intervals).size < 3 || !intervals.some(value => value > 0) || !intervals.some(value => value < 0)) return null;
+  const unit = phrase[0].duration;
+  const rhythm = phrase.map(note => round(note.duration / unit));
+  const iois = phrase.slice(1).map((note, i) => round((note.onset - phrase[i].onset) / unit));
+  if (iois.some(value => value <= 0)) return null;
+  const before = attacks[start - 1];
+  const incoming = before?.pitch !== null && before?.onset !== null && before
+    ? `${round(phrase[0].pitch - before.pitch)}:${round((phrase[0].onset - before.onset) / unit)}` : null;
+  return { key: `${length}|${intervals.join(',')}|${rhythm.join(',')}|${iois.join(',')}`, incoming };
+}
+
+export function detectLongArrivalMotifCells(attacks) {
+  const cells = [];
+  for (let start = 0; start + 4 < attacks.length; start++) {
+    const notes = attacks.slice(start, start + 5), shorts = notes.slice(0, 4);
+    if (notes.some(note => note.pitch === null || note.duration === null || note.onset === null)) continue;
+    const unit = median(shorts.map(note => note.duration));
+    if (!unit) continue;
+    const ratios = shorts.map(note => note.duration / unit), pickupSpan = (notes[4].onset - notes[0].onset) / unit, terminalRatio = notes[4].duration / unit;
+    if (ratios.some(value => value < .45 || value > 1.65) || pickupSpan < 3.5 || pickupSpan > 4.5 || terminalRatio < 3.5) continue;
+    const straight = ratios.every(value => Math.abs(value - 1) <= .2);
+    const redistributedSyncopation = !straight && Math.abs(ratios.reduce((sum, value) => sum + value, 0) - 4) <= .25;
+    if (!straight && !redistributedSyncopation) continue;
+    cells.push({
+      startIndex: notes[0].index, endIndex: notes[4].index, attackCount: 5,
+      rhythmFamily: 'four-short-plus-long-arrival', rhythmVariant: straight ? 'straight' : 'syncopated',
+      normalizedPickupDurations: ratios.map(round), terminalDurationRatio: round(terminalRatio),
+      pitchContour: notes.slice(1).map((note, index) => Math.sign(note.pitch - notes[index].pitch)),
+    });
+  }
+  return cells;
+}
+
+export function applyThematicCellPhraseGrouping(events, motifCells, boundaries) {
+  const result = { applicable: false, rhythmFamily: 'four-short-plus-long-arrival', suppressedBoundaryIndices: [], promotedBoundaryIndices: [], phraseGroups: [] };
+  if (motifCells.length < 8) return result;
+  const attackCount = events.filter(event => event.attack).length, coverage = motifCells.length * 5 / Math.max(1, attackCount), variants = new Set(motifCells.map(cell => cell.rhythmVariant));
+  if (coverage < .55 || variants.size < 2) return result;
+  const cellByStart = new Map(motifCells.map(cell => [cell.startIndex, cell])), cellStarts = motifCells.map(cell => cell.startIndex).sort((a, b) => a - b);
+  let active = boundaries.filter(boundary => boundary.index > 0 && boundary.index < events.length && boundary.strength >= .65 && cellByStart.has(boundary.index)).map(boundary => boundary.index).sort((a, b) => a - b);
+  if (!active.length) return result;
+  const first = active[0], terminal = events.length;
+  active = [...new Set([...active, terminal])].sort((a, b) => a - b);
+  const countCells = (start, end) => cellStarts.filter(index => index >= start && index < end).length;
+  const suppress = (index, reason) => {
+    const boundary = boundaries[index]; if (!boundary) return;
+    boundary.rawStrength = boundary.rawStrength ?? boundary.strength; boundary.continuity = Math.max(boundary.continuity, .9);
+    boundary.cues.push(cue('thematic-cell-internal-continuation', .9, { rhythmFamily: result.rhythmFamily, reason, requiresCadenceReview: true }));
+    boundary.primaryLevel = 'subphrase-cell'; boundary.suppressedBy = `thematic-cell-group-${first}`; boundary.strength = round(Math.min(boundary.strength, .49));
+    result.suppressedBoundaryIndices.push(index);
+  };
+  const promote = (index, reason) => {
+    const boundary = boundaries[index]; if (!boundary) return;
+    boundary.cues.push(cue('thematic-cell-phrase-restart', .7, { rhythmFamily: result.rhythmFamily, reason, requiresCadenceReview: true }));
+    boundary.strength = round(Math.max(boundary.strength, .7)); boundary.primaryLevel = 'phrase';
+    result.promotedBoundaryIndices.push(index);
+  };
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (let i = 0; i < active.length - 2; i++) {
+      const leftCount = countCells(active[i], active[i + 1]), rightCount = countCells(active[i + 1], active[i + 2]);
+      if (leftCount !== 1) continue;
+      if (rightCount === 1) {
+        const removed = active[i + 1]; suppress(removed, 'two adjacent one-cell Phrase hypotheses form a two-cell thematic unit'); active.splice(i + 1, 1); changed = true; break;
+      }
+      if (rightCount >= 4) {
+        const removed = active[i + 1], followingCells = cellStarts.filter(index => index >= removed && index < active[i + 2]), replacement = followingCells[1];
+        if (replacement !== undefined) { suppress(removed, 'move boundary after the pickup cell so neighboring thematic groups contain two to three cells'); promote(replacement, 'balanced two-to-three-cell thematic restart'); active[i + 1] = replacement; active.sort((a, b) => a - b); changed = true; break; }
+      }
+    }
+  }
+  const restartScore = index => {
+    const cellPosition = motifCells.findIndex(cell => cell.startIndex === index), previous = motifCells[cellPosition - 1], current = cellByStart.get(index);
+    if (!previous || !current) return 0;
+    const leap = Math.abs((events[index]?.pitch ?? 0) - (events[previous.endIndex]?.pitch ?? 0));
+    return leap / 12 + (boundaries[index]?.strength ?? 0) * .25;
+  };
+  const stableAnchors = [...active], insertions = [];
+  for (let i = 0; i < stableAnchors.length - 1; i++) {
+    const start = stableAnchors[i], end = stableAnchors[i + 1], cells = motifCells.filter(cell => cell.startIndex >= start && cell.startIndex < end);
+    if (cells.length <= 3) continue;
+    let offset = 0, remaining = cells.length;
+    while (remaining > 3) {
+      let size = remaining === 4 ? 2 : 3;
+      if (remaining === 5) size = restartScore(cells[2].startIndex) > restartScore(cells[3].startIndex) ? 2 : 3;
+      offset += size; remaining -= size;
+      const index = cells[offset].startIndex; promote(index, 'new thematic cell after a complete two-to-three-cell group'); insertions.push(index);
+    }
+  }
+  active = [...new Set([...active, ...insertions])].sort((a, b) => a - b);
+  result.applicable = true; result.coverage = round(coverage); result.variants = [...variants];
+  result.suppressedBoundaryIndices = [...new Set(result.suppressedBoundaryIndices)].sort((a, b) => a - b);
+  result.promotedBoundaryIndices = [...new Set(result.promotedBoundaryIndices)].sort((a, b) => a - b);
+  result.phraseGroups = active.slice(0, -1).map((start, index) => ({ startIndex: start, endIndexExclusive: active[index + 1], cellCount: countCells(start, active[index + 1]) }));
+  return result;
+}
+
+function demotePhraseBoundary(boundary, name, evidence, strength = .9) {
+  if (!boundary) return;
+  if(boundary.longRestBoundary)return;
+  boundary.rawStrength = boundary.rawStrength ?? boundary.strength;
+  boundary.continuity = Math.max(boundary.continuity, strength);
+  boundary.cues.push(cue(name, strength, evidence));
+  boundary.primaryLevel = 'subphrase-cell';
+  boundary.suppressedBy = evidence.groupId;
+  boundary.strength = round(Math.min(boundary.strength, .49));
+}
+
+// A Phrase claim shorter than four attacks is normally only a fragment. Keep the
+// original local evidence, but attach the fragment to the following material.
+// Four repeated attacks remain reviewable because repetition can itself be a
+// complete rhetorical unit; cadence or human annotation may later override this.
+export function applyMinimumPhraseAttackConstraint(events, boundaries, minimumAttacks = 4) {
+  const result = { minimumAttacks, suppressedBoundaryIndices: [] };
+  let phraseStart = 0;
+  for (let index = 1; index < events.length; index++) {
+    const boundary = boundaries[index];
+    if (!boundary || boundary.strength < .65) continue;
+    const attackCount = events.slice(phraseStart, index).filter(event => event.attack).length;
+    if (attackCount < minimumAttacks) {
+      const evidence = { groupId: `minimum-phrase-attacks-${phraseStart}`, phraseStartIndex: phraseStart, boundaryIndex: index, attackCount, minimumAttacks, requiresCadenceReview: true };
+      demotePhraseBoundary(boundary, 'short-phrase-fragment-continuation', evidence, .92);
+      result.suppressedBoundaryIndices.push(index);
+    } else phraseStart = index;
+  }
+  return result;
+}
+
+// When the same Motif core occurs at least three times, compare the boundary
+// frame around each occurrence. A short 1–4 attack lead plus two 4–10 attack
+// subunits is treated as one recurring Phrase frame. This groups preparation,
+// Motif core, and answer without relying on title, measure number, or pitch.
+export function applyRecurringMotifPhraseFrames(events, motifRelations, boundaries) {
+  const result = { applicable: false, suppressedBoundaryIndices: [], frames: [] };
+  const bySignature = new Map();
+  for (const relation of motifRelations || []) {
+    const occurrences = bySignature.get(relation.signatureKey) || new Set();
+    occurrences.add(relation.previousIndex); occurrences.add(relation.currentIndex);
+    bySignature.set(relation.signatureKey, occurrences);
+  }
+  const rawCandidate = boundary => boundary && Number(boundary.rawStrength ?? boundary.strength) >= .65;
+  for (const [signatureKey, occurrenceSet] of bySignature) {
+    const occurrences = [...occurrenceSet].sort((a, b) => a - b);
+    if (occurrences.length < 3) continue;
+    for (const occurrenceIndex of occurrences) {
+      if(boundaries[occurrenceIndex]?.longRestBoundary)continue;
+      const activeBefore = boundaries.slice(1, occurrenceIndex).filter(boundary => boundary.strength >= .65).map(boundary => boundary.index);
+      const frameStart = activeBefore.at(-1) ?? 0, leadAttacks = events.slice(frameStart, occurrenceIndex).filter(event => event.attack).length;
+      if (leadAttacks < 1 || leadAttacks > 4) continue;
+      const following = boundaries.slice(occurrenceIndex + 1, events.length).filter(rawCandidate).map(boundary => boundary.index);
+      if (following.length < 2) continue;
+      const [internalEnd, frameEnd] = following;
+      const coreAttacks = events.slice(occurrenceIndex, internalEnd).filter(event => event.attack).length;
+      const answerAttacks = events.slice(internalEnd, frameEnd).filter(event => event.attack).length;
+      if (coreAttacks < 4 || coreAttacks > 10 || answerAttacks < 4 || answerAttacks > 10) continue;
+      const groupId = `recurring-motif-phrase-frame-${occurrenceIndex}`, evidence = { groupId, signatureKey, occurrenceCount: occurrences.length, frameStartIndex: frameStart, motifCoreIndex: occurrenceIndex, internalBoundaryIndex: internalEnd, frameEndIndex: frameEnd, leadAttacks, coreAttacks, answerAttacks, requiresCadenceReview: true };
+      if (rawCandidate(boundaries[occurrenceIndex])) { demotePhraseBoundary(boundaries[occurrenceIndex], 'recurring-motif-preparation-continuation', evidence); result.suppressedBoundaryIndices.push(occurrenceIndex); }
+      if (rawCandidate(boundaries[internalEnd])) { demotePhraseBoundary(boundaries[internalEnd], 'recurring-motif-answer-continuation', evidence); result.suppressedBoundaryIndices.push(internalEnd); }
+      result.frames.push(evidence);
+    }
+  }
+  result.applicable = result.frames.length > 0;
+  result.suppressedBoundaryIndices = [...new Set(result.suppressedBoundaryIndices)].sort((a, b) => a - b);
+  return result;
+}
+
+function addMotifSupport(attacks, boundaries) {
+  // At most five lengths and four recent occurrences per signature; no all-pairs search.
+  const seen = new Map(), relations = [];
+  for (let start = 0; start < attacks.length; start++) {
+    let best = null;
+    for (let length = 4; length <= 8; length++) {
+      const signature = motifSignature(attacks, start, length);
+      if (!signature) continue;
+      const recent = seen.get(signature.key) || [];
+      const prior = recent.findLast(entry => start - entry.start >= length && start - entry.start <= 64);
+      const boundary = boundaries[attacks[start].index];
+      const anchored = boundary.strength >= .2 && (
+        boundary.cues.some(item => item.name === 'observed-gap') ||
+        prior?.incoming !== null && signature.incoming !== null && prior?.incoming !== signature.incoming
+      );
+      // Repetition alone (including a repeating ostinato's rotations) is not a boundary.
+      if (prior && start > 0 && anchored && (!best || length > best.length)) {
+        best = { length, signatureKey: signature.key, previousIndex: attacks[prior.start].index, distanceInAttacks: start - prior.start };
+      }
+      recent.push({ start, incoming: signature.incoming });
+      if (recent.length > 4) recent.shift();
+      seen.set(signature.key, recent);
+    }
+    if (best) {
+      const boundary = boundaries[attacks[start].index];
+      const currentIndex = attacks[start].index, closeContinuation = best.distanceInAttacks <= best.length * 2&&!boundary.longRestBoundary;
+      const evidence = { ...best, currentIndex, maxDistanceInAttacks: 64, layer: 'motif', contributesToPhraseStrength: false, closeContinuation };
+      boundary.cues.push(cue('repeated-motif-start', .2, evidence));
+      relations.push(evidence);
+      if (closeContinuation) {
+        boundary.rawStrength = boundary.strength;
+        boundary.continuity = Math.max(boundary.continuity, .82);
+        boundary.cues.push(cue('motif-repetition-continuation', .82, { ...evidence, phraseRole: 'internal-subphrase' }));
+        boundary.primaryLevel = 'subphrase-cell';
+        boundary.strength = round(Math.min(boundary.strength, .49));
+      }
+    }
+  }
+  return relations;
+}
+
+export function addParallelRecurrenceContinuity(relations,boundaries){
+  const groups=[];
+  const byDisplacement=new Map();
+  for(const relation of relations){const displacement=relation.currentIndex-relation.previousIndex,items=byDisplacement.get(displacement)||[];items.push(relation);byDisplacement.set(displacement,items)}
+  for(const [displacement,items] of byDisplacement){
+    items.sort((a,b)=>a.previousIndex-b.previousIndex);
+    for(let index=1;index<items.length;index++){
+      const left=items[index-1],right=items[index],cellDistance=right.previousIndex-left.previousIndex;
+      if(cellDistance<=0||right.currentIndex-left.currentIndex!==cellDistance||cellDistance>Math.max(left.length,right.length)*2)continue;
+      const groupId=`parallel-recurrence-${left.previousIndex}-${right.previousIndex}-${displacement}`,evidence={groupId,firstPair:[left.previousIndex,right.previousIndex],recurrencePair:[left.currentIndex,right.currentIndex],displacementInEvents:displacement,cellDistanceInEvents:cellDistance,requiresCadenceReview:true};
+      for(const boundaryIndex of [right.previousIndex,right.currentIndex]){const boundary=boundaries[boundaryIndex];if(!boundary)continue;boundary.rawStrength=boundary.rawStrength??boundary.strength;boundary.continuity=Math.max(boundary.continuity,.9);boundary.cues.push(cue('parallel-motif-recurrence-continuation',.9,evidence));boundary.primaryLevel='subphrase-cell';boundary.suppressedBy=groupId;boundary.strength=round(Math.min(boundary.strength,.49))}
+      groups.push(evidence);
+    }
+  }
+  return groups;
+}
+
+function shiftTieCarryoverBoundaries(events,boundaries){
+  const shifts=[];
+  for(let index=1;index<events.length-1;index++){
+    const event=events[index],next=events[index+1],boundary=boundaries[index];
+    const crossesBarline=event.tieEndMeasure!==null&&event.measure!==null&&event.tieEndMeasure>event.measure;
+    if(!boundary||boundary.strength<.65||!crossesBarline||!next.attack||event.pitch!==next.pitch||event.end===null||next.onset===null||Math.abs(event.end-next.onset)>1e-6)continue;
+    const evidence={fromIndex:index,toIndex:index+1,pitch:event.pitch,tieEndMeasure:event.tieEndMeasure,rule:'phrase begins at the re-articulated attack after a barline-spanning tie'};
+    boundary.rawStrength=boundary.rawStrength??boundary.strength;boundary.continuity=Math.max(boundary.continuity,.92);boundary.cues.push(cue('tied-carryover-continuation',.92,evidence));boundary.primaryLevel='phrase-ending-carryover';boundary.suppressedBy=`tie-carryover-${index}`;boundary.strength=round(Math.min(boundary.strength,.49));
+    const shifted=boundaries[index+1];shifted.cues.push(cue('post-tie-reattack-start',.72,evidence));shifted.strength=round(clamp(shifted.strength+.72));
+    shifts.push(evidence);
+  }
+  return shifts;
+}
+
+export function addRepeatedPassageContinuity(events,parallelGroups,boundaries){
+  const passages=[];
+  for(const group of parallelGroups){
+    const sourceStart=group.firstPair[0],recurrenceStart=group.recurrencePair[0],displacement=group.displacementInEvents,available=Math.min(displacement,events.length-recurrenceStart);
+    if(available<12)continue;
+    const differences=[];for(let offset=0;offset<available;offset++){const left=events[sourceStart+offset],right=events[recurrenceStart+offset];if(left?.pitch!==null&&right?.pitch!==null)differences.push(right.pitch-left.pitch)}
+    const counts=new Map();for(const difference of differences)counts.set(difference,(counts.get(difference)||0)+1);const transposition=[...counts].sort((a,b)=>b[1]-a[1])[0]?.[0],pitchSimilarity=differences.length?differences.filter(value=>value===transposition).length/differences.length:0;
+    let comparableRhythm=0,matchingRhythm=0;for(let offset=0;offset<available;offset++){const left=events[sourceStart+offset]?.duration,right=events[recurrenceStart+offset]?.duration;if(left===null||right===null||!left||!right)continue;comparableRhythm++;if(Math.abs(left-right)/Math.max(left,right)<=.36)matchingRhythm++}const rhythmSimilarity=comparableRhythm?matchingRhythm/comparableRhythm:0;
+    if(pitchSimilarity<.85||rhythmSimilarity<.7)continue;
+    const passageId=`repeated-passage-${sourceStart}-${recurrenceStart}`,evidence={passageId,sourceSpan:[sourceStart,recurrenceStart],recurrenceSpan:[recurrenceStart,Math.min(events.length,recurrenceStart+displacement)],displacementInEvents:displacement,alignedEvents:available,transpositionSemitones:transposition,pitchSimilarity:round(pitchSimilarity),rhythmSimilarity:round(rhythmSimilarity),requiresCadenceReview:true};
+    for(const [start,end] of [evidence.sourceSpan,evidence.recurrenceSpan])for(let index=start+1;index<end;index++){const boundary=boundaries[index],prior=events[index-1],current=events[index],tieCarriesIntoBoundary=prior?.tieEndMeasure!==null&&current?.measure!==null&&prior.tieEndMeasure>=current.measure,clearObservedBreak=!tieCarriesIntoBoundary&&boundary?.cues?.some(item=>item.name==='observed-gap'&&item.strength>=.75);if(!boundary||boundary.strength<.65||clearObservedBreak)continue;boundary.rawStrength=boundary.rawStrength??boundary.strength;boundary.continuity=Math.max(boundary.continuity,.93);boundary.cues.push(cue('repeated-passage-internal-continuation',.93,evidence));boundary.primaryLevel='internal-repeated-passage';boundary.suppressedBy=passageId;boundary.strength=round(Math.min(boundary.strength,.49))}
+    passages.push(evidence);
+  }
+  return passages;
+}
+
+function cellShape(attacks, start, length) {
+  const notes = attacks.slice(start, start + length);
+  if (notes.length !== length || notes.some(note => note.pitch === null || note.duration === null || note.onset === null)) return null;
+  const unit = median(notes.map(note => note.duration));
+  if (!unit) return null;
+  return {
+    rhythm: notes.map(note => round(note.duration / unit)),
+    iois: notes.slice(1).map((note, index) => round((note.onset - notes[index].onset) / unit)),
+    contour: notes.slice(1).map((note, index) => Math.sign(note.pitch - notes[index].pitch)),
+  };
+}
+
+function cellShapeSimilarity(left, right) {
+  if (!left || !right || left.rhythm.length !== right.rhythm.length) return 0;
+  const closeRatio = (a, b, tolerance = .12) => a.length === b.length
+    ? a.filter((value, index) => Math.abs(value - b[index]) <= tolerance * Math.max(1, Math.abs(value), Math.abs(b[index]))).length / Math.max(1, a.length)
+    : 0;
+  const contour = left.contour.filter((value, index) => value === right.contour[index]).length / Math.max(1, left.contour.length);
+  return round(.45 * closeRatio(left.rhythm, right.rhythm) + .35 * closeRatio(left.iois, right.iois) + .2 * contour);
+}
+
+// Repeated sequential figures often contain breaths between cells without ending the
+// larger phrase. Preserve those cell divisions as evidence, but demote them from the
+// primary phrase level and expose the whole run's start/end as candidates.
+function addRepeatedFigureContinuity(attacks, boundaries) {
+  const gapPositions = [];
+  for (let position = 1; position < attacks.length; position++) {
+    const boundary = boundaries[attacks[position].index];
+    if (boundary.cues.some(item => item.name === 'observed-gap' && item.strength >= .65)) gapPositions.push(position);
+  }
+  const runs = [];
+  for (let i = 0; i < gapPositions.length - 1; i++) {
+    const first = gapPositions[i], second = gapPositions[i + 1], length = second - first, start = first - length, end = second + length;
+    if (length < 3 || length > 8 || start < 0 || end > attacks.length) continue;
+    const firstSimilarity = cellShapeSimilarity(cellShape(attacks, start, length), cellShape(attacks, first, length));
+    const secondSimilarity = cellShapeSimilarity(cellShape(attacks, first, length), cellShape(attacks, second, length));
+    if (firstSimilarity < .82 || secondSimilarity < .72) continue;
+    const candidate = { start, end, length, internal: [first, second], similarities: [firstSimilarity, secondSimilarity] };
+    const previous = runs.at(-1);
+    if (previous && previous.length === length && candidate.start <= previous.end) {
+      previous.end = Math.max(previous.end, candidate.end);
+      previous.internal = [...new Set([...previous.internal, ...candidate.internal])].sort((a, b) => a - b);
+      previous.similarities.push(...candidate.similarities);
+    } else runs.push(candidate);
+  }
+  return runs.map((run, runIndex) => {
+    const runId = `repeat-run-${runIndex + 1}-${attacks[run.start].index}`;
+    const startIndex = attacks[run.start].index, endIndex = run.end < attacks.length ? attacks[run.end].index : boundaries.length - 1;
+    const evidence = { runId, cellLengthInAttacks: run.length, cellCount: run.internal.length + 1, internalBoundaryIndices: run.internal.map(position => attacks[position].index), similarity: round(median(run.similarities) || 0), requiresCadenceReview: true };
+    for (const position of run.internal) {
+      const boundary = boundaries[attacks[position].index];
+      boundary.rawStrength = boundary.rawStrength ?? boundary.strength;
+      boundary.continuity = Math.max(boundary.continuity, .9);
+      boundary.cues.push(cue('repeated-figure-continuation', .9, evidence));
+      boundary.primaryLevel = 'subphrase-cell';
+      boundary.suppressedBy = runId;
+      boundary.strength = round(Math.min(boundary.strength, .49));
+    }
+    if (startIndex > 0) {
+      const boundary = boundaries[startIndex];
+      const independentBoundary = boundary.strength >= .65 && boundary.continuity < .75;
+      boundary.cues.push(cue('repeated-figure-run-start', .35, { ...evidence, layer: 'motif', contributesToPhraseStrength: false, promotedToPhraseBoundary: independentBoundary }));
+      if (independentBoundary) boundary.primaryLevel = 'phrase';
+    }
+    if (endIndex > 0 && endIndex < boundaries.length - 1) {
+      const boundary = boundaries[endIndex];
+      const independentClosure = boundary.strength >= .65 && boundary.continuity < .75;
+      const endEvidence = { ...evidence, requiresIndependentClosureCue: true, promotedToPhraseBoundary: independentClosure };
+      boundary.cues.push(cue('repeated-figure-run-end', independentClosure ? .68 : .35, endEvidence));
+      // A repeated run ending is structural evidence, not sufficient closure by
+      // itself. In particular, do not create a tiny phrase where the notes are
+      // temporally continuous and no independent boundary cue is present.
+      if (independentClosure) boundary.primaryLevel = 'phrase';
+    }
+    return { ...evidence, startIndex, endIndex };
+  });
+}
+
+function normalizedPrefix(attacks, start, end, count = 3) {
+  const notes = attacks.slice(start, Math.min(end, start + count));
+  if (notes.length < count || notes.some(note => note.duration === null)) return null;
+  const unit = notes[0].duration;
+  return unit > 0 ? notes.map(note => round(note.duration / unit)) : null;
+}
+
+function addRhythmicGestureContinuity(attacks, boundaries) {
+  const gaps = [];
+  for (let position = 1; position < attacks.length; position++) {
+    const boundary = boundaries[attacks[position].index], previous = attacks[position - 1];
+    const observed = boundary.cues.find(item => item.name === 'observed-gap' && item.strength >= .65);
+    if (observed && previous.end !== null && attacks[position].onset !== null) gaps.push({ position, absolute: attacks[position].onset - previous.end });
+  }
+  const groups = [];
+  for (let i = 0; i < gaps.length - 2; i++) {
+    const [left, middle, right] = gaps.slice(i, i + 3), leftLength = middle.position - left.position, rightLength = right.position - middle.position;
+    if (leftLength < 3 || leftLength > 8 || rightLength < 3 || rightLength > 8 || right.absolute < Math.max(2, middle.absolute * 2.5)) continue;
+    const first = normalizedPrefix(attacks, left.position, middle.position), second = normalizedPrefix(attacks, middle.position, right.position);
+    if (!first || !second || first.some((value, index) => Math.abs(value - second[index]) > .12 * Math.max(1, value, second[index]))) continue;
+    // Require a genuinely short-short-long pickup cell, not arbitrary equal notes.
+    if (!(first[0] <= first[2] * .6 && first[1] <= first[2] * .6)) continue;
+    const boundary = boundaries[attacks[middle.position].index], groupId = `gesture-chain-${groups.length + 1}-${attacks[left.position].index}`;
+    const evidence = { groupId, startIndex: attacks[left.position].index, internalBoundaryIndex: attacks[middle.position].index, endIndex: attacks[right.position].index, sharedRhythmPrefix: first, followingGapQuarters: round(right.absolute), requiresCadenceReview: true };
+    boundary.rawStrength = boundary.rawStrength ?? boundary.strength;
+    boundary.continuity = Math.max(boundary.continuity, .82);
+    boundary.cues.push(cue('rhythmic-gesture-continuation', .82, evidence));
+    boundary.primaryLevel = 'subphrase-cell';
+    boundary.suppressedBy = groupId;
+    boundary.strength = round(Math.min(boundary.strength, .49));
+    groups.push(evidence);
+  }
+  return groups;
+}
+
+/** Boundaries[i] is immediately before original note i; endpoints remain unknown. */
+function metricBeatQuarters(note){
+  const count=Number(note.meterCount),unit=Number(note.meterUnit);
+  if([6,9,12].includes(count)&&unit===8)return 1.5;
+  return [2,3,4].includes(count)&&[2,4,8].includes(unit)?4/unit:null;
+}
+
+// A sustained texture closes at its LAST long note, not at every barline.
+// Uses sounding duration, not the glyph alone; no harmonic cadence inference.
+export function sustainedEndingEvidence(notes,index){
+  const prior=notes[index-1],next=notes[index];
+  if(!prior||!next)return null;
+  const beat=metricBeatQuarters(prior),count=Number(prior.meterCount),unit=Number(prior.meterUnit);
+  const bar=count*4/unit;
+  if(!beat||bar<3*beat||next.meterCount!==prior.meterCount||next.meterUnit!==prior.meterUnit)return null;
+  if(![prior.onset,prior.durationRatio,next.onset,next.durationRatio,next.beat].every(finite))return null;
+  const duration=Number(prior.durationRatio),nextDuration=Number(next.durationRatio);
+  const gap=Number(next.onset)-Number(prior.onset)-duration;
+  // A fresh strong-beat attack and an actual rhythmic restart are required.
+  if(duration<bar||nextDuration<=0||nextDuration>beat||Number(next.beat)!==1||gap< -1e-6||gap>beat)return null;
+  if(next.isAttack===false||next.tieStop)return null;
+  const nextMeasure=Number(next.measureOrdinal??next.measure);
+  const priorMeasure=Number(prior.measureOrdinal??prior.measure);
+  if(!Number.isFinite(nextMeasure)||!Number.isFinite(priorMeasure)||nextMeasure<=priorMeasure)return null;
+  if(finite(prior.tieEndMeasure)&&Number(prior.tieEndMeasure)>=nextMeasure)return null;
+  const restart=notes.slice(index,index+3);
+  if(restart.length<3||restart.some(n=>!finite(n.onset)||!finite(n.durationRatio)||Number(n.durationRatio)<=0||n.isAttack===false||n.tieStop))return null;
+  if(restart.some((n,i)=>i&&Number(n.onset)<=Number(restart[i-1].onset)))return null;
+  if(restart.some((n,i)=>i&&Number(n.onset)-Number(restart[i-1].onset)-Number(restart[i-1].durationRatio)>beat))return null;
+  const restartMedian=median(restart.map(n=>Number(n.durationRatio)));
+  if(restartMedian>beat||duration<3*restartMedian)return null;
+  return {rule:'sustained-ending-rhythmic-restart-v1',terminalIndex:index-1,boundaryIndex:index,
+    durationQuarters:duration,barQuarters:bar,beatQuarters:beat,gapQuarters:round(Math.max(0,gap)),
+    restartIndices:restart.map((_,i)=>index+i),restartMedian,meaning:'last sustained note before short-note restart; not a cadence label'};
+}
+
+export function suppressShortArticulationBeforeArrival(events,boundaries){
+  const groups=[];
+  for(let i=1;i<events.length;i++){
+    const before=events[i-1],current=events[i],boundary=boundaries[i];
+    if(!before.explicit||!current.explicit||!current.attack||boundary.strength<.65)continue;
+    const gap=current.onset-before.end;
+    const beat=before.beatQuarters;
+    if(!beat||!(gap>0&&gap<=beat*.5&&before.duration<=beat*.5))continue;
+    if(boundary.cues.some(c=>c.name==='notated-breath-symbol'))continue;
+    // A nearby sustained arrival plus a substantially larger silence is stronger
+    // closure evidence than an articulation rest after a short attack. Do this
+    // BEFORE minimum-length pruning so the true following boundary survives.
+    for(let j=i;j<Math.min(events.length-1,i+12);j++){
+      const arrival=events[j],next=events[j+1];
+      if(arrival.onset-current.onset>8*beat)break;
+      if(!arrival.explicit||!next.explicit||!next.attack)continue;
+      const closureGap=next.onset-arrival.end;
+      if(closureGap>=Math.max(.5*beat,gap*2)&&arrival.duration>=Math.max(beat,before.duration*3)){
+        const evidence={startIndex:i,arrivalIndex:j,followingBoundaryIndex:j+1,articulationGap:gap,closureGap,arrivalDuration:arrival.duration,rule:'short-articulation-before-sustained-arrival-v1'};
+        demotePhraseBoundary(boundary,'short-articulation-continuation',evidence,.9);groups.push(evidence);break;
+      }
+      // Do not look past a clearly separate silence to justify distant merging.
+      if(closureGap>Math.max(.5*beat,gap*2))break;
+    }
+  }
+  return groups;
+}
+
+export function suppressWeakShortClosures(notes,events,boundaries){
+  const groups=[];let phraseStart=0;
+  for(let i=1;i<events.length;i++){
+    const b=boundaries[i];if(b.strength<.65)continue;
+    const prior=events[i-1],next=events[i],source=notes[i-1];
+    const gap=next.onset-prior.end;
+    const count=events.slice(phraseStart,i).filter(e=>e.attack).length;
+    const span=prior.end-events[phraseStart].onset;
+    const countInMeter=Number(source.meterCount),denominator=Number(source.meterUnit);
+    // Conventional beat grouping only; asymmetric/unknown meters need an explicit grid.
+    const compound=[6,9,12].includes(countInMeter)&&denominator===8;
+    const beat=compound?1.5:([2,3,4].includes(countInMeter)&&[2,4,8].includes(denominator)?4/denominator:null);
+    const local=median(events.slice(Math.max(phraseStart,i-4),i).map(e=>e.duration));
+    const terminalBeats=beat?prior.duration/beat:null,gapBeats=beat?gap/beat:null;
+    const independentBreath=source.breathSymbols?.length||b.cues.some(c=>c.name==='notated-breath-symbol');
+    // Weak closure prior, not a prohibition on sixteenth-note phrase endings.
+    const shortEnding=beat&&terminalBeats<=.25&&prior.duration<=local&&gapBeats>0&&gapBeats<=.5;
+    const tinyUnit=beat&&count<=4&&span/beat<4&&terminalBeats<=.5&&prior.duration<=2*local&&gapBeats>0&&gapBeats<1;
+    if(beat&&prior.explicit&&next.explicit&&!independentBreath&&(shortEnding||tinyUnit)){
+      const evidence={startIndex:phraseStart,boundaryIndex:i,attackCount:count,spanQuarters:span,terminalDuration:prior.duration,gapQuarters:gap,beatQuarters:beat,terminalBeats,gapBeats,localDuration:local,reason:shortEnding?'short-ending-with-small-rest':'short-cell-without-independent-closure',requiresCadenceReview:true};
+      demotePhraseBoundary(b,'weak-short-closure',evidence,.86);groups.push(evidence);
+    }
+    phraseStart=i;
+  }
+  return groups;
+}
+
+export function analyzePhraseBoundaries(notes,{repeatBreath=true,shortCell=true,traceSink}={}) {
+  const events = timeline(Array.isArray(notes) ? notes : []);
+  const boundaries = Array.from({ length: events.length + 1 }, (_, index) => unknown(index));
+  const attacks = events.filter(note => note.attack);
+  const motifCells = detectLongArrivalMotifCells(attacks);
+  const pitchDistances = attacks.map((note, i) => i && note.pitch !== null && attacks[i - 1].pitch !== null ? Math.abs(note.pitch - attacks[i - 1].pitch) : null);
+  const iois = attacks.map((note, i) => i && note.onset !== null && attacks[i - 1].onset !== null && note.onset > attacks[i - 1].onset ? note.onset - attacks[i - 1].onset : null);
+  for (let position = 0; position < attacks.length; position++) {
+    const current = attacks[position], index = current.index;
+    if (!index) continue;
+    const previous = events[index - 1], boundary = boundaries[index];
+    const unitTrace=traceSink?{reads:[]}:undefined;
+    const unit = localUnit(events, attacks, position,unitTrace);
+    const pitchPeak = discontinuity(pitchDistances, position);
+    const ioiPeak = discontinuity(iois, position);
+    if (pitchPeak > 0) boundary.cues.push(cue('pitch-discontinuity', .25 * pitchPeak, { localPeak: round(pitchPeak), method: 'neighbor-relative, LBDM-inspired' }));
+    if (ioiPeak > 0) boundary.cues.push(cue('ioi-discontinuity', .25 * ioiPeak, { localPeak: round(ioiPeak), method: 'neighbor-relative, LBDM-inspired' }));
+    boundary.strength = round(.25 * pitchPeak + .25 * ioiPeak);
+    // Inferred sequential onsets cannot establish either a rest or its absence.
+    if (unit && current.explicit && previous.explicit && previous.end !== null && current.onset > previous.onset) {
+      const gapRatio = (current.onset - previous.end) / unit;
+      if (gapRatio >= .25) {
+        const gapStrength = Math.min(.95, .55 + .2 * Math.log2(1 + gapRatio));
+        boundary.cues.push(cue('observed-gap', gapStrength, { gapRatio: round(gapRatio), relativeTo: 'local IOI or duration', explicitOnsets: true }));
+        if(traceSink)traceSink({ruleId:'observed-gap',boundaryIndex:index,unitTrace,
+          reads:[...unitTrace.reads,{index,field:'onset'},{index:index-1,field:'onset'},{index:index-1,field:'durationRatio'}],
+          attackSelection:attacks.map(a=>a.index),
+          complete:unitTrace.reads.every(r=>r.field!=='onset'||events[r.index].explicit),
+          guard:{currentExplicit:current.explicit,previousExplicit:previous.explicit,previousEnd:previous.end,increasingOnset:current.onset>previous.onset,minimumGapRatio:.25},
+          gapQuarters:current.onset-previous.end,gapRatio,gapStrength:round(gapStrength)});
+        boundary.strength = round(clamp(boundary.strength + gapStrength));
+      } else if (gapRatio >= -1e-6 && gapRatio <= .03 && pitchPeak <= .25 && ioiPeak <= .25) {
+        boundary.continuity = .85;
+        boundary.cues.push(cue('observed-continuity', .85, { gapRatio: round(Math.max(0, gapRatio)), explicitOnsets: true, meaning: 'temporal contact, not proof of no musical phrase' }));
+      }
+    }
+  }
+  for(let i=1;i<events.length;i++){
+    const evidence=sustainedEndingEvidence(notes,i);
+    if(evidence){
+      boundaries[i].cues.push(cue('sustained-ending-rhythmic-restart',.68,evidence));
+      boundaries[i].strength=Math.max(boundaries[i].strength,.68);
+      // Keep downstream repetition/minimum-length constraints authoritative.
+    }
+  }
+  // Preserve strongly observed silence while retaining the recurrence relation.
+  for(let i=1;i<events.length;i++){
+    const prior=events[i-1],current=events[i],beat=prior.beatQuarters;
+    if(beat&&prior.explicit&&current.explicit&&current.attack&&(current.onset-prior.end>=4*beat||(current.onset-prior.end>=2*beat&&prior.duration>=2*beat))){
+      boundaries[i].longRestBoundary={gapQuarters:current.onset-prior.end,beatQuarters:beat,initialStrength:boundaries[i].strength};
+    }
+  }
+  const motifRelations = addMotifSupport(attacks, boundaries);
+  const motifParallelGroups = addParallelRecurrenceContinuity(motifRelations,boundaries);
+  const repeatedFigureRuns = addRepeatedFigureContinuity(attacks, boundaries);
+  const rhythmicGestureGroups = addRhythmicGestureContinuity(attacks, boundaries);
+  const tieCarryoverShifts = shiftTieCarryoverBoundaries(events,boundaries);
+  const repeatedPassageGroups = addRepeatedPassageContinuity(events,motifParallelGroups,boundaries);
+  const thematicCellGrouping = applyThematicCellPhraseGrouping(events,motifCells,boundaries);
+  const shortArticulationGroups=suppressShortArticulationBeforeArrival(events,boundaries);
+  const minimumPhraseConstraint = attacks.length >= 12
+    ? applyMinimumPhraseAttackConstraint(events,boundaries)
+    : { minimumAttacks: 4, suppressedBoundaryIndices: [], applicable: false, reason: 'excerpt too short for work-level Phrase aggregation' };
+  const recurringMotifPhraseFrames = attacks.length >= 12
+    ? applyRecurringMotifPhraseFrames(events,motifRelations,boundaries)
+    : { applicable: false, suppressedBoundaryIndices: [], frames: [] };
+  const weakShortClosures=suppressWeakShortClosures(notes,events,boundaries);
+  // Narrow companion rule: a small interior breath before a nearby sustained
+  // ending, long silence AND a recognized restart of this earlier material.
+  for(let i=1;i<events.length;i++){
+    const b=boundaries[i],prior=events[i-1],beat=prior.beatQuarters;
+    if(!beat||b.strength<.65||b.longRestBoundary||notes[i-1].breathSymbols?.length)continue;
+    const gap=events[i].onset-prior.end;
+    if(!prior.explicit||!events[i].explicit||gap<=0||gap>1.5*beat||prior.duration>beat)continue;
+    for(let j=i+1;j<events.length;j++){
+      const terminal=events[j-1];if(terminal.end-events[i].onset>8*beat)break;
+      const shortBreath=gap<=.5*beat;
+      const strongerEnding=shortBreath?terminal.duration>=prior.duration:terminal.duration>=2*prior.duration&&events[j].onset-terminal.end>=gap*1.5;
+      if(boundaries[j].longRestBoundary&&strongerEnding&&motifRelations.some(r=>r.currentIndex===j&&r.previousIndex<i)){
+        demotePhraseBoundary(b,'interior-breath-before-repeated-restart',{boundaryIndex:i,arrivalIndex:j-1,restartIndex:j,beatQuarters:beat,gapQuarters:gap});break;
+      }
+      if(events[j].onset-terminal.end>.5*beat)break;
+    }
+  }
+  // Transfer only an already justified interior-breath decision between complete
+  // rhythm/pitch-equivalent units bounded by protected closures. No partial match.
+  const anchors=[0,...boundaries.filter(b=>b.longRestBoundary).map(b=>b.index)],seenUnits=new Map();
+  for(let a=0;a<anchors.length-1;a++){
+    const start=anchors[a],end=anchors[a+1],unit=events.slice(start,end);
+    if(unit.length<4||unit.length>64||unit.some(e=>!e.explicit||!e.attack||e.pitch===null))continue;
+    const first=unit[0],key=unit.map(e=>`${round(e.pitch-first.pitch)}:${round(e.duration/first.duration)}:${round((e.onset-first.onset)/first.duration)}`).join('|');
+    const previous=seenUnits.get(key);
+    if(previous!==undefined){
+      for(let k=1;k<unit.length;k++){
+        const source=boundaries[previous+k],target=boundaries[start+k];
+        if(source.cues.some(c=>c.name==='interior-breath-before-repeated-restart')&&!notes[start+k-1].breathSymbols?.length){
+          demotePhraseBoundary(target,'repeated-complete-phrase-internal-breath',{sourceBoundaryIndex:previous+k,boundaryIndex:start+k,sourceStart:previous,targetStart:start});
+        }
+      }
+    }else seenUnits.set(key,start);
+  }
+  for(const b of boundaries){if(b.longRestBoundary){b.strength=Math.max(b.strength,b.longRestBoundary.initialStrength);b.continuity=0;delete b.suppressedBy;b.primaryLevel='phrase';b.cues.push(cue('long-rest-boundary-protection',b.strength,b.longRestBoundary));}}
+  applyBreathSymbolEvidence(notes,boundaries);
+  const shortCellReview=shortCell?shortCellContinuity(notes,boundaries):{decisions:[],status:'disabled'};
+  const repeatedBreath=repeatBreath?repeatedBreathDecisions(notes,boundaries):{decisions:[],status:'disabled',comparisons:0};
+  for(const evidence of shortCellReview.decisions)demotePhraseBoundary(boundaries[evidence.boundaryIndex],'short-cell-variation-continuity',evidence);
+  for(const evidence of repeatedBreath.decisions)demotePhraseBoundary(boundaries[evidence.boundaryIndex],'whole-repeat-duration-rest-continuity',evidence);
+  for (let index = 1; index < events.length; index++) {
+    const boundary = boundaries[index];
+    if (!events[index].attack) {
+      boundary.continuity = 1;
+      boundary.cues.push(cue('tie-continuation', 1, { newAttack: false }));
+    }
+    boundary.supported = boundary.strength >= .65;
+    boundary.reliable = boundary.supported || boundary.continuity >= .75;
+    boundary.state = boundary.supported ? 'boundary' : boundary.continuity >= .75 ? 'continuous' : 'unknown';
+  }
+  return { version: VERSION, calibrated: false, label: 'phrase boundary evidence with separate motif-group hypotheses; harmonic cadence is a separate layer', repeatedBreath, motifRelations, motifCells, motifParallelGroups, repeatedPassageGroups, thematicCellGrouping, shortArticulationGroups, weakShortClosures, minimumPhraseConstraint, recurringMotifPhraseFrames, repeatedFigureRuns, rhythmicGestureGroups, tieCarryoverShifts, boundaries };
+}
+
+/** Only adjacent INTERNAL mapped transitions are comparable; use full candidate indices. */
+export function comparePhraseBoundaries(queryAnalysis, candidateAnalysis, pairs) {
+  const query = queryAnalysis?.boundaries || [], candidate = candidateAnalysis?.boundaries || [];
+  let previous = null, support = 0, conflicts = 0, weighted = 0;
+  const details = [], seen = new Set();
+  for (const pair of Array.isArray(pairs) ? pairs : []) {
+    const q = pair?.queryIndex, c = pair?.candidateIndex;
+    if (!Number.isInteger(q) || !Number.isInteger(c) || q < 0 || c < 0 || q >= query.length - 1 || c >= candidate.length - 1) {
+      previous = null;
+      continue;
+    }
+    if (previous && q === previous.q + 1 && c === previous.c + 1 && q > 0 && c > 0 && !seen.has(`${q}:${c}`)) {
+      seen.add(`${q}:${c}`);
+      const qb = query[q], cb = candidate[c];
+      if (qb?.supported && qb.reliable && qb.strength >= .65 && cb?.reliable) {
+        const gap = qb.cues?.find(item => item.name === 'observed-gap' && item.strength >= .65);
+        if (cb.supported && cb.strength >= .65) {
+          const weight = Math.min(qb.strength, cb.strength);
+          support++; weighted += weight;
+          details.push({ queryIndex: q, candidateIndex: c, outcome: 'supported-match', weight: round(weight) });
+        } else if (gap && cb.continuity >= .75) {
+          const weight = gap.strength * cb.continuity;
+          conflicts++; weighted -= weight;
+          details.push({ queryIndex: q, candidateIndex: c, outcome: 'observed-gap-vs-continuity', weight: round(weight) });
+        }
+      }
+    }
+    previous = { q, c };
+  }
+  const compared = support + conflicts;
+  const adjustment = round(3 * Math.max(-1, Math.min(1, weighted / Math.max(2, compared))));
+  return { version: VERSION, calibrated: false, applicable: compared > 0, support, conflicts, compared, adjustment, score: round(50 + adjustment * 50 / 3), details };
+}

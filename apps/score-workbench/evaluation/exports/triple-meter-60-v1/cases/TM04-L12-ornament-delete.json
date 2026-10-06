@@ -1,0 +1,2769 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "triple-meter-60-v1-TM04-L12-ornament-delete",
+  "createdAt": "2026-09-17",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM04-e0",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e2",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e3",
+        "kind": "note",
+        "pitchMidi": 41,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e4",
+        "kind": "note",
+        "pitchMidi": 39,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e5",
+        "kind": "note",
+        "pitchMidi": 38,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e6",
+        "kind": "note",
+        "pitchMidi": 36,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e7",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e8",
+        "kind": "note",
+        "pitchMidi": 48,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e9",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e10",
+        "kind": "note",
+        "pitchMidi": 55,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e11",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM04-e0",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e1",
+        "kind": "note",
+        "pitchMidi": 44,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e2",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e3",
+        "kind": "note",
+        "pitchMidi": 41,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e4",
+        "kind": "note",
+        "pitchMidi": 39,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e5",
+        "kind": "note",
+        "pitchMidi": 38,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e6",
+        "kind": "note",
+        "pitchMidi": 36,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e7",
+        "kind": "note",
+        "pitchMidi": 43,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e8",
+        "kind": "note",
+        "pitchMidi": 48,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e9",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e10",
+        "kind": "note",
+        "pitchMidi": 55,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM04-e11",
+        "kind": "note",
+        "pitchMidi": 51,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "12음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 11음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "TM04-e1"
+    ],
+    "originalDuration": 6,
+    "queryDuration": 5.5,
+    "transformation": {
+      "omission": {
+        "eventId": "TM04-e1",
+        "index": 1,
+        "evidence": {
+          "index": 1,
+          "type": "neighbor",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P1:m12:n4",
+            "P1:m12:n6"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-442652cb08a654c2",
+    "sourceId": "3. Chim Chim Cher-ee, Piano Solo.musicxml.xml",
+    "streamId": "P1:2:2",
+    "title": "CHIM CHIM CHER-EE",
+    "composer": "Composed by Robert B. Sherman\nArranged by Reflet des Nuages",
+    "baseStartIndex": 42,
+    "baseStartMeasure": 12,
+    "baseEndMeasure": 13,
+    "baseTargets": [
+      {
+        "onset": 33,
+        "pitchMidi": 43,
+        "measure": 12,
+        "beat": 1
+      },
+      {
+        "onset": 33.5,
+        "pitchMidi": 44,
+        "measure": 12,
+        "beat": 1.5
+      },
+      {
+        "onset": 34,
+        "pitchMidi": 43,
+        "measure": 12,
+        "beat": 2
+      },
+      {
+        "onset": 34.5,
+        "pitchMidi": 41,
+        "measure": 12,
+        "beat": 2.5
+      },
+      {
+        "onset": 35,
+        "pitchMidi": 39,
+        "measure": 12,
+        "beat": 3
+      },
+      {
+        "onset": 35.5,
+        "pitchMidi": 38,
+        "measure": 12,
+        "beat": 3.5
+      },
+      {
+        "onset": 36,
+        "pitchMidi": 36,
+        "measure": 13,
+        "beat": 1
+      },
+      {
+        "onset": 36.5,
+        "pitchMidi": 43,
+        "measure": 13,
+        "beat": 1.5
+      },
+      {
+        "onset": 37,
+        "pitchMidi": 48,
+        "measure": 13,
+        "beat": 2
+      },
+      {
+        "onset": 37.5,
+        "pitchMidi": 51,
+        "measure": 13,
+        "beat": 2.5
+      },
+      {
+        "onset": 38,
+        "pitchMidi": 55,
+        "measure": 13,
+        "beat": 3
+      },
+      {
+        "onset": 38.5,
+        "pitchMidi": 51,
+        "measure": 13,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 13676.292400000035,
+      "trace": {
+        "rejections": {
+          "inferior-window": 1,
+          "admission-floor": 1,
+          "downbeat-floor": 1,
+          "query-coverage": 1
+        },
+        "scored": [
+          {
+            "sequence": 698,
+            "stage": "candidate-scored",
+            "elapsedMs": 3822.4414000000106,
+            "key": "work-442652cb08a654c2\u0000*",
+            "local": 91.71026582224391,
+            "scores": {
+              "pitch": 98.72727272727273,
+              "interval": 98.6509090909091,
+              "contour": 90,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 10.90909090909091,
+              "adjustment": -14.727272727272727,
+              "matches": 0,
+              "conflicts": 2,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 40.919627576550454,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 73.98744051780396,
+              "pillarPitch": 72,
+              "interval": 69.2,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 96.36363636363636,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 43,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 44,
+                  "cost": 0.25763374285714286,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 45,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 46,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 47,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 48,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 49,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 50,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 51,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 52,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 53,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 43,
+              "end": 53,
+              "coverage": 1,
+              "cost": 0.25763374285714286,
+              "similarity": 95.23770425688946
+            },
+            "windowStart": 0
+          },
+          {
+            "sequence": 3723,
+            "stage": "candidate-scored",
+            "elapsedMs": 5566.609200000006,
+            "key": "work-442652cb08a654c2\u000043",
+            "local": 91.71026582224391,
+            "scores": {
+              "pitch": 98.72727272727273,
+              "interval": 98.6509090909091,
+              "contour": 90,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 10.90909090909091,
+              "adjustment": -14.727272727272727,
+              "matches": 0,
+              "conflicts": 2,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 40.919627576550454,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 73.98744051780396,
+              "pillarPitch": 72,
+              "interval": 69.2,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 96.36363636363636,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 5,
+                  "cost": 0.25763374285714286,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 4,
+              "end": 14,
+              "coverage": 1,
+              "cost": 0.25763374285714286,
+              "similarity": 95.23770425688946
+            },
+            "windowStart": 39
+          },
+          {
+            "sequence": 3736,
+            "stage": "candidate-scored",
+            "elapsedMs": 5566.859899999981,
+            "key": "work-442652cb08a654c2\u00007",
+            "local": 67.17855933864523,
+            "scores": {
+              "pitch": 64.6,
+              "interval": 76.50666666666666,
+              "contour": 100,
+              "rhythm": 39.94093475524381
+            },
+            "metric": {
+              "score": 6,
+              "adjustment": -15.6,
+              "matches": 0,
+              "conflicts": 2,
+              "overAccents": 2
+            },
+            "structural": {
+              "similarity": 32.34986473968493,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 57.97974225605406,
+              "pillarPitch": 86,
+              "interval": 77.6,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 0.5,
+              "strongCoverage": 0.5
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 91.11111111111111,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": null,
+                  "cost": 0.3768,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 6,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 7,
+                  "cost": 0.1457993142857143,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0.042737142857142855,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0.2959387428571429,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 5,
+              "end": 14,
+              "coverage": 0.9090909090909091,
+              "cost": 0.9040123428571429,
+              "similarity": 76.60371293509087
+            },
+            "windowStart": 3
+          },
+          {
+            "sequence": 3749,
+            "stage": "candidate-scored",
+            "elapsedMs": 5567.042199999967,
+            "key": "work-442652cb08a654c2\u0000153",
+            "local": 57.756596698009496,
+            "scores": {
+              "pitch": 66.66666666666666,
+              "interval": 69.71666666666667,
+              "contour": 75,
+              "rhythm": 66.95254860235477
+            },
+            "metric": {
+              "score": 10,
+              "adjustment": -14.88888888888889,
+              "matches": 0,
+              "conflicts": 2,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 28.973213900471883,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 44.68275046155694,
+              "pillarPitch": 72,
+              "interval": 55.2,
+              "contour": 0,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 0.5,
+              "strongCoverage": 0.5
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 88.88888888888889,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 7,
+                  "cost": 0.28049074285714287,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": null,
+                  "cost": 0.3597,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": null,
+                  "cost": 0.3312,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0.36803802857142864,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0.3908416,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 12,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 13,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 14,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 6,
+              "end": 14,
+              "coverage": 0.8181818181818182,
+              "cost": 1.7302703714285714,
+              "similarity": 58.95631634046578
+            },
+            "windowStart": 149
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-17T01:05:34.050Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 95.98532802041598,
+      "representativeWindowRank": 1,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 11,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [
+        {
+          "id": "query-completion-v1-0",
+          "kind": "pitch",
+          "query": {
+            "version": 1,
+            "mode": "melody_rhythm",
+            "meter": "3/4",
+            "startsOnDownbeat": true,
+            "includeRests": true,
+            "absoluteExactOnly": false,
+            "events": [
+              {
+                "id": "TM04-e0",
+                "kind": "note",
+                "pitchMidi": 44,
+                "durationRatio": 0.5,
+                "spelling": "G♯2"
+              },
+              {
+                "id": "TM04-e2",
+                "kind": "note",
+                "pitchMidi": 43,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e3",
+                "kind": "note",
+                "pitchMidi": 41,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e4",
+                "kind": "note",
+                "pitchMidi": 39,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e5",
+                "kind": "note",
+                "pitchMidi": 38,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e6",
+                "kind": "note",
+                "pitchMidi": 36,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e7",
+                "kind": "note",
+                "pitchMidi": 43,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e8",
+                "kind": "note",
+                "pitchMidi": 48,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e9",
+                "kind": "note",
+                "pitchMidi": 51,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e10",
+                "kind": "note",
+                "pitchMidi": 55,
+                "durationRatio": 0.5
+              },
+              {
+                "id": "TM04-e11",
+                "kind": "note",
+                "pitchMidi": 51,
+                "durationRatio": 0.5
+              }
+            ]
+          },
+          "changedIds": [
+            "TM04-e0"
+          ],
+          "reason": "1번째 음 undefined → G♯2",
+          "beforeFit": 0.9090909090909091,
+          "afterFit": 1,
+          "evidence": [
+            {
+              "workId": "work-442652cb08a654c2",
+              "sourceId": "3. Chim Chim Cher-ee, Piano Solo.musicxml.xml",
+              "title": "CHIM CHIM CHER-EE",
+              "streamId": "P1:2:2",
+              "startMeasure": 12,
+              "endMeasure": 13,
+              "transposition": 0,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-442652cb08a654c2-1",
+                  "kind": "note",
+                  "pitchMidi": 44,
+                  "spelling": "Ab2",
+                  "durationRatio": 0.5,
+                  "onset": 33.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-2",
+                  "kind": "note",
+                  "pitchMidi": 43,
+                  "spelling": "G2",
+                  "durationRatio": 0.5,
+                  "onset": 34,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-3",
+                  "kind": "note",
+                  "pitchMidi": 41,
+                  "spelling": "F2",
+                  "durationRatio": 0.5,
+                  "onset": 34.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-4",
+                  "kind": "note",
+                  "pitchMidi": 39,
+                  "spelling": "Eb2",
+                  "durationRatio": 0.5,
+                  "onset": 35,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-5",
+                  "kind": "note",
+                  "pitchMidi": 38,
+                  "spelling": "D2",
+                  "durationRatio": 0.5,
+                  "onset": 35.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-6",
+                  "kind": "note",
+                  "pitchMidi": 36,
+                  "spelling": "C2",
+                  "durationRatio": 0.5,
+                  "onset": 36,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-7",
+                  "kind": "note",
+                  "pitchMidi": 43,
+                  "spelling": "G2",
+                  "durationRatio": 0.5,
+                  "onset": 36.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-8",
+                  "kind": "note",
+                  "pitchMidi": 48,
+                  "spelling": "C3",
+                  "durationRatio": 0.5,
+                  "onset": 37,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-9",
+                  "kind": "note",
+                  "pitchMidi": 51,
+                  "spelling": "Eb3",
+                  "durationRatio": 0.5,
+                  "onset": 37.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-10",
+                  "kind": "note",
+                  "pitchMidi": 55,
+                  "spelling": "G3",
+                  "durationRatio": 0.5,
+                  "onset": 38,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-442652cb08a654c2-11",
+                  "kind": "note",
+                  "pitchMidi": 51,
+                  "spelling": "Eb3",
+                  "durationRatio": 0.5,
+                  "onset": 38.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 2,
+                  "cost": 0.25763374285714286,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ]
+            },
+            {
+              "workId": "work-ebe1a1dbc7e41a62-3ba9e1fb",
+              "sourceId": "3. Chim Chim Cher-ee, Violin and Piano Duet.musicxml.xml",
+              "title": "CHIM CHIM CHER-EE",
+              "streamId": "P2:2:2",
+              "startMeasure": 12,
+              "endMeasure": 13,
+              "transposition": 0,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-1",
+                  "kind": "note",
+                  "pitchMidi": 44,
+                  "spelling": "Ab2",
+                  "durationRatio": 0.5,
+                  "onset": 33.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-2",
+                  "kind": "note",
+                  "pitchMidi": 43,
+                  "spelling": "G2",
+                  "durationRatio": 0.5,
+                  "onset": 34,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-3",
+                  "kind": "note",
+                  "pitchMidi": 41,
+                  "spelling": "F2",
+                  "durationRatio": 0.5,
+                  "onset": 34.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-4",
+                  "kind": "note",
+                  "pitchMidi": 39,
+                  "spelling": "Eb2",
+                  "durationRatio": 0.5,
+                  "onset": 35,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-5",
+                  "kind": "note",
+                  "pitchMidi": 38,
+                  "spelling": "D2",
+                  "durationRatio": 0.5,
+                  "onset": 35.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-6",
+                  "kind": "note",
+                  "pitchMidi": 36,
+                  "spelling": "C2",
+                  "durationRatio": 0.5,
+                  "onset": 36,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-7",
+                  "kind": "note",
+                  "pitchMidi": 43,
+                  "spelling": "G2",
+                  "durationRatio": 0.5,
+                  "onset": 36.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-8",
+                  "kind": "note",
+                  "pitchMidi": 48,
+                  "spelling": "C3",
+                  "durationRatio": 0.5,
+                  "onset": 37,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-9",
+                  "kind": "note",
+                  "pitchMidi": 51,
+                  "spelling": "Eb3",
+                  "durationRatio": 0.5,
+                  "onset": 37.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-10",
+                  "kind": "note",
+                  "pitchMidi": 55,
+                  "spelling": "G3",
+                  "durationRatio": 0.5,
+                  "onset": 38,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-ebe1a1dbc7e41a62-3ba9e1fb-11",
+                  "kind": "note",
+                  "pitchMidi": 51,
+                  "spelling": "Eb3",
+                  "durationRatio": 0.5,
+                  "onset": 38.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 2,
+                  "cost": 0.25763374285714286,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ]
+            },
+            {
+              "workId": "work-68209f2f7de64ee1-a22005a1",
+              "sourceId": "3. Chim Chim Cher-ee, Violin, Cello and Piano Trio.musicxml.xml",
+              "title": "CHIM CHIM CHER-EE",
+              "streamId": "P3:2:2",
+              "startMeasure": 12,
+              "endMeasure": 13,
+              "transposition": 0,
+              "tempoRatio": 1,
+              "notes": [
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-1",
+                  "kind": "note",
+                  "pitchMidi": 44,
+                  "spelling": "Ab2",
+                  "durationRatio": 0.5,
+                  "onset": 33.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-2",
+                  "kind": "note",
+                  "pitchMidi": 43,
+                  "spelling": "G2",
+                  "durationRatio": 0.5,
+                  "onset": 34,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-3",
+                  "kind": "note",
+                  "pitchMidi": 41,
+                  "spelling": "F2",
+                  "durationRatio": 0.5,
+                  "onset": 34.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-4",
+                  "kind": "note",
+                  "pitchMidi": 39,
+                  "spelling": "Eb2",
+                  "durationRatio": 0.5,
+                  "onset": 35,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-5",
+                  "kind": "note",
+                  "pitchMidi": 38,
+                  "spelling": "D2",
+                  "durationRatio": 0.5,
+                  "onset": 35.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 12,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 12,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-6",
+                  "kind": "note",
+                  "pitchMidi": 36,
+                  "spelling": "C2",
+                  "durationRatio": 0.5,
+                  "onset": 36,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 1,
+                  "metricStrength": 1,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-7",
+                  "kind": "note",
+                  "pitchMidi": 43,
+                  "spelling": "G2",
+                  "durationRatio": 0.5,
+                  "onset": 36.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 1.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-8",
+                  "kind": "note",
+                  "pitchMidi": 48,
+                  "spelling": "C3",
+                  "durationRatio": 0.5,
+                  "onset": 37,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 2,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-9",
+                  "kind": "note",
+                  "pitchMidi": 51,
+                  "spelling": "Eb3",
+                  "durationRatio": 0.5,
+                  "onset": 37.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 2.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-10",
+                  "kind": "note",
+                  "pitchMidi": 55,
+                  "spelling": "G3",
+                  "durationRatio": 0.5,
+                  "onset": 38,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 3,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                },
+                {
+                  "id": "work-68209f2f7de64ee1-a22005a1-11",
+                  "kind": "note",
+                  "pitchMidi": 51,
+                  "spelling": "Eb3",
+                  "durationRatio": 0.5,
+                  "onset": 38.5,
+                  "cue": false,
+                  "tieStart": false,
+                  "tieStop": false,
+                  "measure": 13,
+                  "beat": 3.5,
+                  "metricStrength": 0.5,
+                  "structuralSalience": 0.5,
+                  "structuralConfidence": 0.65,
+                  "chordRole": "unknown",
+                  "measureOrdinal": 13,
+                  "clefShape": "F",
+                  "clefLine": 4,
+                  "meterCount": 3,
+                  "meterUnit": 4,
+                  "partName": "Pno.",
+                  "keyFifths": -3
+                }
+              ],
+              "alignment": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 2,
+                  "cost": 0.25763374285714286,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 8,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 9,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 10,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "top": [
+        {
+          "rank": 1,
+          "title": "CHIM CHIM CHER-EE",
+          "sourceId": "3. Chim Chim Cher-ee, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:2",
+          "score": 95.98532802041598,
+          "scores": {
+            "pitch": 98.72727272727273,
+            "interval": 98.6509090909091,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 41,
+            "skeleton": 74,
+            "pillarPitch": 72,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-442652cb08a654c2&start=12&end=13&source=search&targets=33.5%3A44%2C34%3A43%2C34.5%3A41%2C35%3A39%2C35.5%3A38%2C36%3A36%2C36.5%3A43%2C37%3A48%2C37.5%3A51%2C38%3A55%2C38.5%3A51"
+        },
+        {
+          "rank": 2,
+          "title": "CHIM CHIM CHER-EE",
+          "sourceId": "3. Chim Chim Cher-ee, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:2:2",
+          "score": 95.98532802041598,
+          "scores": {
+            "pitch": 98.72727272727273,
+            "interval": 98.6509090909091,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 41,
+            "skeleton": 74,
+            "pillarPitch": 72,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-ebe1a1dbc7e41a62-3ba9e1fb&start=12&end=13&source=search&targets=33.5%3A44%2C34%3A43%2C34.5%3A41%2C35%3A39%2C35.5%3A38%2C36%3A36%2C36.5%3A43%2C37%3A48%2C37.5%3A51%2C38%3A55%2C38.5%3A51"
+        },
+        {
+          "rank": 3,
+          "title": "CHIM CHIM CHER-EE",
+          "sourceId": "3. Chim Chim Cher-ee, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:2:2",
+          "score": 95.98532802041598,
+          "scores": {
+            "pitch": 98.72727272727273,
+            "interval": 98.6509090909091,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 41,
+            "skeleton": 74,
+            "pillarPitch": 72,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-68209f2f7de64ee1-a22005a1&start=12&end=13&source=search&targets=33.5%3A44%2C34%3A43%2C34.5%3A41%2C35%3A39%2C35.5%3A38%2C36%3A36%2C36.5%3A43%2C37%3A48%2C37.5%3A51%2C38%3A55%2C38.5%3A51"
+        },
+        {
+          "rank": 4,
+          "title": "겨울새",
+          "sourceId": "kysing/97366.xml",
+          "streamId": "P2:1:1",
+          "score": 93.17339273644774,
+          "scores": {
+            "pitch": 94.9090909090909,
+            "interval": 94.60363636363635,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 3,
+            "structural": 29,
+            "skeleton": 63,
+            "pillarPitch": 81,
+            "specificity": 76,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-7e0b7c6a6969d28f-88a85b71&start=28&end=29&source=search&targets=109.5%3A67%2C110%3A66%2C110.5%3A64%2C111%3A62%2C111.5%3A61%2C112%3A59%2C112.5%3A66%2C113%3A71%2C113.5%3A74%2C114%3A78%2C114.5%3A71"
+        },
+        {
+          "rank": 5,
+          "title": "Cello Suite No.2 in D minor BWV 1008",
+          "sourceId": "mxl/7/46/QmPupdr8z3WgnqkeDcPZLVS3JbkUapimQV8uLubFyS2bQA.mxl",
+          "streamId": "P1:1:1",
+          "score": 90.1843787443916,
+          "scores": {
+            "pitch": 89.81818181818181,
+            "interval": 88.36727272727273,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 43,
+            "skeleton": 89,
+            "pillarPitch": 90,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-e8e13765154f14c1&start=54&end=55&source=search&targets=160.75%3A58%2C161%3A56%2C161.25%3A54%2C161.5%3A52%2C161.75%3A51%2C162%3A49%2C162.25%3A56%2C162.5%3A61%2C162.75%3A63%2C163%3A64%2C163.25%3A63"
+        },
+        {
+          "rank": 6,
+          "title": "Cello Suite No.2 in D minor BWV 1008",
+          "sourceId": "mxl/12/53/QmUXgcnzTBWAW2FNkRP9nEKov5dxQN1TfHsqY1bh3wMpC7.mxl",
+          "streamId": "P1:1:1",
+          "score": 90.1843787443916,
+          "scores": {
+            "pitch": 89.81818181818181,
+            "interval": 88.36727272727273,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 43,
+            "skeleton": 89,
+            "pillarPitch": 90,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-ea57edfbde2c183e&start=54&end=55&source=search&targets=160.75%3A71%2C161%3A69%2C161.25%3A67%2C161.5%3A65%2C161.75%3A64%2C162%3A62%2C162.25%3A69%2C162.5%3A74%2C162.75%3A76%2C163%3A77%2C163.25%3A76"
+        },
+        {
+          "rank": 7,
+          "title": "Cello Suite No.2 in D minor BWV 1008",
+          "sourceId": "mxl/4/49/QmeVfw4eWo74eT9DLf6pEiHQ9e33Vc1BJ6KKzHo8u47ZoB.mxl",
+          "streamId": "P1:1:1",
+          "score": 90.1843787443916,
+          "scores": {
+            "pitch": 89.81818181818181,
+            "interval": 88.36727272727273,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 43,
+            "skeleton": 89,
+            "pillarPitch": 90,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-fa5dc78b156f1100&start=54&end=55&source=search&targets=160.75%3A47%2C161%3A45%2C161.25%3A43%2C161.5%3A41%2C161.75%3A40%2C162%3A38%2C162.25%3A45%2C162.5%3A50%2C162.75%3A52%2C163%3A53%2C163.25%3A52"
+        },
+        {
+          "rank": 8,
+          "title": "Cello Suite No.2 in D minor BWV 1008",
+          "sourceId": "mxl/8/49/QmQVPi2gU8mij2GA8abWwz3mo3sxMoeEBxpMEHVrQoZsSn.mxl",
+          "streamId": "P1:1:1",
+          "score": 90.1843787443916,
+          "scores": {
+            "pitch": 89.81818181818181,
+            "interval": 88.36727272727273,
+            "contour": 90,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 43,
+            "skeleton": 89,
+            "pillarPitch": 90,
+            "specificity": 76,
+            "repeatPattern": 96,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-78bd8ee6f6a601f0&start=54&end=55&source=search&targets=160.75%3A46%2C161%3A44%2C161.25%3A42%2C161.5%3A40%2C161.75%3A39%2C162%3A37%2C162.25%3A44%2C162.5%3A49%2C162.75%3A51%2C163%3A52%2C163.25%3A51"
+        },
+        {
+          "rank": 9,
+          "title": "Pièces choisis pour orgue",
+          "sourceId": "mxl/17/38/QmZqPxLNwBqmf6wBrAAirGHrKcdptfWQPgWGj5eUExRMXj.mxl",
+          "streamId": "P2:3:9",
+          "score": 88.38113587352899,
+          "scores": {
+            "pitch": 91.6,
+            "interval": 90.10666666666667,
+            "contour": 100,
+            "rhythm": 80.88666471820896,
+            "meter": 82,
+            "structural": 41,
+            "skeleton": 89,
+            "pillarPitch": 90,
+            "specificity": 76,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 10,
+          "url": "/score?workId=work-b0d1f9e3ee651de5-bab14c45&start=8&end=13&source=search&targets=16%3A50%2C16.5%3A48%2C17%3A46%2C17.5%3A45%2C18%3A43%2C20%3A50%2C22%3A55%2C24%3A57%2C26%3A58%2C26.5%3A57"
+        },
+        {
+          "rank": 10,
+          "title": "Pavane and Chaconne in G minor",
+          "sourceId": "mxl/1/2/Qmb3wuQG5FxU9xwKvxoM65bvnbjTSAgbZ6Jz3iw1QYVuQd.mxl",
+          "streamId": "P2:1:1",
+          "score": 87.82506187298353,
+          "scores": {
+            "pitch": 87.27272727272728,
+            "interval": 87.34909090909092,
+            "contour": 80,
+            "rhythm": 100,
+            "meter": 11,
+            "structural": 34,
+            "skeleton": 68,
+            "pillarPitch": 76,
+            "specificity": 76,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 11,
+          "url": "/score?workId=work-fe320055701911b9-88a85b71&start=98&end=99&source=search&targets=291.5%3A69%2C292%3A67%2C292.5%3A65%2C293%3A63%2C293.5%3A62%2C294%3A60%2C294.5%3A67%2C295%3A72%2C295.5%3A75%2C296%3A74%2C296.5%3A72"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 12,
+      "queryNoteLength": 11,
+      "returnedCount": 100,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/TM04-L12-ornament-delete.json",
+      "initialPath": "../runs/TM04-L12-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-442652cb08a654c2",
+      "sourceId": "3. Chim Chim Cher-ee, Piano Solo.musicxml.xml",
+      "streamId": "P1:2:2",
+      "title": "CHIM CHIM CHER-EE",
+      "composer": "Composed by Robert B. Sherman\nArranged by Reflet des Nuages",
+      "baseStartIndex": 42,
+      "baseStartMeasure": 12,
+      "baseEndMeasure": 13,
+      "baseTargets": [
+        {
+          "onset": 33,
+          "pitchMidi": 43,
+          "measure": 12,
+          "beat": 1
+        },
+        {
+          "onset": 33.5,
+          "pitchMidi": 44,
+          "measure": 12,
+          "beat": 1.5
+        },
+        {
+          "onset": 34,
+          "pitchMidi": 43,
+          "measure": 12,
+          "beat": 2
+        },
+        {
+          "onset": 34.5,
+          "pitchMidi": 41,
+          "measure": 12,
+          "beat": 2.5
+        },
+        {
+          "onset": 35,
+          "pitchMidi": 39,
+          "measure": 12,
+          "beat": 3
+        },
+        {
+          "onset": 35.5,
+          "pitchMidi": 38,
+          "measure": 12,
+          "beat": 3.5
+        },
+        {
+          "onset": 36,
+          "pitchMidi": 36,
+          "measure": 13,
+          "beat": 1
+        },
+        {
+          "onset": 36.5,
+          "pitchMidi": 43,
+          "measure": 13,
+          "beat": 1.5
+        },
+        {
+          "onset": 37,
+          "pitchMidi": 48,
+          "measure": 13,
+          "beat": 2
+        },
+        {
+          "onset": 37.5,
+          "pitchMidi": 51,
+          "measure": 13,
+          "beat": 2.5
+        },
+        {
+          "onset": 38,
+          "pitchMidi": 55,
+          "measure": 13,
+          "beat": 3
+        },
+        {
+          "onset": 38.5,
+          "pitchMidi": 51,
+          "measure": 13,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 10,
+      "endOrdinal": 15,
+      "xmlHash": "7f522f8181299aa3da898f5f2b024808efbf53ea44fc9127a0a6b38a31b0d1ec",
+      "xmlError": null,
+      "eventsHash": "fdbc298f3e9d2c13a38da709fe37add6b7b47c0678ce6663ac986c72de38b1b0",
+      "sourcePath": "K:/Music Analysis/musicxml/3. Chim Chim Cher-ee, Piano Solo.musicxml.xml",
+      "sourceHash": "442652cb08a654c2245c8ea71e8d9b1d4aa76214e09dc1a7b7271a81ec5315f9"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m12:n4",
+          "xmlNoteId": "P1:m12:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 33,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 43,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 18,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m12:n5",
+          "xmlNoteId": "P1:m12:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 67,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 44,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 19,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m12:n6",
+          "xmlNoteId": "P1:m12:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 34,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 43,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 18,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m12:n7",
+          "xmlNoteId": "P1:m12:n7",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 7
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 69,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 41,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 17,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m12:n8",
+          "xmlNoteId": "P1:m12:n8",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 8
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 35,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 39,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 16,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m12:n9",
+          "xmlNoteId": "P1:m12:n9",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 9
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 71,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 38,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 15,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m13:n17",
+          "xmlNoteId": "P1:m13:n17",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 17
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 36,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 36,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 14,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m13:n18",
+          "xmlNoteId": "P1:m13:n18",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 18
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 73,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 43,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 18,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 2
+          }
+        },
+        {
+          "id": "P1:m13:n19",
+          "xmlNoteId": "P1:m13:n19",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 19
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 37,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 48,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 21,
+          "writtenPitch": {
+            "step": "C",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m13:n20",
+          "xmlNoteId": "P1:m13:n20",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 20
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 75,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 51,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 23,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m13:n21",
+          "xmlNoteId": "P1:m13:n21",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 21
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 38,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 55,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 25,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 3
+          }
+        },
+        {
+          "id": "P1:m13:n22",
+          "xmlNoteId": "P1:m13:n22",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 13,
+            "noteIndex": 22
+          },
+          "partId": "P1",
+          "voiceId": "2",
+          "staffId": "2",
+          "kind": "note",
+          "measureOrdinal": 13,
+          "originalMeasureLabel": "13",
+          "onsetQ": {
+            "n": 77,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 51,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 23,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 3
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/TM04-L12/context.musicxml",
+      "events": "../base-assets/TM04-L12/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

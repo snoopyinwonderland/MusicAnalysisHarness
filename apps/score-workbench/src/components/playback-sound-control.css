@@ -1,0 +1,8 @@
+.playback-sound-control{display:flex;flex-direction:column;gap:2px;flex:0 1 auto;min-width:0;color:#69706c;font-size:10px;line-height:1.4}
+.playback-sound-control .playback-sound-toggle,.score-transport .playback-sound-control .playback-sound-toggle,.controls .playback-sound-control .playback-sound-toggle{display:flex;align-items:center;gap:6px;grid-template-columns:none;min-width:0;width:auto;height:auto;flex:none;border:0;background:none;padding:0;font:inherit;white-space:nowrap}
+.playback-sound-control .playback-sound-toggle input,.score-transport .playback-sound-control .playback-sound-toggle input{width:13px;height:13px;flex:none;margin:0;accent-color:#d94f3d}
+.playback-sound-control small{font-size:9px;max-width:180px;overflow-wrap:anywhere}
+.score-transport:has(.playback-sound-control){flex-wrap:wrap}
+.score-transport .playback-part-label{font-size:9px;color:#69706c;max-width:180px;overflow-wrap:anywhere}
+.transport:has(.playback-sound-control){flex-wrap:wrap}
+@media(max-width:520px){.score-transport .playback-sound-control .playback-sound-toggle{min-width:0;flex:none}.score-transport .playback-sound-control{margin-left:auto}}

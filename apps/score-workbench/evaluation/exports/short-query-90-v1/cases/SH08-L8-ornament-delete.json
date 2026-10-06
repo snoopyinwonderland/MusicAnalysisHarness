@@ -1,0 +1,1068 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH08-L8-ornament-delete",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH08-e0",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e2",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.3359375
+      },
+      {
+        "id": "SH08-e3",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.3359375
+      },
+      {
+        "id": "SH08-e6",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e7",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.33203125
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH08-e0",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e1",
+        "kind": "note",
+        "pitchMidi": 78,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e2",
+        "kind": "note",
+        "pitchMidi": 79,
+        "durationRatio": 0.3359375
+      },
+      {
+        "id": "SH08-e3",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e4",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e5",
+        "kind": "note",
+        "pitchMidi": 76,
+        "durationRatio": 0.3359375
+      },
+      {
+        "id": "SH08-e6",
+        "kind": "note",
+        "pitchMidi": 74,
+        "durationRatio": 0.33203125
+      },
+      {
+        "id": "SH08-e7",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.33203125
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "8음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 7음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "SH08-e1"
+    ],
+    "originalDuration": 2.6640625,
+    "queryDuration": 2.33203125,
+    "transformation": {
+      "omission": {
+        "eventId": "SH08-e1",
+        "index": 1,
+        "evidence": {
+          "index": 1,
+          "type": "neighbor",
+          "metric": 0.2,
+          "duration": 0.33203125,
+          "endpoints": [
+            "P1:m3:n1",
+            "P1:m3:n3"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-a94065d6dfa92c04",
+    "sourceId": "2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+    "streamId": "P1:1:1",
+    "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+    "composer": "Composed by Mark Harrison et al.\nArranged by Reflet des Nuages",
+    "baseStartIndex": 12,
+    "baseStartMeasure": 3,
+    "baseEndMeasure": 3,
+    "baseTargets": [
+      {
+        "onset": 8,
+        "pitchMidi": 79,
+        "measure": 3,
+        "beat": 1
+      },
+      {
+        "onset": 8.33203125,
+        "pitchMidi": 78,
+        "measure": 3,
+        "beat": 1.33203125
+      },
+      {
+        "onset": 8.6640625,
+        "pitchMidi": 79,
+        "measure": 3,
+        "beat": 1.6640625
+      },
+      {
+        "onset": 9,
+        "pitchMidi": 76,
+        "measure": 3,
+        "beat": 2
+      },
+      {
+        "onset": 9.33203125,
+        "pitchMidi": 74,
+        "measure": 3,
+        "beat": 2.33203125
+      },
+      {
+        "onset": 9.6640625,
+        "pitchMidi": 76,
+        "measure": 3,
+        "beat": 2.6640625
+      },
+      {
+        "onset": 10,
+        "pitchMidi": 74,
+        "measure": 3,
+        "beat": 3
+      },
+      {
+        "onset": 10.33203125,
+        "pitchMidi": 71,
+        "measure": 3,
+        "beat": 3.33203125
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 73,
+      "elapsedMs": 10453.43889999995,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 764,
+            "stage": "candidate-scored",
+            "elapsedMs": 2125.411100000143,
+            "key": "work-a94065d6dfa92c04\u000013",
+            "local": 91.49899821238232,
+            "scores": {
+              "pitch": 98,
+              "interval": 97.80000000000001,
+              "contour": 83.33333333333333,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 8.571428571428573,
+              "adjustment": -15.142857142857142,
+              "matches": 0,
+              "conflicts": 2,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 81.93157696683753,
+              "bonus": 1.7999999999999998,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 77.17155154155843,
+              "pillarPitch": 86,
+              "interval": 83.19999999999999,
+              "contour": 66.66666666666666,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 95.23809523809524,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0.26786468571428573,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 7,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 8,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 3,
+              "end": 9,
+              "coverage": 1,
+              "cost": 0.26786468571428573,
+              "similarity": 92.33733476036092
+            },
+            "windowStart": 10
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 72,
+      "sourceScore": 95.58194901681028,
+      "representativeWindowRank": 73,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 7,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "GOODBYE SO SOON",
+          "sourceId": "4. Goodbye So Soon, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 94,
+            "structural": 43,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-417e73d072be61c9&start=97&end=97&source=search&targets=384%3A84%2C384.5%3A84%2C385%3A81%2C385.5%3A79%2C386%3A81%2C386.5%3A79%2C387%3A76"
+        },
+        {
+          "rank": 2,
+          "title": "GOODBYE SO SOON",
+          "sourceId": "4. Goodbye So Soon, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 94,
+            "structural": 43,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-366ebbc007fac966&start=97&end=97&source=search&targets=384%3A84%2C384.5%3A84%2C385%3A81%2C385.5%3A79%2C386%3A81%2C386.5%3A79%2C387%3A76"
+        },
+        {
+          "rank": 3,
+          "title": "GOODBYE SO SOON",
+          "sourceId": "4. Goodbye So Soon, Violin, Viola, Cello and Piano Quartet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 94,
+            "structural": 43,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-6a45336ce504fb81&start=97&end=97&source=search&targets=384%3A84%2C384.5%3A84%2C385%3A81%2C385.5%3A79%2C386%3A81%2C386.5%3A79%2C387%3A76"
+        },
+        {
+          "rank": 4,
+          "title": "GOODBYE SO SOON",
+          "sourceId": "Goodbye So Soon Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 94,
+            "structural": 43,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-f0a06f3550134a94&start=97&end=97&source=search&targets=384%3A84%2C384.5%3A84%2C385%3A81%2C385.5%3A79%2C386%3A81%2C386.5%3A79%2C387%3A76"
+        },
+        {
+          "rank": 5,
+          "title": "The great white throne",
+          "sourceId": "mxl/12/44/QmUtbHEcWxtpvHj4URe8vBspUhn1AqDd2gsJT3nZHvhii8.mxl",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 87,
+            "structural": 14,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-485fb455ec6e937b&start=9&end=10&source=search&targets=36%3A75%2C37%3A75%2C38%3A72%2C39%3A70%2C40%3A72%2C41%3A70%2C42%3A67"
+        },
+        {
+          "rank": 6,
+          "title": "ST. ASAPH (Bambridge)",
+          "sourceId": "mxl/12/25/QmUipgJ3ku3nzxVmamogr3hAhZG6fzTP7MBzeGEdz8p46Y.mxl",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 38,
+            "structural": 40,
+            "skeleton": 55,
+            "pillarPitch": 79,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-dd8c6926b6bf4eaa&start=2&end=4&source=search&targets=7%3A74%2C8%3A74%2C9%3A71%2C10%3A69%2C11%3A71%2C12%3A69%2C13%3A66"
+        },
+        {
+          "rank": 7,
+          "title": "ヒバナ",
+          "sourceId": "kysing/44200.xml",
+          "streamId": "P3:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 51,
+            "structural": 82,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-f5be0d9673a78fb5-a71ddd21&start=21&end=22&source=search&targets=83.5%3A76%2C83.75%3A76%2C84%3A73%2C84.25%3A71%2C84.5%3A73%2C84.75%3A71%2C85%3A68"
+        },
+        {
+          "rank": 8,
+          "title": "Baby I'm a star",
+          "sourceId": "kysing/44569.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 51,
+            "structural": 29,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-b7cb5de5010d8814&start=16&end=17&source=search&targets=59%3A79%2C59.5%3A79%2C60%3A76%2C60.5%3A74%2C61%3A76%2C61.5%3A74%2C62%3A71"
+        },
+        {
+          "rank": 9,
+          "title": "叫べ (\"蒼穹のファフナー THE BEYOND\"OP)",
+          "sourceId": "kysing/44622.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726944804,
+            "meter": 94,
+            "structural": 39,
+            "skeleton": 72,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-dec26eb454bccecc-88a85b71&start=32&end=32&source=search&targets=124%3A83%2C124.5%3A83%2C125%3A80%2C125.5%3A78%2C126%3A80%2C126.5%3A78%2C127%3A75"
+        },
+        {
+          "rank": 10,
+          "title": "Pray",
+          "sourceId": "kysing/45039.xml",
+          "streamId": "P2:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 99.85536726943819,
+            "meter": 15,
+            "structural": 39,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 67,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-0fcc7676d97e16d5-88a85b71&start=170&end=170&source=search&targets=678.8333333333334%3A75%2C679%3A75%2C679.1666666666666%3A72%2C679.3333333333334%3A70%2C679.5%3A72%2C679.6666666666666%3A70%2C679.8333333333334%3A67"
+        },
+        {
+          "rank": 73,
+          "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+          "sourceId": "2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 95.58194901681028,
+          "scores": {
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "contour": 83.33333333333333,
+            "rhythm": 100,
+            "meter": 9,
+            "structural": 82,
+            "skeleton": 77,
+            "pillarPitch": 86,
+            "specificity": 67,
+            "repeatPattern": 95,
+            "phrase": 50
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-a94065d6dfa92c04&start=3&end=3&source=search&targets=8.33203125%3A78%2C8.6640625%3A79%2C9%3A76%2C9.33203125%3A74%2C9.6640625%3A76%2C10%3A74%2C10.33203125%3A71"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": 73,
+          "baselineRank": 1,
+          "exactCount": 19,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": true,
+          "rejections": {},
+          "bestScoredTrace": {
+            "local": 91.49899821238232,
+            "pitch": 98,
+            "interval": 97.80000000000001,
+            "rhythm": 100,
+            "meter": 8.571428571428573,
+            "equality": 95.23809523809524,
+            "coverage": 1,
+            "gaps": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 7,
+      "returnedCount": 100,
+      "exactCount": 19,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "text": "Rank/coverage needs review; this is not a confirmed relevance error.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "text": "Inspect the source passage and preceding candidates; do not require rank 1.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH08-L8-ornament-delete.json",
+      "initialPath": "../runs/SH08-L8-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-a94065d6dfa92c04",
+      "sourceId": "2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+      "streamId": "P1:1:1",
+      "title": "THE SPONGEBOB SQUAREPANTS \nTHEME SONG",
+      "composer": "Composed by Mark Harrison et al.\nArranged by Reflet des Nuages",
+      "baseStartIndex": 12,
+      "baseStartMeasure": 3,
+      "baseEndMeasure": 3,
+      "baseTargets": [
+        {
+          "onset": 8,
+          "pitchMidi": 79,
+          "measure": 3,
+          "beat": 1
+        },
+        {
+          "onset": 8.33203125,
+          "pitchMidi": 78,
+          "measure": 3,
+          "beat": 1.33203125
+        },
+        {
+          "onset": 8.6640625,
+          "pitchMidi": 79,
+          "measure": 3,
+          "beat": 1.6640625
+        },
+        {
+          "onset": 9,
+          "pitchMidi": 76,
+          "measure": 3,
+          "beat": 2
+        },
+        {
+          "onset": 9.33203125,
+          "pitchMidi": 74,
+          "measure": 3,
+          "beat": 2.33203125
+        },
+        {
+          "onset": 9.6640625,
+          "pitchMidi": 76,
+          "measure": 3,
+          "beat": 2.6640625
+        },
+        {
+          "onset": 10,
+          "pitchMidi": 74,
+          "measure": 3,
+          "beat": 3
+        },
+        {
+          "onset": 10.33203125,
+          "pitchMidi": 71,
+          "measure": 3,
+          "beat": 3.33203125
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 1,
+      "endOrdinal": 5,
+      "xmlHash": "7184aa99b58a49742364edd5fcf03bb2976376efd2ae8620897fa3503ceee2d8",
+      "xmlError": null,
+      "eventsHash": "e04cfc525445ee159a21f3862eb22129946792ddcfd3fa4aedc3dd655ee8c152",
+      "sourcePath": "K:/Music Analysis/musicxml/2. The SpongeBob SquarePants Theme Song, Piano Solo.musicxml.xml",
+      "sourceHash": "a94065d6dfa92c04318ba036b62556ec064af4dd9c4aa05e4938acb038ab0ec6"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m3:n1",
+          "xmlNoteId": "P1:m3:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 8,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 79,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n2",
+          "xmlNoteId": "P1:m3:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 2133,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 85,
+            "d": 256
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 78,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n3",
+          "xmlNoteId": "P1:m3:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 1109,
+            "d": 128
+          },
+          "durationQ": {
+            "n": 43,
+            "d": 128
+          },
+          "beatQ": {
+            "n": 85,
+            "d": 128
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 79,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 39,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n4",
+          "xmlNoteId": "P1:m3:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 9,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n5",
+          "xmlNoteId": "P1:m3:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 2389,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 341,
+            "d": 256
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 74,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n6",
+          "xmlNoteId": "P1:m3:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 1237,
+            "d": 128
+          },
+          "durationQ": {
+            "n": 43,
+            "d": 128
+          },
+          "beatQ": {
+            "n": 213,
+            "d": 128
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 76,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n7",
+          "xmlNoteId": "P1:m3:n7",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 7
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 10,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 74,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m3:n8",
+          "xmlNoteId": "P1:m3:n8",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 3,
+            "noteIndex": 8
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 3,
+          "originalMeasureLabel": "3",
+          "onsetQ": {
+            "n": 2645,
+            "d": 256
+          },
+          "durationQ": {
+            "n": 85,
+            "d": 256
+          },
+          "beatQ": {
+            "n": 597,
+            "d": 256
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH08-L8/context.musicxml",
+      "events": "../base-assets/SH08-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

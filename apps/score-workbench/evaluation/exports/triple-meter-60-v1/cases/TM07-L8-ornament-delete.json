@@ -1,0 +1,954 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "triple-meter-60-v1-TM07-L8-ornament-delete",
+  "createdAt": "2026-09-17",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM07-e0",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM07-e1",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM07-e2",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e5",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e6",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e7",
+        "kind": "note",
+        "pitchMidi": 59,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "3/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "TM07-e0",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 2
+      },
+      {
+        "id": "TM07-e1",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 1
+      },
+      {
+        "id": "TM07-e2",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e3",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e5",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e6",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "TM07-e7",
+        "kind": "note",
+        "pitchMidi": 59,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "ornament-delete",
+    "positive-probe"
+  ],
+  "description": "8음에서 약박·짧은 순차진행 장식음 후보 1개와 그 음가 삭제 → 7음. 이후 시작 시각 당겨짐.",
+  "changes": {
+    "changedSourceIds": [
+      "TM07-e3"
+    ],
+    "originalDuration": 6,
+    "queryDuration": 5.5,
+    "transformation": {
+      "omission": {
+        "eventId": "TM07-e3",
+        "index": 3,
+        "evidence": {
+          "index": 3,
+          "type": "neighbor",
+          "metric": 0.2,
+          "duration": 0.5,
+          "endpoints": [
+            "P1:m5:n1",
+            "P1:m5:n3"
+          ]
+        },
+        "timing": "delete-note-and-duration"
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-10cadf172c28777e",
+    "sourceId": "3. It Came Upon a Midnight Clear, Piano Solo.musicxml(1).xml",
+    "streamId": "P1:1:1",
+    "title": "IT CAME UPON A MIDNIGHT CLEAR",
+    "composer": "Composed by Richard Storrs\nArranged by Reflet des Nuages",
+    "baseStartIndex": 2,
+    "baseStartMeasure": 4,
+    "baseEndMeasure": 5,
+    "baseTargets": [
+      {
+        "onset": 9,
+        "pitchMidi": 71,
+        "measure": 4,
+        "beat": 1
+      },
+      {
+        "onset": 11,
+        "pitchMidi": 69,
+        "measure": 4,
+        "beat": 3
+      },
+      {
+        "onset": 12,
+        "pitchMidi": 67,
+        "measure": 5,
+        "beat": 1
+      },
+      {
+        "onset": 12.5,
+        "pitchMidi": 66,
+        "measure": 5,
+        "beat": 1.5
+      },
+      {
+        "onset": 13,
+        "pitchMidi": 67,
+        "measure": 5,
+        "beat": 2
+      },
+      {
+        "onset": 13.5,
+        "pitchMidi": 66,
+        "measure": 5,
+        "beat": 2.5
+      },
+      {
+        "onset": 14,
+        "pitchMidi": 62,
+        "measure": 5,
+        "beat": 3
+      },
+      {
+        "onset": 14.5,
+        "pitchMidi": 59,
+        "measure": 5,
+        "beat": 3.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": null,
+      "elapsedMs": 7574.353000000003,
+      "trace": {
+        "rejections": {},
+        "scored": [],
+        "inHits": true,
+        "inCandidates": false
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-17T01:05:34.050Z",
+      "baselineRank": 1,
+      "rankChange": null,
+      "sourceScore": null,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 0,
+      "issues": [
+        "source-not-in-candidates"
+      ],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "키스 미",
+          "sourceId": "kysing/88379.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 9,
+            "structural": 100,
+            "skeleton": 78,
+            "pillarPitch": 86,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-3f352d5e7a8922de&start=49&end=50&source=search&targets=193.5%3A83%2C194.5%3A81%2C195.5%3A79%2C196%3A79%2C196.5%3A78%2C197%3A74%2C197.5%3A71"
+        },
+        {
+          "rank": 2,
+          "title": "퇴사(Art. 이민석) (Prod. GC)",
+          "sourceId": "kysing/22187.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 83.57142857142858,
+            "meter": 15,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-1773943cc0db3834-d08f9a8a&start=6&end=7&source=search&targets=21%3A78%2C21.5%3A76%2C22.5%3A74%2C23%3A74%2C23.5%3A73%2C24.5%3A69%2C25%3A66"
+        },
+        {
+          "rank": 3,
+          "title": "너는, 꽃",
+          "sourceId": "kysing/49991.xml",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 91.78571428571428,
+            "meter": 58,
+            "structural": 65,
+            "skeleton": 86,
+            "pillarPitch": 97,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-d9f38e32dc90a331&start=48&end=49&source=search&targets=191%3A78%2C191.5%3A76%2C192%3A74%2C193%3A74%2C193.25%3A73%2C193.5%3A69%2C193.75%3A66"
+        },
+        {
+          "rank": 4,
+          "title": "못다한 한마디...",
+          "sourceId": "kysing/68970.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 91.78571428571428,
+            "meter": 15,
+            "structural": 67,
+            "skeleton": 86,
+            "pillarPitch": 97,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-b89354ae737b683f-a71ddd21&start=72&end=72&source=search&targets=280%3A74%2C280.5%3A72%2C281%3A70%2C282%3A70%2C282.25%3A69%2C282.5%3A65%2C282.75%3A62"
+        },
+        {
+          "rank": 5,
+          "title": "꿈(Pos)",
+          "sourceId": "kysing/77520.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 91.78571428571428,
+            "meter": 15,
+            "structural": 60,
+            "skeleton": 86,
+            "pillarPitch": 97,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-f3c4f4eaa67be460&start=69&end=69&source=search&targets=272%3A77%2C272.5%3A75%2C273%3A73%2C274%3A73%2C274.25%3A72%2C274.5%3A68%2C274.75%3A65"
+        },
+        {
+          "rank": 6,
+          "title": "외사랑",
+          "sourceId": "kysing/85868.xml",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 91.78571428571428,
+            "meter": 87,
+            "structural": 56,
+            "skeleton": 71,
+            "pillarPitch": 91,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-ed1201ea8b613e00-88a85b71&start=31&end=32&source=search&targets=91%3A86%2C92.5%3A84%2C94%3A82%2C95.5%3A82%2C95.75%3A81%2C96%3A77%2C96.25%3A74"
+        },
+        {
+          "rank": 7,
+          "title": "오늘",
+          "sourceId": "kysing/91691.xml",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 91.78571428571428,
+            "meter": 94,
+            "structural": 58,
+            "skeleton": 70,
+            "pillarPitch": 95,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-5d621154af8bc11a-88a85b71&start=43&end=44&source=search&targets=166%3A76%2C169%3A74%2C170%3A72%2C172%3A72%2C172.5%3A71%2C173%3A67%2C173.5%3A64"
+        },
+        {
+          "rank": 8,
+          "title": "안 돼",
+          "sourceId": "kysing/88915.xml",
+          "streamId": "P3:1:1",
+          "score": 96.42682331836967,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 83.57142857142858,
+            "meter": 74,
+            "structural": 100,
+            "skeleton": 72,
+            "pillarPitch": 79,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-6d5975d971831fff-a71ddd21&start=15&end=18&source=search&targets=56%3A69%2C60%3A67%2C64%3A65%2C66%3A65%2C67%3A64%2C68%3A60%2C70%3A57"
+        },
+        {
+          "rank": 9,
+          "title": "천년애",
+          "sourceId": "kysing/66959.xml",
+          "streamId": "P1:1:1",
+          "score": 96.05997244640534,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 64.27174999381866,
+            "meter": 9,
+            "structural": 43,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-96c3d526a1a97c23&start=22&end=23&source=search&targets=86%3A82%2C87%3A80%2C87.25%3A78%2C87.5%3A78%2C88%3A77%2C88.75%3A73%2C89%3A70"
+        },
+        {
+          "rank": 10,
+          "title": "떠나보낼 준비 해 둘 걸 그랬어",
+          "sourceId": "kysing/95709.xml",
+          "streamId": "P2:1:1",
+          "score": 95.35784330593326,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 77.5,
+            "meter": 45,
+            "structural": 80,
+            "skeleton": 63,
+            "pillarPitch": 86,
+            "specificity": 80,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 7,
+          "url": "/score?workId=work-c76a2c4a61f833b8-88a85b71&start=57&end=58&source=search&targets=223.75%3A77%2C224%3A75%2C226%3A73%2C228%3A73%2C228.5%3A72%2C229%3A68%2C229.5%3A65"
+        }
+      ]
+    },
+    {
+      "kind": "alignment-evidence-review",
+      "details": [
+        {
+          "originalNotes": 8,
+          "queryNotes": 7,
+          "sourceRank": null,
+          "baselineRank": 1,
+          "exactCount": 1,
+          "sameScoreBeforeSource": 0,
+          "inCandidates": false,
+          "rejections": {},
+          "bestScoredTrace": null
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 7,
+      "returnedCount": 100,
+      "exactCount": 1,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "source-not-in-candidates",
+      "status": "observation-not-confirmed-cause"
+    },
+    {
+      "text": "Expected source is absent from returned results; candidate and rejection trace retained, cause not yet confirmed.",
+      "status": "observed-not-fixed"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "source-not-in-candidates",
+      "text": "Audit candidate recall using retained anchor runs; avoid globally lowering ranking thresholds.",
+      "status": "proposed-not-implemented"
+    },
+    {
+      "text": "Separate candidate retrieval, window selection, admission and result limit before modifying ranking.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/TM07-L8-ornament-delete.json",
+      "initialPath": "../runs/TM07-L8-ornament-delete.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-10cadf172c28777e",
+      "sourceId": "3. It Came Upon a Midnight Clear, Piano Solo.musicxml(1).xml",
+      "streamId": "P1:1:1",
+      "title": "IT CAME UPON A MIDNIGHT CLEAR",
+      "composer": "Composed by Richard Storrs\nArranged by Reflet des Nuages",
+      "baseStartIndex": 2,
+      "baseStartMeasure": 4,
+      "baseEndMeasure": 5,
+      "baseTargets": [
+        {
+          "onset": 9,
+          "pitchMidi": 71,
+          "measure": 4,
+          "beat": 1
+        },
+        {
+          "onset": 11,
+          "pitchMidi": 69,
+          "measure": 4,
+          "beat": 3
+        },
+        {
+          "onset": 12,
+          "pitchMidi": 67,
+          "measure": 5,
+          "beat": 1
+        },
+        {
+          "onset": 12.5,
+          "pitchMidi": 66,
+          "measure": 5,
+          "beat": 1.5
+        },
+        {
+          "onset": 13,
+          "pitchMidi": 67,
+          "measure": 5,
+          "beat": 2
+        },
+        {
+          "onset": 13.5,
+          "pitchMidi": 66,
+          "measure": 5,
+          "beat": 2.5
+        },
+        {
+          "onset": 14,
+          "pitchMidi": 62,
+          "measure": 5,
+          "beat": 3
+        },
+        {
+          "onset": 14.5,
+          "pitchMidi": 59,
+          "measure": 5,
+          "beat": 3.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 2,
+      "endOrdinal": 7,
+      "xmlHash": "bdb36da32d6ceb8a086a58666635b985122b993456390a9cf2c121cf01209f92",
+      "xmlError": null,
+      "eventsHash": "97fa5e8d38ae7f8790e551f7e6b7d420aec4dce8c33ad404d792c10737730f92",
+      "sourcePath": "K:/Music Analysis/musicxml/3. It Came Upon a Midnight Clear, Piano Solo.musicxml(1).xml",
+      "sourceHash": "10cadf172c28777e3b59aaa429655d5d229ade7f4d8c479f18024eec3ea0e0a5"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m4:n1",
+          "xmlNoteId": "P1:m4:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 9,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 2,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 71,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m4:n2",
+          "xmlNoteId": "P1:m4:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 4,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 4,
+          "originalMeasureLabel": "4",
+          "onsetQ": {
+            "n": 11,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 1
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 69,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n1",
+          "xmlNoteId": "P1:m5:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 12,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n2",
+          "xmlNoteId": "P1:m5:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 25,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 66,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n3",
+          "xmlNoteId": "P1:m5:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 13,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 1,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 67,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 32,
+          "writtenPitch": {
+            "step": "G",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n4",
+          "xmlNoteId": "P1:m5:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 27,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 66,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 31,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n5",
+          "xmlNoteId": "P1:m5:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 14,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 62,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 29,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "0",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m5:n6",
+          "xmlNoteId": "P1:m5:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 5,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 5,
+          "originalMeasureLabel": "5",
+          "onsetQ": {
+            "n": 29,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "3/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 59,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 27,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "0",
+            "octave": 3
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/TM07-L8/context.musicxml",
+      "events": "../base-assets/TM07-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "ornament-delete"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "3/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

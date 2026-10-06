@@ -1,0 +1,89 @@
+{
+  "caseId": "TRIAD-01-exact-corpus",
+  "category": "global-tempo-scaling",
+  "status": "failed",
+  "elapsedMs": 11017,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "2/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "DM02-e0",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "DM02-e1",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "DM02-e2",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "DM02-e3",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "DM02-e4",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "DM02-e5",
+        "kind": "note",
+        "pitchMidi": 66,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "DM02-e6",
+        "kind": "note",
+        "pitchMidi": 67,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "DM02-e7",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "DM02-e8",
+        "kind": "note",
+        "pitchMidi": 62,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "DM02-e9",
+        "kind": "note",
+        "pitchMidi": 72,
+        "durationRatio": 0.75
+      },
+      {
+        "id": "DM02-e10",
+        "kind": "note",
+        "pitchMidi": 71,
+        "durationRatio": 0.25
+      },
+      {
+        "id": "DM02-e11",
+        "kind": "note",
+        "pitchMidi": 69,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "error": "TypeError: Cannot read properties of undefined (reading 'workId')\n    at file:///K:/MusicSearch/scripts/run-small-regression-triad-v1.mjs:54:81\n    at Array.findIndex (<anonymous>)\n    at file:///K:/MusicSearch/scripts/run-small-regression-triad-v1.mjs:54:31"
+}

@@ -1,0 +1,5098 @@
+{
+  "createdAt": "2026-09-21T15:48:39.080Z",
+  "mode": "offline-no-ui-change",
+  "codeHashes": {
+    "scripts/audit-phrase-closure-cases.mjs": "d535c51800507677dcd5a1e77de0c1c4bd09c3c29e9af1d61ed4615a701054db",
+    "server/phrase-boundaries.mjs": "0b6f5b7432d06be221bc3a724642e42cff2e1897c38b529519f629f51d84a75f",
+    "server/phrase-breath-symbols.mjs": "35f97e2cca5f61b9713d3f16e32d7236daf68a6af5c1a6306232f56befec8dfe",
+    "server/notation-structure-evidence.mjs": "2b10fb68ab825bad247ed15b440bafc710d94278139439842f1e8d4fc5cbafa1",
+    "server/xml-target-verification.mjs": "91d0eced262e4151547956409d53d75191c267e50ee54647232721efbdbf24cb",
+    "server/phrase-source-closure.mjs": "7e3fdf45dd91644ead9f4865554918e48ac3513a76ff40369d71c9d8101dfddd",
+    "server/phrase-meter-review.mjs": "af8649b417b9e39d78dddbdfe1fe889dbd575406639987e197e272a10c95a29a"
+  },
+  "cases": [
+    {
+      "caseId": "S-STRUCT-001",
+      "status": "unavailable",
+      "missing": [
+        "review-snapshot.json"
+      ]
+    },
+    {
+      "caseId": "S-STRUCT-002",
+      "status": "unavailable",
+      "missing": [
+        "review-snapshot.json"
+      ]
+    },
+    {
+      "caseId": "S-STRUCT-003",
+      "status": "unavailable",
+      "missing": [
+        "review-snapshot.json"
+      ]
+    },
+    {
+      "caseId": "S-STRUCT-004",
+      "status": "audited",
+      "sourceHash": "2aa84a8385adb471b9f9f77a9b1ea44b562f7c38c415f13270ae02320f7d83cf",
+      "snapshotHash": "d2142d065f8187f2b419335abb0e6a1de1e35e8a9575c81a5294fd193bb50ed2",
+      "engineVersion": "local-boundary-evidence-v1.14",
+      "noteCount": 298,
+      "mapped": 298,
+      "warningCount": 0,
+      "boundaryCount": 33,
+      "normalized": 33,
+      "protected": 8,
+      "unknownReasons": {},
+      "boundaries": [
+        {
+          "index": 16,
+          "previousEventId": "work-b4fdcba72f89a969-15",
+          "nextEventId": "work-b4fdcba72f89a969-16",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-15",
+            "nextEventId": "work-b4fdcba72f89a969-16",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:13491",
+              "notation:2aa84a8385adb471:14370"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:14777"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 8,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 21,
+          "previousEventId": "work-b4fdcba72f89a969-20",
+          "nextEventId": "work-b4fdcba72f89a969-21",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-20",
+            "nextEventId": "work-b4fdcba72f89a969-21",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:16344"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:16737"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 1.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 1.5,
+            "releaseNotation": {
+              "measureOrdinal": 9,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 1.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 27,
+          "previousEventId": "work-b4fdcba72f89a969-26",
+          "nextEventId": "work-b4fdcba72f89a969-27",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-26",
+            "nextEventId": "work-b4fdcba72f89a969-27",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:18639",
+              "notation:2aa84a8385adb471:19062"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:19472",
+              "notation:2aa84a8385adb471:19758"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 5,
+            "releaseNotation": {
+              "measureOrdinal": 11,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest",
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 35,
+          "previousEventId": "work-b4fdcba72f89a969-34",
+          "nextEventId": "work-b4fdcba72f89a969-35",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-34",
+            "nextEventId": "work-b4fdcba72f89a969-35",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:22635",
+              "notation:2aa84a8385adb471:23188"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:23594"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 14,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 43,
+          "previousEventId": "work-b4fdcba72f89a969-42",
+          "nextEventId": "work-b4fdcba72f89a969-43",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-42",
+            "nextEventId": "work-b4fdcba72f89a969-43",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:26138",
+              "notation:2aa84a8385adb471:26691"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:27100",
+              "notation:2aa84a8385adb471:27275"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 16,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 2,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 47,
+          "previousEventId": "work-b4fdcba72f89a969-46",
+          "nextEventId": "work-b4fdcba72f89a969-47",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-46",
+            "nextEventId": "work-b4fdcba72f89a969-47",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:28547",
+              "notation:2aa84a8385adb471:28948"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:29336",
+              "notation:2aa84a8385adb471:29950"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2.5,
+            "releaseNotation": {
+              "measureOrdinal": 17,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 53,
+          "previousEventId": "work-b4fdcba72f89a969-52",
+          "nextEventId": "work-b4fdcba72f89a969-53",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-52",
+            "nextEventId": "work-b4fdcba72f89a969-53",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:31854"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:32173"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 19,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 73,
+          "previousEventId": "work-b4fdcba72f89a969-72",
+          "nextEventId": "work-b4fdcba72f89a969-73",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-72",
+            "nextEventId": "work-b4fdcba72f89a969-73",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:41091"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:41411",
+              "notation:2aa84a8385adb471:41586"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 23,
+              "quarterPosition": 1.5
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 86,
+          "previousEventId": "work-b4fdcba72f89a969-85",
+          "nextEventId": "work-b4fdcba72f89a969-86",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-85",
+            "nextEventId": "work-b4fdcba72f89a969-86",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:47112",
+              "notation:2aa84a8385adb471:47594"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:48003"
+            ],
+            "sourceDuration": 5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 27,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 94,
+          "previousEventId": "work-b4fdcba72f89a969-93",
+          "nextEventId": "work-b4fdcba72f89a969-94",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-93",
+            "nextEventId": "work-b4fdcba72f89a969-94",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:52065",
+              "notation:2aa84a8385adb471:52618"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:53036"
+            ],
+            "sourceDuration": 3.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 3.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 29,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 3.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 98,
+          "previousEventId": "work-b4fdcba72f89a969-97",
+          "nextEventId": "work-b4fdcba72f89a969-98",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-97",
+            "nextEventId": "work-b4fdcba72f89a969-98",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:54290",
+              "notation:2aa84a8385adb471:54767"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:55177"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 30,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 135,
+          "previousEventId": "work-b4fdcba72f89a969-134",
+          "nextEventId": "work-b4fdcba72f89a969-135",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-134",
+            "nextEventId": "work-b4fdcba72f89a969-135",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:75485"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:75792"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.75,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.75,
+            "releaseNotation": {
+              "measureOrdinal": 41,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.75,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 138,
+          "previousEventId": "work-b4fdcba72f89a969-137",
+          "nextEventId": "work-b4fdcba72f89a969-138",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-137",
+            "nextEventId": "work-b4fdcba72f89a969-138",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:77266"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:77949"
+            ],
+            "sourceDuration": 4,
+            "explicitRestDuration": 4,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4,
+            "inferredGap": 4,
+            "releaseNotation": {
+              "measureOrdinal": 42,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4,
+            "restBeats": 4,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest",
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 146,
+          "previousEventId": "work-b4fdcba72f89a969-145",
+          "nextEventId": "work-b4fdcba72f89a969-146",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-145",
+            "nextEventId": "work-b4fdcba72f89a969-146",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:80496",
+              "notation:2aa84a8385adb471:81049"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:81455"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 45,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 154,
+          "previousEventId": "work-b4fdcba72f89a969-153",
+          "nextEventId": "work-b4fdcba72f89a969-154",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-153",
+            "nextEventId": "work-b4fdcba72f89a969-154",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:83999",
+              "notation:2aa84a8385adb471:84552"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:84958"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 47,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 158,
+          "previousEventId": "work-b4fdcba72f89a969-157",
+          "nextEventId": "work-b4fdcba72f89a969-158",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-157",
+            "nextEventId": "work-b4fdcba72f89a969-158",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:86557",
+              "notation:2aa84a8385adb471:86959"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:87454"
+            ],
+            "sourceDuration": 3.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 3.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 48,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 3.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 164,
+          "previousEventId": "work-b4fdcba72f89a969-163",
+          "nextEventId": "work-b4fdcba72f89a969-164",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-163",
+            "nextEventId": "work-b4fdcba72f89a969-164",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:89982"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:90301"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 50,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 184,
+          "previousEventId": "work-b4fdcba72f89a969-183",
+          "nextEventId": "work-b4fdcba72f89a969-184",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-183",
+            "nextEventId": "work-b4fdcba72f89a969-184",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:98606"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:98925",
+              "notation:2aa84a8385adb471:99099"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 54,
+              "quarterPosition": 1.5
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 191,
+          "previousEventId": "work-b4fdcba72f89a969-190",
+          "nextEventId": "work-b4fdcba72f89a969-191",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-190",
+            "nextEventId": "work-b4fdcba72f89a969-191",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:101998"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:102306"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 55,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 196,
+          "previousEventId": "work-b4fdcba72f89a969-195",
+          "nextEventId": "work-b4fdcba72f89a969-196",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-195",
+            "nextEventId": "work-b4fdcba72f89a969-196",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:104547"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:104855"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 56,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 198,
+          "previousEventId": "work-b4fdcba72f89a969-197",
+          "nextEventId": "work-b4fdcba72f89a969-198",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-197",
+            "nextEventId": "work-b4fdcba72f89a969-198",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:105429"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:106134"
+            ],
+            "sourceDuration": 4,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 57,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 224,
+          "previousEventId": "work-b4fdcba72f89a969-223",
+          "nextEventId": "work-b4fdcba72f89a969-224",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-223",
+            "nextEventId": "work-b4fdcba72f89a969-224",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:119243",
+              "notation:2aa84a8385adb471:119796"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:120276"
+            ],
+            "sourceDuration": 4.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 65,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 232,
+          "previousEventId": "work-b4fdcba72f89a969-231",
+          "nextEventId": "work-b4fdcba72f89a969-232",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-231",
+            "nextEventId": "work-b4fdcba72f89a969-232",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:124056",
+              "notation:2aa84a8385adb471:124936"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:125343"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 1.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 1.5,
+            "releaseNotation": {
+              "measureOrdinal": 68,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 1.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 236,
+          "previousEventId": "work-b4fdcba72f89a969-235",
+          "nextEventId": "work-b4fdcba72f89a969-236",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-235",
+            "nextEventId": "work-b4fdcba72f89a969-236",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:127216",
+              "notation:2aa84a8385adb471:127694"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:128104"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 69,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 240,
+          "previousEventId": "work-b4fdcba72f89a969-239",
+          "nextEventId": "work-b4fdcba72f89a969-240",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-239",
+            "nextEventId": "work-b4fdcba72f89a969-240",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:129408",
+              "notation:2aa84a8385adb471:129885"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:130295"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 70,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 246,
+          "previousEventId": "work-b4fdcba72f89a969-245",
+          "nextEventId": "work-b4fdcba72f89a969-246",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-245",
+            "nextEventId": "work-b4fdcba72f89a969-246",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:132232"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:132681"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 71,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 260,
+          "previousEventId": "work-b4fdcba72f89a969-259",
+          "nextEventId": "work-b4fdcba72f89a969-260",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-259",
+            "nextEventId": "work-b4fdcba72f89a969-260",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:139517"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:139814"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 76,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 266,
+          "previousEventId": "work-b4fdcba72f89a969-265",
+          "nextEventId": "work-b4fdcba72f89a969-266",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-265",
+            "nextEventId": "work-b4fdcba72f89a969-266",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:141989",
+              "notation:2aa84a8385adb471:142429"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:142822"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 77,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 272,
+          "previousEventId": "work-b4fdcba72f89a969-271",
+          "nextEventId": "work-b4fdcba72f89a969-272",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-271",
+            "nextEventId": "work-b4fdcba72f89a969-272",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:144990"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:145292"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 79,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 277,
+          "previousEventId": "work-b4fdcba72f89a969-276",
+          "nextEventId": "work-b4fdcba72f89a969-277",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-276",
+            "nextEventId": "work-b4fdcba72f89a969-277",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:147451"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:147755"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 81,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 284,
+          "previousEventId": "work-b4fdcba72f89a969-283",
+          "nextEventId": "work-b4fdcba72f89a969-284",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-283",
+            "nextEventId": "work-b4fdcba72f89a969-284",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:151879",
+              "notation:2aa84a8385adb471:152357"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:152767"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 86,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 288,
+          "previousEventId": "work-b4fdcba72f89a969-287",
+          "nextEventId": "work-b4fdcba72f89a969-288",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-287",
+            "nextEventId": "work-b4fdcba72f89a969-288",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:154327",
+              "notation:2aa84a8385adb471:154805"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:155215"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 87,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 295,
+          "previousEventId": "work-b4fdcba72f89a969-294",
+          "nextEventId": "work-b4fdcba72f89a969-295",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-b4fdcba72f89a969-294",
+            "nextEventId": "work-b4fdcba72f89a969-295",
+            "sourceNoteIds": [
+              "notation:2aa84a8385adb471:158070"
+            ],
+            "sourceRestIds": [
+              "notation:2aa84a8385adb471:158377"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.75,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.75,
+            "releaseNotation": {
+              "measureOrdinal": 89,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.75,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "S-STRUCT-005",
+      "status": "audited",
+      "sourceHash": "5262519faf644779893a97843e7601aeb9a2ce1a017faa726c8f9b5798047126",
+      "snapshotHash": "d3c13deb65541c50b2d8bfb28246dc66bd4222ef1c22d829a1c593d9db630a00",
+      "engineVersion": "local-boundary-evidence-v1.14",
+      "noteCount": 444,
+      "mapped": 444,
+      "warningCount": 0,
+      "boundaryCount": 29,
+      "normalized": 29,
+      "protected": 11,
+      "unknownReasons": {},
+      "boundaries": [
+        {
+          "index": 15,
+          "previousEventId": "work-19d1b96a1aff8a63-14",
+          "nextEventId": "work-19d1b96a1aff8a63-15",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-14",
+            "nextEventId": "work-19d1b96a1aff8a63-15",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:11499"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:11781"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 4,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 20,
+          "previousEventId": "work-19d1b96a1aff8a63-19",
+          "nextEventId": "work-19d1b96a1aff8a63-20",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-19",
+            "nextEventId": "work-19d1b96a1aff8a63-20",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:13690"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:14044",
+              "notation:5262519faf644779:14326",
+              "notation:5262519faf644779:14608",
+              "notation:5262519faf644779:14892",
+              "notation:5262519faf644779:15176",
+              "notation:5262519faf644779:15788"
+            ],
+            "sourceDuration": 4,
+            "explicitRestDuration": 21,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4,
+            "inferredGap": 21,
+            "releaseNotation": {
+              "measureOrdinal": 6,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4,
+            "restBeats": 21,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest",
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 33,
+          "previousEventId": "work-19d1b96a1aff8a63-32",
+          "nextEventId": "work-19d1b96a1aff8a63-33",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-32",
+            "nextEventId": "work-19d1b96a1aff8a63-33",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:21377",
+              "notation:5262519faf644779:21834"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:22329",
+              "notation:5262519faf644779:22503"
+            ],
+            "sourceDuration": 1.25,
+            "explicitRestDuration": 0.75,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.25,
+            "inferredGap": 0.75,
+            "releaseNotation": {
+              "measureOrdinal": 13,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.25,
+            "restBeats": 0.75,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 46,
+          "previousEventId": "work-19d1b96a1aff8a63-45",
+          "nextEventId": "work-19d1b96a1aff8a63-46",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-45",
+            "nextEventId": "work-19d1b96a1aff8a63-46",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:27604",
+              "notation:5262519faf644779:28088"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:28474",
+              "notation:5262519faf644779:28760"
+            ],
+            "sourceDuration": 1.25,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.25,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 15,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.25,
+            "restBeats": 2,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 56,
+          "previousEventId": "work-19d1b96a1aff8a63-55",
+          "nextEventId": "work-19d1b96a1aff8a63-56",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-55",
+            "nextEventId": "work-19d1b96a1aff8a63-56",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:32032",
+              "notation:5262519faf644779:32450"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:32821",
+              "notation:5262519faf644779:33107",
+              "notation:5262519faf644779:33281"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 1.75,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 1.75,
+            "releaseNotation": {
+              "measureOrdinal": 17,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 1.75,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 66,
+          "previousEventId": "work-19d1b96a1aff8a63-65",
+          "nextEventId": "work-19d1b96a1aff8a63-66",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-65",
+            "nextEventId": "work-19d1b96a1aff8a63-66",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:37986",
+              "notation:5262519faf644779:38371"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:38742",
+              "notation:5262519faf644779:39028"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 19,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 79,
+          "previousEventId": "work-19d1b96a1aff8a63-78",
+          "nextEventId": "work-19d1b96a1aff8a63-79",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-78",
+            "nextEventId": "work-19d1b96a1aff8a63-79",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:44614",
+              "notation:5262519faf644779:45071"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:45566"
+            ],
+            "sourceDuration": 1.25,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.25,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 21,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.25,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 92,
+          "previousEventId": "work-19d1b96a1aff8a63-91",
+          "nextEventId": "work-19d1b96a1aff8a63-92",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-91",
+            "nextEventId": "work-19d1b96a1aff8a63-92",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:51436"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:51731"
+            ],
+            "sourceDuration": 0.75,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.75,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 23,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.75,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 97,
+          "previousEventId": "work-19d1b96a1aff8a63-96",
+          "nextEventId": "work-19d1b96a1aff8a63-97",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-96",
+            "nextEventId": "work-19d1b96a1aff8a63-97",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:53375"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:53681"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 24,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 104,
+          "previousEventId": "work-19d1b96a1aff8a63-103",
+          "nextEventId": "work-19d1b96a1aff8a63-104",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-103",
+            "nextEventId": "work-19d1b96a1aff8a63-104",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:56416",
+              "notation:5262519faf644779:56952"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:57339"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.25,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.25,
+            "releaseNotation": {
+              "measureOrdinal": 26,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.25,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 110,
+          "previousEventId": "work-19d1b96a1aff8a63-109",
+          "nextEventId": "work-19d1b96a1aff8a63-110",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-109",
+            "nextEventId": "work-19d1b96a1aff8a63-110",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:59282",
+              "notation:5262519faf644779:60195"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:60677"
+            ],
+            "sourceDuration": 4.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 27,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 160,
+          "previousEventId": "work-19d1b96a1aff8a63-159",
+          "nextEventId": "work-19d1b96a1aff8a63-160",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-159",
+            "nextEventId": "work-19d1b96a1aff8a63-160",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:84668",
+              "notation:5262519faf644779:85225"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:85604",
+              "notation:5262519faf644779:85890"
+            ],
+            "sourceDuration": 3.25,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 3.25,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 35,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 3.25,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 164,
+          "previousEventId": "work-19d1b96a1aff8a63-163",
+          "nextEventId": "work-19d1b96a1aff8a63-164",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-163",
+            "nextEventId": "work-19d1b96a1aff8a63-164",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:87534"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:87984",
+              "notation:5262519faf644779:88596",
+              "notation:5262519faf644779:88880",
+              "notation:5262519faf644779:89164",
+              "notation:5262519faf644779:89448",
+              "notation:5262519faf644779:89732"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 21,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 21,
+            "releaseNotation": {
+              "measureOrdinal": 36,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 21,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 177,
+          "previousEventId": "work-19d1b96a1aff8a63-176",
+          "nextEventId": "work-19d1b96a1aff8a63-177",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-176",
+            "nextEventId": "work-19d1b96a1aff8a63-177",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:95697",
+              "notation:5262519faf644779:96157"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:96655",
+              "notation:5262519faf644779:96829"
+            ],
+            "sourceDuration": 1.25,
+            "explicitRestDuration": 0.75,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.25,
+            "inferredGap": 0.75,
+            "releaseNotation": {
+              "measureOrdinal": 43,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.25,
+            "restBeats": 0.75,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 190,
+          "previousEventId": "work-19d1b96a1aff8a63-189",
+          "nextEventId": "work-19d1b96a1aff8a63-190",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-189",
+            "nextEventId": "work-19d1b96a1aff8a63-190",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:101686",
+              "notation:5262519faf644779:102173"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:102668"
+            ],
+            "sourceDuration": 2.25,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.25,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 45,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.25,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 212,
+          "previousEventId": "work-19d1b96a1aff8a63-211",
+          "nextEventId": "work-19d1b96a1aff8a63-212",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-211",
+            "nextEventId": "work-19d1b96a1aff8a63-212",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:112006",
+              "notation:5262519faf644779:112407"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:112795",
+              "notation:5262519faf644779:113081"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 49,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 225,
+          "previousEventId": "work-19d1b96a1aff8a63-224",
+          "nextEventId": "work-19d1b96a1aff8a63-225",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-224",
+            "nextEventId": "work-19d1b96a1aff8a63-225",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:119045",
+              "notation:5262519faf644779:119505"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:120003"
+            ],
+            "sourceDuration": 1.25,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.25,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 51,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.25,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 238,
+          "previousEventId": "work-19d1b96a1aff8a63-237",
+          "nextEventId": "work-19d1b96a1aff8a63-238",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-237",
+            "nextEventId": "work-19d1b96a1aff8a63-238",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:125946"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:126263"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 53,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 243,
+          "previousEventId": "work-19d1b96a1aff8a63-242",
+          "nextEventId": "work-19d1b96a1aff8a63-243",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-242",
+            "nextEventId": "work-19d1b96a1aff8a63-243",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:127917"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:128226"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 54,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 252,
+          "previousEventId": "work-19d1b96a1aff8a63-251",
+          "nextEventId": "work-19d1b96a1aff8a63-252",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-251",
+            "nextEventId": "work-19d1b96a1aff8a63-252",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:132612",
+              "notation:5262519faf644779:133200"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:133681"
+            ],
+            "sourceDuration": 4.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 57,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 302,
+          "previousEventId": "work-19d1b96a1aff8a63-301",
+          "nextEventId": "work-19d1b96a1aff8a63-302",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-301",
+            "nextEventId": "work-19d1b96a1aff8a63-302",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:158277",
+              "notation:5262519faf644779:159162"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:159621"
+            ],
+            "sourceDuration": 4.25,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4.25,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 65,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4.25,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 316,
+          "previousEventId": "work-19d1b96a1aff8a63-315",
+          "nextEventId": "work-19d1b96a1aff8a63-316",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-315",
+            "nextEventId": "work-19d1b96a1aff8a63-316",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:167762"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:168079"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 69,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 329,
+          "previousEventId": "work-19d1b96a1aff8a63-328",
+          "nextEventId": "work-19d1b96a1aff8a63-329",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-328",
+            "nextEventId": "work-19d1b96a1aff8a63-329",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:174589",
+              "notation:5262519faf644779:175445"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:175824",
+              "notation:5262519faf644779:176110"
+            ],
+            "sourceDuration": 3.5,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 3.5,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 73,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 3.5,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 333,
+          "previousEventId": "work-19d1b96a1aff8a63-332",
+          "nextEventId": "work-19d1b96a1aff8a63-333",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-332",
+            "nextEventId": "work-19d1b96a1aff8a63-333",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:177744",
+              "notation:5262519faf644779:178243",
+              "notation:5262519faf644779:178772"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:179159"
+            ],
+            "sourceDuration": 5.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 5.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 76,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 5.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 373,
+          "previousEventId": "work-19d1b96a1aff8a63-372",
+          "nextEventId": "work-19d1b96a1aff8a63-373",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-372",
+            "nextEventId": "work-19d1b96a1aff8a63-373",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:198603"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:198949",
+              "notation:5262519faf644779:199124"
+            ],
+            "sourceDuration": 0.25,
+            "explicitRestDuration": 0.75,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.25,
+            "inferredGap": 0.75,
+            "releaseNotation": {
+              "measureOrdinal": 81,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.25,
+            "restBeats": 0.75,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 383,
+          "previousEventId": "work-19d1b96a1aff8a63-382",
+          "nextEventId": "work-19d1b96a1aff8a63-383",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-382",
+            "nextEventId": "work-19d1b96a1aff8a63-383",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:203745",
+              "notation:5262519faf644779:204633"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:205091"
+            ],
+            "sourceDuration": 4.25,
+            "explicitRestDuration": 2,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 4.25,
+            "inferredGap": 2,
+            "releaseNotation": {
+              "measureOrdinal": 83,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 4.25,
+            "restBeats": 2,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 433,
+          "previousEventId": "work-19d1b96a1aff8a63-432",
+          "nextEventId": "work-19d1b96a1aff8a63-433",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-432",
+            "nextEventId": "work-19d1b96a1aff8a63-433",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:230296",
+              "notation:5262519faf644779:230856"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:231240",
+              "notation:5262519faf644779:231523"
+            ],
+            "sourceDuration": 2.25,
+            "explicitRestDuration": 3,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.25,
+            "inferredGap": 3,
+            "releaseNotation": {
+              "measureOrdinal": 91,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.25,
+            "restBeats": 3,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 437,
+          "previousEventId": "work-19d1b96a1aff8a63-436",
+          "nextEventId": "work-19d1b96a1aff8a63-437",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-436",
+            "nextEventId": "work-19d1b96a1aff8a63-437",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:232674"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:232976",
+              "notation:5262519faf644779:233587"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 6,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 6,
+            "releaseNotation": {
+              "measureOrdinal": 93,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 6,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest",
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 443,
+          "previousEventId": "work-19d1b96a1aff8a63-442",
+          "nextEventId": "work-19d1b96a1aff8a63-443",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-19d1b96a1aff8a63-442",
+            "nextEventId": "work-19d1b96a1aff8a63-443",
+            "sourceNoteIds": [
+              "notation:5262519faf644779:236456"
+            ],
+            "sourceRestIds": [
+              "notation:5262519faf644779:236750"
+            ],
+            "sourceDuration": 3,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 3,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 97,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 3,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "S-STRUCT-006",
+      "status": "audited",
+      "sourceHash": "6eaae4861c93a539e9b0608480b0a573a81b7de3c7e90b4e3f0950603a0eafac",
+      "snapshotHash": "5b6ee9f47f967c7ad1adfcee4246d2b305ad0f76c99a52a22baf34a10532c719",
+      "engineVersion": "local-boundary-evidence-v1.14",
+      "noteCount": 431,
+      "mapped": 431,
+      "warningCount": 0,
+      "boundaryCount": 41,
+      "normalized": 41,
+      "protected": 15,
+      "unknownReasons": {},
+      "boundaries": [
+        {
+          "index": 13,
+          "previousEventId": "work-6eaae4861c93a539-12",
+          "nextEventId": "work-6eaae4861c93a539-13",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-12",
+            "nextEventId": "work-6eaae4861c93a539-13",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:13316"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:13674",
+              "notation:6eaae4861c93a539:13893",
+              "notation:6eaae4861c93a539:14395"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 6,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 29,
+          "previousEventId": "work-6eaae4861c93a539-28",
+          "nextEventId": "work-6eaae4861c93a539-29",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-28",
+            "nextEventId": "work-6eaae4861c93a539-29",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:22361",
+              "notation:6eaae4861c93a539:23130"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:23507",
+              "notation:6eaae4861c93a539:23728"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2.5,
+            "releaseNotation": {
+              "measureOrdinal": 11,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 42,
+          "previousEventId": "work-6eaae4861c93a539-41",
+          "nextEventId": "work-6eaae4861c93a539-42",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-41",
+            "nextEventId": "work-6eaae4861c93a539-42",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:30369"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:30727",
+              "notation:6eaae4861c93a539:31242",
+              "notation:6eaae4861c93a539:31451"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 14,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 51,
+          "previousEventId": "work-6eaae4861c93a539-50",
+          "nextEventId": "work-6eaae4861c93a539-51",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-50",
+            "nextEventId": "work-6eaae4861c93a539-51",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:35893"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:36412"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 17,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 57,
+          "previousEventId": "work-6eaae4861c93a539-56",
+          "nextEventId": "work-6eaae4861c93a539-57",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-56",
+            "nextEventId": "work-6eaae4861c93a539-57",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:38825",
+              "notation:6eaae4861c93a539:39283"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:39690",
+              "notation:6eaae4861c93a539:40212",
+              "notation:6eaae4861c93a539:40421"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 5.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 5.5,
+            "releaseNotation": {
+              "measureOrdinal": 18,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 5.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest",
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 65,
+          "previousEventId": "work-6eaae4861c93a539-64",
+          "nextEventId": "work-6eaae4861c93a539-65",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-64",
+            "nextEventId": "work-6eaae4861c93a539-65",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:45033"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:45555"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 21,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 70,
+          "previousEventId": "work-6eaae4861c93a539-69",
+          "nextEventId": "work-6eaae4861c93a539-70",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-69",
+            "nextEventId": "work-6eaae4861c93a539-70",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:47929"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:48448"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 22,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 77,
+          "previousEventId": "work-6eaae4861c93a539-76",
+          "nextEventId": "work-6eaae4861c93a539-77",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-76",
+            "nextEventId": "work-6eaae4861c93a539-77",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:52370"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:52936"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 23,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 85,
+          "previousEventId": "work-6eaae4861c93a539-84",
+          "nextEventId": "work-6eaae4861c93a539-85",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-84",
+            "nextEventId": "work-6eaae4861c93a539-85",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:57555"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:57911"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 25,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 93,
+          "previousEventId": "work-6eaae4861c93a539-92",
+          "nextEventId": "work-6eaae4861c93a539-93",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-92",
+            "nextEventId": "work-6eaae4861c93a539-93",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:62599",
+              "notation:6eaae4861c93a539:63200"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:63578",
+              "notation:6eaae4861c93a539:63743"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 3,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 3,
+            "releaseNotation": {
+              "measureOrdinal": 27,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 3,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 123,
+          "previousEventId": "work-6eaae4861c93a539-122",
+          "nextEventId": "work-6eaae4861c93a539-123",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-122",
+            "nextEventId": "work-6eaae4861c93a539-123",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:81175"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:81644"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 34,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 130,
+          "previousEventId": "work-6eaae4861c93a539-129",
+          "nextEventId": "work-6eaae4861c93a539-130",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-129",
+            "nextEventId": "work-6eaae4861c93a539-130",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:85148"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:85830"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 35,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 143,
+          "previousEventId": "work-6eaae4861c93a539-142",
+          "nextEventId": "work-6eaae4861c93a539-143",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-142",
+            "nextEventId": "work-6eaae4861c93a539-143",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:92959"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:93316",
+              "notation:6eaae4861c93a539:93536",
+              "notation:6eaae4861c93a539:94039"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 38,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 151,
+          "previousEventId": "work-6eaae4861c93a539-150",
+          "nextEventId": "work-6eaae4861c93a539-151",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-150",
+            "nextEventId": "work-6eaae4861c93a539-151",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:97760"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:98226"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 41,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 159,
+          "previousEventId": "work-6eaae4861c93a539-158",
+          "nextEventId": "work-6eaae4861c93a539-159",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-158",
+            "nextEventId": "work-6eaae4861c93a539-159",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:101837",
+              "notation:6eaae4861c93a539:102311"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:102686",
+              "notation:6eaae4861c93a539:103202"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2.5,
+            "releaseNotation": {
+              "measureOrdinal": 43,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 172,
+          "previousEventId": "work-6eaae4861c93a539-171",
+          "nextEventId": "work-6eaae4861c93a539-172",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-171",
+            "nextEventId": "work-6eaae4861c93a539-172",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:109844"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:110202",
+              "notation:6eaae4861c93a539:110422",
+              "notation:6eaae4861c93a539:110928"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 46,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 181,
+          "previousEventId": "work-6eaae4861c93a539-180",
+          "nextEventId": "work-6eaae4861c93a539-181",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-180",
+            "nextEventId": "work-6eaae4861c93a539-181",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:115048"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:115567"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 49,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 187,
+          "previousEventId": "work-6eaae4861c93a539-186",
+          "nextEventId": "work-6eaae4861c93a539-187",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-186",
+            "nextEventId": "work-6eaae4861c93a539-187",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:117980"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:118336",
+              "notation:6eaae4861c93a539:118853",
+              "notation:6eaae4861c93a539:119062"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 50,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 195,
+          "previousEventId": "work-6eaae4861c93a539-194",
+          "nextEventId": "work-6eaae4861c93a539-195",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-194",
+            "nextEventId": "work-6eaae4861c93a539-195",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:123675"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:124194"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 53,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 200,
+          "previousEventId": "work-6eaae4861c93a539-199",
+          "nextEventId": "work-6eaae4861c93a539-200",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-199",
+            "nextEventId": "work-6eaae4861c93a539-200",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:126865"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:127386"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 1,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 1,
+            "releaseNotation": {
+              "measureOrdinal": 54,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 1,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 207,
+          "previousEventId": "work-6eaae4861c93a539-206",
+          "nextEventId": "work-6eaae4861c93a539-207",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-206",
+            "nextEventId": "work-6eaae4861c93a539-207",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:131009"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:131574"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 55,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 215,
+          "previousEventId": "work-6eaae4861c93a539-214",
+          "nextEventId": "work-6eaae4861c93a539-215",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-214",
+            "nextEventId": "work-6eaae4861c93a539-215",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:136484"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:137005"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 57,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 223,
+          "previousEventId": "work-6eaae4861c93a539-222",
+          "nextEventId": "work-6eaae4861c93a539-223",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-222",
+            "nextEventId": "work-6eaae4861c93a539-223",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:141394",
+              "notation:6eaae4861c93a539:141995"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:142373",
+              "notation:6eaae4861c93a539:142538"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 3,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 3,
+            "releaseNotation": {
+              "measureOrdinal": 59,
+              "quarterPosition": 1
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 3,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 242,
+          "previousEventId": "work-6eaae4861c93a539-241",
+          "nextEventId": "work-6eaae4861c93a539-242",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-241",
+            "nextEventId": "work-6eaae4861c93a539-242",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:153680"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:154184"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 63,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 253,
+          "previousEventId": "work-6eaae4861c93a539-252",
+          "nextEventId": "work-6eaae4861c93a539-253",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-252",
+            "nextEventId": "work-6eaae4861c93a539-253",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:159862"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:160331"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 66,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 260,
+          "previousEventId": "work-6eaae4861c93a539-259",
+          "nextEventId": "work-6eaae4861c93a539-260",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-259",
+            "nextEventId": "work-6eaae4861c93a539-260",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:163835"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:164517"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 67,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 273,
+          "previousEventId": "work-6eaae4861c93a539-272",
+          "nextEventId": "work-6eaae4861c93a539-273",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-272",
+            "nextEventId": "work-6eaae4861c93a539-273",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:171646"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:172003",
+              "notation:6eaae4861c93a539:172223",
+              "notation:6eaae4861c93a539:172726"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 70,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 281,
+          "previousEventId": "work-6eaae4861c93a539-280",
+          "nextEventId": "work-6eaae4861c93a539-281",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-280",
+            "nextEventId": "work-6eaae4861c93a539-281",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:176447"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:176913"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 73,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 289,
+          "previousEventId": "work-6eaae4861c93a539-288",
+          "nextEventId": "work-6eaae4861c93a539-289",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-288",
+            "nextEventId": "work-6eaae4861c93a539-289",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:180524",
+              "notation:6eaae4861c93a539:180998"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:181373",
+              "notation:6eaae4861c93a539:181891"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 2.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 2.5,
+            "releaseNotation": {
+              "measureOrdinal": 75,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 2.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 302,
+          "previousEventId": "work-6eaae4861c93a539-301",
+          "nextEventId": "work-6eaae4861c93a539-302",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-301",
+            "nextEventId": "work-6eaae4861c93a539-302",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:188533"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:188891",
+              "notation:6eaae4861c93a539:189111",
+              "notation:6eaae4861c93a539:189615"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 6.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 6.5,
+            "releaseNotation": {
+              "measureOrdinal": 78,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 6.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 311,
+          "previousEventId": "work-6eaae4861c93a539-310",
+          "nextEventId": "work-6eaae4861c93a539-311",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-310",
+            "nextEventId": "work-6eaae4861c93a539-311",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:193735"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:194254"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 81,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 317,
+          "previousEventId": "work-6eaae4861c93a539-316",
+          "nextEventId": "work-6eaae4861c93a539-317",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-316",
+            "nextEventId": "work-6eaae4861c93a539-317",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:196667"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:197023",
+              "notation:6eaae4861c93a539:197540",
+              "notation:6eaae4861c93a539:197703"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 4.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 4.5,
+            "releaseNotation": {
+              "measureOrdinal": 82,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 4.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 339,
+          "previousEventId": "work-6eaae4861c93a539-338",
+          "nextEventId": "work-6eaae4861c93a539-339",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-338",
+            "nextEventId": "work-6eaae4861c93a539-339",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:210935",
+              "notation:6eaae4861c93a539:211583"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:212348"
+            ],
+            "sourceDuration": 1.25,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.25,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 86,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.25,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 363,
+          "previousEventId": "work-6eaae4861c93a539-362",
+          "nextEventId": "work-6eaae4861c93a539-363",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-362",
+            "nextEventId": "work-6eaae4861c93a539-363",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:226396"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:226901"
+            ],
+            "sourceDuration": 0.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 0.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 90,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 0.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 370,
+          "previousEventId": "work-6eaae4861c93a539-369",
+          "nextEventId": "work-6eaae4861c93a539-370",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-369",
+            "nextEventId": "work-6eaae4861c93a539-370",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:230592"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:231004"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 91,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 383,
+          "previousEventId": "work-6eaae4861c93a539-382",
+          "nextEventId": "work-6eaae4861c93a539-383",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-382",
+            "nextEventId": "work-6eaae4861c93a539-383",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:238632",
+              "notation:6eaae4861c93a539:239105"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:239486",
+              "notation:6eaae4861c93a539:239710",
+              "notation:6eaae4861c93a539:240216"
+            ],
+            "sourceDuration": 2.5,
+            "explicitRestDuration": 5.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2.5,
+            "inferredGap": 5.5,
+            "releaseNotation": {
+              "measureOrdinal": 94,
+              "quarterPosition": 3
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2.5,
+            "restBeats": 5.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest",
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 391,
+          "previousEventId": "work-6eaae4861c93a539-390",
+          "nextEventId": "work-6eaae4861c93a539-391",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-390",
+            "nextEventId": "work-6eaae4861c93a539-391",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:243976"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:244453"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 97,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 401,
+          "previousEventId": "work-6eaae4861c93a539-400",
+          "nextEventId": "work-6eaae4861c93a539-401",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-400",
+            "nextEventId": "work-6eaae4861c93a539-401",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:249360"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:249665",
+              "notation:6eaae4861c93a539:249887"
+            ],
+            "sourceDuration": 2,
+            "explicitRestDuration": 2.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 2,
+            "inferredGap": 2.5,
+            "releaseNotation": {
+              "measureOrdinal": 99,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 2,
+            "restBeats": 2.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "sustained-arrival-and-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 410,
+          "previousEventId": "work-6eaae4861c93a539-409",
+          "nextEventId": "work-6eaae4861c93a539-410",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-409",
+            "nextEventId": "work-6eaae4861c93a539-410",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:254132"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:254477"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 101,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 416,
+          "previousEventId": "work-6eaae4861c93a539-415",
+          "nextEventId": "work-6eaae4861c93a539-416",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-415",
+            "nextEventId": "work-6eaae4861c93a539-416",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:258306"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:258718",
+              "notation:6eaae4861c93a539:258927"
+            ],
+            "sourceDuration": 1,
+            "explicitRestDuration": 4.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1,
+            "inferredGap": 4.5,
+            "releaseNotation": {
+              "measureOrdinal": 102,
+              "quarterPosition": 4
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1,
+            "restBeats": 4.5,
+            "decision": "protect-boundary",
+            "reasons": [
+              "long-rest"
+            ],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        },
+        {
+          "index": 425,
+          "previousEventId": "work-6eaae4861c93a539-424",
+          "nextEventId": "work-6eaae4861c93a539-425",
+          "closure": {
+            "status": "observed",
+            "eventId": "work-6eaae4861c93a539-424",
+            "nextEventId": "work-6eaae4861c93a539-425",
+            "sourceNoteIds": [
+              "notation:6eaae4861c93a539:263478"
+            ],
+            "sourceRestIds": [
+              "notation:6eaae4861c93a539:264039"
+            ],
+            "sourceDuration": 1.5,
+            "explicitRestDuration": 0.5,
+            "durationMatches": true,
+            "gapMatches": true,
+            "flattenedDuration": 1.5,
+            "inferredGap": 0.5,
+            "releaseNotation": {
+              "measureOrdinal": 105,
+              "quarterPosition": 2
+            },
+            "breathSymbols": [],
+            "limitations": [
+              "legacy numeric positions",
+              "cross-bar continuity assumes prior measure ends at last observed event; no meter validation",
+              "duration/rest agreement is not a phrase or cadence decision"
+            ]
+          },
+          "meter": {
+            "status": "normalized",
+            "meter": {
+              "count": 4,
+              "unit": 4
+            },
+            "beatQuarter": 1,
+            "beatConvention": "denominator-beat",
+            "durationBeats": 1.5,
+            "restBeats": 0.5,
+            "decision": "cannot_judge",
+            "reasons": [],
+            "policy": "existing-v1.14-protection-shadow",
+            "limitation": "No protection is not merge approval; conventional beat grouping is not inferred performed pulse"
+          }
+        }
+      ]
+    }
+  ]
+}

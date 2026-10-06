@@ -1,0 +1,468 @@
+{
+  "caseId": "S-STRUCT-008",
+  "sourceHash": "4e78a1a6baf5bc0a2596e6fe4b2790daafc4485ade4ac7855140a7d76bf7c39c",
+  "status": "user-preference-not-gold",
+  "userDescription": "Phrase2는 Phrase1 앞부분의 반복인데 분리되었다. Phrase2와3을 합쳐야 한다.",
+  "reference": {
+    "startEventId": "work-15fa42f2e80b3722-0",
+    "lastEventId": "work-15fa42f2e80b3722-29"
+  },
+  "proposed": {
+    "startEventId": "work-15fa42f2e80b3722-30",
+    "lastEventId": "work-15fa42f2e80b3722-59",
+    "endExclusiveEventId": "work-15fa42f2e80b3722-60"
+  },
+  "removeBoundaryBefore": "work-15fa42f2e80b3722-35",
+  "observations": {
+    "originalArrival": {
+      "eventId": "work-15fa42f2e80b3722-4",
+      "pitch": "A4",
+      "duration": 1.5,
+      "gap": 0
+    },
+    "repeatedArrival": {
+      "eventId": "work-15fa42f2e80b3722-34",
+      "pitch": "A5",
+      "duration": 1,
+      "gap": 0.5
+    }
+  },
+  "analysis": {
+    "status": "compared",
+    "version": "structure-template-alignment-v0.1",
+    "calibrated": false,
+    "similarity": 92,
+    "melodic": 92,
+    "interval": 94,
+    "contour": 89,
+    "shape": 88,
+    "rhythm": 95,
+    "coverage": 93,
+    "matchedNotes": 28,
+    "transformations": [
+      "transposition",
+      "ornament-insertion",
+      "note-deletion",
+      "pitch-substitution",
+      "rhythm-variation",
+      "repeat-expansion"
+    ],
+    "alignment": [
+      {
+        "leftIndex": 0,
+        "rightIndex": 0,
+        "type": "match"
+      },
+      {
+        "leftIndex": 1,
+        "rightIndex": 1,
+        "type": "match"
+      },
+      {
+        "leftIndex": 2,
+        "rightIndex": 2,
+        "type": "match"
+      },
+      {
+        "leftIndex": 3,
+        "rightIndex": 3,
+        "type": "match"
+      },
+      {
+        "leftIndex": 4,
+        "rightIndex": 4,
+        "type": "match"
+      },
+      {
+        "leftIndex": 5,
+        "rightIndex": 5,
+        "type": "match"
+      },
+      {
+        "leftIndex": 6,
+        "rightIndex": 6,
+        "type": "match"
+      },
+      {
+        "leftIndex": 7,
+        "rightIndex": 7,
+        "type": "match"
+      },
+      {
+        "leftIndex": 8,
+        "rightIndex": 8,
+        "type": "match"
+      },
+      {
+        "leftIndex": 9,
+        "rightIndex": 9,
+        "type": "match"
+      },
+      {
+        "leftIndex": 10,
+        "rightIndex": 10,
+        "type": "match"
+      },
+      {
+        "leftIndex": 11,
+        "rightIndex": null,
+        "type": "deletion"
+      },
+      {
+        "leftIndex": 12,
+        "rightIndex": null,
+        "type": "deletion"
+      },
+      {
+        "leftIndex": 13,
+        "rightIndex": 11,
+        "type": "substitution"
+      },
+      {
+        "leftIndex": 14,
+        "rightIndex": 12,
+        "type": "match"
+      },
+      {
+        "leftIndex": 15,
+        "rightIndex": 13,
+        "type": "substitution"
+      },
+      {
+        "leftIndex": 16,
+        "rightIndex": 14,
+        "type": "substitution"
+      },
+      {
+        "leftIndex": null,
+        "rightIndex": 15,
+        "type": "insertion"
+      },
+      {
+        "leftIndex": null,
+        "rightIndex": 16,
+        "type": "insertion"
+      },
+      {
+        "leftIndex": 17,
+        "rightIndex": 17,
+        "type": "match"
+      },
+      {
+        "leftIndex": 18,
+        "rightIndex": 18,
+        "type": "match"
+      },
+      {
+        "leftIndex": 19,
+        "rightIndex": 19,
+        "type": "match"
+      },
+      {
+        "leftIndex": 20,
+        "rightIndex": 20,
+        "type": "match"
+      },
+      {
+        "leftIndex": 21,
+        "rightIndex": 21,
+        "type": "match"
+      },
+      {
+        "leftIndex": 22,
+        "rightIndex": 22,
+        "type": "match"
+      },
+      {
+        "leftIndex": 23,
+        "rightIndex": 23,
+        "type": "match"
+      },
+      {
+        "leftIndex": 24,
+        "rightIndex": 24,
+        "type": "match"
+      },
+      {
+        "leftIndex": 25,
+        "rightIndex": 25,
+        "type": "match"
+      },
+      {
+        "leftIndex": 26,
+        "rightIndex": 26,
+        "type": "match"
+      },
+      {
+        "leftIndex": 27,
+        "rightIndex": 27,
+        "type": "match"
+      },
+      {
+        "leftIndex": 28,
+        "rightIndex": 28,
+        "type": "match"
+      },
+      {
+        "leftIndex": 29,
+        "rightIndex": 29,
+        "type": "substitution"
+      }
+    ],
+    "prefix": {
+      "alignedAttackCount": 11,
+      "leftRatio": 0.36666666666666664,
+      "rightRatio": 0.36666666666666664,
+      "meaning": "contiguous leading match, not a inferred musical section"
+    },
+    "terminal": {
+      "bothEndpointsPaired": true,
+      "leftDuration": 1,
+      "rightDuration": 3
+    },
+    "restComparisons": [
+      {
+        "leftEventId": "work-15fa42f2e80b3722-5",
+        "rightEventId": "work-15fa42f2e80b3722-35",
+        "leftGapUnits": 0,
+        "rightGapUnits": 1,
+        "kind": "inferred-stream-gap"
+      }
+    ],
+    "alignmentRefs": [
+      {
+        "leftIndex": 0,
+        "rightIndex": 0,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-0",
+        "rightEventId": "work-15fa42f2e80b3722-30"
+      },
+      {
+        "leftIndex": 1,
+        "rightIndex": 1,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-1",
+        "rightEventId": "work-15fa42f2e80b3722-31"
+      },
+      {
+        "leftIndex": 2,
+        "rightIndex": 2,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-2",
+        "rightEventId": "work-15fa42f2e80b3722-32"
+      },
+      {
+        "leftIndex": 3,
+        "rightIndex": 3,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-3",
+        "rightEventId": "work-15fa42f2e80b3722-33"
+      },
+      {
+        "leftIndex": 4,
+        "rightIndex": 4,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-4",
+        "rightEventId": "work-15fa42f2e80b3722-34"
+      },
+      {
+        "leftIndex": 5,
+        "rightIndex": 5,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-5",
+        "rightEventId": "work-15fa42f2e80b3722-35"
+      },
+      {
+        "leftIndex": 6,
+        "rightIndex": 6,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-6",
+        "rightEventId": "work-15fa42f2e80b3722-36"
+      },
+      {
+        "leftIndex": 7,
+        "rightIndex": 7,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-7",
+        "rightEventId": "work-15fa42f2e80b3722-37"
+      },
+      {
+        "leftIndex": 8,
+        "rightIndex": 8,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-8",
+        "rightEventId": "work-15fa42f2e80b3722-38"
+      },
+      {
+        "leftIndex": 9,
+        "rightIndex": 9,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-9",
+        "rightEventId": "work-15fa42f2e80b3722-39"
+      },
+      {
+        "leftIndex": 10,
+        "rightIndex": 10,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-10",
+        "rightEventId": "work-15fa42f2e80b3722-40"
+      },
+      {
+        "leftIndex": 11,
+        "rightIndex": null,
+        "type": "deletion",
+        "leftEventId": "work-15fa42f2e80b3722-11",
+        "rightEventId": null
+      },
+      {
+        "leftIndex": 12,
+        "rightIndex": null,
+        "type": "deletion",
+        "leftEventId": "work-15fa42f2e80b3722-12",
+        "rightEventId": null
+      },
+      {
+        "leftIndex": 13,
+        "rightIndex": 11,
+        "type": "substitution",
+        "leftEventId": "work-15fa42f2e80b3722-13",
+        "rightEventId": "work-15fa42f2e80b3722-41"
+      },
+      {
+        "leftIndex": 14,
+        "rightIndex": 12,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-14",
+        "rightEventId": "work-15fa42f2e80b3722-42"
+      },
+      {
+        "leftIndex": 15,
+        "rightIndex": 13,
+        "type": "substitution",
+        "leftEventId": "work-15fa42f2e80b3722-15",
+        "rightEventId": "work-15fa42f2e80b3722-43"
+      },
+      {
+        "leftIndex": 16,
+        "rightIndex": 14,
+        "type": "substitution",
+        "leftEventId": "work-15fa42f2e80b3722-16",
+        "rightEventId": "work-15fa42f2e80b3722-44"
+      },
+      {
+        "leftIndex": null,
+        "rightIndex": 15,
+        "type": "insertion",
+        "leftEventId": null,
+        "rightEventId": "work-15fa42f2e80b3722-45"
+      },
+      {
+        "leftIndex": null,
+        "rightIndex": 16,
+        "type": "insertion",
+        "leftEventId": null,
+        "rightEventId": "work-15fa42f2e80b3722-46"
+      },
+      {
+        "leftIndex": 17,
+        "rightIndex": 17,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-17",
+        "rightEventId": "work-15fa42f2e80b3722-47"
+      },
+      {
+        "leftIndex": 18,
+        "rightIndex": 18,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-18",
+        "rightEventId": "work-15fa42f2e80b3722-48"
+      },
+      {
+        "leftIndex": 19,
+        "rightIndex": 19,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-19",
+        "rightEventId": "work-15fa42f2e80b3722-49"
+      },
+      {
+        "leftIndex": 20,
+        "rightIndex": 20,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-20",
+        "rightEventId": "work-15fa42f2e80b3722-50"
+      },
+      {
+        "leftIndex": 21,
+        "rightIndex": 21,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-21",
+        "rightEventId": "work-15fa42f2e80b3722-51"
+      },
+      {
+        "leftIndex": 22,
+        "rightIndex": 22,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-22",
+        "rightEventId": "work-15fa42f2e80b3722-52"
+      },
+      {
+        "leftIndex": 23,
+        "rightIndex": 23,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-23",
+        "rightEventId": "work-15fa42f2e80b3722-53"
+      },
+      {
+        "leftIndex": 24,
+        "rightIndex": 24,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-24",
+        "rightEventId": "work-15fa42f2e80b3722-54"
+      },
+      {
+        "leftIndex": 25,
+        "rightIndex": 25,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-25",
+        "rightEventId": "work-15fa42f2e80b3722-55"
+      },
+      {
+        "leftIndex": 26,
+        "rightIndex": 26,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-26",
+        "rightEventId": "work-15fa42f2e80b3722-56"
+      },
+      {
+        "leftIndex": 27,
+        "rightIndex": 27,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-27",
+        "rightEventId": "work-15fa42f2e80b3722-57"
+      },
+      {
+        "leftIndex": 28,
+        "rightIndex": 28,
+        "type": "match",
+        "leftEventId": "work-15fa42f2e80b3722-28",
+        "rightEventId": "work-15fa42f2e80b3722-58"
+      },
+      {
+        "leftIndex": 29,
+        "rightIndex": 29,
+        "type": "substitution",
+        "leftEventId": "work-15fa42f2e80b3722-29",
+        "rightEventId": "work-15fa42f2e80b3722-59"
+      }
+    ],
+    "limitations": [
+      "gap channel is diagnostic only and not added to similarity",
+      "beam and metric grouping are observations, not scored here",
+      "no harmonic prolongation or cadence judgment"
+    ]
+  },
+  "limitations": [
+    "Similarity is uncalibrated, not merge probability",
+    "No production rule or harmonic interpretation changed"
+  ]
+}

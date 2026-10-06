@@ -1,0 +1,8341 @@
+[
+  {
+    "caseId": "NEXT-B01-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 1
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B01-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 65,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 64,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note1-passing-0",
+          "kind": "note",
+          "pitchMidi": 71,
+          "durationRatio": 0.5,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 65,
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note1",
+        "originalDuration": 1,
+        "addedIds": [
+          "note1-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 64,
+        "after": 65
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B02-delete",
+    "state": "recovered",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B02-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 68,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 80,
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 2,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 79,
+        "after": 80
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B03-delete",
+    "state": "recovered",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.25
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B03-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.6666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 79,
+          "durationRatio": 0.6666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 78,
+          "durationRatio": 0.6666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 0.125
+        },
+        {
+          "id": "note3-passing-0",
+          "kind": "note",
+          "pitchMidi": 79,
+          "durationRatio": 0.125,
+          "originId": "note3",
+          "generated": true
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 81,
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note3",
+        "originalDuration": 0.25,
+        "addedIds": [
+          "note3-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 2,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 80,
+        "after": 81
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B04-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B04-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 4
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.3333333333333333
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 70,
+          "durationRatio": 1.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "durationRatio": 1.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1-passing-0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "durationRatio": 1,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 84,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note1",
+        "originalDuration": 2,
+        "addedIds": [
+          "note1-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 4,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 83,
+        "after": 84
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B05-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 58,
+          "spelling": "Bb3",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 60,
+          "spelling": "C4",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 60,
+          "spelling": "C4",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 58,
+          "spelling": "Bb3",
+          "durationRatio": 1
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 2
+    },
+    "after": {
+      "status": "completed",
+      "rank": 2
+    }
+  },
+  {
+    "caseId": "NEXT-B05-extra",
+    "state": "found",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 58,
+          "spelling": "Bb3",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 60,
+          "spelling": "C4",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 65,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 70,
+          "spelling": "Bb4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3-passing-0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "durationRatio": 0.5,
+          "originId": "note3",
+          "generated": true
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 59,
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 60,
+          "spelling": "C4",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note3",
+        "originalDuration": 1,
+        "addedIds": [
+          "note3-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 58,
+        "after": 59
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 2
+    },
+    "after": {
+      "status": "completed",
+      "rank": 2
+    }
+  },
+  {
+    "caseId": "NEXT-B06-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap4",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3359375
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap4",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3359375
+        }
+      }
+    ],
+    "before": {
+      "status": "failed"
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B06-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap4",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3359375
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.6666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "durationRatio": 0.6666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 66,
+          "durationRatio": 0.6666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1-passing-0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "durationRatio": 1,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap4",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.33203125
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 68,
+          "durationRatio": 0.3359375
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note1",
+        "originalDuration": 2,
+        "addedIds": [
+          "note1-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 2,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 67,
+        "after": 68
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B07-delete",
+    "state": "recovered",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 3.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 3.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": 2
+    }
+  },
+  {
+    "caseId": "NEXT-B07-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 3.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 3.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3-passing-0",
+          "kind": "note",
+          "pitchMidi": 64,
+          "durationRatio": 0.5,
+          "originId": "note3",
+          "generated": true
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 65,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note3",
+        "originalDuration": 1,
+        "addedIds": [
+          "note3-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 3,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 64,
+        "after": 65
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B08-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "2/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "2/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B08-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "2/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "2/2",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 77,
+          "durationRatio": 0.5,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 76,
+          "durationRatio": 0.5,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "durationRatio": 1.5,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 73,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 65,
+          "spelling": "F4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 3,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 1.5,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 72,
+        "after": 73
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B09-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 3
+    },
+    "after": {
+      "status": "completed",
+      "rank": 3
+    }
+  },
+  {
+    "caseId": "NEXT-B09-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.16666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 82,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 81,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "durationRatio": 0.5,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 74,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 85,
+          "spelling": "C#6",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 0.5,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 73,
+        "after": 74
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B10-delete",
+    "state": "recovered",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B10-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2-passing-0",
+          "kind": "note",
+          "pitchMidi": 73,
+          "durationRatio": 0.75,
+          "originId": "note2",
+          "generated": true
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 80,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note2",
+        "originalDuration": 1.5,
+        "addedIds": [
+          "note2-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 3,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 79,
+        "after": 80
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B11-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.75
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.75
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 3
+    },
+    "after": {
+      "status": "completed",
+      "rank": 3
+    }
+  },
+  {
+    "caseId": "NEXT-B11-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.75
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note1-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 68,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note1-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2-passing-0",
+          "kind": "note",
+          "pitchMidi": 65,
+          "durationRatio": 0.25,
+          "originId": "note2",
+          "generated": true
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 75,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.75
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note2",
+        "originalDuration": 0.5,
+        "addedIds": [
+          "note2-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note1",
+        "originalDuration": 1,
+        "addedIds": [
+          "note1-neighbor-0",
+          "note1-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 74,
+        "after": 75
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B12-delete",
+    "state": "recovered",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 3.25
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 3.25
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B12-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 3.25
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1.0833333333333333
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 73,
+          "durationRatio": 1.0833333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 72,
+          "durationRatio": 1.0833333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.125
+        },
+        {
+          "id": "note1-passing-0",
+          "kind": "note",
+          "pitchMidi": 70,
+          "durationRatio": 0.125,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 60,
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 59,
+          "spelling": "B3",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note1",
+        "originalDuration": 0.25,
+        "addedIds": [
+          "note1-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 3.25,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 59,
+        "after": 60
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B13-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "6/8",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "6/8",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B13-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "6/8",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "6/8",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.375
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 77,
+          "durationRatio": 0.375,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 80,
+          "durationRatio": 0.5,
+          "originId": "note4",
+          "generated": true
+        },
+        {
+          "id": "note4-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "durationRatio": 0.5,
+          "originId": "note4",
+          "generated": true
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 73,
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 0.75,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note4",
+        "originalDuration": 1.5,
+        "addedIds": [
+          "note4-neighbor-0",
+          "note4-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 72,
+        "after": 73
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B14-delete",
+    "state": "recovered",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 82,
+          "spelling": "Bb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 82,
+          "spelling": "Bb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 1.75
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": 5
+    }
+  },
+  {
+    "caseId": "NEXT-B14-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 82,
+          "spelling": "Bb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 78,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 77,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 78,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 75,
+          "spelling": "Eb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 82,
+          "spelling": "Bb5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 87,
+          "durationRatio": 1.75
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.3333333333333333
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 2,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 86,
+        "after": 87
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B15-delete",
+    "state": "missing",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.25
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B15-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 74,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 73,
+          "durationRatio": 1,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.125
+        },
+        {
+          "id": "note2-passing-0",
+          "kind": "note",
+          "pitchMidi": 72,
+          "durationRatio": 0.125,
+          "originId": "note2",
+          "generated": true
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 3
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 68,
+          "spelling": "G#4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 65,
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 66,
+          "spelling": "F#4",
+          "durationRatio": 4
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 73,
+          "spelling": "C#5",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.25
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note2",
+        "originalDuration": 0.25,
+        "addedIds": [
+          "note2-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 3,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 64,
+        "after": 65
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B16-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 57,
+          "spelling": "A3",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 57,
+          "spelling": "A3",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B16-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 57,
+          "spelling": "A3",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.16666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 63,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 62,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.125
+        },
+        {
+          "id": "note1-passing-0",
+          "kind": "note",
+          "pitchMidi": 76,
+          "durationRatio": 0.125,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 74,
+          "spelling": "D5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 79,
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap8",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 57,
+          "spelling": "A3",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note1",
+        "originalDuration": 0.25,
+        "addedIds": [
+          "note1-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 0.5,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 78,
+        "after": 79
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B17-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap6",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap6",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 2
+    },
+    "after": {
+      "status": "completed",
+      "rank": 2
+    }
+  },
+  {
+    "caseId": "NEXT-B17-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        },
+        {
+          "id": "gap6",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "gap1",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.3333333333333333
+        },
+        {
+          "id": "note1-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 80,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note1-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 79,
+          "durationRatio": 0.3333333333333333,
+          "originId": "note1",
+          "generated": true
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 3
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 1
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3-passing-0",
+          "kind": "note",
+          "pitchMidi": 80,
+          "durationRatio": 0.5,
+          "originId": "note3",
+          "generated": true
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 77,
+          "durationRatio": 1
+        },
+        {
+          "id": "gap6",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 72,
+          "spelling": "C5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 76,
+          "spelling": "E5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note3",
+        "originalDuration": 1,
+        "addedIds": [
+          "note3-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note1",
+        "originalDuration": 1,
+        "addedIds": [
+          "note1-neighbor-0",
+          "note1-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 76,
+        "after": 77
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B18-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 3
+    },
+    "after": {
+      "status": "completed",
+      "rank": 3
+    }
+  },
+  {
+    "caseId": "NEXT-B18-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 67,
+          "spelling": "G4",
+          "durationRatio": 0.16666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 68,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 67,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 69,
+          "durationRatio": 0.5,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 0.75
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 68,
+          "durationRatio": 1
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 69,
+          "spelling": "A4",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 62,
+          "spelling": "D4",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 64,
+          "spelling": "E4",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 0.5,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 67,
+        "after": 68
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  },
+  {
+    "caseId": "NEXT-B19-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B19-extra",
+    "state": "found",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 2
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "3/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 83,
+          "spelling": "B5",
+          "durationRatio": 0.6666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 84,
+          "durationRatio": 0.6666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 83,
+          "durationRatio": 0.6666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 80,
+          "spelling": "G#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 0.25
+        },
+        {
+          "id": "note4-passing-0",
+          "kind": "note",
+          "pitchMidi": 82,
+          "durationRatio": 0.25,
+          "originId": "note4",
+          "generated": true
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 84,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 71,
+          "spelling": "B4",
+          "durationRatio": 2
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 78,
+          "spelling": "F#5",
+          "durationRatio": 1
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note4",
+        "originalDuration": 0.5,
+        "addedIds": [
+          "note4-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 2,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 83,
+        "after": 84
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 1
+    },
+    "after": {
+      "status": "completed",
+      "rank": 1
+    }
+  },
+  {
+    "caseId": "NEXT-B20-delete",
+    "state": "found",
+    "kind": "delete-one",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 0.6640625
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 89,
+          "spelling": "F6",
+          "durationRatio": 0.66796875
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.667969
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.49999975000000063
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 0.6640625
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.667969
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.49999975000000063
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "delete-note-and-duration",
+        "event": {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 89,
+          "spelling": "F6",
+          "durationRatio": 0.66796875
+        }
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": 2
+    },
+    "after": {
+      "status": "completed",
+      "rank": 2
+    }
+  },
+  {
+    "caseId": "NEXT-B20-extra",
+    "state": "missing",
+    "kind": "combined-plus-one-semitone",
+    "original": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 1
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 0.6640625
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 89,
+          "spelling": "F6",
+          "durationRatio": 0.66796875
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.667969
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.49999975000000063
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "query": {
+      "version": 1,
+      "mode": "melody_rhythm",
+      "meter": "4/4",
+      "startsOnDownbeat": true,
+      "events": [
+        {
+          "id": "note0",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 0.16666666666666666
+        },
+        {
+          "id": "note0-neighbor-0",
+          "kind": "note",
+          "pitchMidi": 89,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-neighbor-1",
+          "kind": "note",
+          "pitchMidi": 88,
+          "durationRatio": 0.16666666666666666,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note0-passing-0",
+          "kind": "note",
+          "pitchMidi": 87,
+          "durationRatio": 0.5,
+          "originId": "note0",
+          "generated": true
+        },
+        {
+          "id": "note1",
+          "kind": "note",
+          "pitchMidi": 86,
+          "spelling": "D6",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note2",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.5
+        },
+        {
+          "id": "gap3",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note3",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note4",
+          "kind": "note",
+          "pitchMidi": 88,
+          "spelling": "E6",
+          "durationRatio": 0.6640625
+        },
+        {
+          "id": "note5",
+          "kind": "note",
+          "pitchMidi": 90,
+          "durationRatio": 0.66796875
+        },
+        {
+          "id": "note6",
+          "kind": "note",
+          "pitchMidi": 84,
+          "spelling": "C6",
+          "durationRatio": 1.667969
+        },
+        {
+          "id": "gap7",
+          "kind": "rest",
+          "pitchMidi": null,
+          "durationRatio": 0.49999975000000063
+        },
+        {
+          "id": "note7",
+          "kind": "note",
+          "pitchMidi": 77,
+          "spelling": "F5",
+          "durationRatio": 0.5
+        },
+        {
+          "id": "note8",
+          "kind": "note",
+          "pitchMidi": 81,
+          "spelling": "A5",
+          "durationRatio": 1
+        },
+        {
+          "id": "note9",
+          "kind": "note",
+          "pitchMidi": 79,
+          "spelling": "G5",
+          "durationRatio": 0.5
+        }
+      ],
+      "absoluteExactOnly": false,
+      "includeRests": true
+    },
+    "changes": [
+      {
+        "type": "passing",
+        "eventId": "note0",
+        "originalDuration": 1,
+        "addedIds": [
+          "note0-passing-0"
+        ]
+      },
+      {
+        "type": "neighbor",
+        "eventId": "note0",
+        "originalDuration": 0.5,
+        "addedIds": [
+          "note0-neighbor-0",
+          "note0-neighbor-1"
+        ]
+      },
+      {
+        "type": "pitch-change",
+        "id": "note5",
+        "before": 89,
+        "after": 90
+      }
+    ],
+    "before": {
+      "status": "completed",
+      "rank": null
+    },
+    "after": {
+      "status": "completed",
+      "rank": null
+    }
+  }
+]

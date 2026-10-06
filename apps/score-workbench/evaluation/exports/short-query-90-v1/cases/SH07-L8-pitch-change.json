@@ -1,0 +1,1445 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH07-L8-pitch-change",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH07-e0",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "SH07-e1",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e2",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e3",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e4",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e5",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e6",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "SH07-e7",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH07-e0",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "SH07-e1",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e2",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e3",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e4",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e5",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e6",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "SH07-e7",
+        "kind": "note",
+        "pitchMidi": 68,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "pitch-change",
+    "positive-probe"
+  ],
+  "description": "8음 중 네 번째 음 +2반음 변경",
+  "changes": {
+    "changedSourceIds": [
+      "SH07-e3"
+    ],
+    "originalDuration": 6,
+    "queryDuration": 6,
+    "transformation": {
+      "pitch": {
+        "eventId": "SH07-e3",
+        "from": 75,
+        "to": 77,
+        "semitones": 2
+      }
+    }
+  },
+  "expected": {
+    "workId": "work-6938f089921bd525",
+    "sourceId": "2. Someone You Loved, Violin and Piano Duet.xml",
+    "streamId": "P1:1:1",
+    "title": "Someone You Loved",
+    "composer": "Composed by Lewis Capaldi\nArranged by Reflet des Nuages",
+    "baseStartIndex": 35,
+    "baseStartMeasure": 11,
+    "baseEndMeasure": 12,
+    "baseTargets": [
+      {
+        "onset": 40,
+        "pitchMidi": 75,
+        "measure": 11,
+        "beat": 1
+      },
+      {
+        "onset": 41.5,
+        "pitchMidi": 77,
+        "measure": 11,
+        "beat": 2.5
+      },
+      {
+        "onset": 42,
+        "pitchMidi": 77,
+        "measure": 11,
+        "beat": 3
+      },
+      {
+        "onset": 42.5,
+        "pitchMidi": 75,
+        "measure": 11,
+        "beat": 3.5
+      },
+      {
+        "onset": 43,
+        "pitchMidi": 73,
+        "measure": 11,
+        "beat": 4
+      },
+      {
+        "onset": 43.5,
+        "pitchMidi": 70,
+        "measure": 11,
+        "beat": 4.5
+      },
+      {
+        "onset": 44,
+        "pitchMidi": 68,
+        "measure": 12,
+        "beat": 1
+      },
+      {
+        "onset": 45.5,
+        "pitchMidi": 68,
+        "measure": 12,
+        "beat": 2.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 48095.4449,
+      "trace": {
+        "rejections": {
+          "inferior-window": 1,
+          "admission-floor": 3
+        },
+        "scored": [
+          {
+            "sequence": 324,
+            "stage": "candidate-scored",
+            "elapsedMs": 17712.840099999914,
+            "key": "work-6938f089921bd525\u0000*",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 96.36404443012863
+            },
+            "metric": {
+              "score": 66.04166666666666,
+              "adjustment": -1.666666666666666,
+              "matches": 2,
+              "conflicts": 1,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 174,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 175,
+                  "cost": 0.01516222801869237,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 176,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 177,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": null,
+                  "candidateIndex": 178,
+                  "cost": 0.2328,
+                  "type": "insertion"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 179,
+                  "cost": 0.12540411428571427,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 180,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 181,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 182,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 174,
+              "end": 182,
+              "coverage": 1,
+              "cost": 0.3733663423044067,
+              "similarity": 90.73465497652353
+            },
+            "windowStart": 0
+          },
+          {
+            "sequence": 11759,
+            "stage": "candidate-scored",
+            "elapsedMs": 20788.773199999938,
+            "key": "work-6938f089921bd525\u0000174",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 96.36404443012863
+            },
+            "metric": {
+              "score": 66.04166666666666,
+              "adjustment": -1.666666666666666,
+              "matches": 2,
+              "conflicts": 1,
+              "overAccents": 1
+            },
+            "structural": {
+              "similarity": 100,
+              "bonus": 6,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 3,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": true,
+            "intervalExact": false,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0.01516222801869237,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": null,
+                  "candidateIndex": 7,
+                  "cost": 0.2328,
+                  "type": "insertion"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 8,
+                  "cost": 0.12540411428571427,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 9,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 10,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 11,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 3,
+              "end": 11,
+              "coverage": 1,
+              "cost": 0.3733663423044067,
+              "similarity": 90.73465497652353
+            },
+            "windowStart": 171
+          },
+          {
+            "sequence": 11772,
+            "stage": "candidate-scored",
+            "elapsedMs": 20788.98179999995,
+            "key": "work-6938f089921bd525\u0000117",
+            "local": 61.782005503155986,
+            "scores": {
+              "pitch": 82,
+              "interval": 81.6,
+              "contour": 100,
+              "rhythm": 22.054885333175438
+            },
+            "metric": {
+              "score": 43.33333333333333,
+              "adjustment": -7.333333333333332,
+              "matches": 1,
+              "conflicts": 2,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 34.43215245236702,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 62.65446860356516,
+              "pillarPitch": 86,
+              "interval": 77.6,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 4,
+              "coverage": 0.6666666666666666,
+              "strongCoverage": 0.6666666666666666
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 95.23809523809524,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0.03759531051710583,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0.022583333333333334,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0.025920000000000002,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": null,
+                  "cost": 0.4053,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 7,
+                  "cost": 0.09938468571428571,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 8,
+                  "cost": 0.2697138655104989,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 9,
+                  "cost": 0.04359280861983469,
+                  "type": "match"
+                }
+              ],
+              "start": 3,
+              "end": 9,
+              "coverage": 0.875,
+              "cost": 0.9040900036950585,
+              "similarity": 69.14451179086842
+            },
+            "windowStart": 114
+          },
+          {
+            "sequence": 11785,
+            "stage": "candidate-scored",
+            "elapsedMs": 20789.17479999992,
+            "key": "work-6938f089921bd525\u0000257",
+            "local": 52.76144029433702,
+            "scores": {
+              "pitch": 83.66666666666667,
+              "interval": 80.02666666666667,
+              "contour": 100,
+              "rhythm": 29.014173690245737
+            },
+            "metric": {
+              "score": 43.33333333333333,
+              "adjustment": -7.333333333333332,
+              "matches": 1,
+              "conflicts": 2,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 34.43215245236702,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 66.97584317484495,
+              "pillarPitch": 67.33333333333334,
+              "interval": 57.53333333333333,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 93.33333333333333,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0.03759531051710583,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0.022583333333333334,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0.025920000000000002,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": null,
+                  "cost": 0.4053,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 7,
+                  "cost": 0.09938468571428571,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 8,
+                  "cost": 0.27938237931138743,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": null,
+                  "cost": 0.40415999999999996,
+                  "type": "deletion"
+                }
+              ],
+              "start": 3,
+              "end": 8,
+              "coverage": 0.75,
+              "cost": 1.2743257088761122,
+              "similarity": 53.81931729140834
+            },
+            "windowStart": 254
+          },
+          {
+            "sequence": 11798,
+            "stage": "candidate-scored",
+            "elapsedMs": 20789.36770000006,
+            "key": "work-6938f089921bd525\u000065",
+            "local": 60.88006891117209,
+            "scores": {
+              "pitch": 62,
+              "interval": 75,
+              "contour": 83.33333333333333,
+              "rhythm": 29.83076927607219
+            },
+            "metric": {
+              "score": 43.33333333333333,
+              "adjustment": -7.333333333333332,
+              "matches": 1,
+              "conflicts": 2,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 30.541003483146902,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.39999999999999997
+            },
+            "skeleton": {
+              "similarity": 66.97584317484495,
+              "pillarPitch": 67.33333333333334,
+              "interval": 57.53333333333333,
+              "contour": 100,
+              "queryNotes": 3,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": false,
+            "equality": 76.19047619047619,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 4,
+                  "cost": 0.03759531051710583,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 5,
+                  "cost": 0.022583333333333334,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 6,
+                  "cost": 0.01516222801869237,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": null,
+                  "cost": 0.4053,
+                  "type": "deletion"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 7,
+                  "cost": 0.07346468571428572,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 6,
+                  "candidateIndex": 8,
+                  "cost": 0.31726357142857137,
+                  "type": "substitution"
+                },
+                {
+                  "queryIndex": 7,
+                  "candidateIndex": 9,
+                  "cost": 0.04108222801869237,
+                  "type": "match"
+                }
+              ],
+              "start": 3,
+              "end": 9,
+              "coverage": 0.875,
+              "cost": 0.912451357030681,
+              "similarity": 68.9941178539666
+            },
+            "windowStart": 62
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 97,
+      "representativeWindowRank": null,
+      "originalStartInOccurrences": false,
+      "sourcePairedNotes": 8,
+      "issues": [
+        "representative-window-differs"
+      ],
+      "reviewNotes": [
+        "Inspect equivalent repeated passages and occurrence links before declaring a wrong match."
+      ],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "Someone You Loved",
+          "sourceId": "2. Someone You Loved, Violin and Piano Duet.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 96.36404443012863,
+            "meter": 66,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 61,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-6938f089921bd525&start=35&end=36&source=search&targets=136%3A75%2C137%3A77%2C137.5%3A77%2C138%3A77%2C139%3A73%2C139.5%3A70%2C140%3A68%2C141.5%3A68"
+        },
+        {
+          "rank": 2,
+          "title": "Someone You Loved",
+          "sourceId": "2. Someone You Loved, Violin, Cello and Piano Trio.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 96.36404443012863,
+            "meter": 66,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 61,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-01dcd7e4c462fc59&start=35&end=36&source=search&targets=136%3A75%2C137%3A77%2C137.5%3A77%2C138%3A77%2C139%3A73%2C139.5%3A70%2C140%3A68%2C141.5%3A68"
+        },
+        {
+          "rank": 3,
+          "title": "Confession",
+          "sourceId": "mxl/8/11/QmQbYmPNa1RnGJB4ten6Y1YGhqvbhKaPG421hshPab9nEV.mxl",
+          "streamId": "P3:1:1",
+          "score": 92.43133659707523,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 85.71428571428571,
+            "rhythm": 79.55251935172478,
+            "meter": 66,
+            "structural": 70,
+            "skeleton": 79,
+            "pillarPitch": 91,
+            "specificity": 61,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-de59d4cf11c06ee1-a71ddd21&start=12&end=14&source=search&targets=22%3A64%2C23%3A64%2C23.5%3A64%2C24%3A64%2C25%3A60%2C25.5%3A57%2C26%3A55%2C27%3A55"
+        },
+        {
+          "rank": 4,
+          "title": "사랑한단 말 못하고",
+          "sourceId": "kysing/69686.xml",
+          "streamId": "P1:1:1",
+          "score": 92.17207836951599,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 85.71428571428571,
+            "rhythm": 92.00444146293232,
+            "meter": 38,
+            "structural": 70,
+            "skeleton": 75,
+            "pillarPitch": 91,
+            "specificity": 61,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-804fe04b12e263ea-d08f9a8a&start=30&end=32&source=search&targets=119.5%3A78%2C120%3A80%2C121%3A80%2C121.5%3A80%2C122.5%3A76%2C123%3A73%2C123.5%3A71%2C125%3A73"
+        },
+        {
+          "rank": 5,
+          "title": "울지 마요",
+          "sourceId": "kysing/83845.xml",
+          "streamId": "P3:1:1",
+          "score": 91.70358468752113,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 71.25,
+            "meter": 4,
+            "structural": 82,
+            "skeleton": 79,
+            "pillarPitch": 91,
+            "specificity": 61,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-3acd80d7e7b1628b-a71ddd21&start=62&end=64&source=search&targets=245%3A72%2C245.5%3A74%2C246%3A74%2C248%3A74%2C248.5%3A70%2C249%3A67%2C249.5%3A65%2C250%3A65"
+        },
+        {
+          "rank": 6,
+          "title": "나의 옛날 이야기",
+          "sourceId": "kysing/93494.xml",
+          "streamId": "P2:1:1",
+          "score": 91.60520078532998,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 78.4375,
+            "meter": 38,
+            "structural": 34,
+            "skeleton": 63,
+            "pillarPitch": 86,
+            "specificity": 61,
+            "repeatPattern": 100,
+            "phrase": 64
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-f909e6fba37eca8b&start=2&end=4&source=search&targets=5.5%3A76%2C6%3A78%2C7%3A78%2C7.5%3A78%2C8%3A74%2C9%3A71%2C9.5%3A69%2C12.5%3A69"
+        },
+        {
+          "rank": 7,
+          "title": "구애",
+          "sourceId": "kysing/93901.xml",
+          "streamId": "P1:1:1",
+          "score": 91.59082406029557,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 85.71428571428571,
+            "rhythm": 92.00444146293232,
+            "meter": 32,
+            "structural": 43,
+            "skeleton": 79,
+            "pillarPitch": 91,
+            "specificity": 61,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-8335c14955fd5d20&start=30&end=32&source=search&targets=89%3A74%2C89.5%3A76%2C90.5%3A76%2C91%3A76%2C91.5%3A72%2C92%3A69%2C92.5%3A67%2C94.5%3A69"
+        },
+        {
+          "rank": 8,
+          "title": "When ye are met by towering foes",
+          "sourceId": "mxl/3/21/QmdgBNzBW2CsTfYwfa1puJwoJhqsSJZoW954xATdUUk2yx.mxl",
+          "streamId": "P1:1:1",
+          "score": 91.3844899362781,
+          "scores": {
+            "pitch": 96.5,
+            "interval": 96.19999999999999,
+            "contour": 85.71428571428571,
+            "rhythm": 89.48393168143699,
+            "meter": 38,
+            "structural": 87,
+            "skeleton": 75,
+            "pillarPitch": 86,
+            "specificity": 61,
+            "repeatPattern": 93,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-c39335cf220d6f20&start=4&end=6&source=search&targets=10.5%3A70%2C11.5%3A73%2C12%3A73%2C13.5%3A72%2C14%3A68%2C14.5%3A65%2C15%3A63%2C16%3A63"
+        },
+        {
+          "rank": 9,
+          "title": "Ballade",
+          "sourceId": "mxl/4/7/Qme8Dz2TtWJPTk6QauUhcmxxzbGz9xhnwj4DMYfMDUxZPb.mxl",
+          "streamId": "P1:1:1",
+          "score": 90.87291500481422,
+          "scores": {
+            "pitch": 93,
+            "interval": 94.8,
+            "contour": 85.71428571428571,
+            "rhythm": 84.64817248906141,
+            "meter": 43,
+            "structural": 87,
+            "skeleton": 67,
+            "pillarPitch": 67,
+            "specificity": 61,
+            "repeatPattern": 89,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-4ebe32197932d60a&start=69&end=70&source=search&targets=273%3A88%2C273.6666666666667%3A90%2C274%3A92%2C274.6666666666667%3A92%2C275%3A88%2C275.6666666666667%3A85%2C276%3A83%2C276.6666666666667%3A83"
+        },
+        {
+          "rank": 10,
+          "title": "Nothin'",
+          "sourceId": "kysing/28119.xml",
+          "streamId": "P1:1:1",
+          "score": 90.73341626522193,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 35.33815489170055,
+            "meter": 9,
+            "structural": 100,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 61,
+            "repeatPattern": 100,
+            "phrase": 50
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 8,
+          "url": "/score?workId=work-715512b354a18178-d08f9a8a&start=16&end=17&source=search&targets=63.25%3A71%2C63.5%3A73%2C63.833333333333336%3A73%2C64%3A73%2C64.33333333333333%3A69%2C64.66666666666667%3A66%2C65%3A64%2C65.75%3A64"
+        }
+      ]
+    },
+    {
+      "kind": "changed-note-alignment",
+      "queryNoteIndex": 3,
+      "queryPitch": 77,
+      "originalPitch": 75,
+      "sourcePitch": 77,
+      "sourceOnset": 138,
+      "alignmentType": "match",
+      "unmatched": false
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 8,
+      "queryNoteLength": 8,
+      "returnedCount": 100,
+      "exactCount": 0,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [
+    {
+      "code": "representative-window-differs",
+      "status": "observation-not-confirmed-cause"
+    }
+  ],
+  "proposals": [
+    {
+      "code": "representative-window-differs",
+      "text": "Compare repeated occurrences and preserve links to the requested source passage.",
+      "status": "proposed-not-implemented"
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH07-L8-pitch-change.json",
+      "initialPath": "../runs/SH07-L8-pitch-change.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-6938f089921bd525",
+      "sourceId": "2. Someone You Loved, Violin and Piano Duet.xml",
+      "streamId": "P1:1:1",
+      "title": "Someone You Loved",
+      "composer": "Composed by Lewis Capaldi\nArranged by Reflet des Nuages",
+      "baseStartIndex": 35,
+      "baseStartMeasure": 11,
+      "baseEndMeasure": 12,
+      "baseTargets": [
+        {
+          "onset": 40,
+          "pitchMidi": 75,
+          "measure": 11,
+          "beat": 1
+        },
+        {
+          "onset": 41.5,
+          "pitchMidi": 77,
+          "measure": 11,
+          "beat": 2.5
+        },
+        {
+          "onset": 42,
+          "pitchMidi": 77,
+          "measure": 11,
+          "beat": 3
+        },
+        {
+          "onset": 42.5,
+          "pitchMidi": 75,
+          "measure": 11,
+          "beat": 3.5
+        },
+        {
+          "onset": 43,
+          "pitchMidi": 73,
+          "measure": 11,
+          "beat": 4
+        },
+        {
+          "onset": 43.5,
+          "pitchMidi": 70,
+          "measure": 11,
+          "beat": 4.5
+        },
+        {
+          "onset": 44,
+          "pitchMidi": 68,
+          "measure": 12,
+          "beat": 1
+        },
+        {
+          "onset": 45.5,
+          "pitchMidi": 68,
+          "measure": 12,
+          "beat": 2.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 9,
+      "endOrdinal": 14,
+      "xmlHash": "6ea6576f5a3b8fb3f5f9c280f15a8109b4438a1a90e92f9d4db9c3da4f64a2e9",
+      "xmlError": null,
+      "eventsHash": "1f061a71fc61e152a65bd80d04dae9d00acd05ee2ef0b5788b1ce85c5c93d4ee",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Someone You Loved, Violin and Piano Duet.xml",
+      "sourceHash": "6938f089921bd5256a187794ddd7ca4c8edd703b7d992f90dff6ed2798069dbd"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m11:n1",
+          "xmlNoteId": "P1:m11:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 40,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 75,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n2",
+          "xmlNoteId": "P1:m11:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 83,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n3",
+          "xmlNoteId": "P1:m11:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 42,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n4",
+          "xmlNoteId": "P1:m11:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 85,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 75,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n5",
+          "xmlNoteId": "P1:m11:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 43,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 73,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n6",
+          "xmlNoteId": "P1:m11:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 87,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m12:n1",
+          "xmlNoteId": "P1:m12:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 44,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 4
+          }
+        },
+        {
+          "id": "P1:m12:n2",
+          "xmlNoteId": "P1:m12:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 12,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 12,
+          "originalMeasureLabel": "12",
+          "onsetQ": {
+            "n": 91,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 68,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 33,
+          "writtenPitch": {
+            "step": "A",
+            "alter": "-1",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH07-L8/context.musicxml",
+      "events": "../base-assets/SH07-L8/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "pitch-change"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

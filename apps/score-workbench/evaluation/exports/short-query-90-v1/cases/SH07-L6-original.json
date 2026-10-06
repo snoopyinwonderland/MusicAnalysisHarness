@@ -1,0 +1,862 @@
+{
+  "schema": "musicanote-evaluation-case/v1",
+  "caseId": "short-query-90-v1-SH07-L6-original",
+  "createdAt": "2026-09-16",
+  "status": "draft",
+  "replayable": true,
+  "query": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH07-e0",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "SH07-e1",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e2",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e3",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e4",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e5",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "originalQuery": {
+    "version": 1,
+    "mode": "melody_rhythm",
+    "meter": "4/4",
+    "startsOnDownbeat": true,
+    "includeRests": true,
+    "absoluteExactOnly": false,
+    "events": [
+      {
+        "id": "SH07-e0",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 1.5
+      },
+      {
+        "id": "SH07-e1",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e2",
+        "kind": "note",
+        "pitchMidi": 77,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e3",
+        "kind": "note",
+        "pitchMidi": 75,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e4",
+        "kind": "note",
+        "pitchMidi": 73,
+        "durationRatio": 0.5
+      },
+      {
+        "id": "SH07-e5",
+        "kind": "note",
+        "pitchMidi": 70,
+        "durationRatio": 0.5
+      }
+    ]
+  },
+  "tags": [
+    "original",
+    "positive-probe"
+  ],
+  "description": "6음 원형 대조",
+  "changes": {
+    "changedSourceIds": [],
+    "originalDuration": 4,
+    "queryDuration": 4,
+    "transformation": {}
+  },
+  "expected": {
+    "workId": "work-6938f089921bd525",
+    "sourceId": "2. Someone You Loved, Violin and Piano Duet.xml",
+    "streamId": "P1:1:1",
+    "title": "Someone You Loved",
+    "composer": "Composed by Lewis Capaldi\nArranged by Reflet des Nuages",
+    "baseStartIndex": 35,
+    "baseStartMeasure": 11,
+    "baseEndMeasure": 11,
+    "baseTargets": [
+      {
+        "onset": 40,
+        "pitchMidi": 75,
+        "measure": 11,
+        "beat": 1
+      },
+      {
+        "onset": 41.5,
+        "pitchMidi": 77,
+        "measure": 11,
+        "beat": 2.5
+      },
+      {
+        "onset": 42,
+        "pitchMidi": 77,
+        "measure": 11,
+        "beat": 3
+      },
+      {
+        "onset": 42.5,
+        "pitchMidi": 75,
+        "measure": 11,
+        "beat": 3.5
+      },
+      {
+        "onset": 43,
+        "pitchMidi": 73,
+        "measure": 11,
+        "beat": 4
+      },
+      {
+        "onset": 43.5,
+        "pitchMidi": 70,
+        "measure": 11,
+        "beat": 4.5
+      }
+    ],
+    "status": "source-retrieval-probe"
+  },
+  "observations": [
+    {
+      "status": "completed",
+      "sourceRank": 1,
+      "elapsedMs": 6344.7039000000805,
+      "trace": {
+        "rejections": {},
+        "scored": [
+          {
+            "sequence": 54,
+            "stage": "candidate-scored",
+            "elapsedMs": 1110.7064000000246,
+            "key": "work-6938f089921bd525\u000035",
+            "local": 100,
+            "scores": {
+              "pitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "rhythm": 100
+            },
+            "metric": {
+              "score": 100,
+              "adjustment": 6,
+              "matches": 2,
+              "conflicts": 0,
+              "overAccents": 0
+            },
+            "structural": {
+              "similarity": 59.2918448708711,
+              "bonus": 0,
+              "queryPillars": 3,
+              "candidatePillars": 3,
+              "confidence": 0.6
+            },
+            "skeleton": {
+              "similarity": 100,
+              "pillarPitch": 100,
+              "interval": 100,
+              "contour": 100,
+              "queryNotes": 4,
+              "candidateNotes": 4,
+              "coverage": 1,
+              "strongCoverage": 1
+            },
+            "skeletonException": false,
+            "intervalExact": true,
+            "equality": 100,
+            "alignment": {
+              "path": [
+                {
+                  "queryIndex": 0,
+                  "candidateIndex": 0,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 1,
+                  "candidateIndex": 1,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 2,
+                  "candidateIndex": 2,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 3,
+                  "candidateIndex": 3,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 4,
+                  "candidateIndex": 4,
+                  "cost": 0,
+                  "type": "match"
+                },
+                {
+                  "queryIndex": 5,
+                  "candidateIndex": 5,
+                  "cost": 0,
+                  "type": "match"
+                }
+              ],
+              "start": 0,
+              "end": 5,
+              "coverage": 1,
+              "cost": 0,
+              "similarity": 100
+            },
+            "windowStart": 35
+          }
+        ],
+        "inHits": true,
+        "inCandidates": true
+      }
+    },
+    {
+      "kind": "automated-audit",
+      "generatedAt": "2026-09-16T23:37:05.505Z",
+      "baselineRank": 1,
+      "rankChange": 0,
+      "sourceScore": 100,
+      "representativeWindowRank": 1,
+      "originalStartInOccurrences": true,
+      "sourcePairedNotes": 6,
+      "issues": [],
+      "reviewNotes": [],
+      "suggestions": [],
+      "top": [
+        {
+          "rank": 1,
+          "title": "Someone You Loved",
+          "sourceId": "2. Someone You Loved, Violin and Piano Duet.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 59,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": true,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-6938f089921bd525&start=11&end=11&source=search&targets=40%3A75%2C41.5%3A77%2C42%3A77%2C42.5%3A75%2C43%3A73%2C43.5%3A70"
+        },
+        {
+          "rank": 2,
+          "title": "Someone You Loved",
+          "sourceId": "2. Someone You Loved, Violin, Cello and Piano Trio.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 59,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-01dcd7e4c462fc59&start=11&end=11&source=search&targets=40%3A75%2C41.5%3A77%2C42%3A77%2C42.5%3A75%2C43%3A73%2C43.5%3A70"
+        },
+        {
+          "rank": 3,
+          "title": "DON'T YOU WORRY 'BOUT A THING",
+          "sourceId": "4. Don_t You Worry _Bout a Thing, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 8,
+            "structural": 43,
+            "skeleton": 66,
+            "pillarPitch": 77,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 29
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-e633a6eee321a392&start=65&end=68&source=search&targets=258.5%3A81%2C269%3A83%2C269.5%3A83%2C270%3A81%2C270.5%3A79%2C271%3A76"
+        },
+        {
+          "rank": 4,
+          "title": "DON'T YOU WORRY 'BOUT A THING",
+          "sourceId": "4. Don_t You Worry _Bout a Thing, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 8,
+            "structural": 43,
+            "skeleton": 66,
+            "pillarPitch": 77,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 29
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-d354a4928a2525be&start=65&end=68&source=search&targets=258.5%3A81%2C269%3A83%2C269.5%3A83%2C270%3A81%2C270.5%3A79%2C271%3A76"
+        },
+        {
+          "rank": 5,
+          "title": "DON'T YOU WORRY 'BOUT A THING",
+          "sourceId": "Don_t You Worry _Bout a Thing Melody.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 8,
+            "structural": 43,
+            "skeleton": 66,
+            "pillarPitch": 77,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 29
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-b0c0ca148cb3be76&start=65&end=68&source=search&targets=258.5%3A81%2C269%3A83%2C269.5%3A83%2C270%3A81%2C270.5%3A79%2C271%3A76"
+        },
+        {
+          "rank": 6,
+          "title": "Someone You Loved",
+          "sourceId": "Someone You Loved.xml",
+          "streamId": "P1:1:1",
+          "score": 100,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 100,
+            "meter": 100,
+            "structural": 59,
+            "skeleton": 100,
+            "pillarPitch": 100,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 70
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-ca6aab0ee2a76cd3&start=11&end=11&source=search&targets=40%3A75%2C41.5%3A77%2C42%3A77%2C42.5%3A75%2C43%3A73%2C43.5%3A70"
+        },
+        {
+          "rank": 7,
+          "title": "ONE CALL AWAY",
+          "sourceId": "4. One Call Away, Piano Solo.musicxml.xml",
+          "streamId": "P1:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 8,
+            "structural": 94,
+            "skeleton": 63,
+            "pillarPitch": 86,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 89
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-f4022bd1a793343e&start=5&end=6&source=search&targets=22%3A74%2C23%3A76%2C23.5%3A76%2C24%3A74%2C24.5%3A72%2C25.5%3A69"
+        },
+        {
+          "rank": 8,
+          "title": "ONE CALL AWAY",
+          "sourceId": "4. One Call Away, Violin and Piano Duet.musicxml.xml",
+          "streamId": "P2:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 8,
+            "structural": 94,
+            "skeleton": 63,
+            "pillarPitch": 86,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 89
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-55f3e9899bc52a58-88a85b71&start=5&end=6&source=search&targets=22%3A74%2C23%3A76%2C23.5%3A76%2C24%3A74%2C24.5%3A72%2C25.5%3A69"
+        },
+        {
+          "rank": 9,
+          "title": "ONE CALL AWAY",
+          "sourceId": "4. One Call Away, Violin, Cello and Piano Trio.musicxml.xml",
+          "streamId": "P3:1:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 8,
+            "structural": 94,
+            "skeleton": 63,
+            "pillarPitch": 86,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 89
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-a34adccb5c6a929d-a71ddd21&start=5&end=6&source=search&targets=22%3A74%2C23%3A76%2C23.5%3A76%2C24%3A74%2C24.5%3A72%2C25.5%3A69"
+        },
+        {
+          "rank": 10,
+          "title": "Twinkle, Twinkle, Little Star",
+          "sourceId": "4. Twinkle, Twinkle, Little Star, Piano Solo.musicxml.xml",
+          "streamId": "P1:2:1",
+          "score": 97,
+          "scores": {
+            "pitch": 100,
+            "interval": 100,
+            "contour": 100,
+            "rhythm": 90.41666666666666,
+            "meter": 78,
+            "structural": 87,
+            "skeleton": 84,
+            "pillarPitch": 83,
+            "specificity": 69,
+            "repeatPattern": 100,
+            "phrase": 67
+          },
+          "isExpectedSource": false,
+          "pairedNotes": 6,
+          "url": "/score?workId=work-50ccf1cabba8e949&start=27&end=28&source=search&targets=106.15625%3A48%2C108.15625%3A50%2C109.15625%3A50%2C110.15625%3A48%2C112.15625%3A46%2C113.15625%3A43"
+        }
+      ]
+    },
+    {
+      "kind": "rank-context",
+      "originalNoteLength": 6,
+      "queryNoteLength": 6,
+      "returnedCount": 100,
+      "exactCount": 6,
+      "sameScoreBeforeSource": 0
+    }
+  ],
+  "diagnoses": [],
+  "proposals": [],
+  "runs": [
+    {
+      "status": "completed",
+      "resultPath": "../runs/SH07-L6-original.json",
+      "initialPath": "../runs/SH07-L6-original.json"
+    }
+  ],
+  "knowledgeBase": {
+    "schema": "musicanote-case-knowledge/v1",
+    "identity": {
+      "workId": "work-6938f089921bd525",
+      "sourceId": "2. Someone You Loved, Violin and Piano Duet.xml",
+      "streamId": "P1:1:1",
+      "title": "Someone You Loved",
+      "composer": "Composed by Lewis Capaldi\nArranged by Reflet des Nuages",
+      "baseStartIndex": 35,
+      "baseStartMeasure": 11,
+      "baseEndMeasure": 11,
+      "baseTargets": [
+        {
+          "onset": 40,
+          "pitchMidi": 75,
+          "measure": 11,
+          "beat": 1
+        },
+        {
+          "onset": 41.5,
+          "pitchMidi": 77,
+          "measure": 11,
+          "beat": 2.5
+        },
+        {
+          "onset": 42,
+          "pitchMidi": 77,
+          "measure": 11,
+          "beat": 3
+        },
+        {
+          "onset": 42.5,
+          "pitchMidi": 75,
+          "measure": 11,
+          "beat": 3.5
+        },
+        {
+          "onset": 43,
+          "pitchMidi": 73,
+          "measure": 11,
+          "beat": 4
+        },
+        {
+          "onset": 43.5,
+          "pitchMidi": 70,
+          "measure": 11,
+          "beat": 4.5
+        }
+      ]
+    },
+    "sourceSnapshot": {
+      "startOrdinal": 9,
+      "endOrdinal": 13,
+      "xmlHash": "26a57a56d0317671cf096c55d0a8b68c11d6bcf9078d11d09cb06c505143a354",
+      "xmlError": null,
+      "eventsHash": "fc3529dc2f0b6c13dba6eabcc1c1e77480ab3c2061c146bf777eb846405ab781",
+      "sourcePath": "K:/Music Analysis/musicxml/2. Someone You Loved, Violin and Piano Duet.xml",
+      "sourceHash": "6938f089921bd5256a187794ddd7ca4c8edd703b7d992f90dff6ed2798069dbd"
+    },
+    "focus": {
+      "events": [
+        {
+          "id": "P1:m11:n1",
+          "xmlNoteId": "P1:m11:n1",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 1
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 40,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 3,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 0,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 75,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n2",
+          "xmlNoteId": "P1:m11:n2",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 2
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 83,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n3",
+          "xmlNoteId": "P1:m11:n3",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 3
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 42,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 2,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 77,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 38,
+          "writtenPitch": {
+            "step": "F",
+            "alter": "0",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n4",
+          "xmlNoteId": "P1:m11:n4",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 4
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 85,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 5,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 75,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 37,
+          "writtenPitch": {
+            "step": "E",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n5",
+          "xmlNoteId": "P1:m11:n5",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 5
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 43,
+            "d": 1
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 3,
+            "d": 1
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 73,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 36,
+          "writtenPitch": {
+            "step": "D",
+            "alter": "-1",
+            "octave": 5
+          }
+        },
+        {
+          "id": "P1:m11:n6",
+          "xmlNoteId": "P1:m11:n6",
+          "xmlLocator": {
+            "partId": "P1",
+            "measureOrdinal": 11,
+            "noteIndex": 6
+          },
+          "partId": "P1",
+          "voiceId": "1",
+          "staffId": "1",
+          "kind": "note",
+          "measureOrdinal": 11,
+          "originalMeasureLabel": "11",
+          "onsetQ": {
+            "n": 87,
+            "d": 2
+          },
+          "durationQ": {
+            "n": 1,
+            "d": 2
+          },
+          "beatQ": {
+            "n": 7,
+            "d": 2
+          },
+          "meter": "4/4",
+          "grace": false,
+          "cue": false,
+          "pitchMidi": 70,
+          "identityDefaults": {
+            "voice": false,
+            "staff": false
+          },
+          "diatonicPitch": 34,
+          "writtenPitch": {
+            "step": "B",
+            "alter": "-1",
+            "octave": 4
+          }
+        }
+      ]
+    },
+    "context": {
+      "policy": "original XML up to 2 measures before/after; event snapshot preserves supplied source context"
+    },
+    "assets": {
+      "musicXml": "../base-assets/SH07-L6/context.musicxml",
+      "events": "../base-assets/SH07-L6/events.json"
+    },
+    "classification": {
+      "phenomenonTypes": [
+        "original"
+      ],
+      "musicalFunctions": [],
+      "contextualConditions": [
+        {
+          "meter": "4/4"
+        }
+      ],
+      "exclusions": [
+        "Automated retrieval is not a human relevance judgment"
+      ],
+      "confidence": "automatic-unreviewed"
+    },
+    "ruleLearning": {
+      "candidateRules": [],
+      "counterexamples": [],
+      "reusableFor": [
+        "retrieval-regression",
+        "query-completion",
+        "alignment-review"
+      ]
+    }
+  }
+}

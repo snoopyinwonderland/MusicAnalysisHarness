@@ -1,0 +1,10 @@
+{
+  "schema": "musicanote-evaluation-review/v1",
+  "createdAt": "2026-09-17",
+  "cases": [
+    {"caseId":"OCT01-local-octave","observations":["Source rank 1; changed pitch 85, originally 73, has deletion alignment."],"diagnosis":"Work retrieval succeeded without matching the changed note.","proposal":"Compare octave substitution and deletion paths with duration/arrival evidence and negative controls; no work-specific exception.","status":"observed-not-fixed"},
+    {"caseId":"OCT02-local-octave","observations":["Source rank 1; changed pitch 68, originally 80, has deletion alignment."],"diagnosis":"Work retrieval succeeded without matching the changed note.","proposal":"Review octave substitution versus omission, without requiring rank 1 or forcing every note to align.","status":"observed-not-fixed"},
+    {"caseId":"OCT01-octave-plus-omission","observations":["Source rank 1; changed octave note remains unmatched."],"diagnosis":"Compound variation is retrieved but octave note is excluded.","proposal":"Evaluate alignment path explanations separately from retrieval success.","status":"observed-not-fixed"},
+    {"caseId":"OCT02-octave-plus-omission","observations":["Source rank 1; changed note 68, originally 80, maps to source pitch 74 at onset 74."],"diagnosis":"Changed note does not map to its original pitch; requires musical path review, not a ranking failure conclusion.","proposal":"Inspect arrival-time and neighboring-anchor evidence before altering alignment costs.","status":"observed-not-fixed"}
+  ]
+}

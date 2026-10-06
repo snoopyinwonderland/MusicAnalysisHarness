@@ -1,0 +1,60 @@
+{
+  "schema": "musicanote-small-regression-summary/v1",
+  "completed": 6,
+  "total": 6,
+  "summary": [
+    {
+      "caseId": "TRIAD-01-exact-corpus",
+      "category": "global-tempo-scaling",
+      "status": "failed",
+      "targetRank": null,
+      "elapsedMs": 11017,
+      "renderingAudit": null
+    },
+    {
+      "caseId": "TRIAD-02-global-tempo-x2",
+      "category": "global-tempo-scaling",
+      "status": "failed",
+      "targetRank": null,
+      "elapsedMs": 5763,
+      "renderingAudit": null
+    },
+    {
+      "caseId": "TRIAD-03-local-duration-rest-mismatch",
+      "category": "global-tempo-scaling",
+      "status": "failed",
+      "targetRank": null,
+      "elapsedMs": 6361,
+      "renderingAudit": null
+    },
+    {
+      "caseId": "TRIAD-04-pickup-weak-beat-bar-crossing",
+      "category": "start-context",
+      "status": "failed",
+      "targetRank": null,
+      "elapsedMs": 10255,
+      "renderingAudit": null
+    },
+    {
+      "caseId": "TRIAD-05-same-intervals-different-rhythm",
+      "category": "negative-control",
+      "status": "failed",
+      "targetRank": null,
+      "elapsedMs": 6054,
+      "renderingAudit": null
+    },
+    {
+      "caseId": "TRIAD-06-same-rhythm-different-melody",
+      "category": "negative-control",
+      "status": "failed",
+      "targetRank": null,
+      "elapsedMs": 4444,
+      "renderingAudit": null
+    }
+  ],
+  "limitations": [
+    "Offline local index only; no corpus collection or DB sync.",
+    "SVG audit verifies target IDs in rendered SVG, not human layout quality or listening.",
+    "Ranks are raw stream results; edition duplicates are retained."
+  ]
+}
