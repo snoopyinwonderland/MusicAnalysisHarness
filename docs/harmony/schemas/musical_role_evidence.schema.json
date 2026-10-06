@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.musicanote.com/musical-role-evidence/0.1.0",
+  "title": "Literal geometry and assumption-conditioned musical role evidence",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_name", "schema_version", "producer_version", "record_id", "record_sha256", "observation_ref", "scope", "literal", "conditional", "semantics", "use_policy"],
+  "properties": {
+    "schema_name": {"const": "musicanote-musical-role-evidence"},
+    "schema_version": {"const": "0.1.0"},
+    "producer_version": {"const": "musical-role-evidence-0.1.0"},
+    "record_id": {"type": "string", "pattern": "^mre_[0-9a-f]{24}$"},
+    "record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "observation_ref": {"$ref": "#/$defs/ref"},
+    "scope": {"$ref": "https://schemas.musicanote.com/musical-pattern-observation/0.1.0#/properties/scope"},
+    "literal": {"type": "object", "additionalProperties": false,
+      "required": ["sounds", "grace_points", "pitch_episodes", "onset_groups", "rests", "limits"],
+      "properties": {
+        "sounds": {"type": "array", "items": {"$ref": "#/$defs/sound"}},
+        "grace_points": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+          "required": ["note_ids", "sounding_event_id", "lane", "onset", "pitch"],
+          "properties": {"note_ids": {"$ref": "#/$defs/ids"}, "sounding_event_id": {"$ref": "#/$defs/id"}, "lane": {"$ref": "#/$defs/lane"}, "onset": {"$ref": "#/$defs/q"}, "pitch": {"$ref": "#/$defs/pitch"}}
+        }},
+        "pitch_episodes": {"type": "array", "items": {"$ref": "#/$defs/episode"}},
+        "onset_groups": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+          "required": ["lane", "onset", "note_ids", "sounding_event_ids"],
+          "properties": {"lane": {"$ref": "#/$defs/lane"}, "onset": {"$ref": "#/$defs/q"}, "note_ids": {"$ref": "#/$defs/ids"}, "sounding_event_ids": {"$ref": "#/$defs/ids"}}
+        }},
+        "rests": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+          "required": ["event_id", "lane", "span"], "properties": {"event_id": {"$ref": "#/$defs/id"}, "lane": {"$ref": "#/$defs/lane"}, "span": {"$ref": "#/$defs/span"}}}},
+        "limits": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "conditional": {"type": "array", "items": {"type": "object", "additionalProperties": false,
+      "required": ["assumption_ref", "pedal_profiles", "sequential_profiles"],
+      "properties": {"assumption_ref": {"$ref": "#/$defs/ref"}, "pedal_profiles": {"type": "array", "items": {"$ref": "#/$defs/pedal"}}, "sequential_profiles": {"type": "array", "items": {"$ref": "#/$defs/sequential"}}}
+    }},
+    "semantics": {"const": {"roles_validated": false, "melody_or_bass_selected": false, "chord_assumption_selected": false, "generation_ready": false}},
+    "use_policy": {"const": {"research_only": true, "training_eligible": false, "gold_status": "not_established"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "minLength": 1},
+    "ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "strings": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "q": {"$ref": "https://schemas.musicanote.com/canonical-music-ir/0.1.0#/$defs/rational"},
+    "span": {"$ref": "https://schemas.musicanote.com/canonical-music-ir/0.1.0#/$defs/span"},
+    "optionalSpan": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/span"}]},
+    "pitch": {"$ref": "https://schemas.musicanote.com/canonical-music-ir/0.1.0#/$defs/pitch"},
+    "member": {"type": "object", "additionalProperties": false, "required": ["step", "alter"], "properties": {"step": {"enum": ["A", "B", "C", "D", "E", "F", "G"]}, "alter": {"$ref": "#/$defs/q"}}},
+    "degree": {"type": ["integer", "null"], "minimum": 1, "maximum": 7},
+    "lane": {"type": "object", "additionalProperties": false, "required": ["part_id", "voice_id"], "properties": {"part_id": {"$ref": "#/$defs/id"}, "voice_id": {"$ref": "#/$defs/id"}}},
+    "ref": {"type": "object", "additionalProperties": false, "required": ["record_id", "record_sha256"], "properties": {"record_id": {"$ref": "#/$defs/id"}, "record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}},
+    "sound": {"type": "object", "additionalProperties": false,
+      "required": ["sounding_event_id", "source_note_ids", "attack_note_id", "lane", "pitch", "original_span", "observed_span", "target_overlap", "attack_in_context", "attack_in_target", "tie_continuation_note_ids"],
+      "properties": {
+        "sounding_event_id": {"$ref": "#/$defs/id"}, "source_note_ids": {"$ref": "#/$defs/ids"}, "attack_note_id": {"$ref": "#/$defs/id"}, "lane": {"$ref": "#/$defs/lane"}, "pitch": {"$ref": "#/$defs/pitch"},
+        "original_span": {"$ref": "#/$defs/span"}, "observed_span": {"$ref": "#/$defs/span"}, "target_overlap": {"$ref": "#/$defs/optionalSpan"},
+        "attack_in_context": {"type": "boolean"}, "attack_in_target": {"type": "boolean"}, "tie_continuation_note_ids": {"$ref": "#/$defs/ids"}
+      }
+    },
+    "episode": {"type": "object", "additionalProperties": false,
+      "required": ["episode_id", "lane", "pitch", "original_span", "observed_span", "target_overlap", "sounding_event_ids", "source_note_ids", "attack_note_ids_context", "tie_continuation_note_ids", "mode", "context_clipped_start", "context_clipped_end", "overlap_ambiguous"],
+      "properties": {
+        "episode_id": {"$ref": "#/$defs/id"}, "lane": {"$ref": "#/$defs/lane"}, "pitch": {"$ref": "#/$defs/pitch"}, "original_span": {"$ref": "#/$defs/span"}, "observed_span": {"$ref": "#/$defs/span"}, "target_overlap": {"$ref": "#/$defs/optionalSpan"},
+        "sounding_event_ids": {"$ref": "#/$defs/ids"}, "source_note_ids": {"$ref": "#/$defs/ids"}, "attack_note_ids_context": {"$ref": "#/$defs/ids"}, "tie_continuation_note_ids": {"$ref": "#/$defs/ids"},
+        "mode": {"enum": ["single_sound", "touching_reattacks", "overlapping_same_pitch"]}, "context_clipped_start": {"type": "boolean"}, "context_clipped_end": {"type": "boolean"}, "overlap_ambiguous": {"type": "boolean"}
+      }
+    },
+    "pedal": {"type": "object", "additionalProperties": false,
+      "required": ["episode_id", "cells", "status", "blockers", "alternatives", "pedal_confirmed"],
+      "properties": {
+        "episode_id": {"$ref": "#/$defs/id"}, "cells": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["span", "segment_id", "label", "membership", "degree"],
+          "properties": {"span": {"$ref": "#/$defs/span"}, "segment_id": {"type": ["string", "null"]}, "label": {"type": ["string", "null"]}, "membership": {"enum": ["member", "nonmember", "unknown"]}, "degree": {"$ref": "#/$defs/degree"}}}},
+        "status": {"enum": ["anchored_pedal_shape", "unanchored_pedal_shape", "no_pedal_shape"]}, "blockers": {"$ref": "#/$defs/strings"}, "alternatives": {"$ref": "#/$defs/strings"}, "pedal_confirmed": {"const": false}
+      }
+    },
+    "sequential": {"type": "object", "additionalProperties": false,
+      "required": ["lane", "segment_id", "span", "onset_groups", "missing_members", "membership_scope", "onset_deltas_quarter", "status", "blockers", "alternatives", "arpeggio_confirmed"],
+      "properties": {
+        "lane": {"$ref": "#/$defs/lane"}, "segment_id": {"$ref": "#/$defs/id"}, "span": {"$ref": "#/$defs/span"},
+        "onset_groups": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false,
+          "required": ["onset", "note_ids", "sounding_event_ids", "member_note_ids", "nonmember_note_ids", "unknown_note_ids", "degree_by_note"],
+          "properties": {"onset": {"$ref": "#/$defs/q"}, "note_ids": {"$ref": "#/$defs/ids"}, "sounding_event_ids": {"$ref": "#/$defs/ids"}, "member_note_ids": {"$ref": "#/$defs/ids"}, "nonmember_note_ids": {"$ref": "#/$defs/ids"}, "unknown_note_ids": {"$ref": "#/$defs/ids"}, "degree_by_note": {"type": "object", "additionalProperties": {"$ref": "#/$defs/degree"}}}
+        }},
+        "missing_members": {"oneOf": [{"type": "null"}, {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/member"}}]},
+        "membership_scope": {"const": "attacks_only"}, "onset_deltas_quarter": {"type": "array", "items": {"$ref": "#/$defs/q"}},
+        "status": {"enum": ["broken_chord_shape", "insufficient_shape"]}, "blockers": {"$ref": "#/$defs/strings"}, "alternatives": {"$ref": "#/$defs/strings"}, "arpeggio_confirmed": {"const": false}
+      }
+    }
+  }
+}

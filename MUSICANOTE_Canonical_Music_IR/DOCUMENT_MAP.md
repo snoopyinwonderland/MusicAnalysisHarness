@@ -2,7 +2,7 @@
 
 ## 먼저 읽을 문서
 
-화성 개발 인수인계의 시작점은 [HARMONY_DEVELOPER_HANDOFF.md](HARMONY_DEVELOPER_HANDOFF.md)다. 현재 상태·재현·개발 기록 기준을 확인한 다음 아래 계약과 주제별 기록을 읽는다.
+화성 분석 개발의 시작점은 별도 [개발 메인 문서](../docs/harmony/README.md)와 [개발 로그](../docs/harmony/DEVELOPMENT_LOG.md)다. 아래는 공통 계약과 기존 상세 기록의 지도다. 새 화성 개발 결과는 `docs/harmony/`에서 관리하며 인수인계 문서에 누적하지 않는다.
 
 1. `README.md` — 문서 범위와 우선순위
 2. `CANONICAL_MUSIC_IR_SPEC_v0.1.md` — 전체 계약
@@ -10,6 +10,20 @@
 4. `ID_AND_TIME_COORDINATE_SPEC.md` — 공통 ID·시간축
 
 ## 주제별 정본
+
+최신 후속: [실제 연속 음형의 조건부 화음 대조](HARMONY_CONTINUOUS_SURVEY_2026-09-29.md). 지연 끝점에 국한하지 않은 라벨 독립184개 표본, 같은 음가의 후보 대조, 전체 악보·재현·보류와 한계를 기록한다.
+
+최신 후속: [성부 경로별 조건부 비화성음](HARMONY_PATH_ORNAMENTS_2026-09-29.md). 후보 철자/경로 가정별 경과·보조 설명, 비구성음 음가 보존, 실패 이력과 실제 검증 한계를 기록한다.
+
+최신 후속: [연속 성부 경로 전체 조합](HARMONY_VOICE_PATHS_2026-09-29.md). 지역 대응을 연속 경로 분할로 만들고 음표1회 사용/음가 보존을 검증한다. 쉼 뒤 지연 해결과 구별한다.
+
+최신 후속: [제한적 문맥 확대와 성부 복수 대응](HARMONY_PATH_CONTEXT_2026-09-29.md). 관찰 범위와 화음 범위를 구별하고, 지역 부분 대응/무연결을 저장한다. 기존 결과와 전체 악보 대조도 포함한다.
+
+최신 후속: [공통 후보와 지연 경로의 조건부 설명](HARMONY_CATALOG_PATHS_2026-09-29.md). 중간 음 생략 없이 유지/도착/새 화음 대안을 구별하고 실제 문맥·성부 보류를 기록한다.
+
+후속 화성 기록: [미세 시간축·분산 도착 감사](HARMONY_CATALOG_MICROTIME_2026-09-29.md). 실제 음 시작/종료 좌표에서의 후보 대조와 지연 연결의 불확실성을 다룬다.
+
+최신 화성 구현 기록은 [공통 후보의 해결 관계 연결](HARMONY_CATALOG_RESOLUTION_2026-09-29.md)이다. 전체 악보 화면, 실험/운영 구분, 후보 수와 정확도의 차이 및 다음 작업을 함께 기록한다.
 
 화성의 실제 악보 비교는 [최근 5사례 화면](../output/harmony-visual-review-2026-09-27-r7/index.html)에서 시작한다. 관련 개발 기록 (상세 기록은 공개 브랜치에서 제외)에 원자료/자동 환산 표기의 차이와 재현 명령을 남겼다.
 
@@ -28,6 +42,7 @@
 | 검증·이전 | `VALIDATION_RULES.md`, `VERSIONING_AND_MIGRATION.md` |
 | 미확정 문제 | `OPEN_QUESTIONS.md` |
 | 화성·구조·작곡·편곡 실행 순서 | [통합 실행 계획](HARMONY_COMPOSITION_HARNESS_IMPLEMENTATION_PLAN.md) |
+| 음악적 역할·반주·배치·전개 및 과거 사례 보충 | [화성 개발의 의미 데이터·생성 로드맵](../docs/harmony/MUSICAL_SEMANTICS_AND_GENERATION_ROADMAP.md) |
 | 코퍼스 조사 근거 | [로컬 자료 조사](CLASSICAL_HARMONY_CORPORA_AUDIT_2026-09-24.md) |
 | 전체 파일 등록·DCML 정렬 확대의 현재 상태 | [등록·정렬 개발 기록](ALL_CORPORA_REGISTRY_AND_ALIGNMENT_2026-09-24.md) |
 | 반복 엔딩 시간축·수입 품질 관문 | [반복 엔딩 정렬 검증](DCML_REPEAT_TIMELINE_ALIGNMENT_2026-09-24.md) |

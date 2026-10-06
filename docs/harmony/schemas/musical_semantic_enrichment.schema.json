@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.musicanote.com/musical-semantic-enrichment/0.1.0",
+  "title": "Research-only musical semantic enrichment sidecar 0.1.0",
+  "description": "SOURCE preserves prose without a score target. BOUND is a separate atomic assertion. Runtime validation additionally checks content hashes, exact references, span ordering, axis vocabulary, and revision/coverage scope. No undocumented free parameters, Core mutation, gold labels, training permission, or automatic classification.",
+  "type": "object",
+  "required": ["schema_name", "schema_version", "schema_uri", "term_dictionary_version", "record_id", "record_sha256", "case_id", "case_sha256", "lineage_id", "revision", "supersedes", "record_kind", "coverage_state", "source_context", "source_claim_ref", "binding", "claim", "provenance", "confidence", "confidence_semantics", "human_review", "use_policy"],
+  "properties": {
+    "schema_name": {"const": "musicanote-musical-semantic-enrichment"},
+    "schema_version": {"const": "0.1.0"},
+    "schema_uri": {"const": "https://schemas.musicanote.com/musical-semantic-enrichment/0.1.0"},
+    "term_dictionary_version": {"const": "0.1.0"},
+    "record_id": {"type": "string", "pattern": "^mse_[0-9a-f]{24}$"},
+    "record_sha256": {"$ref": "#/$defs/hash"},
+    "case_id": {"$ref": "#/$defs/nonempty"},
+    "case_sha256": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+    "lineage_id": {"$ref": "#/$defs/nonempty"},
+    "revision": {"type": "integer", "minimum": 1},
+    "supersedes": {"anyOf": [{"$ref": "#/$defs/record_ref"}, {"type": "null"}]},
+    "record_kind": {"enum": ["SOURCE", "BOUND"]},
+    "coverage_state": {"enum": ["not_assessed", "needs_alignment", "pending_review", "covered_partial", "covered"]},
+    "source_context": {"$ref": "#/$defs/source_context"},
+    "source_claim_ref": {"anyOf": [{"$ref": "#/$defs/record_ref"}, {"type": "null"}]},
+    "binding": {"anyOf": [{"$ref": "#/$defs/binding"}, {"type": "null"}]},
+    "claim": {"$ref": "#/$defs/claim"},
+    "provenance": {"$ref": "#/$defs/provenance"},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "confidence_semantics": {"enum": [null, "source_reported", "uncalibrated_score", "calibrated_probability", "human_reported"]},
+    "human_review": {"$ref": "#/$defs/review"},
+    "use_policy": {
+      "type": "object", "required": ["research_only", "training_eligible", "gold_status"],
+      "properties": {"research_only": {"const": true}, "training_eligible": {"const": false}, "gold_status": {"const": "not_established"}},
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"record_kind": {"const": "SOURCE"}}}, "then": {"properties": {"binding": {"type": "null"}, "source_claim_ref": {"type": "null"}, "coverage_state": {"const": "needs_alignment"}}}},
+    {"if": {"properties": {"record_kind": {"const": "BOUND"}}}, "then": {"properties": {"binding": {"$ref": "#/$defs/binding"}, "source_claim_ref": {"$ref": "#/$defs/record_ref"}, "coverage_state": {"enum": ["pending_review", "covered_partial", "covered"]}, "claim": {"properties": {"axis": {"$ref": "#/$defs/axis"}, "term": {"$ref": "#/$defs/nonempty"}}}}}}
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "nonempty": {"type": "string", "minLength": 1},
+    "nullable_string": {"anyOf": [{"$ref": "#/$defs/nonempty"}, {"type": "null"}]},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "record_ref": {
+      "type": "object", "required": ["record_id", "record_sha256"],
+      "properties": {"record_id": {"type": "string", "pattern": "^mse_[0-9a-f]{24}$"}, "record_sha256": {"$ref": "#/$defs/hash"}},
+      "additionalProperties": false
+    },
+    "version_ref": {
+      "type": "object", "required": ["name", "version"],
+      "properties": {"name": {"$ref": "#/$defs/nonempty"}, "version": {"$ref": "#/$defs/nonempty"}},
+      "additionalProperties": false
+    },
+    "line": {
+      "type": "object", "required": ["physical_line", "raw_text"],
+      "properties": {"physical_line": {"type": "integer", "minimum": 1}, "raw_text": {"type": "string"}, "line_ending": {"type": "string"}},
+      "additionalProperties": false
+    },
+    "location": {
+      "type": "object", "required": ["kind", "locator"],
+      "properties": {
+        "kind": {"enum": ["source_statement", "document_passage", "annotation_record", "rule_reference", "human_statement"]},
+        "locator": {
+          "type": "object", "minProperties": 1,
+          "properties": {
+            "path": {"$ref": "#/$defs/nonempty"}, "relative_path": {"$ref": "#/$defs/nonempty"},
+            "physical_line": {"type": "integer", "minimum": 1}, "native_tag": {"$ref": "#/$defs/nonempty"},
+            "source_tag_spelling": {"$ref": "#/$defs/nonempty"},
+            "source_tag_spelling": {"$ref": "#/$defs/nonempty"},
+            "raw_value": {"type": "string"}, "line_ending": {"type": "string"},
+            "context_lines": {"type": "array", "items": {"$ref": "#/$defs/line"}},
+            "preceding_measure_line": {"anyOf": [{"$ref": "#/$defs/line"}, {"type": "null"}]},
+            "following_measure_line": {"anyOf": [{"$ref": "#/$defs/line"}, {"type": "null"}]},
+            "context_is_target": {"const": false},
+            "page": {"type": "integer", "minimum": 1}, "section": {"$ref": "#/$defs/nonempty"},
+            "annotation_id": {"$ref": "#/$defs/nonempty"}, "rule_id": {"$ref": "#/$defs/nonempty"},
+            "statement_id": {"$ref": "#/$defs/nonempty"}
+          }, "additionalProperties": false
+        }
+      }, "additionalProperties": false
+    },
+    "rights": {
+      "type": "object", "required": ["rights_status", "rights_ref", "training_status", "training_ref"],
+      "description": "Policy references are inherited evidence, not newly granted rights. Annotation presence never makes this sidecar trainable.",
+      "properties": {
+        "rights_status": {"enum": ["unknown", "inherited"]}, "rights_ref": {"$ref": "#/$defs/nullable_string"},
+        "training_status": {"enum": ["unknown", "inherited"]}, "training_ref": {"$ref": "#/$defs/nullable_string"}
+      }, "additionalProperties": false
+    },
+    "source_context": {
+      "type": "object", "required": ["source_ref", "source_revision", "source_sha256", "raw_text", "location", "rights"],
+      "properties": {
+        "source_ref": {"$ref": "#/$defs/nonempty"}, "source_revision": {"$ref": "#/$defs/nonempty"},
+        "source_sha256": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+        "raw_text": {"$ref": "#/$defs/nonempty"}, "location": {"$ref": "#/$defs/location"}, "rights": {"$ref": "#/$defs/rights"}
+      }, "additionalProperties": false
+    },
+    "rational": {
+      "type": "object", "required": ["numerator", "denominator"],
+      "properties": {"numerator": {"type": "integer"}, "denominator": {"type": "integer", "minimum": 1}}, "additionalProperties": false
+    },
+    "span": {
+      "type": "object", "required": ["start", "end"],
+      "properties": {"start": {"$ref": "#/$defs/rational"}, "end": {"$ref": "#/$defs/rational"}}, "additionalProperties": false
+    },
+    "harmony_ref": {
+      "type": "object", "required": ["analysis_id", "analysis_sha256", "engine_version"],
+      "properties": {"analysis_id": {"$ref": "#/$defs/nonempty"}, "analysis_sha256": {"$ref": "#/$defs/hash"}, "engine_version": {"$ref": "#/$defs/nonempty"}},
+      "additionalProperties": false
+    },
+    "binding": {
+      "type": "object", "required": ["score_id", "score_sha256", "ir_sha256", "ir_schema_version", "alignment_ref", "target", "harmony_assumption_ref"],
+      "properties": {
+        "score_id": {"$ref": "#/$defs/nonempty"}, "score_sha256": {"$ref": "#/$defs/hash"}, "ir_sha256": {"$ref": "#/$defs/hash"},
+        "ir_schema_version": {"$ref": "#/$defs/nonempty"}, "alignment_ref": {"$ref": "#/$defs/nonempty"},
+        "target": {"type": "object", "required": ["entity_refs", "span"], "properties": {"entity_refs": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/nonempty"}}, "span": {"$ref": "#/$defs/span"}}, "additionalProperties": false},
+        "harmony_assumption_ref": {"anyOf": [{"$ref": "#/$defs/harmony_ref"}, {"type": "null"}]}
+      }, "additionalProperties": false
+    },
+    "axis": {"enum": ["voice_role", "harmonic_role", "texture", "motif", "form_role", "development", "placement", "performance"]},
+    "claim": {
+      "type": "object", "required": ["axis", "term", "rationale", "relations"],
+      "properties": {
+        "axis": {"anyOf": [{"$ref": "#/$defs/axis"}, {"type": "null"}]}, "term": {"$ref": "#/$defs/nullable_string"},
+        "rationale": {"type": ["string", "null"]},
+        "relations": {"type": "array", "uniqueItems": true, "items": {
+          "type": "object", "required": ["relation_type", "target_ref"],
+          "properties": {"relation_type": {"enum": ["accompanies", "contrasts_with", "doubles", "derived_from", "repeats", "transforms", "develops", "placed_above", "placed_below", "before", "after", "overlaps", "alternates", "supports"]}, "target_ref": {"$ref": "#/$defs/record_ref"}},
+          "additionalProperties": false
+        }}
+      }, "additionalProperties": false,
+      "allOf": [
+        {"if": {"properties": {"axis": {"const": "voice_role"}}}, "then": {"properties": {"term": {"enum": [null, "melody", "countermelody", "bass", "accompaniment", "inner_voice", "pedal", "drone", "fill", "doubling", "response", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "harmonic_role"}}}, "then": {"properties": {"term": {"enum": [null, "chord_tone", "root", "third", "fifth", "seventh", "non_chord_tone", "passing", "neighbor", "double_neighbor", "changing_tone", "suspension", "retardation", "anticipation", "pedal", "structural_bass", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "texture"}}}, "then": {"properties": {"term": {"enum": [null, "homophonic", "polyphonic", "monophonic", "arpeggiated", "ostinato", "alberti_bass", "chordal", "heterophonic", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "motif"}}}, "then": {"properties": {"term": {"enum": [null, "occurrence", "variant", "fragment", "core", "complete_extent", "statement", "response", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "form_role"}}}, "then": {"properties": {"term": {"enum": [null, "opening", "continuation", "transition", "cadential", "closing", "contrast", "return", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "development"}}}, "then": {"properties": {"term": {"enum": [null, "repetition", "sequence", "augmentation", "diminution", "inversion", "retrograde", "fragmentation", "liquidation", "variation", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "placement"}}}, "then": {"properties": {"term": {"enum": [null, "foreground", "middleground", "background", "register_above", "register_below", "doubled", "distributed", "before", "after", "overlapping", "alternating", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"const": "performance"}}}, "then": {"properties": {"term": {"enum": [null, "articulation", "dynamics", "phrasing", "timing", "ornamentation", "unknown"]}}}},
+        {"if": {"properties": {"axis": {"type": "null"}}}, "then": {"properties": {"term": {"type": "null"}}}}
+      ]
+    },
+    "provenance": {
+      "type": "object", "required": ["kind", "actor_id", "producer"],
+      "properties": {
+        "kind": {"enum": ["imported_source", "rule", "ai", "human"]}, "actor_id": {"$ref": "#/$defs/nullable_string"},
+        "producer": {"type": "object", "required": ["name", "version", "config_sha256", "model_ref", "schema_ref"], "properties": {
+          "name": {"$ref": "#/$defs/nonempty"}, "version": {"$ref": "#/$defs/nonempty"},
+          "config_sha256": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+          "model_ref": {"anyOf": [{"$ref": "#/$defs/version_ref"}, {"type": "null"}]}, "schema_ref": {"$ref": "#/$defs/version_ref"}
+        }, "additionalProperties": false}
+      }, "additionalProperties": false,
+      "allOf": [{"if": {"properties": {"kind": {"const": "ai"}}}, "then": {"properties": {"producer": {"properties": {"model_ref": {"$ref": "#/$defs/version_ref"}}}}}}, {"if": {"properties": {"kind": {"const": "human"}}}, "then": {"properties": {"actor_id": {"$ref": "#/$defs/nonempty"}}}}]
+    },
+    "review": {
+      "type": "object", "required": ["status", "reviewer_id", "review_ref"],
+      "properties": {"status": {"enum": ["unreviewed", "pending_review", "validated", "rejected"]}, "reviewer_id": {"$ref": "#/$defs/nullable_string"}, "review_ref": {"$ref": "#/$defs/nullable_string"}},
+      "additionalProperties": false
+    }
+  }
+}

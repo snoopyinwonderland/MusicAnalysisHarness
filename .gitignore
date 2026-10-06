@@ -8,6 +8,29 @@ output/
 MusicXML/
 .pytest_cache/
 .qa/
+/tmp/
+/reports/
+/structure-publish-worktree/
+.env
+.env.*
+!.env.example
+node_modules/
+*.tsbuildinfo
+
+# Local datasets stay outside the consolidated public code snapshot.
+/apps/score-workbench/data/
+/apps/score-workbench/evaluation/**/context.musicxml
+
+# Preserve the previously agreed local-only textbook detail documents.
+/MUSICANOTE_Canonical_Music_IR/HARMONY_TEXTBOOK_CASE_CURRICULUM.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_CATALOG_MICROTIME_2026-09-29.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_CATALOG_PATHS_2026-09-29.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_CATALOG_RESOLUTION_2026-09-29.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_CONTINUOUS_SURVEY_2026-09-29.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_PATH_CONTEXT_2026-09-29.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_PATH_ORNAMENTS_2026-09-29.md
+/MUSICANOTE_Canonical_Music_IR/HARMONY_VOICE_PATHS_2026-09-29.md
+/docs/harmony/archive/DEVELOPMENT_HISTORY_THROUGH_2026-09-29.md
 corpus/incoming/*
 corpus/accepted/*
 corpus/quarantine/*

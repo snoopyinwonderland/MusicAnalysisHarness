@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.musicanote.com/frozen-context-observation/0.1.0",
+  "title": "Frozen all-part literal context observation, not SOURCE or musical truth",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_name", "schema_version", "producer_version", "record_id", "record_sha256", "scope", "origin", "slots", "core_projection", "raw_lanes", "semantics", "use_policy"],
+  "properties": {
+    "schema_name": {"const": "musicanote-frozen-context-observation"},
+    "schema_version": {"const": "0.1.0"},
+    "producer_version": {"const": "frozen-context-observation-0.1.0"},
+    "record_id": {"type": "string", "pattern": "^mfco_[0-9a-f]{24}$"},
+    "record_sha256": {"$ref": "#/$defs/hash"},
+    "scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["score_id", "ir_document_id", "ir_content_sha256", "source_files", "target_span", "context_span"],
+      "properties": {
+        "score_id": {"$ref": "#/$defs/text"}, "ir_document_id": {"$ref": "#/$defs/text"},
+        "ir_content_sha256": {"$ref": "#/$defs/hash"},
+        "source_files": {"type": "array", "minItems": 1, "items": {"$ref": "https://schemas.musicanote.com/canonical-music-ir/0.1.0#/$defs/sourceFile"}},
+        "target_span": {"$ref": "#/$defs/span"}, "context_span": {"$ref": "#/$defs/span"}
+      }
+    },
+    "origin": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "pair_id", "plan_index", "lane_index", "sample", "target_policy", "selector", "cohort_dependency", "working_ir_selection", "historical_ir_document_id", "historical_ir_content_sha256", "parent_content_sha256", "artifact_references", "parent_statuses", "source_statement_or_alignment_certified", "source_file_bytes_checked_by_pure_function", "selector_and_revision_fresh_replay_required_by_runner", "annotation_or_parent_locator_retargeted"],
+      "properties": {
+        "kind": {"const": "frozen_context_window"}, "pair_id": {"$ref": "#/$defs/text"},
+        "plan_index": {"type": "integer", "minimum": 0}, "lane_index": {"type": "integer", "minimum": 0},
+        "sample": {"$ref": "#/$defs/sample"}, "target_policy": {"const": "full_frozen_context"},
+        "selector": {"const": {"version": "harmony-breadth-trial-0.1.1", "policy": "interior quantile indices per explicit lane over full score", "window_selection_label_independent": true, "sampled_lane_is_seed_metadata_only": true, "all_parts_projected": true}},
+        "cohort_dependency": {
+          "type": "object", "additionalProperties": false,
+          "required": ["kind", "annotation_independent_cohort", "manifest_entry_id", "annotation_sha256", "annotation_lineage_id", "work_family_id", "split"],
+          "properties": {
+            "kind": {"const": "inherited_score_annotation_hash_pair_and_alignment_eligibility"},
+            "annotation_independent_cohort": {"const": false}, "manifest_entry_id": {"$ref": "#/$defs/text"},
+            "annotation_sha256": {"$ref": "#/$defs/hash"}, "annotation_lineage_id": {"type": ["string", "null"]},
+            "work_family_id": {"$ref": "#/$defs/text"}, "split": {"enum": ["train", "dev"]}
+          }
+        },
+        "working_ir_selection": {"enum": ["historical_parent", "measure_core_candidate"]},
+        "historical_ir_document_id": {"$ref": "#/$defs/text"}, "historical_ir_content_sha256": {"$ref": "#/$defs/hash"},
+        "parent_content_sha256": {
+          "type": "object", "additionalProperties": false,
+          "required": ["integration_index_row", "integration_packet", "original_stored_packet", "frozen_plan_row", "package", "revision_row", "revision_sidecar", "parent_ir"],
+          "properties": {
+            "integration_index_row": {"$ref": "#/$defs/hash"}, "integration_packet": {"$ref": "#/$defs/hash"},
+            "original_stored_packet": {"$ref": "#/$defs/hash"}, "frozen_plan_row": {"$ref": "#/$defs/hash"},
+            "package": {"$ref": "#/$defs/hash"}, "revision_row": {"$ref": "#/$defs/hash"},
+            "revision_sidecar": {"$ref": "#/$defs/hash"}, "parent_ir": {"$ref": "#/$defs/hash"}
+          }
+        },
+        "artifact_references": {
+          "type": "object", "additionalProperties": false,
+          "required": ["integration_artifact", "integration_file_sha256", "original_stored_artifact", "original_stored_file_sha256", "revision_sidecar", "historical_ir_file_sha256"],
+          "properties": {
+            "integration_artifact": {"$ref": "#/$defs/text"}, "integration_file_sha256": {"$ref": "#/$defs/hash"},
+            "original_stored_artifact": {"$ref": "#/$defs/text"}, "original_stored_file_sha256": {"$ref": "#/$defs/hash"},
+            "revision_sidecar": {"$ref": "#/$defs/text"}, "historical_ir_file_sha256": {"$ref": "#/$defs/hash"}
+          }
+        },
+        "parent_statuses": {
+          "type": "object", "additionalProperties": false, "required": ["original", "integration", "measure_revision"],
+          "properties": {"original": {"$ref": "#/$defs/text"}, "integration": {"$ref": "#/$defs/text"}, "measure_revision": {"enum": ["not_required", "candidate_core_ready", "candidate_core_ready_parent_bound_residuals"]}}
+        },
+        "source_statement_or_alignment_certified": {"const": false},
+        "source_file_bytes_checked_by_pure_function": {"const": false},
+        "selector_and_revision_fresh_replay_required_by_runner": {"const": true},
+        "annotation_or_parent_locator_retargeted": {"const": false}
+      }
+    },
+    "slots": {"$ref": "https://schemas.musicanote.com/musical-pattern-observation/0.1.0#/properties/slots"},
+    "core_projection": {"$ref": "https://schemas.musicanote.com/musical-pattern-observation/0.1.0#/properties/core_projection"},
+    "raw_lanes": {"$ref": "https://schemas.musicanote.com/musical-pattern-observation/0.1.0#/properties/raw_lanes"},
+    "semantics": {"$ref": "https://schemas.musicanote.com/musical-pattern-observation/0.1.0#/properties/semantics"},
+    "use_policy": {"$ref": "https://schemas.musicanote.com/musical-pattern-observation/0.1.0#/properties/use_policy"}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1}, "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "span": {"$ref": "https://schemas.musicanote.com/canonical-music-ir/0.1.0#/$defs/span"},
+    "sample": {
+      "type": "object", "additionalProperties": false,
+      "required": ["sample_id", "lane", "attack_group_onsets", "seed_event_refs", "span", "abstention_reasons"],
+      "properties": {
+        "sample_id": {"type": "string", "pattern": "^cont_[0-9a-f]{20}$"},
+        "lane": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/text"}},
+        "attack_group_onsets": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "https://schemas.musicanote.com/canonical-music-ir/0.1.0#/$defs/rational"}},
+        "seed_event_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/text"}},
+        "span": {"$ref": "#/$defs/span"}, "abstention_reasons": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

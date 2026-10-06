@@ -25,8 +25,8 @@ def spelled_height(p):
     return 7*octave+LETTERS.index(step)
 
 
-def voice_links(ir,context_span):
-    """Only unique contiguous nonoverlapping successors in an explicit IR voice."""
+def prepare_voice_geometry(ir):
+    """Full-score observation only; retain insertion order and every source note."""
     rows,_=prepare(ir);notes={n['note_id']:n for n in ir.get('note_events',[])}
     sounds={s['sounding_event_id']:s for s in ir['sounding_events']};voices=defaultdict(list);reason={}
     for r in rows:
@@ -37,6 +37,14 @@ def voice_links(ir,context_span):
         identity=next(iter(identities))
         if not identity[0] or not identity[1]:reason[r['id']]='missing_explicit_part_or_voice';continue
         voices[identity].append(r)
+    return {'rows':rows,'sounds':sounds,'voices':{
+        identity:sorted(sequence,key=lambda r:(r['start'],r['id']))
+        for identity,sequence in voices.items()},'reason':reason}
+
+
+def voice_links_from_geometry(geometry,context_span):
+    """Keep outside-context overlap and successor observations in the score."""
+    rows,sounds,voices,reason=(geometry[k] for k in ('rows','sounds','voices','reason'))
     start,end=f(context_span['start']),f(context_span['end'])
     if start<0 or end<start:raise ValueError('invalid_context_span')
     links=[];abstentions=Counter();observations=[]
@@ -45,7 +53,6 @@ def voice_links(ir,context_span):
         if in_context(r) and r['id'] in reason:
             abstentions[reason[r['id']]]+=1;observations.append({'event_ref':r['id'],'status':reason[r['id']]})
     for (part,voice),sequence in voices.items():
-        sequence=sorted(sequence,key=lambda r:(r['start'],r['id']))
         for r in sequence:
             if not in_context(r):continue
             status=None
@@ -73,6 +80,13 @@ def voice_links(ir,context_span):
                 'contrapuntal_voice_identity_confirmed':False})
     return {'links':links,'abstentions':dict(abstentions),'event_statuses':observations,
             'context_span':context_span,'polyphonic_voice_matching':'deferred_no_nearest_pitch_guess'}
+
+
+def voice_links(ir,context_span,*,geometry_cache=None):
+    """Only unique contiguous nonoverlapping successors in an explicit IR voice."""
+    if geometry_cache is not None:
+        return geometry_cache.voice_links(ir,context_span)
+    return voice_links_from_geometry(prepare_voice_geometry(ir),context_span)
 
 
 def relation(link,source,target):
