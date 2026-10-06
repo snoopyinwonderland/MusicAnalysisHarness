@@ -6,6 +6,7 @@
 
 - 통합 GitHub: `https://github.com/snoopyinwonderland/MusicAnalysisHarness`
 - 통합 브랜치: `codex/unified-analysis`
+- 기본 배포 위치: 같은 저장소의 `main` (기존 이력 위의 fast-forward로 갱신; 강제 push 없음)
 - Python/화성 위치: `src/musicanote_harness/`
 - 웹 위치: `apps/score-workbench/`
 - 전체 문서 진입점: [docs/README.md](README.md)
@@ -19,6 +20,7 @@
 | Claude Phrase 원출처 | `650ca3b472be5ac546b77ce91b9d3064e74f6135` | 호흡/상위 종지층 및 통합 보완 |
 | Claude Motif 원출처 | `81df3159` | note-level Motif 발견과 가족 연결 |
 | 통합 전 structure/main 로컬 기록 | `ad5a1868` | 이전 구조 분석 저장소 snapshot |
+| 통합 코드 commit | `4644265da5d80c422a2b83652bfdcbcd3aa6d513` | 웹 snapshot 3,948파일 + 단일 문서 지도 + 실행/검증 스크립트 |
 
 MusicSearch의 `7ac75ffd`는 최신 코드/문서/재배포 출처가 있는 sample assets 109파일을 commit했다. 수집 중인 data 4파일은 commit에서 제외하고 원폴더에 그대로 남겼다. 이 상태를 버리지 않는다.
 
